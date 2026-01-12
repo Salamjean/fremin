@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\Presentation\GalleryController;
 use App\Http\Controllers\Admin\Presentation\HeroSectionController;
 use App\Http\Controllers\Admin\Actualite\FeaturedArticleController;
 use App\Http\Controllers\Admin\Actualite\NewsArticleController;
+use App\Http\Controllers\Admin\Program\ProgramController;
+use App\Http\Controllers\Admin\Program\OpportunityController;
 use App\Http\Controllers\Admin\Publication\PublicationController;
 use App\Http\Controllers\Home\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +25,12 @@ Route::prefix('home')->group(function () {
     Route::get('/publication', [HomeController::class, 'publication'])->name('home.publication');
     Route::get('/program', [HomeController::class, 'program'])->name('home.program');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
+    Route::get('/lang/{locale}', function ($locale) {
+        if (in_array($locale, ['fr', 'en'])) {
+            session()->put('locale', $locale);
+        }
+        return redirect()->back();
+    })->name('lang.switch');
 });
 
 
@@ -131,6 +139,26 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::post('/{publication}/toggle-featured', [PublicationController::class, 'toggleFeatured'])->name('toggle-featured');
         Route::post('/{publication}/toggle-active', [PublicationController::class, 'toggleActive'])->name('toggle-active');
         Route::get('/{publication}/download', [PublicationController::class, 'download'])->name('download');
+    });
+
+    // Les routes de la page Programmes et Opportunités
+    Route::prefix('programs')->name('admin.programs.')->group(function () {
+        Route::get('/', [ProgramController::class, 'index'])->name('index');
+        Route::get('/create', [ProgramController::class, 'create'])->name('create');
+        Route::post('/', [ProgramController::class, 'store'])->name('store');
+        Route::get('/{program}/edit', [ProgramController::class, 'edit'])->name('edit');
+        Route::put('/{program}', [ProgramController::class, 'update'])->name('update');
+        Route::delete('/{program}', [ProgramController::class, 'destroy'])->name('destroy');
+        Route::post('/{program}/toggle-status', [ProgramController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('opportunities')->name('admin.opportunities.')->group(function () {
+        Route::get('/create', [OpportunityController::class, 'create'])->name('create');
+        Route::post('/', [OpportunityController::class, 'store'])->name('store');
+        Route::get('/{opportunity}/edit', [OpportunityController::class, 'edit'])->name('edit');
+        Route::put('/{opportunity}', [OpportunityController::class, 'update'])->name('update');
+        Route::delete('/{opportunity}', [OpportunityController::class, 'destroy'])->name('destroy');
+        Route::post('/{opportunity}/toggle-status', [OpportunityController::class, 'toggleStatus'])->name('toggle-status');
     });
 });
 

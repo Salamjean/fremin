@@ -33,7 +33,7 @@ class HomeController extends Controller
         $featuredArticle = FeaturedArticle::getFeatured();
         $newsArticles = NewsArticle::getActive();
         $upcomingEvents = Event::getActive();
-        return view('home.pages.actuality', compact('featuredArticle','newsArticles','upcomingEvents'));
+        return view('home.pages.actuality', compact('featuredArticle', 'newsArticles', 'upcomingEvents'));
     }
 
     public function publication()
@@ -43,7 +43,9 @@ class HomeController extends Controller
 
     public function program()
     {
-        return view('home.pages.program');
+        $programs = \App\Models\Program::active()->ordered()->get();
+        $opportunities = \App\Models\Opportunity::active()->ordered()->get();
+        return view('home.pages.program', compact('programs', 'opportunities'));
     }
 
     public function contact()

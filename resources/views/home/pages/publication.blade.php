@@ -1,40 +1,39 @@
 @extends('home.layouts.template')
 @section('content')
 
-@php
-    // Récupérer les publications par type
-    $rapports = App\Models\Publication::where('type', 'rapport')->published()->recent(3)->get();
-    $etudes = App\Models\Publication::where('type', 'etude')->published()->recent(3)->get();
-    $guides = App\Models\Publication::where('type', 'guide')->published()->recent(3)->get();
-    $brochures = App\Models\Publication::where('type', 'brochure')->published()->recent(3)->get();
-    $autres = App\Models\Publication::where('type', 'autre')->published()->recent(3)->get();
-    
-    // Statistiques
-    $totalPublications = App\Models\Publication::published()->count();
-    $totalDownloads = App\Models\Publication::published()->sum('downloads');
-@endphp
+    @php
+        // Récupérer les publications par type
+        $rapports = App\Models\Publication::where('type', 'rapport')->published()->recent(3)->get();
+        $etudes = App\Models\Publication::where('type', 'etude')->published()->recent(3)->get();
+        $guides = App\Models\Publication::where('type', 'guide')->published()->recent(3)->get();
+        $brochures = App\Models\Publication::where('type', 'brochure')->published()->recent(3)->get();
+        $autres = App\Models\Publication::where('type', 'autre')->published()->recent(3)->get();
+
+        // Statistiques
+        $totalPublications = App\Models\Publication::published()->count();
+        $totalDownloads = App\Models\Publication::published()->sum('downloads');
+    @endphp
     <!-- Hero Section Publications -->
     <section class="publications-hero">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <h1 class="hero-title">
-                        <span class="text-primary">Publications</span> & Ressources
+                        <span class="text-primary">{{ __('messages.publications') }}</span> & {{ __('messages.resources') }}
                     </h1>
                     <p class="hero-subtitle">
-                        Documentation officielle, guides, formulaires et ressources utiles pour les entreprises
-                        industrielles
+                        {{ __('messages.pub_hero_subtitle') }}
                     </p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <div class="hero-stats">
                         <div class="stat-badge">
                             <i class="fas fa-file-pdf me-2"></i>
-                            <span>{{ $totalPublications }} Documents</span>
+                            <span>{{ $totalPublications }} {{ __('messages.documents') }}</span>
                         </div>
                         <div class="stat-badge">
                             <i class="fas fa-download me-2"></i>
-                            <span>{{ number_format($totalDownloads) }}+ Téléchargements</span>
+                            <span>{{ number_format($totalDownloads) }}+ {{ __('messages.total_downloads') }}</span>
                         </div>
                     </div>
                 </div>
@@ -45,7 +44,7 @@
     <!-- Catégories de Publications -->
     <section class="categories-section py-5">
         <div class="container">
-            <h3 class="section-subtitle mb-4">Parcourir par Catégorie</h3>
+            <h3 class="section-subtitle mb-4">{{ __('messages.browse_category') }}</h3>
 
             <div class="row g-4">
                 <!-- Catégorie 1 -->
@@ -54,8 +53,8 @@
                         <div class="category-icon">
                             <i class="fas fa-chart-bar"></i>
                         </div>
-                        <h4 class="category-title">Rapports</h4>
-                        <p class="category-count">{{ $rapports->count() }} documents</p>
+                        <h4 class="category-title">{{ __('messages.cat_rapports') }}</h4>
+                        <p class="category-count">{{ $rapports->count() }} {{ __('messages.documents') }}</p>
                         <div class="category-arrow">
                             <i class="fas fa-arrow-right"></i>
                         </div>
@@ -68,8 +67,8 @@
                         <div class="category-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h4 class="category-title">Études</h4>
-                        <p class="category-count">{{ $etudes->count() }} documents</p>
+                        <h4 class="category-title">{{ __('messages.cat_etudes') }}</h4>
+                        <p class="category-count">{{ $etudes->count() }} {{ __('messages.documents') }}</p>
                         <div class="category-arrow">
                             <i class="fas fa-arrow-right"></i>
                         </div>
@@ -82,8 +81,8 @@
                         <div class="category-icon">
                             <i class="fas fa-book"></i>
                         </div>
-                        <h4 class="category-title">Guides</h4>
-                        <p class="category-count">{{ $guides->count() }} documents</p>
+                        <h4 class="category-title">{{ __('messages.cat_guides') }}</h4>
+                        <p class="category-count">{{ $guides->count() }} {{ __('messages.documents') }}</p>
                         <div class="category-arrow">
                             <i class="fas fa-arrow-right"></i>
                         </div>
@@ -96,8 +95,8 @@
                         <div class="category-icon">
                             <i class="fas fa-newspaper"></i>
                         </div>
-                        <h4 class="category-title">Brochures</h4>
-                        <p class="category-count">{{ $brochures->count() }} documents</p>
+                        <h4 class="category-title">{{ __('messages.cat_brochures') }}</h4>
+                        <p class="category-count">{{ $brochures->count() }} {{ __('messages.documents') }}</p>
                         <div class="category-arrow">
                             <i class="fas fa-arrow-right"></i>
                         </div>
@@ -109,437 +108,426 @@
 
 
     @if($rapports->count() > 0)
-<section class="recent-publications py-5 bg-light" id="rapports">
-    <div class="container">
-        <div class="section-header d-flex justify-content-between align-items-center mb-5">
-            <div>
-                <h2 class="section-title">
-                    <i class="fas fa-chart-bar me-3"></i>
-                    Rapports d'Activités
-                </h2>
-                <p class="section-subtitle">Documents officiels et rapports annuels</p>
-            </div>
-            <a href="{{ route('publications.index') }}?type=rapport" class="btn btn-outline-primary">
-                Voir tous <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-        </div>
-
-        <div class="row g-4">
-            @foreach($rapports as $publication)
-            <div class="col-md-6 col-lg-4">
-                <div class="publication-card">
-                    <div class="publication-badge">
-                        <span class="badge-icon">{{ $publication->file_format }}</span>
-                        <span class="badge-size">{{ $publication->file_size }}</span>
+        <section class="recent-publications py-5 bg-light" id="rapports">
+            <div class="container">
+                <div class="section-header d-flex justify-content-between align-items-center mb-5">
+                    <div>
+                        <h2 class="section-title">
+                            <i class="fas fa-chart-bar me-3"></i>
+                            {{ __('messages.rapports_title') }}
+                        </h2>
+                        <p class="section-subtitle">{{ __('messages.rapports_subtitle') }}</p>
                     </div>
-                    <div class="publication-icon">
-                        <i class="{{ $publication->type_icon }}"></i>
-                    </div>
-                    <h4 class="publication-title">
-                        {{ $publication->title }}
-                    </h4>
-                    <p class="publication-description">
-                        {{ $publication->short_description }}
-                    </p>
-                    <div class="publication-meta">
-                        <span class="meta-item">
-                            <i class="far fa-calendar me-1"></i>
-                            {{ $publication->formatted_date }}
-                        </span>
-                        @if($publication->page_count)
-                        <span class="meta-item">
-                            <i class="far fa-file me-1"></i>
-                            {{ $publication->page_count }} pages
-                        </span>
-                        @endif
-                    </div>
-                    <div class="publication-footer">
-                        <button class="btn btn-primary btn-sm preview-btn" 
-                                data-bs-toggle="modal" 
-                                data-bs-target="#previewModal{{ $publication->id }}">
-                            <i class="far fa-eye me-1"></i> Aperçu
-                        </button>
-                        <a href="{{ route('publications.download', $publication) }}" 
-                           class="download-btn" 
-                           target="_blank">
-                            <i class="fas fa-download me-1"></i> Télécharger
-                        </a>
-                    </div>
+                    <a href="{{ route('publications.index') }}?type=rapport" class="btn btn-outline-primary">
+                        {{ __('messages.see_all') }} <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
                 </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-@endif
 
-       @if($etudes->count() > 0)
-<section class="guides-section py-5" id="etudes">
-    <div class="container">
-        <div class="section-header d-flex justify-content-between align-items-center mb-5">
-            <div>
-                <h2 class="section-title">
-                    <i class="fas fa-chart-line me-3"></i>
-                    Études & Analyses
-                </h2>
-                <p class="section-subtitle">Analyses approfondies et études sectorielles</p>
-            </div>
-            <a href="{{ route('publications.index') }}?type=etude" class="btn btn-outline-primary">
-                Voir tous <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-        </div>
-
-        <div class="row g-4">
-            @foreach($etudes as $publication)
-            <div class="col-md-6 col-lg-4">
-                <div class="guide-card">
-                    <div class="guide-header">
-                        <div class="guide-icon">
-                            <i class="{{ $publication->type_icon }}"></i>
-                        </div>
-                        @if($publication->is_featured)
-                        <div class="guide-badge">
-                            <span class="badge-important">En vedette</span>
-                        </div>
-                        @endif
-                    </div>
-                    <h4 class="guide-title">
-                        {{ $publication->title }}
-                    </h4>
-                    <p class="guide-description">
-                        {{ $publication->short_description }}
-                    </p>
-                    <div class="guide-meta">
-                        <span class="meta-item">
-                            <i class="far fa-calendar me-1"></i>
-                            {{ $publication->formatted_date }}
-                        </span>
-                        @if($publication->page_count)
-                        <span class="meta-item">
-                            <i class="far fa-file me-1"></i>
-                            {{ $publication->page_count }} pages
-                        </span>
-                        @endif
-                    </div>
-                    <div class="guide-footer">
-                        <span class="guide-pages">
-                            <i class="fas fa-download me-1"></i>
-                            {{ $publication->downloads }} téléchargements
-                        </span>
-                        <div class="guide-actions">
-                            <button class="btn btn-sm btn-outline-primary preview-btn" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#previewModal{{ $publication->id }}">
-                                <i class="far fa-eye"></i>
-                            </button>
-                            <a href="{{ route('publications.download', $publication) }}" 
-                               class="btn btn-sm btn-primary" 
-                               target="_blank">
-                                <i class="fas fa-download"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-@endif
-
-    @if($guides->count() > 0)
-<section class="guides-section py-5 bg-light" id="guides">
-    <div class="container">
-        <div class="section-header d-flex justify-content-between align-items-center mb-5">
-            <div>
-                <h2 class="section-title">
-                    <i class="fas fa-book me-3"></i>
-                    Guides Méthodologiques
-                </h2>
-                <p class="section-subtitle">Documentation pratique pour les entreprises</p>
-            </div>
-            <a href="{{ route('publications.index') }}?type=guide" class="btn btn-outline-primary">
-                Voir tous <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-        </div>
-
-        <div class="row g-4">
-            @foreach($guides as $publication)
-            <div class="col-md-6 col-lg-4">
-                <div class="guide-card">
-                    <div class="guide-header">
-                        <div class="guide-icon">
-                            <i class="{{ $publication->type_icon }}"></i>
-                        </div>
-                        @if($publication->created_at->diffInDays(now()) < 30)
-                        <div class="guide-badge">
-                            <span class="badge-new">Nouveau</span>
-                        </div>
-                        @endif
-                    </div>
-                    <h4 class="guide-title">
-                        {{ $publication->title }}
-                    </h4>
-                    <p class="guide-description">
-                        {{ $publication->short_description }}
-                    </p>
-                    <div class="guide-meta">
-                        <span class="meta-item">
-                            <i class="far fa-calendar me-1"></i>
-                            {{ $publication->formatted_date }}
-                        </span>
-                        @if($publication->page_count)
-                        <span class="meta-item">
-                            <i class="far fa-file me-1"></i>
-                            {{ $publication->page_count }} pages
-                        </span>
-                        @endif
-                    </div>
-                    <div class="guide-footer">
-                        <span class="guide-pages">
-                            <i class="fas fa-download me-1"></i>
-                            {{ $publication->downloads }} téléchargements
-                        </span>
-                        <div class="guide-actions">
-                            <button class="btn btn-sm btn-outline-primary preview-btn" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#previewModal{{ $publication->id }}">
-                                <i class="far fa-eye"></i>
-                            </button>
-                            <a href="{{ route('publications.download', $publication) }}" 
-                               class="btn btn-sm btn-primary" 
-                               target="_blank">
-                                <i class="fas fa-download"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-@endif
-
-    @if($brochures->count() > 0)
-<section class="forms-section py-5" id="brochures">
-    <div class="container">
-        <div class="section-header mb-5">
-            <h2 class="section-title">
-                <i class="fas fa-newspaper me-3"></i>
-                Brochures & Présentations
-            </h2>
-            <p class="section-subtitle">Documents de présentation et plaquettes institutionnelles</p>
-        </div>
-
-        <div class="row g-4">
-            @foreach($brochures as $publication)
-            <div class="col-md-6 col-lg-4">
-                <div class="brochure-card">
-                    <div class="brochure-thumbnail">
-                        <img src="{{ $publication->thumbnail_url }}" 
-                             alt="{{ $publication->thumbnail_alt ?? $publication->title }}"
-                             class="img-fluid rounded">
-                    </div>
-                    <div class="brochure-content">
-                        <h4 class="brochure-title">
-                            {{ $publication->title }}
-                        </h4>
-                        <p class="brochure-description">
-                            {{ $publication->short_description }}
-                        </p>
-                        <div class="brochure-footer">
-                            <div class="brochure-meta">
-                                <span class="meta-item">
-                                    <i class="far fa-calendar me-1"></i>
-                                    {{ $publication->formatted_date }}
-                                </span>
-                                <span class="meta-item">
-                                    <i class="fas fa-weight-hanging me-1"></i>
-                                    {{ $publication->file_size }}
-                                </span>
-                            </div>
-                            <div class="brochure-actions">
-                                <button class="btn btn-sm btn-outline-primary preview-btn" 
-                                        data-bs-toggle="modal" 
-                                        data-bs-target="#previewModal{{ $publication->id }}">
-                                    <i class="far fa-eye"></i>
-                                </button>
-                                <a href="{{ route('publications.download', $publication) }}" 
-                                   class="btn btn-sm btn-primary" 
-                                   target="_blank">
-                                    <i class="fas fa-download"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-@endif
-
-@if($autres->count() > 0)
-<section class="regulations-section py-5 bg-light" id="autres">
-    <div class="container">
-        <div class="section-header mb-5">
-            <h2 class="section-title">
-                <i class="fas fa-file-alt me-3"></i>
-                Autres Documents
-            </h2>
-            <p class="section-subtitle">Autres ressources et documents utiles</p>
-        </div>
-
-        <div class="accordion regulations-accordion" id="regulationsAccordion">
-            @foreach($autres as $index => $publication)
-            <div class="accordion-item">
-                <h3 class="accordion-header">
-                    <button class="accordion-button {{ $index === 0 ? '' : 'collapsed' }}" 
-                            type="button" 
-                            data-bs-toggle="collapse" 
-                            data-bs-target="#publication{{ $publication->id }}">
-                        <i class="{{ $publication->type_icon }} me-3"></i>
-                        {{ $publication->title }}
-                    </button>
-                </h3>
-                <div id="publication{{ $publication->id }}" 
-                     class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}" 
-                     data-bs-parent="#regulationsAccordion">
-                    <div class="accordion-body">
-                        <div class="regulation-info">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h5>{{ $publication->title }}</h5>
-                                    <p class="mb-3">{{ $publication->description }}</p>
-                                    <div class="regulation-meta">
-                                        <span class="meta-item">
-                                            <i class="far fa-calendar me-1"></i>
-                                            {{ $publication->publication_date->format('d/m/Y') }}
-                                        </span>
-                                        @if($publication->page_count)
+                <div class="row g-4">
+                    @foreach($rapports as $publication)
+                        <div class="col-md-6 col-lg-4">
+                            <div class="publication-card">
+                                <div class="publication-badge">
+                                    <span class="badge-icon">{{ $publication->file_format }}</span>
+                                    <span class="badge-size">{{ $publication->file_size }}</span>
+                                </div>
+                                <div class="publication-icon">
+                                    <i class="{{ $publication->type_icon }}"></i>
+                                </div>
+                                <h4 class="publication-title">
+                                    {{ $publication->title }}
+                                </h4>
+                                <p class="publication-description">
+                                    {{ $publication->short_description }}
+                                </p>
+                                <div class="publication-meta">
+                                    <span class="meta-item">
+                                        <i class="far fa-calendar me-1"></i>
+                                        {{ $publication->formatted_date }}
+                                    </span>
+                                    @if($publication->page_count)
                                         <span class="meta-item">
                                             <i class="far fa-file me-1"></i>
                                             {{ $publication->page_count }} pages
                                         </span>
-                                        @endif
-                                        <span class="meta-item">
-                                            <i class="fas fa-download me-1"></i>
-                                            {{ $publication->downloads }} téléchargements
-                                        </span>
-                                    </div>
+                                    @endif
                                 </div>
-                                <div class="col-md-4 text-md-end">
-                                    <a href="{{ route('publications.download', $publication) }}" 
-                                       class="btn btn-primary"
-                                       target="_blank">
-                                        <i class="fas fa-download me-2"></i>
-                                        Télécharger
+                                <div class="publication-footer">
+                                    <button class="btn btn-primary btn-sm preview-btn" data-bs-toggle="modal"
+                                        data-bs-target="#previewModal{{ $publication->id }}">
+                                        <i class="far fa-eye me-1"></i> {{ __('messages.preview') }}
+                                    </button>
+                                    <a href="{{ route('publications.download', $publication) }}" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download me-1"></i> {{ __('messages.download') }}
                                     </a>
                                 </div>
                             </div>
                         </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
+
+    @if($etudes->count() > 0)
+        <section class="guides-section py-5" id="etudes">
+            <div class="container">
+                <div class="section-header d-flex justify-content-between align-items-center mb-5">
+                    <div>
+                        <h2 class="section-title">
+                            <i class="fas fa-chart-line me-3"></i>
+                            {{ __('messages.etudes_title') }}
+                        </h2>
+                        <p class="section-subtitle">{{ __('messages.etudes_subtitle') }}</p>
+                    </div>
+                    <a href="{{ route('publications.index') }}?type=etude" class="btn btn-outline-primary">
+                        {{ __('messages.see_all') }} <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+
+                <div class="row g-4">
+                    @foreach($etudes as $publication)
+                        <div class="col-md-6 col-lg-4">
+                            <div class="guide-card">
+                                <div class="guide-header">
+                                    <div class="guide-icon">
+                                        <i class="{{ $publication->type_icon }}"></i>
+                                    </div>
+                                    @if($publication->is_featured)
+                                        <div class="guide-badge">
+                                            <span class="badge-important">{{ __('messages.featured') }}</span>
+                                        </div>
+                                    @endif
+                                </div>
+                                <h4 class="guide-title">
+                                    {{ $publication->title }}
+                                </h4>
+                                <p class="guide-description">
+                                    {{ $publication->short_description }}
+                                </p>
+                                <div class="guide-meta">
+                                    <span class="meta-item">
+                                        <i class="far fa-calendar me-1"></i>
+                                        {{ $publication->formatted_date }}
+                                    </span>
+                                    @if($publication->page_count)
+                                        <span class="meta-item">
+                                            <i class="far fa-file me-1"></i>
+                                            {{ $publication->page_count }} {{ __('messages.pages') }}
+                                        </span>
+                                    @endif
+                                </div>
+                                <div class="guide-footer">
+                                    <span class="guide-pages">
+                                        <i class="fas fa-download me-1"></i>
+                                        {{ $publication->downloads }} téléchargements
+                                    </span>
+                                    <div class="guide-actions">
+                                        <button class="btn btn-sm btn-outline-primary preview-btn" data-bs-toggle="modal"
+                                            data-bs-target="#previewModal{{ $publication->id }}">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                        <a href="{{ route('publications.download', $publication) }}" class="btn btn-sm btn-primary"
+                                            target="_blank">
+                                            <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
+
+    @if($guides->count() > 0)
+        <section class="guides-section py-5 bg-light" id="guides">
+            <div class="container">
+                <div class="section-header d-flex justify-content-between align-items-center mb-5">
+                    <div>
+                        <h2 class="section-title">
+                            <i class="fas fa-book me-3"></i>
+                            {{ __('messages.guides_title') }}
+                        </h2>
+                        <p class="section-subtitle">{{ __('messages.guides_subtitle') }}</p>
+                    </div>
+                    <a href="{{ route('publications.index') }}?type=guide" class="btn btn-outline-primary">
+                        {{ __('messages.see_all') }} <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+
+                <div class="row g-4">
+                    @foreach($guides as $publication)
+                        <div class="col-md-6 col-lg-4">
+                            <div class="guide-card">
+                                <div class="guide-header">
+                                    <div class="guide-icon">
+                                        <i class="{{ $publication->type_icon }}"></i>
+                                    </div>
+                                    @if($publication->created_at->diffInDays(now()) < 30)
+                                        <div class="guide-badge">
+                                            <span class="badge-new">{{ __('messages.new') }}</span>
+                                        </div>
+                                    @endif
+                                </div>
+                                <h4 class="guide-title">
+                                    {{ $publication->title }}
+                                </h4>
+                                <p class="guide-description">
+                                    {{ $publication->short_description }}
+                                </p>
+                                <div class="guide-meta">
+                                    <span class="meta-item">
+                                        <i class="far fa-calendar me-1"></i>
+                                        {{ $publication->formatted_date }}
+                                    </span>
+                                    @if($publication->page_count)
+                                        <span class="meta-item">
+                                            <i class="far fa-file me-1"></i>
+                                            {{ $publication->page_count }} pages
+                                        </span>
+                                    @endif
+                                </div>
+                                <div class="guide-footer">
+                                    <span class="guide-pages">
+                                        <i class="fas fa-download me-1"></i>
+                                        {{ $publication->downloads }} téléchargements
+                                    </span>
+                                    <div class="guide-actions">
+                                        <button class="btn btn-sm btn-outline-primary preview-btn" data-bs-toggle="modal"
+                                            data-bs-target="#previewModal{{ $publication->id }}">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                        <a href="{{ route('publications.download', $publication) }}" class="btn btn-sm btn-primary"
+                                            target="_blank">
+                                            <i class="fas fa-download"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
+
+    @if($brochures->count() > 0)
+        <section class="forms-section py-5" id="brochures">
+            <div class="container">
+                <div class="section-header mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-newspaper me-3"></i>
+                        {{ __('messages.brochures_title') }}
+                    </h2>
+                    <p class="section-subtitle">{{ __('messages.brochures_subtitle') }}</p>
+                </div>
+
+                <div class="row g-4">
+                    @foreach($brochures as $publication)
+                        <div class="col-md-6 col-lg-4">
+                            <div class="brochure-card">
+                                <div class="brochure-thumbnail">
+                                    <img src="{{ $publication->thumbnail_url }}"
+                                        alt="{{ $publication->thumbnail_alt ?? $publication->title }}" class="img-fluid rounded">
+                                </div>
+                                <div class="brochure-content">
+                                    <h4 class="brochure-title">
+                                        {{ $publication->title }}
+                                    </h4>
+                                    <p class="brochure-description">
+                                        {{ $publication->short_description }}
+                                    </p>
+                                    <div class="brochure-footer">
+                                        <div class="brochure-meta">
+                                            <span class="meta-item">
+                                                <i class="far fa-calendar me-1"></i>
+                                                {{ $publication->formatted_date }}
+                                            </span>
+                                            <span class="meta-item">
+                                                <i class="fas fa-weight-hanging me-1"></i>
+                                                {{ $publication->file_size }}
+                                            </span>
+                                        </div>
+                                        <div class="brochure-actions">
+                                            <button class="btn btn-sm btn-outline-primary preview-btn" data-bs-toggle="modal"
+                                                data-bs-target="#previewModal{{ $publication->id }}">
+                                                <i class="far fa-eye"></i>
+                                            </button>
+                                            <a href="{{ route('publications.download', $publication) }}"
+                                                class="btn btn-sm btn-primary" target="_blank">
+                                                <i class="fas fa-download"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
+
+    @if($autres->count() > 0)
+        <section class="regulations-section py-5 bg-light" id="autres">
+            <div class="container">
+                <div class="section-header mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-3"></i>
+                        {{ __('messages.autres_title') }}
+                    </h2>
+                    <p class="section-subtitle">{{ __('messages.autres_subtitle') }}</p>
+                </div>
+
+                <div class="accordion regulations-accordion" id="regulationsAccordion">
+                    @foreach($autres as $index => $publication)
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button {{ $index === 0 ? '' : 'collapsed' }}" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#publication{{ $publication->id }}">
+                                    <i class="{{ $publication->type_icon }} me-3"></i>
+                                    {{ $publication->title }}
+                                </button>
+                            </h3>
+                            <div id="publication{{ $publication->id }}"
+                                class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}"
+                                data-bs-parent="#regulationsAccordion">
+                                <div class="accordion-body">
+                                    <div class="regulation-info">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <h5>{{ $publication->title }}</h5>
+                                                <p class="mb-3">{{ $publication->description }}</p>
+                                                <div class="regulation-meta">
+                                                    <span class="meta-item">
+                                                        <i class="far fa-calendar me-1"></i>
+                                                        {{ $publication->formatted_date }}
+                                                    </span>
+                                                    @if($publication->page_count)
+                                                        <span class="meta-item">
+                                                            <i class="far fa-file me-1"></i>
+                                                            {{ $publication->page_count }} pages
+                                                        </span>
+                                                    @endif
+                                                    <span class="meta-item">
+                                                        <i class="fas fa-download me-1"></i>
+                                                        {{ $publication->downloads }} téléchargements
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 text-md-end">
+                                                <a href="{{ route('publications.download', $publication) }}" class="btn btn-primary"
+                                                    target="_blank">
+                                                    <i class="fas fa-download me-2"></i>
+                                                    Télécharger
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
+
+
+
+    <!-- Modals d'aperçu pour toutes les publications -->
+    @php
+        // Combiner toutes les publications pour les modals
+        $allPublications = $rapports->concat($etudes)->concat($guides)->concat($brochures)->concat($autres);
+    @endphp
+
+    @foreach($allPublications as $publication)
+        <div class="modal fade" id="previewModal{{ $publication->id }}" tabindex="-1"
+            aria-labelledby="previewModalLabel{{ $publication->id }}" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="previewModalLabel{{ $publication->id }}">
+                            <i class="{{ $publication->type_icon }} me-2"></i>
+                            {{ $publication->title }}
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="publication-thumbnail mb-3">
+                                    <img src="{{ $publication->thumbnail_url }}"
+                                        alt="{{ $publication->thumbnail_alt ?? $publication->title }}"
+                                        class="img-fluid rounded">
+                                </div>
+                                <div class="publication-info">
+                                    <div class="info-item mb-2">
+                                        <strong><i class="fas fa-tag me-2"></i>{{ __('messages.type') }}:</strong>
+                                        <span class="badge" style="background: {{ $publication->type_color }};">
+                                            {{ $publication->type_text }}
+                                        </span>
+                                    </div>
+                                    <div class="info-item mb-2">
+                                        <strong><i class="far fa-calendar me-2"></i>{{ __('messages.date') }}:</strong>
+                                        {{ $publication->formatted_date }}
+                                    </div>
+                                    <div class="info-item mb-2">
+                                        <strong><i class="fas fa-weight-hanging me-2"></i>{{ __('messages.size') }}:</strong>
+                                        {{ $publication->file_size }}
+                                    </div>
+                                    <div class="info-item mb-2">
+                                        <strong><i class="far fa-file me-2"></i>{{ __('messages.pages') }}:</strong>
+                                        {{ $publication->page_count ?? 'N/A' }}
+                                    </div>
+                                    <div class="info-item mb-2">
+                                        <strong><i class="fas fa-download me-2"></i>{{ __('messages.downloads') }}:</strong>
+                                        {{ $publication->downloads }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h6>{{ __('messages.description') }}</h6>
+                                <p class="mb-4">{{ $publication->description }}</p>
+
+                                @if($publication->period)
+                                    <h6>Période couverte</h6>
+                                    <p class="mb-4">{{ $publication->period }}</p>
+                                @endif
+
+                                @if($publication->author)
+                                    <h6>Auteur/Éditeur</h6>
+                                    <p class="mb-4">{{ $publication->author }}</p>
+                                @endif
+
+                                <h6>{{ __('messages.technical_info') }}</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-file-pdf me-2"></i>Format: {{ $publication->file_format }}</li>
+                                    <li><i class="fas fa-language me-2"></i>{{ __('messages.language') }}:
+                                        {{ strtoupper($publication->language) }}
+                                    </li>
+                                    @if($publication->isbn)
+                                        <li><i class="fas fa-barcode me-2"></i>ISBN: {{ $publication->isbn }}</li>
+                                    @endif
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <i class="fas fa-times me-1"></i>{{ __('messages.close') }}
+                        </button>
+                        <a href="{{ route('publications.download', $publication) }}" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-download me-1"></i>{{ __('messages.download_pdf') }}
+                        </a>
                     </div>
                 </div>
             </div>
-            @endforeach
         </div>
-    </div>
-</section>
-@endif
-
- 
-
-<!-- Modals d'aperçu pour toutes les publications -->
-@php
-    // Combiner toutes les publications pour les modals
-    $allPublications = $rapports->concat($etudes)->concat($guides)->concat($brochures)->concat($autres);
-@endphp
-
-@foreach($allPublications as $publication)
-<div class="modal fade" id="previewModal{{ $publication->id }}" tabindex="-1" aria-labelledby="previewModalLabel{{ $publication->id }}" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="previewModalLabel{{ $publication->id }}">
-                    <i class="{{ $publication->type_icon }} me-2"></i>
-                    {{ $publication->title }}
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="publication-thumbnail mb-3">
-                            <img src="{{ $publication->thumbnail_url }}" 
-                                 alt="{{ $publication->thumbnail_alt ?? $publication->title }}" 
-                                 class="img-fluid rounded">
-                        </div>
-                        <div class="publication-info">
-                            <div class="info-item mb-2">
-                                <strong><i class="fas fa-tag me-2"></i>Type:</strong>
-                                <span class="badge" style="background: {{ $publication->type_color }};">
-                                    {{ $publication->type_text }}
-                                </span>
-                            </div>
-                            <div class="info-item mb-2">
-                                <strong><i class="far fa-calendar me-2"></i>Date:</strong>
-                                {{ $publication->publication_date->format('d/m/Y') }}
-                            </div>
-                            <div class="info-item mb-2">
-                                <strong><i class="fas fa-weight-hanging me-2"></i>Taille:</strong>
-                                {{ $publication->file_size }}
-                            </div>
-                            <div class="info-item mb-2">
-                                <strong><i class="far fa-file me-2"></i>Pages:</strong>
-                                {{ $publication->page_count ?? 'N/A' }}
-                            </div>
-                            <div class="info-item mb-2">
-                                <strong><i class="fas fa-download me-2"></i>Téléchargements:</strong>
-                                {{ $publication->downloads }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <h6>Description</h6>
-                        <p class="mb-4">{{ $publication->description }}</p>
-                        
-                        @if($publication->period)
-                        <h6>Période couverte</h6>
-                        <p class="mb-4">{{ $publication->period }}</p>
-                        @endif
-                        
-                        @if($publication->author)
-                        <h6>Auteur/Éditeur</h6>
-                        <p class="mb-4">{{ $publication->author }}</p>
-                        @endif
-                        
-                        <h6>Informations techniques</h6>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-file-pdf me-2"></i>Format: {{ $publication->file_format }}</li>
-                            <li><i class="fas fa-language me-2"></i>Langue: {{ strtoupper($publication->language) }}</li>
-                            @if($publication->isbn)
-                            <li><i class="fas fa-barcode me-2"></i>ISBN: {{ $publication->isbn }}</li>
-                            @endif
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                    <i class="fas fa-times me-1"></i>Fermer
-                </button>
-                <a href="{{ route('publications.download', $publication) }}" 
-                   class="btn btn-primary" 
-                   target="_blank">
-                    <i class="fas fa-download me-1"></i>Télécharger le PDF
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-@endforeach
+    @endforeach
     <style>
         :root {
             --primary-color: #00632d;
@@ -1079,7 +1067,7 @@
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Animation des cartes au scroll
             const observerOptions = {
                 threshold: 0.1,
@@ -1106,7 +1094,7 @@
             // Boutons d'aperçu
             const previewButtons = document.querySelectorAll('.preview-btn');
             previewButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const card = this.closest('.publication-card');
                     const title = card.querySelector('.publication-title').textContent;
 
@@ -1128,7 +1116,7 @@
             // Bouton de téléchargement complet
             const downloadAllBtn = document.querySelector('.download-zone .btn-light');
             if (downloadAllBtn) {
-                downloadAllBtn.addEventListener('click', function() {
+                downloadAllBtn.addEventListener('click', function () {
                     const originalText = this.innerHTML;
                     this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Téléchargement...';
                     this.disabled = true;
@@ -1151,7 +1139,7 @@
 
             // Navigation ancrée
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
+                anchor.addEventListener('click', function (e) {
                     const targetId = this.getAttribute('href');
                     if (targetId !== '#') {
                         e.preventDefault();
@@ -1168,17 +1156,17 @@
         });
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Initialiser les tooltips
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
                 return new bootstrap.Tooltip(tooltipTriggerEl);
             });
 
             // Suivi des téléchargements
             const downloadLinks = document.querySelectorAll('.download-btn');
             downloadLinks.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     const publicationId = this.getAttribute('data-id');
                     if (publicationId) {
                         // Envoyer une requête pour incrémenter le compteur

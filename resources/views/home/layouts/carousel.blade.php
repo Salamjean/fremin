@@ -22,28 +22,26 @@
                                     </p>
                                     <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
                                         <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#">
-                                            <i class="fas fa-info-circle me-2"></i> Présentation
+                                            <i class="fas fa-info-circle me-2"></i> {{ __('messages.about') }}
                                         </a>
                                         <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#">
-                                            Nous contacter
+                                            {{ __('messages.contact') }}
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-5 animated fadeInRight">
                                 <div class="calrousel-img" style="object-fit: cover;">
-                                    <img src="{{ asset('storage/' . $carousel->image) }}" 
-                                         class="img-fluid w-100"
-                                         alt="{{ $carousel->image_alt ?? $carousel->title }}">
+                                    <img src="{{ asset('storage/' . $carousel->image) }}" class="img-fluid w-100"
+                                        alt="{{ $carousel->image_alt ?? $carousel->title }}">
                                 </div>
                             </div>
                         @else
                             <!-- Image à gauche, texte à droite -->
                             <div class="col-lg-5 animated fadeInLeft">
                                 <div class="calrousel-img">
-                                    <img src="{{ asset('storage/' . $carousel->image) }}" 
-                                         class="img-fluid w-100"
-                                         alt="{{ $carousel->image_alt ?? $carousel->title }}">
+                                    <img src="{{ asset('storage/' . $carousel->image) }}" class="img-fluid w-100"
+                                        alt="{{ $carousel->image_alt ?? $carousel->title }}">
                                 </div>
                             </div>
                             <div class="col-lg-7 animated fadeInRight">
@@ -61,10 +59,10 @@
                                     </p>
                                     <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
                                         <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#">
-                                            <i class="fas fa-handshake me-2"></i> Présentation
+                                            <i class="fas fa-handshake me-2"></i> {{ __('messages.about') }}
                                         </a>
                                         <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#">
-                                            Nous contacter
+                                            {{ __('messages.contact') }}
                                         </a>
                                     </div>
                                 </div>

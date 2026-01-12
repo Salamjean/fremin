@@ -18,7 +18,50 @@ class AdminDashboard extends Controller
 {
     public function dashboard()
     {
-        return view('admin.dashboard');
+        // Statistiques Publications
+        $pubStats = [
+            'total' => \App\Models\Publication::count(),
+            'published' => \App\Models\Publication::where('is_published', true)->count(),
+            'draft' => \App\Models\Publication::where('is_published', false)->count(),
+            'downloads' => \App\Models\Publication::sum('downloads'),
+            'views' => \App\Models\Publication::sum('views'),
+            'recent_downloads' => \App\Models\Publication::orderBy('downloads', 'desc')->take(5)->get()
+        ];
+
+        // Statistiques Programmes & Opportunités
+        $progStats = [
+            'total' => \App\Models\Program::count(),
+            'active' => \App\Models\Program::active()->count(),
+            'inactive' => \App\Models\Program::where('is_active', false)->count(),
+        ];
+
+        $oppStats = [
+            'total' => \App\Models\Opportunity::count(),
+            'active' => \App\Models\Opportunity::active()->count(),
+            'open' => \App\Models\Opportunity::where('status', 'open')->count(),
+            'closed' => \App\Models\Opportunity::where('status', 'closed')->count(),
+        ];
+
+        // Statistiques Actualités
+        $newsStats = [
+            'total' => \App\Models\NewsArticle::count(),
+            'active' => \App\Models\NewsArticle::where('is_active', true)->count(),
+            'events' => \App\Models\Event::count(),
+        ];
+
+        // Données pour les graphiques
+        $charts = [
+            'pubTypes' => \App\Models\Publication::selectRaw('type, count(*) as count')->groupBy('type')->get(),
+            'topPubs' => \App\Models\Publication::orderBy('downloads', 'desc')->take(7)->get(),
+            'oppStatus' => \App\Models\Opportunity::selectRaw('status, count(*) as count')->groupBy('status')->get(),
+            'downloadsPeriod' => \App\Models\DownloadLog::selectRaw('DATE(created_at) as date, count(*) as count')
+                ->where('created_at', '>=', now()->subDays(30))
+                ->groupBy('date')
+                ->orderBy('date')
+                ->get(),
+        ];
+
+        return view('admin.dashboard', compact('pubStats', 'progStats', 'oppStats', 'newsStats', 'charts'));
     }
 
     public function logout()

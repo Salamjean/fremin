@@ -3,11 +3,11 @@
     <!-- Header Start -->
     <div class="container-fluid bg-breadcrumb">
         <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contactez - nous</h4>
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">{{ __('messages.contact_us') }}</h4>
             <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                <li class="breadcrumb-item"><a href="{{ route('home') }}">Accueil</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('messages.home') }}</a></li>
                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active text-success">Contact</li>
+                <li class="breadcrumb-item active text-success">{{ __('messages.contact') }}</li>
             </ol>
         </div>
     </div>
@@ -18,8 +18,8 @@
     <div class="container-fluid contact bg-light py-5">
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-success">Contactez - nous</h4>
-                <h1 class="display-4 mb-4">Si vous avez des commentaires, partagez-les maintenant.</h1>
+                <h4 class="text-success">{{ __('messages.contact_us') }}</h4>
+                <h1 class="display-4 mb-4">{{ __('messages.contact_hero_title') }}</h1>
             </div>
             <div class="row g-5">
                 <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
@@ -31,57 +31,57 @@
                 </div>
                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
                     <div>
-                        <h4 class="text-success">Envoyez votre message</h4>
+                        <h4 class="text-success">{{ __('messages.send_message') }}</h4>
                         <p class="mb-4">
-                            Remplissez le formulaire ci-dessous pour toute question ou demande de renseignements. Nous sommes
-                            impatients de vous entendre !
+                            {{ __('messages.contact_desc') }}
                         </p>
                         <form>
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
                                         <input type="text" class="form-control border-0" id="name"
-                                            placeholder="Nom complet">
-                                        <label for="name">Nom complet</label>
+                                            placeholder="{{ __('messages.full_name') }}">
+                                        <label for="name">{{ __('messages.full_name') }}</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
                                         <input type="email" class="form-control border-0" id="email"
-                                            placeholder="Adresse mail">
-                                        <label for="email">Adresse mail</label>
+                                            placeholder="{{ __('messages.email_address') }}">
+                                        <label for="email">{{ __('messages.email_address') }}</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
                                         <input type="phone" class="form-control border-0" id="phone"
-                                            placeholder="Téléphone">
-                                        <label for="phone">Téléphone</label>
+                                            placeholder="{{ __('messages.phone') }}">
+                                        <label for="phone">{{ __('messages.phone') }}</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
                                         <input type="text" class="form-control border-0" id="adresse"
-                                            placeholder="Adresse Postale">
-                                        <label for="adresse">Adresse postale</label>
+                                            placeholder="{{ __('messages.postal_address') }}">
+                                        <label for="adresse">{{ __('messages.postal_address') }}</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <input type="text" class="form-control border-0" id="subject"
-                                            placeholder="Sujet">
-                                        <label for="subject">Sujet</label>
+                                            placeholder="{{ __('messages.subject') }}">
+                                        <label for="subject">{{ __('messages.subject') }}</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 120px"></textarea>
+                                        <textarea class="form-control border-0" placeholder="Leave a message here"
+                                            id="message" style="height: 120px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
 
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3">Envoyez votre message</button>
+                                    <button class="btn btn-primary w-100 py-3">{{ __('messages.send_message') }}</button>
                                 </div>
                             </div>
                         </form>
@@ -96,7 +96,7 @@
                                         <i class="fas fa-map-marker-alt fa-2x"></i>
                                     </div>
                                     <div>
-                                        <h4>Adresse</h4>
+                                        <h4>{{ __('messages.address') }}</h4>
                                         <p class="mb-0">Côte d'Ivoire, Abidjan</p>
                                     </div>
                                 </div>
@@ -107,8 +107,8 @@
                                         <i class="fas fa-envelope fa-2x"></i>
                                     </div>
                                     <div>
-                                        <h4>E-mail</h4>
-                                        <p class="mb-0">info@example.com</p>
+                                        <h4>{{ __('messages.email') }}</h4>
+                                        <p class="mb-0">info@fremin.ci</p>
                                     </div>
                                 </div>
                             </div>
@@ -118,8 +118,8 @@
                                         <i class="fa fa-phone-alt fa-2x"></i>
                                     </div>
                                     <div>
-                                        <h4>Téléphone</h4>
-                                        <p class="mb-0">(+225) 27 45 678 901</p>
+                                        <h4>{{ __('messages.phone') }}</h4>
+                                        <p class="mb-0">+225 27 22 44 55 66</p>
                                     </div>
                                 </div>
                             </div>

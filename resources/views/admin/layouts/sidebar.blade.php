@@ -18,8 +18,7 @@
                     </a>
                 </div>
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
-                        data-target="ui-sub-menu">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-menu">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">dashboard</i>
                         Accueil
@@ -34,15 +33,14 @@
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{route('admin.team.index')}}">
-                                Équipe
+                                    Équipe
                                 </a>
                             </div>
                         </nav>
                     </div>
                 </div>
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
-                        data-target="ui-sub-hero">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-hero">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">dashboard</i>
                         Présentation
@@ -57,12 +55,12 @@
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{ route('admin.about.index') }}">
-                                Présentation
+                                    Présentation
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{ route('admin.gallery.index') }}">
-                                Galerie
+                                    Galerie
                                 </a>
                             </div>
                         </nav>
@@ -83,8 +81,7 @@
                     </a>
                 </div> --}}
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
-                        data-target="ui-sub-actu">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-actu">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">dashboard</i>
                         Actualités
@@ -133,6 +130,30 @@
                             <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="#">
                                     Evenements
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-prog">
+                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                            aria-hidden="true">assignment</i>
+                        Programmes
+                        <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+                    </a>
+                    <div class="mdc-expansion-panel" id="ui-sub-prog">
+                        <nav class="mdc-list mdc-drawer-subprog">
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.programs.index') }}">
+                                    Nos Programmes
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link"
+                                    href="{{ route('admin.programs.index', ['tab' => 'opportunities']) }}">
+                                    Appels en Cours
                                 </a>
                             </div>
                         </nav>

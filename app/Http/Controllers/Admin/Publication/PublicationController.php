@@ -277,10 +277,18 @@ class PublicationController extends Controller
         // Incrémenter le compteur de téléchargements
         $publication->incrementDownloads();
 
+        // Créer un log de téléchargement
+        \App\Models\DownloadLog::create([
+            'publication_id' => $publication->id,
+            'ip_address' => request()->ip(),
+            'user_agent' => request()->userAgent()
+        ]);
+
         $filePath = storage_path('app/public/' . $publication->file_path);
 
         if (!file_exists($filePath)) {
-            return redirect()->back()->with('error', 'Le fichier n\'existe pas.');
+            Log::error('Fichier non trouvé pour le téléchargement', ['path' => $filePath, 'id' => $publication->id]);
+            return redirect()->back()->with('error', 'Le fichier n\'existe pas sur le serveur.');
         }
 
         return response()->download($filePath, $publication->file_name);

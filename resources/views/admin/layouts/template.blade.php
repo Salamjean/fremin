@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +21,9 @@
   <link rel="shortcut icon" href="{{asset('assets/img/logo_fremin.jpg')}}" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
-<script src="{{asset('assetsPoster/assets/js/preloader.js')}}"></script>
+  <script src="{{asset('assetsPoster/assets/js/preloader.js')}}"></script>
   <div class="body-wrapper">
     <!-- partial:partials/_sidebar.html -->
     @include('admin.layouts.sidebar')
@@ -51,5 +52,28 @@
   <!-- Custom js for this page-->
   <script src="{{asset('assetsPoster/assets/js/dashboard.js')}}"></script>
   <!-- End custom js for this page-->
+
+  @if(session('success'))
+    <script>
+      Swal.fire({
+        icon: 'success',
+        title: 'Succès',
+        text: "{{ session('success') }}",
+        confirmButtonColor: '#06634e'
+      });
+    </script>
+  @endif
+
+  @if(session('error'))
+    <script>
+      Swal.fire({
+        icon: 'error',
+        title: 'Erreur',
+        text: "{{ session('error') }}",
+        confirmButtonColor: '#06634e'
+      });
+    </script>
+  @endif
 </body>
-</html> 
+
+</html>
