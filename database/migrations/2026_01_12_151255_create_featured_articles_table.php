@@ -21,7 +21,7 @@ return new class extends Migration {
             $table->integer('views')->default(0);
             $table->string('title');
             $table->text('excerpt');
-            $table->string('read_more_text')->default('Lire l\'article complet');
+            $table->string('read_more_text')->default('Lire l’article complet');
             $table->string('read_more_link')->nullable();
             $table->integer('sort_order')->default(0);
             $table->boolean('is_active')->default(true);

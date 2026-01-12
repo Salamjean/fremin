@@ -26,7 +26,7 @@ return new class extends Migration {
             $table->boolean('is_event')->default(false);
             $table->date('event_date')->nullable();
             $table->integer('event_registrations')->default(0);
-            $table->string('event_button_text')->default('S\'inscrire');
+            $table->string('event_button_text')->default('S’inscrire');
             $table->string('event_button_icon')->default('fas fa-calendar-plus');
             $table->integer('sort_order')->default(0);
             $table->boolean('is_active')->default(true);
