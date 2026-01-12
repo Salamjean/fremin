@@ -26,7 +26,7 @@ class NewsArticle extends Model
         'event_registrations',
         'event_button_text',
         'event_button_icon',
-        'order',
+        'sort_order',
         'is_active'
     ];
 
@@ -35,7 +35,7 @@ class NewsArticle extends Model
         'is_event' => 'boolean',
         'views' => 'integer',
         'event_registrations' => 'integer',
-        'order' => 'integer',
+        'sort_order' => 'integer',
         'date' => 'date',
         'event_date' => 'date'
     ];
@@ -49,23 +49,23 @@ class NewsArticle extends Model
     // Scope pour trier par ordre
     public function scopeOrdered($query)
     {
-        return $query->orderBy('order', 'asc')->orderBy('date', 'desc');
+        return $query->orderBy('sort_order', 'asc')->orderBy('date', 'desc');
     }
 
     // Scope pour les événements à venir
     public function scopeUpcomingEvents($query)
     {
         return $query->where('is_event', true)
-                     ->where('event_date', '>=', now())
-                     ->orderBy('event_date', 'asc');
+            ->where('event_date', '>=', now())
+            ->orderBy('event_date', 'asc');
     }
 
     // Scope pour les articles récents
     public function scopeRecent($query, $limit = 6)
     {
         return $query->where('is_event', false)
-                     ->orderBy('date', 'desc')
-                     ->limit($limit);
+            ->orderBy('date', 'desc')
+            ->limit($limit);
     }
 
     // Formatage de la date

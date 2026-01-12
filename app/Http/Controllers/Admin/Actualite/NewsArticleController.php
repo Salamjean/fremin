@@ -12,7 +12,7 @@ class NewsArticleController extends Controller
     // Afficher tous les articles
     public function index()
     {
-        $articles = NewsArticle::orderBy('order')->get();
+        $articles = NewsArticle::orderBy('sort_order')->get();
         return view('admin.actualite.news.index', compact('articles'));
     }
 
@@ -42,7 +42,7 @@ class NewsArticleController extends Controller
             'event_registrations' => 'nullable|integer|min:0',
             'event_button_text' => 'nullable|string|max:50',
             'event_button_icon' => 'nullable|string|max:50',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
@@ -91,7 +91,7 @@ class NewsArticleController extends Controller
             'event_registrations' => 'nullable|integer|min:0',
             'event_button_text' => 'nullable|string|max:50',
             'event_button_icon' => 'nullable|string|max:50',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 

@@ -357,7 +357,7 @@
             color: var(--white);
         }
 
-        .member-order {
+        .member-sort-order {
             position: absolute;
             top: 1rem;
             left: 1rem;
@@ -374,7 +374,7 @@
             transition: var(--transition);
         }
 
-        .member-card:hover .member-order {
+        .member-card:hover .member-sort-order {
             background: var(--primary-dark);
             color: var(--white);
             transform: scale(1.1);
@@ -679,7 +679,7 @@
                 <!-- Notifications -->
                 @if (session('success'))
                     <script>
-                        document.addEventListener('DOMContentLoaded', function() {
+                        document.addEventListener('DOMContentLoaded', function () {
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Succès !',
@@ -699,7 +699,7 @@
 
                 @if (session('error'))
                     <script>
-                        document.addEventListener('DOMContentLoaded', function() {
+                        document.addEventListener('DOMContentLoaded', function () {
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Erreur !',
@@ -748,7 +748,7 @@
                     <div class="members-grid" id="membersGrid">
                         @foreach ($teamMembers as $member)
                             <div class="member-card" data-status="{{ $member->is_active ? 'active' : 'inactive' }}"
-                                data-order="{{ $member->order }}" data-name="{{ strtolower($member->name) }}">
+                                data-sort-order="{{ $member->sort_order }}" data-name="{{ strtolower($member->name) }}">
 
                                 <!-- En-tête de la carte -->
                                 <div class="member-card-header">
@@ -765,14 +765,13 @@
                                     <div class="image-overlay"></div>
 
                                     <!-- Badge de statut -->
-                                    <div
-                                        class="member-status {{ $member->is_active ? 'status-active' : 'status-inactive' }}">
+                                    <div class="member-status {{ $member->is_active ? 'status-active' : 'status-inactive' }}">
                                         {{ $member->is_active ? 'Actif' : 'Inactif' }}
                                     </div>
 
                                     <!-- Numéro d'ordre -->
-                                    <div class="member-order">
-                                        {{ $member->order }}
+                                    <div class="member-sort-order">
+                                        {{ $member->sort_order }}
                                     </div>
                                 </div>
 
@@ -801,8 +800,8 @@
                                                 <i class="fas fa-user"></i>
                                             </a>
                                             @if ($member->linkedin_url)
-                                                <a href="{{ $member->linkedin_url }}" target="_blank"
-                                                    class="social-link linkedin" title="Voir le profil LinkedIn">
+                                                <a href="{{ $member->linkedin_url }}" target="_blank" class="social-link linkedin"
+                                                    title="Voir le profil LinkedIn">
                                                     <i class="fab fa-linkedin-in"></i>
                                                 </a>
                                             @endif
@@ -820,8 +819,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn-action btn-delete"
-                                                    onclick="return confirmDelete('{{ $member->name }}')"
-                                                    title="Supprimer">
+                                                    onclick="return confirmDelete('{{ $member->name }}')" title="Supprimer">
                                                     <i class="fas fa-trash"></i>
                                                     Supprimer
                                                 </button>
@@ -860,7 +858,7 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Filtres dynamiques
             const statusFilter = document.getElementById('statusFilter');
             const sortFilter = document.getElementById('sortFilter');
@@ -894,9 +892,9 @@
                 filteredCards.sort((a, b) => {
                     switch (sortBy) {
                         case 'order':
-                            return parseInt(a.dataset.order) - parseInt(b.dataset.order);
+                            return parseInt(a.dataset.sortOrder) - parseInt(b.dataset.sortOrder);
                         case 'order-desc':
-                            return parseInt(b.dataset.order) - parseInt(a.dataset.order);
+                            return parseInt(b.dataset.sortOrder) - parseInt(a.dataset.sortOrder);
                         case 'name':
                             return a.dataset.name.localeCompare(b.dataset.name);
                         case 'name-desc':
@@ -930,7 +928,7 @@
             if (statusFilter) statusFilter.addEventListener('change', filterAndSortMembers);
             if (sortFilter) sortFilter.addEventListener('change', filterAndSortMembers);
             if (searchInput) {
-                searchInput.addEventListener('input', function() {
+                searchInput.addEventListener('input', function () {
                     clearTimeout(this.searchTimeout);
                     this.searchTimeout = setTimeout(filterAndSortMembers, 300);
                 });
@@ -939,7 +937,7 @@
             // Animation des cartes au survol
             memberCards.forEach(card => {
                 const image = card.querySelector('.member-image');
-                const orderBadge = card.querySelector('.member-order');
+                const orderBadge = card.querySelector('.member-sort-order');
 
                 card.addEventListener('mouseenter', () => {
                     card.style.zIndex = '10';
@@ -951,10 +949,10 @@
             });
 
             // Confirmation de suppression améliorée
-            window.confirmDelete = function(memberName) {
+            window.confirmDelete = function (memberName) {
                 return confirm(
                     `⚠️ Suppression du membre\n\nÊtes-vous sûr de vouloir supprimer "${memberName}" ?\n\nCette action supprimera également la photo associée et est irréversible.`
-                    );
+                );
             };
 
             // Initialisation de l'animation des cartes

@@ -12,7 +12,7 @@ class GalleryController extends Controller
     // Afficher toutes les images de la galerie
     public function index()
     {
-        $galleries = Gallery::orderBy('order')->get();
+        $galleries = Gallery::orderBy('sort_order')->get();
         return view('admin.presentation.gallery.index', compact('galleries'));
     }
 
@@ -31,7 +31,7 @@ class GalleryController extends Controller
             'image_alt' => 'nullable|string|max:255',
             'caption_title' => 'required|string|max:100',
             'caption_text' => 'nullable|string|max:255',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
@@ -66,7 +66,7 @@ class GalleryController extends Controller
             'image_alt' => 'nullable|string|max:255',
             'caption_title' => 'required|string|max:100',
             'caption_text' => 'nullable|string|max:255',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 

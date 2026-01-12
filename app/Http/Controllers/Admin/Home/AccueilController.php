@@ -32,12 +32,12 @@ class AccueilController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'image_alt' => 'nullable|string|max:255',
             'layout' => 'required|in:left,right',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
         $data = $request->all();
-        
+
         // Gestion de l'upload de l'image
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('carousels', 'public');
@@ -68,19 +68,19 @@ class AccueilController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'image_alt' => 'nullable|string|max:255',
             'layout' => 'required|in:left,right',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
         $data = $request->all();
-        
+
         // Gestion de l'upload de la nouvelle image
         if ($request->hasFile('image')) {
             // Supprimer l'ancienne image si elle existe
             if ($carousel->image && Storage::disk('public')->exists($carousel->image)) {
                 Storage::disk('public')->delete($carousel->image);
             }
-            
+
             $path = $request->file('image')->store('carousels', 'public');
             $data['image'] = $path;
         }

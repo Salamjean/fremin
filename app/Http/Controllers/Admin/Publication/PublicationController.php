@@ -53,7 +53,7 @@ class PublicationController extends Controller
                 'is_published' => 'boolean',
                 'is_featured' => 'boolean',
                 'is_active' => 'boolean',
-                'order' => 'nullable|integer'
+                'sort_order' => 'nullable|integer'
             ]);
 
             Log::info('Validation réussie', $validated);
@@ -177,7 +177,7 @@ class PublicationController extends Controller
             'is_published' => 'boolean',
             'is_featured' => 'boolean',
             'is_active' => 'boolean',
-            'order' => 'nullable|integer'
+            'sort_order' => 'nullable|integer'
         ]);
 
         // Gestion du fichier PDF

@@ -591,16 +591,16 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="order">
+                        <label class="form-label" for="sort_order">
                             <i class="fas fa-sort-numeric-down"></i>
                             Ordre d'affichage
                             <span class="required">*</span>
                         </label>
-                        <input type="number" class="form-control @error('order') is-invalid @enderror"
-                            id="order" name="order"
-                            value="{{ old('order', $gallery->order ?? 0) }}" required min="0" max="100">
+                        <input type="number" class="form-control @error('sort_order') is-invalid @enderror"
+                            id="sort_order" name="sort_order"
+                            value="{{ old('sort_order', $gallery->sort_order ?? 0) }}" required min="0" max="100">
                         <div class="form-hint">Détermine la position dans la galerie (0 = premier)</div>
-                        @error('order')
+                        @error('sort_order')
                             <span class="error-message">{{ $message }}</span>
                         @enderror
                     </div>
@@ -763,7 +763,7 @@
             }
 
             // Validation en temps réel
-            const requiredFields = ['title', 'caption_title', 'order'];
+            const requiredFields = ['title', 'caption_title', 'sort_order'];
 
             requiredFields.forEach(fieldName => {
                 const field = document.getElementById(fieldName);

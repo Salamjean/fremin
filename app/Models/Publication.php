@@ -33,7 +33,7 @@ class Publication extends Model
         'is_active',
         'downloads',
         'views',
-        'order'
+        'sort_order'
     ];
 
     protected $casts = [
@@ -44,7 +44,7 @@ class Publication extends Model
         'page_count' => 'integer',
         'downloads' => 'integer',
         'views' => 'integer',
-        'order' => 'integer'
+        'sort_order' => 'integer'
     ];
 
     protected static function boot()
@@ -68,24 +68,24 @@ class Publication extends Model
     public function scopePublished($query)
     {
         return $query->where('is_published', true)
-                    ->where('is_active', true);
+            ->where('is_active', true);
     }
 
     // Scope pour les publications en vedette
     public function scopeFeatured($query)
     {
         return $query->published()
-                    ->where('is_featured', true)
-                    ->orderBy('publication_date', 'desc');
+            ->where('is_featured', true)
+            ->orderBy('publication_date', 'desc');
     }
 
     // Scope pour les publications récentes
     public function scopeRecent($query, $limit = 6)
     {
         return $query->published()
-                    ->orderBy('publication_date', 'desc')
-                    ->orderBy('created_at', 'desc')
-                    ->take($limit);
+            ->orderBy('publication_date', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->take($limit);
     }
 
     // Scope par type
@@ -98,17 +98,17 @@ class Publication extends Model
     public static function getActive()
     {
         return self::published()
-                  ->orderBy('publication_date', 'desc')
-                  ->orderBy('order')
-                  ->get();
+            ->orderBy('publication_date', 'desc')
+            ->orderBy('sort_order')
+            ->get();
     }
 
     // Méthode pour obtenir les publications en vedette
     public static function getFeatured($limit = 3)
     {
         return self::featured()
-                  ->take($limit)
-                  ->get();
+            ->take($limit)
+            ->get();
     }
 
     // Méthode pour obtenir les publications récentes
@@ -121,7 +121,7 @@ class Publication extends Model
     public function getFormattedDateAttribute()
     {
         return Carbon::parse($this->publication_date)
-                    ->translatedFormat('F Y');
+            ->translatedFormat('F Y');
     }
 
     // Méthode pour obtenir l'icône selon le type

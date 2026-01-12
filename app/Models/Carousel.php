@@ -16,13 +16,13 @@ class Carousel extends Model
         'image',
         'image_alt',
         'layout',
-        'order',
+        'sort_order',
         'is_active'
     ];
 
     protected $casts = [
         'is_active' => 'boolean',
-        'order' => 'integer'
+        'sort_order' => 'integer'
     ];
 
     // Scope pour les carousels actifs
@@ -34,6 +34,6 @@ class Carousel extends Model
     // Scope pour trier par ordre
     public function scopeOrdered($query)
     {
-        return $query->orderBy('order', 'asc');
+        return $query->orderBy('sort_order', 'asc');
     }
 }

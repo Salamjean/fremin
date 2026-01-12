@@ -12,7 +12,7 @@ class FeaturedArticleController extends Controller
     // Afficher tous les articles
     public function index()
     {
-        $articles = FeaturedArticle::orderBy('order')->get();
+        $articles = FeaturedArticle::orderBy('sort_order')->get();
         return view('admin.actualite.featured-articles.index', compact('articles'));
     }
 
@@ -37,12 +37,12 @@ class FeaturedArticleController extends Controller
             'excerpt' => 'required|string|max:500',
             'read_more_text' => 'nullable|string|max:100',
             'read_more_link' => 'nullable|url|max:255',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
         $data = $request->all();
-        
+
         // Gestion de l'upload de l'image
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('featured-articles', 'public');
@@ -79,19 +79,19 @@ class FeaturedArticleController extends Controller
             'excerpt' => 'required|string|max:500',
             'read_more_text' => 'nullable|string|max:100',
             'read_more_link' => 'nullable|url|max:255',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
         $data = $request->all();
-        
+
         // Gestion de l'upload de la nouvelle image
         if ($request->hasFile('image')) {
             // Supprimer l'ancienne image si elle existe
             if ($featuredArticle->image && Storage::disk('public')->exists($featuredArticle->image)) {
                 Storage::disk('public')->delete($featuredArticle->image);
             }
-            
+
             $path = $request->file('image')->store('featured-articles', 'public');
             $data['image'] = $path;
         }

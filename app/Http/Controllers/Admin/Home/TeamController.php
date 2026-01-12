@@ -31,12 +31,12 @@ class TeamController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'image_alt' => 'nullable|string|max:255',
             'linkedin_url' => 'nullable|url|max:255',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
         $data = $request->all();
-        
+
         // Gestion de l'upload de l'image
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('team', 'public');
@@ -66,19 +66,19 @@ class TeamController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'image_alt' => 'nullable|string|max:255',
             'linkedin_url' => 'nullable|url|max:255',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
         $data = $request->all();
-        
+
         // Gestion de l'upload de la nouvelle image
         if ($request->hasFile('image')) {
             // Supprimer l'ancienne image si elle existe
             if ($teamMember->image && Storage::disk('public')->exists($teamMember->image)) {
                 Storage::disk('public')->delete($teamMember->image);
             }
-            
+
             $path = $request->file('image')->store('team', 'public');
             $data['image'] = $path;
         }

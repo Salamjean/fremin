@@ -32,12 +32,12 @@ class AboutSection extends Model
         'feature2_text',
         'feature2_icon',
         'is_active',
-        'order'
+        'sort_order'
     ];
 
     protected $casts = [
         'is_active' => 'boolean',
-        'order' => 'integer'
+        'sort_order' => 'integer'
     ];
 
     // Scope pour les sections actives
@@ -49,7 +49,7 @@ class AboutSection extends Model
     // Scope pour trier par ordre
     public function scopeOrdered($query)
     {
-        return $query->orderBy('order', 'asc');
+        return $query->orderBy('sort_order', 'asc');
     }
 
     // Récupérer la section active (normalement il n'y en a qu'une)

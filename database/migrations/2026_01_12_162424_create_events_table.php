@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -14,14 +13,14 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->date('event_date'); 
+            $table->date('event_date');
             $table->time('start_time');
-            $table->time('end_time')->nullable(); 
-            $table->string('location'); 
+            $table->time('end_time')->nullable();
+            $table->string('location');
             $table->enum('location_type', ['in_person', 'online', 'hybrid'])->default('in_person');
             $table->string('month_short');
-            $table->string('month_full')->nullable(); 
-            $table->integer('day'); 
+            $table->string('month_full')->nullable();
+            $table->integer('day');
             $table->integer('year');
             $table->string('image')->nullable();
             $table->string('image_alt')->nullable();
@@ -31,7 +30,7 @@ return new class extends Migration
             $table->string('button_class')->default('btn-primary');
             $table->boolean('is_active')->default(true);
             $table->boolean('is_featured')->default(false);
-            $table->integer('order')->default(0);
+            $table->integer('sort_order')->default(0);
             $table->timestamps();
         });
     }

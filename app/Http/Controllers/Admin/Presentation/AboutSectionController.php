@@ -12,7 +12,7 @@ class AboutSectionController extends Controller
     // Afficher toutes les sections about
     public function index()
     {
-        $aboutSections = AboutSection::orderBy('order')->get();
+        $aboutSections = AboutSection::orderBy('sort_order')->get();
         return view('admin.presentation.about.index', compact('aboutSections'));
     }
 
@@ -47,7 +47,7 @@ class AboutSectionController extends Controller
             'feature2_title' => 'nullable|string|max:100',
             'feature2_text' => 'nullable|string|max:255',
             'feature2_icon' => 'nullable|string|max:50',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
@@ -98,7 +98,7 @@ class AboutSectionController extends Controller
             'feature2_title' => 'nullable|string|max:100',
             'feature2_text' => 'nullable|string|max:255',
             'feature2_icon' => 'nullable|string|max:50',
-            'order' => 'required|integer',
+            'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 

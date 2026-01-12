@@ -21,14 +21,14 @@ class FeaturedArticle extends Model
         'excerpt',
         'read_more_text',
         'read_more_link',
-        'order',
+        'sort_order',
         'is_active'
     ];
 
     protected $casts = [
         'is_active' => 'boolean',
         'views' => 'integer',
-        'order' => 'integer',
+        'sort_order' => 'integer',
         'publication_date' => 'date'
     ];
 
@@ -41,7 +41,7 @@ class FeaturedArticle extends Model
     // Scope pour trier par ordre
     public function scopeOrdered($query)
     {
-        return $query->orderBy('order', 'asc');
+        return $query->orderBy('sort_order', 'asc');
     }
 
     // Scope pour les articles récents

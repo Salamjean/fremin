@@ -29,7 +29,7 @@ class Event extends Model
         'button_class',
         'is_active',
         'is_featured',
-        'order'
+        'sort_order'
     ];
 
     protected $casts = [

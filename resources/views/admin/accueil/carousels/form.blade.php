@@ -812,17 +812,17 @@
                             </div>
 
                             <div class="config-item">
-                                <label for="order">
+                                <label for="sort_order">
                                     <i class="fas fa-sort-numeric-down"></i>
                                     Ordre d'affichage
                                     <span class="required">*</span>
                                 </label>
                                 <div class="input-wrapper">
                                     <input type="number" 
-                                           class="form-control @error('order') is-invalid @enderror" 
-                                           id="order" 
-                                           name="order" 
-                                           value="{{ old('order', $carousel->order ?? 0) }}" 
+                                           class="form-control @error('sort_order') is-invalid @enderror" 
+                                           id="sort_order" 
+                                           name="sort_order" 
+                                           value="{{ old('sort_order', $carousel->sort_order ?? 0) }}" 
                                            required 
                                            min="0"
                                            placeholder="0">
@@ -831,7 +831,7 @@
                                     </span>
                                 </div>
                                 <div class="hint">Détermine la position dans le carousel</div>
-                                @error('order')
+                                @error('sort_order')
                                     <span class="error-message">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -988,7 +988,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const previewImage = document.getElementById('previewImage');
     const toggleSwitch = document.getElementById('is_active');
     const toggleLabel = toggleSwitch?.closest('.toggle-group')?.querySelector('.toggle-label');
-    const orderInput = document.getElementById('order');
+    const orderInput = document.getElementById('sort_order');
     const orderDisplay = document.querySelector('.order-display .fs-4');
 
     // Drag and drop pour l'image

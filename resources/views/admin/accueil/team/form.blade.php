@@ -762,22 +762,22 @@
 
                                 <div class="form-fields-grid">
                                     <div class="form-group">
-                                        <label class="form-label" for="order">
+                                        <label class="form-label" for="sort_order">
                                             <i class="fas fa-sort-numeric-down"></i>
                                             Ordre d'affichage
                                             <span class="required">*</span>
                                         </label>
                                         <div class="input-wrapper">
-                                            <input type="number" class="form-control @error('order') is-invalid @enderror"
-                                                id="order" name="order"
-                                                value="{{ old('order', $teamMember->order ?? 0) }}" required min="0"
+                                            <input type="number" class="form-control @error('sort_order') is-invalid @enderror"
+                                                id="sort_order" name="sort_order"
+                                                value="{{ old('sort_order', $teamMember->sort_order ?? 0) }}" required min="0"
                                                 placeholder="0">
                                             <span class="input-icon">
                                                 <i class="fas fa-sort-numeric-down"></i>
                                             </span>
                                         </div>
                                         <div class="form-hint">Détermine la position dans la liste des membres</div>
-                                        @error('order')
+                                        @error('sort_order')
                                             <span class="error-message">{{ $message }}</span>
                                         @enderror
                                     </div>
@@ -964,7 +964,7 @@
             }
 
             // Validation en temps réel
-            const requiredFields = ['name', 'position', 'order'];
+            const requiredFields = ['name', 'position', 'sort_order'];
 
             requiredFields.forEach(fieldName => {
                 const field = document.getElementById(fieldName);

@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -14,13 +13,13 @@ return new class extends Migration
         Schema::create('carousels', function (Blueprint $table) {
             $table->id();
             $table->string('subtitle')->nullable();
-            $table->string('title'); 
+            $table->string('title');
             $table->text('description');
             $table->string('image');
-            $table->string('image_alt')->nullable(); 
-            $table->enum('layout', ['left', 'right'])->default('left'); 
-            $table->integer('order')->default(0); 
-            $table->boolean('is_active')->default(true); 
+            $table->string('image_alt')->nullable();
+            $table->enum('layout', ['left', 'right'])->default('left');
+            $table->integer('sort_order')->default(0);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
