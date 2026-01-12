@@ -1,225 +1,249 @@
 @extends('home.layouts.template')
 @section('content')
     <!-- Hero Section -->
-    <section class="fremin-hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-title">
-                        <span class="text-primary">FREMIN</span><br>
-                        Fonds de Restructuration et de Mise à Niveau des Entreprises Industrielles
-                    </h1>
-                    <p class="hero-subtitle">
-                        Accompagnons la compétitivité du secteur industriel ivoirien
-                    </p>
-                    <div class="hero-buttons mt-4">
-                        <a href="#missions" class="btn btn-primary me-3">
-                            <i class="fas fa-bullseye me-2"></i>Nos Missions
-                        </a>
-                        <a href="#programmes" class="btn btn-outline-primary">
-                            <i class="fas fa-handshake me-2"></i>Nos Programmes
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="hero-image-container">
-                        <img src="{{ asset('assets/img/groupe.jpeg') }}" alt="Industrie Ivoirienne"
-                            class="hero-image">
-                        <div class="floating-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">150+</span>
-                                <span class="stat-label">Entreprises accompagnées</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @php
+        $hero = App\Models\HeroSection::getActive();
+    @endphp
 
-    <!-- Présentation Section -->
-    <section class="presentation-section py-5" id="presentation">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="section-title">Qui sommes-nous ?</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle mt-3">Structure placée sous la tutelle du Ministère du Commerce et de l'Industrie
-                </p>
-            </div>
-
-            <div class="row mb-5">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="image-card">
-                        <img src="{{ asset('assets/img/fremin9.jpeg') }}" alt="FREMIN Institution"
-                            class="img-fluid rounded">
-                        <div class="image-overlay">
-                            <div class="overlay-content">
-                                <i class="fas fa-landmark"></i>
-                                <p>Institution d'excellence</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="content-card">
-                        <h3 class="content-title">Notre Histoire</h3>
-                        <p class="content-text">
-                            Créé pour moderniser le tissu productif ivoirien, le FREMIN s'inscrit dans la vision
-                            gouvernementale de développement industriel durable. Notre institution œuvre depuis
-                            sa création à la consolidation des capacités techniques, financières et organisationnelles
-                            des entreprises industrielles locales.
-                        </p>
-                        <div class="features-grid mt-4">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <div class="feature-content">
-                                    <h5>Modernisation</h5>
-                                    <p>Modernisation du tissu productif</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="fas fa-hands-helping"></i>
-                                </div>
-                                <div class="feature-content">
-                                    <h5>Accompagnement</h5>
-                                    <p>Accompagnement personnalisé</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mission & Vision -->
-            <div class="row" id="missions">
-                <div class="col-md-4 mb-4">
-                    <div class="mission-card h-100">
-                        <div class="mission-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <h4>Notre Mission</h4>
-                        <p>Accompagner la compétitivité du secteur industriel ivoirien à travers des interventions ciblées
-                            et stratégiques.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="vision-card h-100">
-                        <div class="vision-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h4>Notre Vision</h4>
-                        <p>Devenir le partenaire privilégié de l'industrie ivoirienne dans sa transformation numérique et
-                            organisationnelle.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="values-card h-100">
-                        <div class="values-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h4>Nos Valeurs</h4>
-                        <p>Excellence, Innovation, Transparence, Partenariat et Engagement pour le développement industriel.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galerie Section -->
-    <section class="gallery-section py-5 bg-light">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="section-title">Nos Actions en Images</h2>
-                <div class="title-underline"></div>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="{{ asset('assets/img/fremin5.jpeg') }}" alt="Atelier de formation" class="img-fluid">
-                        <div class="gallery-caption">
-                            <h5>Ateliers de Formation</h5>
-                            <p>Renforcement des capacités techniques</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="{{ asset('assets/img/structure.jpeg') }}" alt="Visite d'entreprise" class="img-fluid">
-                        <div class="gallery-caption">
-                            <h5>Accompagnement sur site</h5>
-                            <p>Visites techniques personnalisées</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="{{ asset('assets/img/fremin4.jpeg') }}" alt="Cérémonie de remise" class="img-fluid">
-                        <div class="gallery-caption">
-                            <h5>Événements Institutionnels</h5>
-                            <p>Cérémonies de partenariat</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Chiffres clés -->
-    {{-- <section class="stats-section py-5">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-3 col-6 mb-4">
-                <div class="stat-circle">
-                    <span class="stat-number" data-count="500">0</span>
-                    <span class="stat-label">Projets accompagnés</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-6 mb-4">
-                <div class="stat-circle">
-                    <span class="stat-number" data-count="150">0</span>
-                    <span class="stat-label">Entreprises partenaires</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-6 mb-4">
-                <div class="stat-circle">
-                    <span class="stat-number" data-count="50">0</span>
-                    <span class="stat-label">Ateliers organisés</span>
-                </div>
-</div>
-            <div class="col-md-3 col-6 mb-4">
-                <div class="stat-circle">
-                    <span class="stat-number" data-count="12">0</span>
-                    <span class="stat-label">Partenaires institutionnels</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-
-    <!-- CTA Section -->
-    <section class="cta-section py-5">
-        <div class="container">
-            <div class="cta-card">
+    @if ($hero)
+        <!-- Hero Section -->
+        <section class="fremin-hero">
+            <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-8">
-                        <h3 class="cta-title">Vous êtes une entreprise industrielle ?</h3>
-                        <p class="cta-text">Découvrez nos programmes d'accompagnement et bénéficiez de notre expertise pour
-                            votre développement.</p>
+                    <div class="col-lg-6">
+                        <h1 class="hero-title">
+                            <span class="text-primary">{{ $hero->main_title }}</span><br>
+                            @if ($hero->subtitle)
+                                {{ $hero->subtitle }}
+                            @endif
+                        </h1>
+                        <p class="hero-subtitle">
+                            {{ $hero->description }}
+                        </p>
+                        <div class="hero-buttons mt-4">
+                            <a href="#missions" class="btn btn-primary me-3">
+                                <i class="fas fa-bullseye me-2"></i>Nos Missions
+                            </a>
+                            <a href="#programmes" class="btn btn-outline-primary">
+                                <i class="fas fa-handshake me-2"></i>Nos Programmes
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a href="#" class="btn btn-light btn-lg">
-                            Découvrir nos programmes <i class="fas fa-arrow-right ms-2"></i>
-                        </a>
+                    <div class="col-lg-6">
+                        <div class="hero-image-container">
+                            @if ($hero->image)
+                                <img src="{{ asset('storage/' . $hero->image) }}"
+                                    alt="{{ $hero->image_alt ?? $hero->main_title }}" class="hero-image">
+                            @else
+                                <img src="{{ asset('assets/img/groupe.jpeg') }}" alt="Industrie Ivoirienne"
+                                    class="hero-image">
+                            @endif
+                            @if ($hero->stat_number || $hero->stat_label)
+                                <div class="floating-stats">
+                                    <div class="stat-item">
+                                        @if ($hero->stat_number)
+                                            <span class="stat-number">{{ $hero->stat_number }}</span>
+                                        @endif
+                                        @if ($hero->stat_label)
+                                            <span class="stat-label">{{ $hero->stat_label }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
+
+    @php
+        $about = App\Models\AboutSection::getActive();
+    @endphp
+
+    @if ($about)
+        <!-- Présentation Section -->
+        <section class="presentation-section py-5" id="presentation">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    @if ($about->section_title)
+                        <h2 class="section-title">{{ $about->section_title }}</h2>
+                        <div class="title-underline"></div>
+                    @endif
+                    @if ($about->section_subtitle)
+                        <p class="section-subtitle mt-3">{{ $about->section_subtitle }}</p>
+                    @endif
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="image-card">
+                            @if ($about->main_image)
+                                <img src="{{ asset('storage/' . $about->main_image) }}"
+                                    alt="{{ $about->main_image_alt ?? ($about->section_title ?? 'Présentation FREMIN') }}"
+                                    class="img-fluid rounded">
+                            @else
+                                <img src="{{ asset('assets/img/fremin9.jpeg') }}" alt="FREMIN Institution"
+                                    class="img-fluid rounded">
+                            @endif
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-landmark"></i>
+                                    <p>Institution d'excellence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-card">
+                            @if ($about->content_title)
+                                <h3 class="content-title">{{ $about->content_title }}</h3>
+                            @endif
+                            @if ($about->content_text)
+                                <p class="content-text">{{ $about->content_text }}</p>
+                            @endif
+
+                            @if ($about->feature1_title || $about->feature2_title)
+                                <div class="features-grid mt-4">
+                                    @if ($about->feature1_title)
+                                        <div class="feature-item">
+                                            @if ($about->feature1_icon)
+                                                <div class="feature-icon">
+                                                    <i class="{{ $about->feature1_icon }}"></i>
+                                                </div>
+                                            @endif
+                                            <div class="feature-content">
+                                                <h5>{{ $about->feature1_title }}</h5>
+                                                @if ($about->feature1_text)
+                                                    <p>{{ $about->feature1_text }}</p>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    @if ($about->feature2_title)
+                                        <div class="feature-item">
+                                            @if ($about->feature2_icon)
+                                                <div class="feature-icon">
+                                                    <i class="{{ $about->feature2_icon }}"></i>
+                                                </div>
+                                            @endif
+                                            <div class="feature-content">
+                                                <h5>{{ $about->feature2_title }}</h5>
+                                                @if ($about->feature2_text)
+                                                    <p>{{ $about->feature2_text }}</p>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    @endif
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission & Vision -->
+                <div class="row" id="missions">
+                    @if ($about->mission_title || $about->mission_text)
+                        <div class="col-md-4 mb-4">
+                            <div class="mission-card h-100">
+                                @if ($about->mission_icon)
+                                    <div class="mission-icon">
+                                        <i class="{{ $about->mission_icon }}"></i>
+                                    </div>
+                                @endif
+                                @if ($about->mission_title)
+                                    <h4>{{ $about->mission_title }}</h4>
+                                @endif
+                                @if ($about->mission_text)
+                                    <p>{{ $about->mission_text }}</p>
+                                @endif
+                            </div>
+                        </div>
+                    @endif
+
+                    @if ($about->vision_title || $about->vision_text)
+                        <div class="col-md-4 mb-4">
+                            <div class="vision-card h-100">
+                                @if ($about->vision_icon)
+                                    <div class="vision-icon">
+                                        <i class="{{ $about->vision_icon }}"></i>
+                                    </div>
+                                @endif
+                                @if ($about->vision_title)
+                                    <h4>{{ $about->vision_title }}</h4>
+                                @endif
+                                @if ($about->vision_text)
+                                    <p>{{ $about->vision_text }}</p>
+                                @endif
+                            </div>
+                        </div>
+                    @endif
+
+                    @if ($about->values_title || $about->values_text)
+                        <div class="col-md-4 mb-4">
+                            <div class="values-card h-100">
+                                @if ($about->values_icon)
+                                    <div class="values-icon">
+                                        <i class="{{ $about->values_icon }}"></i>
+                                    </div>
+                                @endif
+                                @if ($about->values_title)
+                                    <h4>{{ $about->values_title }}</h4>
+                                @endif
+                                @if ($about->values_text)
+                                    <p>{{ $about->values_text }}</p>
+                                @endif
+                            </div>
+                        </div>
+                    @endif
+                </div>
+            </div>
+        </section>
+    @endif
+
+    @php
+        $galleries = App\Models\Gallery::getActive();
+    @endphp
+
+    @if ($galleries->isNotEmpty())
+        <!-- Galerie Section -->
+        <section class="gallery-section py-5 bg-light">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    @php
+                        // Récupérer le titre de la première image (ou un titre par défaut)
+                        $firstGallery = $galleries->first();
+                        $sectionTitle = $firstGallery ? $firstGallery->title : 'Nos Actions en Images';
+                    @endphp
+                    <h2 class="section-title">{{ $sectionTitle }}</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="row g-4">
+                    @foreach ($galleries as $gallery)
+                        <div class="col-md-4">
+                            <div class="gallery-item">
+                                @if ($gallery->image)
+                                    <img src="{{ asset('storage/' . $gallery->image) }}"
+                                        alt="{{ $gallery->image_alt ?? $gallery->caption_title }}" class="img-fluid">
+                                @else
+                                    <img src="{{ asset('assets/img/placeholder.jpg') }}"
+                                        alt="{{ $gallery->caption_title }}" class="img-fluid">
+                                @endif
+                                <div class="gallery-caption">
+                                    <h5>{{ $gallery->caption_title }}</h5>
+                                    @if ($gallery->caption_text)
+                                        <p>{{ $gallery->caption_text }}</p>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
 
     <style>
         :root {

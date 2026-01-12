@@ -3,22 +3,37 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutSection;
+use App\Models\Carousel;
+use App\Models\Event;
+use App\Models\FeaturedArticle;
+use App\Models\HeroSection;
+use App\Models\NewsArticle;
+use App\Models\TeamMember;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function home()
     {
-        return view('home.accueil');
+        $carousels = Carousel::active()->ordered()->get();
+        $teamMembers = TeamMember::active()->ordered()->get();
+
+        return view('home.accueil', compact('carousels', 'teamMembers'));
     }
     public function about()
     {
-        return view('home.pages.presentation');
+        $hero = HeroSection::getActive();
+        $about = AboutSection::getActive();
+        return view('home.pages.presentation', compact('hero', 'about'));
     }
 
     public function actuality()
     {
-        return view('home.pages.actuality');
+        $featuredArticle = FeaturedArticle::getFeatured();
+        $newsArticles = NewsArticle::getActive();
+        $upcomingEvents = Event::getActive();
+        return view('home.pages.actuality', compact('featuredArticle','newsArticles','upcomingEvents'));
     }
 
     public function publication()

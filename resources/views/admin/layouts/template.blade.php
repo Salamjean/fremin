@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Post - Dashboard</title>
+  <title>Admin - Dashboard</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{asset('assetsPosterr/assets/vendors/mdi/css/materialdesignicons.min.css')}}">
   <link rel="stylesheet" href="{{asset('assetsPoster/assets/vendors/css/vendor.bundle.base.css')}}">
@@ -15,9 +15,11 @@
   <link rel="stylesheet" href="{{asset('assetsPoster/assets/vendors/jvectormap/jquery-jvectormap.cs')}}s">
   <!-- End plugin css for this page -->
   <!-- Layout styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="{{asset('assetsPoster/assets/css/demo/style.css')}}">
   <!-- End layout styles -->
   <link rel="shortcut icon" href="{{asset('assets/img/logo_fremin.jpg')}}" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 <script src="{{asset('assetsPoster/assets/js/preloader.js')}}"></script>

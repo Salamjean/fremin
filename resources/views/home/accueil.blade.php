@@ -191,94 +191,59 @@
     <!-- FAQs End -->
 
     <!-- Team Start -->
-    <div class="container-fluid team pb-5">
-        <div class="container pb-5 mt-4">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-success">Gouvernance & Équipe</h4>
-                <h1 class="display-4 mb-4">Une équipe au service du développement industriel</h1>
-                <p class="mb-0">
-                    Le FREMIN s’appuie sur une équipe pluridisciplinaire composée de professionnels
-                    expérimentés, engagés dans l’accompagnement, la restructuration et la mise à
-                    niveau des entreprises industrielles ivoiriennes.
-                </p>
-            </div>
+<div class="container-fluid team pb-5">
+    <div class="container pb-5 mt-4">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-success">Gouvernance & Équipe</h4>
+            <h1 class="display-4 mb-4">Une équipe au service du développement industriel</h1>
+            <p class="mb-0">
+                Le FREMIN s’appuie sur une équipe pluridisciplinaire composée de professionnels
+                expérimentés, engagés dans l’accompagnement, la restructuration et la mise à
+                niveau des entreprises industrielles ivoiriennes.
+            </p>
+        </div>
 
-            <div class="row g-4">
-                <!-- Membre 1 -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="row g-4">
+            @php
+                $delays = ['0.2s', '0.4s', '0.6s', '0.8s', '1s'];
+                $delayIndex = 0;
+            @endphp
+            
+            @foreach($teamMembers as $member)
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="{{ $delays[$delayIndex % 5] }}">
                     <div class="team-item">
                         <div class="team-img">
-                            <img src="{{asset('assets/img/avatar.jpg')}}" class="img-fluid rounded-top w-100"
-                                alt="Direction générale FREMIN">
+                            @if($member->image)
+                                <img src="{{ asset('storage/' . $member->image) }}" 
+                                     class="img-fluid rounded-top w-100"
+                                     alt="{{ $member->image_alt ?? $member->name }}">
+                            @else
+                                <img src="{{ asset('assets/img/avatar.jpg') }}" 
+                                     class="img-fluid rounded-top w-100"
+                                     alt="{{ $member->name }}">
+                            @endif
                             <div class="team-icon">
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
+                                @if($member->linkedin_url)
+                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" 
+                                       href="{{ $member->linkedin_url }}" 
+                                       target="_blank">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                @endif
                             </div>
                         </div>
                         <div class="team-title p-4">
-                            <h4 class="mb-0">Nom & Prénom</h4>
-                            <p class="mb-0">Directeur Général</p>
+                            <h4 class="mb-0">{{ $member->name }}</h4>
+                            <p class="mb-0">{{ $member->position }}</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Membre 2 -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="{{asset('assets/img/avatar.jpg')}}" class="img-fluid rounded-top w-100"
-                                alt="Direction technique FREMIN">
-                            <div class="team-icon">
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-title p-4">
-                            <h4 class="mb-0">Nom & Prénom</h4>
-                            <p class="mb-0">Directeur Technique</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Membre 3 -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="{{asset('assets/img/avatar.jpg')}}" class="img-fluid rounded-top w-100"
-                                alt="Direction financière FREMIN">
-                            <div class="team-icon">
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-title p-4">
-                            <h4 class="mb-0">Nom & Prénom</h4>
-                            <p class="mb-0">Directeur Administratif et Financier</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Membre 4 -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="{{asset('assets/img/avatar.jpg')}}" class="img-fluid rounded-top w-100"
-                                alt="Responsable programmes FREMIN">
-                            <div class="team-icon">
-                                <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-title p-4">
-                            <h4 class="mb-0">Nom & Prénom</h4>
-                            <p class="mb-0">Responsable Programmes</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @php $delayIndex++; @endphp
+            @endforeach
         </div>
     </div>
-    <!-- Team End -->
+</div>
+<!-- Team End -->
 
     <!-- Testimonial Start -->
 <div class="container-fluid testimonial pb-5">
