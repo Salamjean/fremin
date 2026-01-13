@@ -159,6 +159,14 @@
                         </nav>
                     </div>
                 </div>
+
+                <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="{{ route('admin.projects.index') }}">
+                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                            aria-hidden="true">work</i>
+                        Projets
+                    </a>
+                </div>
             </nav>
         </div>
 </aside>

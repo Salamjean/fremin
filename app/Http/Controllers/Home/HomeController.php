@@ -52,4 +52,10 @@ class HomeController extends Controller
     {
         return view('home.pages.contact');
     }
+
+    public function project($slug)
+    {
+        $project = \App\Models\Project::where('slug', $slug)->firstOrFail();
+        return view('home.pages.project', compact('project'));
+    }
 }

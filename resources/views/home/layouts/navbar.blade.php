@@ -17,18 +17,21 @@
                         class="nav-item nav-link">{{ __('messages.publications') }}</a>
                     <a href="{{route('home.program')}}" class="nav-item nav-link">{{ __('messages.programs') }}</a>
 
-                    <!-- Lang Selector -->
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fas fa-globe me-1"></i> {{ strtoupper(App::getLocale()) }}
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end rounded">
-                            <a href="{{ route('lang.switch', 'fr') }}"
-                                class="dropdown-item {{ App::getLocale() == 'fr' ? 'active' : '' }}">Français</a>
-                            <a href="{{ route('lang.switch', 'en') }}"
-                                class="dropdown-item {{ App::getLocale() == 'en' ? 'active' : '' }}">English</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projets</a>
+                        <div class="dropdown-menu rounded">
+                            @php
+                                $navProjects = \App\Models\Project::where('is_active', true)->get();
+                            @endphp
+                            @foreach($navProjects as $navProject)
+                                <a href="{{ route('home.project', $navProject->slug) }}" class="dropdown-item">
+                                    {{ $navProject->type == 'aed' ? 'AED' : ($navProject->type == 'zone' ? 'Zone Industrielle' : $navProject->title) }}
+                                </a>
+                            @endforeach
                         </div>
                     </div>
+
+
 
                     <div class="nav-btn px-3">
                         <a href="{{route('home.contact')}}"

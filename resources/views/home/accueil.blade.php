@@ -50,8 +50,7 @@
                             <span class="text-preview">{{ substr(__('messages.feature_1_text'), 0, 50) }}...</span>
                             <span class="text-full" style="display: none;">{{ __('messages.feature_1_text') }}</span>
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#"
-                            data-feature="feature1">
+                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#" data-feature="feature1">
                             Voir plus
                         </a>
                     </div>
@@ -68,8 +67,7 @@
                             <span class="text-preview">{{ substr(__('messages.feature_2_text'), 0, 50) }}...</span>
                             <span class="text-full" style="display: none;">{{ __('messages.feature_2_text') }}</span>
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#"
-                            data-feature="feature2">
+                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#" data-feature="feature2">
                             Voir plus
                         </a>
                     </div>
@@ -86,8 +84,7 @@
                             <span class="text-preview">{{ substr(__('messages.feature_3_text'), 0, 50) }}...</span>
                             <span class="text-full" style="display: none;">{{ __('messages.feature_3_text') }}</span>
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#"
-                            data-feature="feature3">
+                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#" data-feature="feature3">
                             Voir plus
                         </a>
                     </div>
@@ -104,8 +101,7 @@
                             <span class="text-preview">{{ substr(__('messages.feature_4_text'), 0, 50) }}...</span>
                             <span class="text-full" style="display: none;">{{ __('messages.feature_4_text') }}</span>
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#"
-                            data-feature="feature4">
+                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#" data-feature="feature4">
                             Voir plus
                         </a>
                     </div>
@@ -136,34 +132,8 @@
                                 son corollaire de mesures restrictives, renforcés par la guerre russo-ukrainienne, ont
                                 ouvert le champ à plusieurs difficultés au niveau des secteurs économiques de la Côte
                                 d'Ivoire...</span>
-                            <span class="text-full" style="display: none;">
-                                Les effets conjoncturels engendrés par la crise de la COVID-19 et son corollaire de mesures
-                                restrictives, renforcés par la guerre russo-ukrainienne, ont ouvert le champ à plusieurs
-                                difficultés au niveau des secteurs économiques de la Côte d'Ivoire.
-
-                                En effet, bon nombre d'entreprises locales ont dû se résoudre au ralentissement économique,
-                                imposé par les effets post COVID-19 et à l'inflation suscitée par la guerre
-                                russo-ukrainienne.
-
-                                Ces difficultés ont conduit plusieurs opérateurs économiques à réduire le champ de leurs
-                                activités et laissent certaines firmes dans un état de vulnérabilité qui nécessite l'action
-                                de la politique publique.
-
-                                Pour apporter les solutions à ces difficultés rencontrées par les entreprises, le Ministère
-                                du Commerce et de l'Industrie, propose dans le cadre du Fonds de Restructuration et de Mise
-                                à Niveau des entreprises industrielles (FREMIN) des mesures de soutien aux entreprises en
-                                difficulté en vue de la relance de leurs activités.
-
-                                De façon spécifique, il s'agira de :
-                                • Identifier les entreprises en difficulté
-                                • Réaliser un diagnostic global et stratégique au profit des entreprises en difficulté
-                                identifiées
-                                • Proposer des mesures et actions visant à renforcer la compétitivité des entreprises en
-                                difficulté
-                            </span>
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-introduction" href="#"
-                            data-intro="intro1">
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="{{ route('home.project', 'aed') }}">
                             Voir plus
                         </a>
                     </div>
@@ -177,33 +147,9 @@
                             <span class="text-preview">Dans le cadre du renforcement de la compétitivité des industries à
                                 travers la mise en place des infrastructures industrielles, l'Etat de Côte d'Ivoire et la
                                 société Arise Ivoire ont signé une convention le 14 juin 2022...</span>
-                            <span class="text-full" style="display: none;">
-                                Dans le cadre du renforcement de la compétitivité des industries à travers la mise en place
-                                des infrastructures industrielles, l'Etat de Côte d'Ivoire et la société Arise Ivoire ont
-                                signé une convention le 14 juin 2022. Cette convention porte sur la réalisation des amenées
-                                primaires du site d'Akoupé-Zeudji, PK24 et la réalisation les travaux de réhabilitation des
-                                zones industrielles de Koumassi et Vridi.
-
-                                La mise en place de ce projet revêt une importance stratégique pour la transformation
-                                structurelle de notre économie et la compétitivité industrielle de la Côte d'Ivoire. A cet
-                                effet, le Ministère du Commerce et de l'Industrie, à travers le Fonds de Restructuration et
-                                de Mise à Niveau des entreprises industrielles « FREMIN » est chargé d'assurer la
-                                réalisation de ces travaux, il s'agira de façon spécifique de :
-
-                                • Réaliser les travaux de l'électricité de 5 MW de la zone industrielle d'Akoupé-Zeudji PK24
-                                • Assurer la maîtrise d'œuvre Electricité 5 MW (Convention CI-ENERGIES)
-                                • Installer l'électricité de 35 MW de la zone industrielle d'Akoupé-Zeudji PK24
-                                • Réaliser les travaux de voirie nervure centrale de la zone industrielle d'Akoupé-Zeudji
-                                PK24
-                                • Assurer la maîtrise d'œuvre Voirie nervure centrale (Convention BNETD)
-                                • Réaliser les Travaux d'eau potable de la zone industrielle d'Akoupé-Zeudji PK24
-                                • Assurer la maîtrise d'œuvre eau potable (convention ONEP)
-                                • Réaliser les travaux de réhabilitation de la zone industrielle de Vridi
-                                • Réaliser les travaux de réhabilitation de la zone industrielle de Koumassi
-                            </span>
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-introduction" href="#"
-                            data-intro="intro2">
+                        <a class="btn btn-primary rounded-pill py-2 px-4"
+                            href="{{ route('home.project', 'zone-industrielle') }}">
                             Voir plus
                         </a>
                     </div>
@@ -261,13 +207,12 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         {{ __('messages.faq_3_q') }}
                                     </button>
                                 </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                    data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         {{ __('messages.faq_3_a') }}
                                     </div>
@@ -307,8 +252,7 @@
                         <div class="team-item">
                             <div class="team-img">
                                 @if ($member->image)
-                                    <img src="{{ asset('storage/' . $member->image) }}"
-                                        class="img-fluid rounded-top w-100"
+                                    <img src="{{ asset('storage/' . $member->image) }}" class="img-fluid rounded-top w-100"
                                         alt="{{ $member->image_alt ?? $member->name }}">
                                 @else
                                     <img src="{{ asset('assets/img/avatar.jpg') }}" class="img-fluid rounded-top w-100"
@@ -361,7 +305,8 @@
                             <div class="d-flex flex-column my-auto text-start p-4">
                                 <h4 class="text-dark mb-0">{{ __('TOE Lucas') ?? 'TOE Lucas' }}</h4>
                                 <p class="mb-3">{{ __('messages.managing_director') ?? 'Directeur Général' }} –
-                                    {{ __('messages.industrial_company') ?? 'Entreprise industrielle' }}</p>
+                                    {{ __('messages.industrial_company') ?? 'Entreprise industrielle' }}
+                                </p>
                                 <div class="d-flex text-success mb-3">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -450,8 +395,7 @@
                                 <div class="footer-item">
                                     <a href="index.html" class="p-0 mb-4">
                                         {{-- <h3 class="text-white"><i class="fab fa-slack me-3"></i> LifeSure</h3> --}}
-                                        <img src="{{ asset('assets/img/logo_fremin.jpg') }}" style="width: 50%"
-                                            alt="Logo">
+                                        <img src="{{ asset('assets/img/logo_fremin.jpg') }}" style="width: 50%" alt="Logo">
                                     </a>
                                     <div class="footer-btn d-flex">
                                         <a class="btn btn-md-square rounded-circle me-3" href="#"><i
@@ -578,9 +522,9 @@
 @endsection
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.toggle-feature').forEach(btn => {
-            btn.addEventListener('click', function(e) {
+            btn.addEventListener('click', function (e) {
                 e.preventDefault();
                 const featureId = this.dataset.feature;
                 const feature = document.getElementById(featureId);
@@ -601,7 +545,7 @@
 
         // Introduction toggle
         document.querySelectorAll('.toggle-introduction').forEach(btn => {
-            btn.addEventListener('click', function(e) {
+            btn.addEventListener('click', function (e) {
                 e.preventDefault();
                 const introId = this.dataset.intro;
                 const intro = document.getElementById(introId);

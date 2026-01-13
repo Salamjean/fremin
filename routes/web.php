@@ -25,6 +25,7 @@ Route::prefix('home')->group(function () {
     Route::get('/publication', [HomeController::class, 'publication'])->name('home.publication');
     Route::get('/program', [HomeController::class, 'program'])->name('home.program');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
+    Route::get('/project/{slug}', [HomeController::class, 'project'])->name('home.project');
     Route::get('/lang/{locale}', function ($locale) {
         if (in_array($locale, ['fr', 'en'])) {
             session()->put('locale', $locale);
@@ -159,6 +160,16 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::put('/{opportunity}', [OpportunityController::class, 'update'])->name('update');
         Route::delete('/{opportunity}', [OpportunityController::class, 'destroy'])->name('destroy');
         Route::post('/{opportunity}/toggle-status', [OpportunityController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('projects')->name('admin.projects.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'store'])->name('store');
+        Route::get('/{project}/edit', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'edit'])->name('edit');
+        Route::put('/{project}', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'update'])->name('update');
+        Route::delete('/{project}', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'destroy'])->name('destroy');
+        Route::post('/{project}/toggle-status', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'toggleStatus'])->name('toggle-status');
     });
 });
 
