@@ -26,12 +26,6 @@ Route::prefix('home')->group(function () {
     Route::get('/program', [HomeController::class, 'program'])->name('home.program');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
     Route::get('/project/{slug}', [HomeController::class, 'project'])->name('home.project');
-    Route::get('/lang/{locale}', function ($locale) {
-        if (in_array($locale, ['fr', 'en'])) {
-            session()->put('locale', $locale);
-        }
-        return redirect()->back();
-    })->name('lang.switch');
 });
 
 

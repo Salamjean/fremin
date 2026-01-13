@@ -7,21 +7,21 @@
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <h1 class="hero-title">
-                        <span class="text-primary">{{ __('messages.actuality_title') }}</span> & {{ __('messages.events') }}
+                        <span class="text-primary">Actualités</span> & Événements
                     </h1>
                     <p class="hero-subtitle">
-                        {{ __('messages.actuality_subtitle') }}
+                        Restez informé des dernières nouvelles, événements et activités du FREMIN
                     </p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <div class="hero-stats">
                         <div class="stat-badge">
                             <i class="fas fa-newspaper me-2"></i>
-                            <span>24 {{ __('messages.articles') }}</span>
+                            <span>24 Articles</span>
                         </div>
                         <div class="stat-badge">
                             <i class="fas fa-calendar-alt me-2"></i>
-                            <span>5 {{ __('messages.upcoming_events') }}</span>
+                            <span>5 Événements à venir</span>
                         </div>
                     </div>
                 </div>
@@ -34,16 +34,16 @@
         <div class="container">
             <div class="filter-tags text-center">
                 <button class="filter-tag active" data-filter="all">
-                    {{ __('messages.all') }}
+                    Tous
                 </button>
                 <button class="filter-tag" data-filter="actualites">
-                    <i class="fas fa-newspaper me-2"></i>{{ __('messages.actuality_title') }}
+                    <i class="fas fa-newspaper me-2"></i>Actualités
                 </button>
                 <button class="filter-tag" data-filter="evenements">
-                    <i class="fas fa-calendar-alt me-2"></i>{{ __('messages.events') }}
+                    <i class="fas fa-calendar-alt me-2"></i>Événements
                 </button>
                 <button class="filter-tag" data-filter="communiques">
-                    <i class="fas fa-bullhorn me-2"></i>{{ __('messages.communiques') }}
+                    <i class="fas fa-bullhorn me-2"></i>Communiqués
                 </button>
             </div>
         </div>
@@ -92,7 +92,7 @@
                                     </span>
                                     <span class="meta-views">
                                         <i class="far fa-eye me-1"></i>
-                                        {{ number_format($featuredArticle->views, 0, ',', ' ') }} {{ __('messages.views') }}
+                                        {{ number_format($featuredArticle->views, 0, ',', ' ') }} vues
                                     </span>
                                 </div>
 
@@ -106,7 +106,7 @@
 
                                 @if ($featuredArticle->read_more_link)
                                     <a href="{{ $featuredArticle->read_more_link }}" class="read-more-btn" target="_blank">
-                                        {{ $featuredArticle->read_more_text ?: __('messages.read_more') }}
+                                        {{ $featuredArticle->read_more_text ?: "Lire l'article complet" }}
                                         <i class="fas fa-arrow-right ms-2"></i>
                                     </a>
                                 @endif
@@ -117,7 +117,7 @@
             @endif
 
             <!-- Liste des Actualités -->
-            <h3 class="section-subtitle mb-4">{{ __('messages.latest_news') }}</h3>
+            <h3 class="section-subtitle mb-4">Dernières Actualités</h3>
 
             <div class="row g-4">
                 <!-- Article 1 -->
@@ -130,9 +130,9 @@
                     <section class="news-section py-5">
                         <div class="container">
                             <div class="section-header text-center mb-5">
-                                <h2 class="section-title">{{ __('messages.actuality_title') }} & {{ __('messages.events') }}</h2>
+                                <h2 class="section-title">Actualités & Événements</h2>
                                 <div class="title-underline"></div>
-                                <p class="section-subtitle mt-3">{{ __('messages.actuality_subtitle') }}</p>
+                                <p class="section-subtitle mt-3">Restez informé des dernières nouvelles, événements et activités du FREMIN</p>
                             </div>
 
                             <div class="row g-4">
@@ -208,7 +208,7 @@
                 <!-- Bouton Voir Plus -->
                 <div class="text-center mt-5">
                     <button class="btn btn-outline-primary btn-load-more">
-                        <i class="fas fa-redo me-2"></i> {{ __('messages.load_more') }}
+                        <i class="fas fa-redo me-2"></i> Charger plus d'articles
                     </button>
                 </div>
             </div>
@@ -223,9 +223,9 @@
             <div class="section-header mb-5">
                 <h2 class="section-title">
                     <i class="fas fa-calendar-check me-3"></i>
-                    {{ __('messages.upcoming_events') }}
+                    Événements à venir
                 </h2>
-                <p class="section-subtitle">{{ __('messages.participate_events') }}</p>
+                <p class="section-subtitle">Participez à nos prochains événements</p>
             </div>
 
             <div class="row g-4">
@@ -314,20 +314,20 @@
                 <div class="col-lg-8 text-center">
                     <div class="newsletter-card">
                         <i class="fas fa-envelope newsletter-icon"></i>
-                        <h3 class="newsletter-title">{{ __('messages.stay_informed') }}</h3>
+                        <h3 class="newsletter-title">Restez Informé</h3>
                         <p class="newsletter-text">
-                            {{ __('messages.newsletter_desc') }}
+                            Recevez nos actualités et invitations aux événements directement dans votre boîte email
                         </p>
                         <div class="newsletter-form mt-4">
                             <div class="input-group">
-                                <input type="email" class="form-control" placeholder="{{ __('messages.your_email') }}">
+                                <input type="email" class="form-control" placeholder="Votre adresse email">
                                 <button class="btn btn-primary" type="button">
-                                    {{ __('messages.subscribe') }} <i class="fas fa-paper-plane ms-2"></i>
+                                    S'abonner <i class="fas fa-paper-plane ms-2"></i>
                                 </button>
                             </div>
                             <p class=" mt-2 text-black">
                                 <i class="fas fa-lock me-1"></i>
-                                {{ __('messages.privacy_respect') }}
+                                Nous respectons votre vie privée. Désabonnez-vous à tout moment.
                             </p>
                         </div>
                     </div>

@@ -22,10 +22,10 @@
                                     </p>
                                     <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
                                         <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#">
-                                            <i class="fas fa-info-circle me-2"></i> {{ __('messages.about') }}
+                                            <i class="fas fa-info-circle me-2"></i> Présentation
                                         </a>
                                         <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#">
-                                            {{ __('messages.contact') }}
+                                            Contact
                                         </a>
                                     </div>
                                 </div>
@@ -59,10 +59,10 @@
                                     </p>
                                     <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
                                         <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#">
-                                            <i class="fas fa-handshake me-2"></i> {{ __('messages.about') }}
+                                            <i class="fas fa-handshake me-2"></i> Présentation
                                         </a>
                                         <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#">
-                                            {{ __('messages.contact') }}
+                                            Contact
                                         </a>
                                     </div>
                                 </div>

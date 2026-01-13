@@ -5,12 +5,12 @@
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{ __('messages.search_keyword') }}</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Rechercher par mot-clé</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex align-items-center bg-primary">
                     <div class="input-group w-75 mx-auto d-flex">
-                        <input type="search" class="form-control p-3" placeholder="{{ __('messages.keywords') }}"
+                        <input type="search" class="form-control p-3" placeholder="mots-clés"
                             aria-describedby="search-icon-1">
                         <span id="search-icon-1" class="btn bg-light border nput-group-text p-3"><i
                                 class="fa fa-search"></i></span>
@@ -31,10 +31,10 @@
     <div class="container-fluid feature bg-light py-5">
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-success">{{ __('messages.our_assets') }}</h4>
-                <h1 class="display-4 mb-4">{{ __('messages.strategic_lever') }}</h1>
+                <h4 class="text-success">Nos atouts</h4>
+                <h1 class="display-4 mb-4">Un levier stratégique pour l’industrie ivoirienne</h1>
                 <p class="mb-0">
-                    {{ __('messages.mechanism_text') }}
+                    Le FREMIN met en œuvre des mécanismes d’accompagnement adaptés afin de renforcer la compétitivité, la performance et la durabilité des entreprises industrielles.
                 </p>
             </div>
 
@@ -45,10 +45,10 @@
                         <div class="feature-icon p-4 mb-4">
                             <i class="far fa-building fa-3x"></i>
                         </div>
-                        <h4 class="mb-4">{{ __('messages.feature_1_title') }}</h4>
+                        <h4 class="mb-4">Institution de référence</h4>
                         <p class="mb-4 feature-text" id="feature1">
-                            <span class="text-preview">{{ substr(__('messages.feature_1_text'), 0, 50) }}...</span>
-                            <span class="text-full" style="display: none;">{{ __('messages.feature_1_text') }}</span>
+                            <span class="text-preview">Le FREMIN est placé sous la tutelle technique du M...</span>
+                            <span class="text-full" style="display: none;">Le FREMIN est placé sous la tutelle technique du Ministre chargé de l'industrie et sous la tutelle financière du Ministre chargé de l'Economie et des Finances, en liaison avec le Ministre chargé du Budget. Le FREMIN est logé à la BNI, qui en assure la gestion administrative et financière, sous l'autorité d u Comité d e Gestion.</span>
                         </p>
                         <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#" data-feature="feature1">
                             Voir plus
@@ -62,10 +62,10 @@
                         <div class="feature-icon p-4 mb-4">
                             <i class="fa fa-chart-line fa-3x"></i>
                         </div>
-                        <h4 class="mb-4">{{ __('messages.feature_2_title') }}</h4>
+                        <h4 class="mb-4">Appui à la performance</h4>
                         <p class="mb-4 feature-text" id="feature2">
-                            <span class="text-preview">{{ substr(__('messages.feature_2_text'), 0, 50) }}...</span>
-                            <span class="text-full" style="display: none;">{{ __('messages.feature_2_text') }}</span>
+                            <span class="text-preview">Des interventions ciblées pour améliorer la produ...</span>
+                            <span class="text-full" style="display: none;">Des interventions ciblées pour améliorer la productivité, la compétitivité et financière.</span>
                         </p>
                         <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#" data-feature="feature2">
                             Voir plus
@@ -79,10 +79,10 @@
                         <div class="feature-icon p-4 mb-4">
                             <i class="fa fa-cogs fa-3x"></i>
                         </div>
-                        <h4 class="mb-4">{{ __('messages.feature_3_title') }}</h4>
+                        <h4 class="mb-4">Mise à niveau industrielle</h4>
                         <p class="mb-4 feature-text" id="feature3">
-                            <span class="text-preview">{{ substr(__('messages.feature_3_text'), 0, 50) }}...</span>
-                            <span class="text-full" style="display: none;">{{ __('messages.feature_3_text') }}</span>
+                            <span class="text-preview">Accompagnement technique, organisationnel et fina...</span>
+                            <span class="text-full" style="display: none;">Accompagnement technique, organisationnel et financier pour la modernisation national.</span>
                         </p>
                         <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#" data-feature="feature3">
                             Voir plus
@@ -96,10 +96,10 @@
                         <div class="feature-icon p-4 mb-4">
                             <i class="fa fa-handshake fa-3x"></i>
                         </div>
-                        <h4 class="mb-4">{{ __('messages.feature_4_title') }}</h4>
+                        <h4 class="mb-4">Partenariats stratégiques</h4>
                         <p class="mb-4 feature-text" id="feature4">
-                            <span class="text-preview">{{ substr(__('messages.feature_4_text'), 0, 50) }}...</span>
-                            <span class="text-full" style="display: none;">{{ __('messages.feature_4_text') }}</span>
+                            <span class="text-preview">Collaboration avec les acteurs publics et privés pour ...</span>
+                            <span class="text-full" style="display: none;">Collaboration avec les acteurs publics et privés pour un développement industriel durable.</span>
                         </p>
                         <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#" data-feature="feature4">
                             Voir plus
@@ -167,7 +167,7 @@
                     <div class="h-100">
                         <div class="mb-5">
                             <h4 class="text-success">FAQs</h4>
-                            <h1 class="display-4 mb-0">{{ __('messages.faq_title') }}</h1>
+                            <h1 class="display-4 mb-0">Tout savoir sur le FREMIN</h1>
                         </div>
 
                         <div class="accordion" id="accordionExample">
@@ -176,13 +176,13 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button border-0" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        {{ __('messages.faq_1_q') }}
+                                        Qui peut bénéficier de l’accompagnement du FREMIN ?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show active"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body rounded">
-                                        {{ __('messages.faq_1_a') }}
+                                        L'accompagnement du FREMIN s’adresse aux entreprises industrielles et agro-industrielles implantées en Côte d'Ivoire, qu'elles soient en phase de création, de développement ou de restructuration.
                                     </div>
                                 </div>
                             </div>
@@ -192,13 +192,13 @@
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        {{ __('messages.faq_2_q') }}
+                                        Quels types d’appui le FREMIN propose-t-il ?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        {{ __('messages.faq_2_a') }}
+                                        Le FREMIN offre un accompagnement technique, financier et organisationnel, visant la restructuration, la modernisation et le renforcement de la compétitivité des entreprises industrielles.
                                     </div>
                                 </div>
                             </div>
@@ -208,13 +208,13 @@
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        {{ __('messages.faq_3_q') }}
+                                        Comment soumettre une demande d’accompagnement ?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        {{ __('messages.faq_3_a') }}
+                                        Les entreprises peuvent soumettre leur demande via les appels à projets ou programmes publiés sur le site officiel du FREMIN, conformément aux procédures et délais indiqués.
                                     </div>
                                 </div>
                             </div>
@@ -234,10 +234,10 @@
     <div class="container-fluid team pb-5">
         <div class="container pb-5 mt-4">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-success">{{ __('messages.team_title') }}</h4>
-                <h1 class="display-4 mb-4">{{ __('messages.team_subtitle') }}</h1>
+                <h4 class="text-success">Gouvernance & Équipe</h4>
+                <h1 class="display-4 mb-4">Une équipe au service du développement industriel</h1>
                 <p class="mb-0">
-                    {{ __('messages.team_desc') }}
+                    Le FREMIN s’appuie sur une équipe pluridisciplinaire composée de professionnels expérimentés, engagés dans l’accompagnement, la restructuration et la mise à niveau des entreprises industrielles ivoiriennes.
                 </p>
             </div>
 
@@ -284,10 +284,10 @@
     <div class="container-fluid testimonial pb-5">
         <div class="container pb-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-success">{{ __('messages.testimonials') }}</h4>
-                <h1 class="display-4 mb-4">{{ __('messages.they_trust_us') }}</h1>
+                <h4 class="text-success">Témoignages</h4>
+                <h1 class="display-4 mb-4">Ils nous font confiance</h1>
                 <p class="mb-0">
-                    {{ __('messages.testimonies_desc') }}
+                    Découvrez les retours d’expérience des entreprises industrielles et partenaires ayant bénéficié de l’accompagnement du FREMIN.
                 </p>
             </div>
 
@@ -303,9 +303,8 @@
                         </div>
                         <div class="col-8 col-lg-8 col-xl-9">
                             <div class="d-flex flex-column my-auto text-start p-4">
-                                <h4 class="text-dark mb-0">{{ __('TOE Lucas') ?? 'TOE Lucas' }}</h4>
-                                <p class="mb-3">{{ __('messages.managing_director') ?? 'Directeur Général' }} –
-                                    {{ __('messages.industrial_company') ?? 'Entreprise industrielle' }}
+                                <h4 class="text-dark mb-0">TOE Lucas</h4>
+                                <p class="mb-3">Directeur Général – Entreprise industrielle
                                 </p>
                                 <div class="d-flex text-success mb-3">
                                     <i class="fas fa-star"></i>
@@ -315,7 +314,7 @@
                                     <i class="fas fa-star"></i>
                                 </div>
                                 <p class="mb-0">
-                                    {{ __('messages.testimony_1_text') ?? 'L’accompagnement du FREMIN a permis à notre entreprise de renforcer sa compétitivité et de moderniser ses processus de production.' }}
+                                    L’accompagnement du FREMIN a permis à notre entreprise de renforcer sa compétitivité et de moderniser ses processus de production.
                                 </p>
                             </div>
                         </div>
@@ -411,18 +410,18 @@
                             </div>
                             <div class="col-md-6 col-lg-6 col-xl-4">
                                 <div class="footer-item">
-                                    <h4 class="text-white mb-4">{{ __('messages.useful_links') }}</h4>
+                                    <h4 class="text-white mb-4">Liens Utiles</h4>
                                     <a href="#"><i class="fas fa-angle-right me-2"></i>
-                                        {{ __('messages.about') }}</a>
+                                        Présentation</a>
                                     <a href="#"><i class="fas fa-angle-right me-2"></i>
-                                        {{ __('messages.features') ?? 'Features' }}</a>
+                                        Features</a>
                                     <a href="#"><i class="fas fa-angle-right me-2"></i>
-                                        {{ __('messages.programs') }}</a>
+                                        Programmes</a>
                                     <a href="#"><i class="fas fa-angle-right me-2"></i> FAQs</a>
                                     <a href="#"><i class="fas fa-angle-right me-2"></i>
-                                        {{ __('messages.actuality') }}</a>
+                                        Actualités</a>
                                     <a href="#"><i class="fas fa-angle-right me-2"></i>
-                                        {{ __('messages.contact') }}</a>
+                                        Contact</a>
                                 </div>
                             </div>
 
@@ -438,7 +437,7 @@
                                                 <i class="fas fa-map-marker-alt fa-2x"></i>
                                             </div>
                                             <div>
-                                                <h4 class="text-white">{{ __('messages.address') }}</h4>
+                                                <h4 class="text-white">Adresse</h4>
                                                 <p class="mb-0">Abidjan, Côte d'Ivoire</p>
                                             </div>
                                         </div>
@@ -449,7 +448,7 @@
                                                 <i class="fas fa-envelope fa-2x"></i>
                                             </div>
                                             <div>
-                                                <h4 class="text-white">{{ __('messages.mail_us') }}</h4>
+                                                <h4 class="text-white">Écrivez-nous</h4>
                                                 <p class="mb-0">info@fremin.ci</p>
                                             </div>
                                         </div>
@@ -460,7 +459,7 @@
                                                 <i class="fa fa-phone-alt fa-2x"></i>
                                             </div>
                                             <div>
-                                                <h4 class="text-white">{{ __('messages.call_us') }}</h4>
+                                                <h4 class="text-white">Appelez-nous</h4>
                                                 <p class="mb-0">+225 27 22 44 55 66</p>
                                             </div>
                                         </div>
@@ -491,7 +490,7 @@
                                 </a>
                             </div>
                             <div class="d-flex flex-column ms-3 flex-shrink-0">
-                                <span>{{ __('messages.call_us') }}</span>
+                                <span>Appelez-nous</span>
                                 <a href="tel:+2252722445566"><span class="text-white">+225 27 22 44 55 66</span></a>
                             </div>
                         </div>

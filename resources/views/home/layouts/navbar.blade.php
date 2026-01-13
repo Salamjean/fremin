@@ -10,12 +10,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-0 mx-lg-auto">
-                    <a href="{{route('home')}}" class="nav-item nav-link active">{{ __('messages.home') }}</a>
-                    <a href="{{route('home.about')}}" class="nav-item nav-link">{{ __('messages.about') }}</a>
-                    <a href="{{route('home.actuality')}}" class="nav-item nav-link">{{ __('messages.actuality') }}</a>
-                    <a href="{{route('home.publication')}}"
-                        class="nav-item nav-link">{{ __('messages.publications') }}</a>
-                    <a href="{{route('home.program')}}" class="nav-item nav-link">{{ __('messages.programs') }}</a>
+                    <a href="{{route('home')}}" class="nav-item nav-link active">Accueil</a>
+                    <a href="{{route('home.about')}}" class="nav-item nav-link">Présentation</a>
+                    <a href="{{route('home.actuality')}}" class="nav-item nav-link">Actualités</a>
+                    <a href="{{route('home.publication')}}" class="nav-item nav-link">Publications</a>
+                    <a href="{{route('home.program')}}" class="nav-item nav-link">Programmes</a>
 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projets</a>
@@ -36,7 +35,7 @@
                     <div class="nav-btn px-3">
                         <a href="{{route('home.contact')}}"
                             class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0">
-                            {{ __('messages.contact') }} </a>
+                            Contact </a>
                     </div>
                 </div>
             </div>

@@ -19,21 +19,22 @@
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <h1 class="hero-title">
-                        <span class="text-primary">{{ __('messages.publications') }}</span> & {{ __('messages.resources') }}
+                        <span class="text-primary">Publications</span> & Ressources
                     </h1>
                     <p class="hero-subtitle">
-                        {{ __('messages.pub_hero_subtitle') }}
+                        Documentation officielle, guides, formulaires et ressources utiles pour les entreprises
+                        industrielles
                     </p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <div class="hero-stats">
                         <div class="stat-badge">
                             <i class="fas fa-file-pdf me-2"></i>
-                            <span>{{ $totalPublications }} {{ __('messages.documents') }}</span>
+                            <span>{{ $totalPublications }} Documents</span>
                         </div>
                         <div class="stat-badge">
                             <i class="fas fa-download me-2"></i>
-                            <span>{{ number_format($totalDownloads) }}+ {{ __('messages.total_downloads') }}</span>
+                            <span>{{ number_format($totalDownloads) }}+ Téléchargements totaux</span>
                         </div>
                     </div>
                 </div>
@@ -44,7 +45,7 @@
     <!-- Catégories de Publications -->
     <section class="categories-section py-5">
         <div class="container">
-            <h3 class="section-subtitle mb-4">{{ __('messages.browse_category') }}</h3>
+            <h3 class="section-subtitle mb-4">Parcourir par catégorie</h3>
 
             <div class="row g-4">
                 <!-- Catégorie 1 -->
@@ -53,8 +54,8 @@
                         <div class="category-icon">
                             <i class="fas fa-chart-bar"></i>
                         </div>
-                        <h4 class="category-title">{{ __('messages.cat_rapports') }}</h4>
-                        <p class="category-count">{{ $rapports->count() }} {{ __('messages.documents') }}</p>
+                        <h4 class="category-title">Rapports d'Activité</h4>
+                        <p class="category-count">{{ $rapports->count() }} Documents</p>
                         <div class="category-arrow">
                             <i class="fas fa-arrow-right"></i>
                         </div>
@@ -67,8 +68,8 @@
                         <div class="category-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h4 class="category-title">{{ __('messages.cat_etudes') }}</h4>
-                        <p class="category-count">{{ $etudes->count() }} {{ __('messages.documents') }}</p>
+                        <h4 class="category-title">Études & Analyses</h4>
+                        <p class="category-count">{{ $etudes->count() }} Documents</p>
                         <div class="category-arrow">
                             <i class="fas fa-arrow-right"></i>
                         </div>
@@ -81,8 +82,8 @@
                         <div class="category-icon">
                             <i class="fas fa-book"></i>
                         </div>
-                        <h4 class="category-title">{{ __('messages.cat_guides') }}</h4>
-                        <p class="category-count">{{ $guides->count() }} {{ __('messages.documents') }}</p>
+                        <h4 class="category-title">Guides Pratiques</h4>
+                        <p class="category-count">{{ $guides->count() }} Documents</p>
                         <div class="category-arrow">
                             <i class="fas fa-arrow-right"></i>
                         </div>
@@ -95,8 +96,8 @@
                         <div class="category-icon">
                             <i class="fas fa-newspaper"></i>
                         </div>
-                        <h4 class="category-title">{{ __('messages.cat_brochures') }}</h4>
-                        <p class="category-count">{{ $brochures->count() }} {{ __('messages.documents') }}</p>
+                        <h4 class="category-title">Brochures & Médias</h4>
+                        <p class="category-count">{{ $brochures->count() }} Documents</p>
                         <div class="category-arrow">
                             <i class="fas fa-arrow-right"></i>
                         </div>
@@ -114,12 +115,12 @@
                     <div>
                         <h2 class="section-title">
                             <i class="fas fa-chart-bar me-3"></i>
-                            {{ __('messages.rapports_title') }}
+                            Rapports d'Activité
                         </h2>
-                        <p class="section-subtitle">{{ __('messages.rapports_subtitle') }}</p>
+                        <p class="section-subtitle">Retrouvez tous nos rapports annuels et bilans d'activités</p>
                     </div>
                     <a href="{{ route('publications.index') }}?type=rapport" class="btn btn-outline-primary">
-                        {{ __('messages.see_all') }} <i class="fas fa-arrow-right ms-2"></i>
+                        Voir tout <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
 
@@ -155,11 +156,11 @@
                                 <div class="publication-footer">
                                     <button class="btn btn-primary btn-sm preview-btn" data-bs-toggle="modal"
                                         data-bs-target="#previewModal{{ $publication->id }}">
-                                        <i class="far fa-eye me-1"></i> {{ __('messages.preview') }}
+                                        <i class="far fa-eye me-1"></i> Aperçu
                                     </button>
                                     <a href="{{ route('publications.download', $publication) }}" class="download-btn"
                                         target="_blank">
-                                        <i class="fas fa-download me-1"></i> {{ __('messages.download') }}
+                                        <i class="fas fa-download me-1"></i> Télécharger
                                     </a>
                                 </div>
                             </div>
@@ -177,12 +178,12 @@
                     <div>
                         <h2 class="section-title">
                             <i class="fas fa-chart-line me-3"></i>
-                            {{ __('messages.etudes_title') }}
+                            Études & Analyses Industriel
                         </h2>
-                        <p class="section-subtitle">{{ __('messages.etudes_subtitle') }}</p>
+                        <p class="section-subtitle">Analyses approfondies du secteur industriel ivoirien</p>
                     </div>
                     <a href="{{ route('publications.index') }}?type=etude" class="btn btn-outline-primary">
-                        {{ __('messages.see_all') }} <i class="fas fa-arrow-right ms-2"></i>
+                        Voir tout <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
 
@@ -196,7 +197,7 @@
                                     </div>
                                     @if($publication->is_featured)
                                         <div class="guide-badge">
-                                            <span class="badge-important">{{ __('messages.featured') }}</span>
+                                            <span class="badge-important">Mise en avant</span>
                                         </div>
                                     @endif
                                 </div>
@@ -214,7 +215,7 @@
                                     @if($publication->page_count)
                                         <span class="meta-item">
                                             <i class="far fa-file me-1"></i>
-                                            {{ $publication->page_count }} {{ __('messages.pages') }}
+                                            {{ $publication->page_count }} Pages
                                         </span>
                                     @endif
                                 </div>
@@ -249,12 +250,12 @@
                     <div>
                         <h2 class="section-title">
                             <i class="fas fa-book me-3"></i>
-                            {{ __('messages.guides_title') }}
+                            Guides Pratiques & Formulaires
                         </h2>
-                        <p class="section-subtitle">{{ __('messages.guides_subtitle') }}</p>
+                        <p class="section-subtitle">Accompagnement étape par étape dans vos démarches</p>
                     </div>
                     <a href="{{ route('publications.index') }}?type=guide" class="btn btn-outline-primary">
-                        {{ __('messages.see_all') }} <i class="fas fa-arrow-right ms-2"></i>
+                        Voir tout <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
 
@@ -268,7 +269,7 @@
                                     </div>
                                     @if($publication->created_at->diffInDays(now()) < 30)
                                         <div class="guide-badge">
-                                            <span class="badge-new">{{ __('messages.new') }}</span>
+                                            <span class="badge-new">Nouveau</span>
                                         </div>
                                     @endif
                                 </div>
@@ -320,9 +321,9 @@
                 <div class="section-header mb-5">
                     <h2 class="section-title">
                         <i class="fas fa-newspaper me-3"></i>
-                        {{ __('messages.brochures_title') }}
+                        Brochures & Médias
                     </h2>
-                    <p class="section-subtitle">{{ __('messages.brochures_subtitle') }}</p>
+                    <p class="section-subtitle">Découvrez nos supports de communication et brochures d'information</p>
                 </div>
 
                 <div class="row g-4">
@@ -377,9 +378,9 @@
                 <div class="section-header mb-5">
                     <h2 class="section-title">
                         <i class="fas fa-file-alt me-3"></i>
-                        {{ __('messages.autres_title') }}
+                        Autres Ressources
                     </h2>
-                    <p class="section-subtitle">{{ __('messages.autres_subtitle') }}</p>
+                    <p class="section-subtitle">Textes réglementaires, décrets et autres documents utiles</p>
                 </div>
 
                 <div class="accordion regulations-accordion" id="regulationsAccordion">
@@ -466,31 +467,31 @@
                                 </div>
                                 <div class="publication-info">
                                     <div class="info-item mb-2">
-                                        <strong><i class="fas fa-tag me-2"></i>{{ __('messages.type') }}:</strong>
+                                        <strong><i class="fas fa-tag me-2"></i>Type:</strong>
                                         <span class="badge" style="background: {{ $publication->type_color }};">
                                             {{ $publication->type_text }}
                                         </span>
                                     </div>
                                     <div class="info-item mb-2">
-                                        <strong><i class="far fa-calendar me-2"></i>{{ __('messages.date') }}:</strong>
+                                        <strong><i class="far fa-calendar me-2"></i>Date:</strong>
                                         {{ $publication->formatted_date }}
                                     </div>
                                     <div class="info-item mb-2">
-                                        <strong><i class="fas fa-weight-hanging me-2"></i>{{ __('messages.size') }}:</strong>
+                                        <strong><i class="fas fa-weight-hanging me-2"></i>Taille:</strong>
                                         {{ $publication->file_size }}
                                     </div>
                                     <div class="info-item mb-2">
-                                        <strong><i class="far fa-file me-2"></i>{{ __('messages.pages') }}:</strong>
+                                        <strong><i class="far fa-file me-2"></i>Pages:</strong>
                                         {{ $publication->page_count ?? 'N/A' }}
                                     </div>
                                     <div class="info-item mb-2">
-                                        <strong><i class="fas fa-download me-2"></i>{{ __('messages.downloads') }}:</strong>
+                                        <strong><i class="fas fa-download me-2"></i>Téléchargements:</strong>
                                         {{ $publication->downloads }}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <h6>{{ __('messages.description') }}</h6>
+                                <h6>Description</h6>
                                 <p class="mb-4">{{ $publication->description }}</p>
 
                                 @if($publication->period)
@@ -503,10 +504,10 @@
                                     <p class="mb-4">{{ $publication->author }}</p>
                                 @endif
 
-                                <h6>{{ __('messages.technical_info') }}</h6>
+                                <h6>Informations Techniques</h6>
                                 <ul class="list-unstyled">
                                     <li><i class="fas fa-file-pdf me-2"></i>Format: {{ $publication->file_format }}</li>
-                                    <li><i class="fas fa-language me-2"></i>{{ __('messages.language') }}:
+                                    <li><i class="fas fa-language me-2"></i>Langue:
                                         {{ strtoupper($publication->language) }}
                                     </li>
                                     @if($publication->isbn)
@@ -518,10 +519,10 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                            <i class="fas fa-times me-1"></i>{{ __('messages.close') }}
+                            <i class="fas fa-times me-1"></i>Fermer
                         </button>
                         <a href="{{ route('publications.download', $publication) }}" class="btn btn-primary" target="_blank">
-                            <i class="fas fa-download me-1"></i>{{ __('messages.download_pdf') }}
+                            <i class="fas fa-download me-1"></i>Télécharger (PDF)
                         </a>
                     </div>
                 </div>

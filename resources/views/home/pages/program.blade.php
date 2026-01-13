@@ -7,21 +7,22 @@
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <h1 class="hero-title">
-                        <span class="text-primary">{{ __('messages.programs') }}</span> & {{ __('messages.opportunities') }}
+                        <span class="text-primary">Programmes</span> & Opportunités
                     </h1>
                     <p class="hero-subtitle">
-                        {{ __('messages.pub_hero_subtitle') }}
+                        Documentation officielle, guides, formulaires et ressources utiles pour les entreprises
+                        industrielles
                     </p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <div class="hero-stats">
                         <div class="stat-badge">
                             <i class="fas fa-handshake me-2"></i>
-                            <span>{{ $programs->count() }} {{ __('messages.active_programs') }}</span>
+                            <span>{{ $programs->count() }} Programmes actifs</span>
                         </div>
                         <div class="stat-badge">
                             <i class="fas fa-clock me-2"></i>
-                            <span>{{ $opportunities->count() }} {{ __('messages.current_calls') }}</span>
+                            <span>{{ $opportunities->count() }} Appels en cours</span>
                         </div>
                     </div>
                 </div>
@@ -39,9 +40,9 @@
                             <i class="fas fa-bullhorn fa-2x"></i>
                         </div>
                         <div>
-                            <h4 class="call-title mb-1">{{ __('messages.ami_title') }}</h4>
+                            <h4 class="call-title mb-1">Appel à Manifestation d'Intérêt</h4>
                             <p class="call-text mb-0">
-                                Programme "Industrie 4.0" - {{ __('messages.ami_deadline') }} : <strong>28 Février
+                                Programme "Industrie 4.0" - Date limite : <strong>28 Février
                                     2024</strong>
                             </p>
                         </div>
@@ -49,7 +50,7 @@
                 </div>
                 <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
                     <a href="#ami" class="btn btn-dark btn-lg">
-                        {{ __('messages.apply_now') }} <i class="fas fa-arrow-right ms-2"></i>
+                        Postuler maintenant <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
             </div>
@@ -60,8 +61,8 @@
     <section class="featured-programs py-5">
         <div class="container">
             <div class="section-header mb-5">
-                <h2 class="section-title">{{ __('messages.our_programs') }}</h2>
-                <p class="section-subtitle">{{ __('messages.solutions_adapted') }}</p>
+                <h2 class="section-title">Nos Programmes d'Accompagnement</h2>
+                <p class="section-subtitle">Des solutions adaptées pour chaque besoin industriel</p>
             </div>
 
             <div class="row g-4">
@@ -71,7 +72,7 @@
                             @if($loop->first)
                                 <div class="program-badge">
                                     <span class="badge-premium">
-                                        <i class="fas fa-crown me-1"></i> {{ __('messages.flagship_program') }}
+                                        <i class="fas fa-crown me-1"></i> Programme Phare
                                     </span>
                                 </div>
                             @endif
@@ -85,15 +86,14 @@
                             </p>
                             <div class="program-footer">
                                 <a href="{{ $program->link ?: '#' }}" class="btn btn-primary w-100">
-                                    {{ $program->link_text ?: __('messages.view_details') }} <i
-                                        class="fas fa-arrow-right ms-2"></i>
+                                    {{ $program->link_text ?: "Voir les détails" }} <i class="fas fa-arrow-right ms-2"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 @empty
                     <div class="col-12 text-center py-5">
-                        <p class="text-muted">{{ __('messages.no_programs_available') }}</p>
+                        <p class="text-muted">Aucun programme d'accompagnement disponible pour le moment.</p>
                     </div>
                 @endforelse
             </div>
@@ -159,7 +159,7 @@
                     </div>
                 @empty
                     <div class="col-12 text-center py-5">
-                        <p class="text-muted">{{ __('messages.no_calls_available') }}</p>
+                        <p class="text-muted">Aucun appel en cours pour le moment.</p>
                     </div>
                 @endforelse
             </div>
@@ -170,8 +170,8 @@
     <section class="application-process py-5">
         <div class="container">
             <div class="section-header text-center mb-5">
-                <h2 class="section-title">{{ __('messages.how_to_apply') }}</h2>
-                <p class="section-subtitle">{{ __('messages.application_process_subtitle') }}</p>
+                <h2 class="section-title">Comment Postuler ?</h2>
+                <p class="section-subtitle">Un processus simple et transparent en 4 étapes</p>
             </div>
 
             <div class="process-steps">
@@ -255,8 +255,8 @@
     <section class="eligibility-criteria py-5 bg-light">
         <div class="container">
             <div class="section-header mb-5">
-                <h2 class="section-title">{{ __('messages.eligibility_criteria') }}</h2>
-                <p class="section-subtitle">{{ __('messages.eligibility_subtitle') }}</p>
+                <h2 class="section-title">Critères d'Éligibilité</h2>
+                <p class="section-subtitle">Vérifiez si votre entreprise peut bénéficier de nos programmes</p>
             </div>
 
             <div class="row g-4">
@@ -1267,15 +1267,15 @@
                     const chatStatus = document.createElement('div');
                     chatStatus.className = 'alert alert-info mt-3';
                     chatStatus.innerHTML = `
-                        <i class="fas fa-comments me-2"></i>
-                        <strong>Service de Chat</strong><br>
-                        Le chat en direct sera disponible du lundi au vendredi, de 8h à 17h.
-                        <div class="mt-2">
-                            <button class="btn btn-sm btn-outline-info" onclick="this.parentElement.parentElement.remove()">
-                                Fermer
-                            </button>
-                        </div>
-                    `;
+                            <i class="fas fa-comments me-2"></i>
+                            <strong>Service de Chat</strong><br>
+                            Le chat en direct sera disponible du lundi au vendredi, de 8h à 17h.
+                            <div class="mt-2">
+                                <button class="btn btn-sm btn-outline-info" onclick="this.parentElement.parentElement.remove()">
+                                    Fermer
+                                </button>
+                            </div>
+                        `;
 
                     this.parentElement.appendChild(chatStatus);
                 });
