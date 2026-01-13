@@ -251,7 +251,7 @@
                         </div>
                         <div class="col-8 col-lg-8 col-xl-9">
                             <div class="d-flex flex-column my-auto text-start p-4">
-                                <h4 class="text-dark mb-0">{{ __('messages.manager_name') ?? 'Nom du dirigeant' }}</h4>
+                                <h4 class="text-dark mb-0">{{ __('TOE Lucas') ?? 'TOE Lucas' }}</h4>
                                 <p class="mb-3">{{ __('messages.managing_director') ?? 'Directeur Général' }} –
                                     {{ __('messages.industrial_company') ?? 'Entreprise industrielle' }}</p>
                                 <div class="d-flex text-success mb-3">
@@ -280,7 +280,7 @@
                         </div>
                         <div class="col-8 col-lg-8 col-xl-9">
                             <div class="d-flex flex-column my-auto text-start p-4">
-                                <h4 class="text-dark mb-0">Nom du responsable</h4>
+                                <h4 class="text-dark mb-0">SORO Moussa</h4>
                                 <p class="mb-3">Partenaire institutionnel</p>
                                 <div class="d-flex text-success mb-3">
                                     <i class="fas fa-star"></i>
@@ -309,7 +309,7 @@
                         </div>
                         <div class="col-8 col-lg-8 col-xl-9">
                             <div class="d-flex flex-column my-auto text-start p-4">
-                                <h4 class="text-dark mb-0">Nom du bénéficiaire</h4>
+                                <h4 class="text-dark mb-0">OUEDRAOGO Salam Jean-Louis</h4>
                                 <p class="mb-3">Responsable d’entreprise industrielle</p>
                                 <div class="d-flex text-success mb-3">
                                     <i class="fas fa-star"></i>
