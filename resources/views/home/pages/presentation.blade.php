@@ -210,9 +210,10 @@
         <section class="gallery-section py-5 bg-light">
             <div class="container">
                 <div class="section-header text-center mb-5">
-                    // Récupérer le titre de la première image (ou un titre par défaut)
-                    $firstGallery = $galleries->first();
-                    $sectionTitle = $firstGallery ? $firstGallery->title : "Nos Actions en Images";
+                    @php
+                        // Récupérer le titre de la première image (ou un titre par défaut)
+                        $firstGallery = $galleries->first();
+                        $sectionTitle = $firstGallery ? $firstGallery->title : "Nos Actions en Images";
                     @endphp
                     <h2 class="section-title">{{ $sectionTitle }}</h2>
                     <div class="title-underline"></div>
