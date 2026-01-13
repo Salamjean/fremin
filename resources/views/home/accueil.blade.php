@@ -21,7 +21,6 @@
     </div>
     <!-- Modal Search End -->
 
-
     <!-- Carousel Start -->
     @include('home.layouts.carousel')
     <!-- Carousel End -->
