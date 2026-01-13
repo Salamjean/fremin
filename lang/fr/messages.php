@@ -42,7 +42,11 @@ return [
     'strategic_lever' => 'Un levier stratégique pour l’industrie ivoirienne',
     'mechanism_text' => 'Le FREMIN met en œuvre des mécanismes d’accompagnement adaptés afin de renforcer la compétitivité, la performance et la durabilité des entreprises industrielles.',
     'feature_1_title' => 'Institution de référence',
-    'feature_1_text' => 'Structure publique placée sous la tutelle du Ministère du Commerce et de l’Industrie.',
+    'feature_1_text' => 'Le FREMIN est placé sous la tutelle technique du Ministre chargé de l\'industrie
+et sous la tutelle financière du Ministre chargé de l\'Economie et des Finances,
+en liaison avec le Ministre chargé du Budget.
+ Le FREMIN est logé à la BNI, qui en assure la gestion administrative et
+financière, sous l\'autorité d u Comité d e Gestion.',
     'feature_2_title' => 'Appui à la performance',
     'feature_2_text' => 'Des interventions ciblées pour améliorer la productivité, la compétitivité et financière.',
     'feature_3_title' => 'Mise à niveau industrielle',

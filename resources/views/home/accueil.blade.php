@@ -46,11 +46,13 @@
                             <i class="far fa-building fa-3x"></i>
                         </div>
                         <h4 class="mb-4">{{ __('messages.feature_1_title') }}</h4>
-                        <p class="mb-4">
-                            {{ __('messages.feature_1_text') }}
+                        <p class="mb-4 feature-text" id="feature1">
+                            <span class="text-preview">{{ substr(__('messages.feature_1_text'), 0, 50) }}...</span>
+                            <span class="text-full" style="display: none;">{{ __('messages.feature_1_text') }}</span>
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">
-                            {{ __('messages.view_more') }}
+                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#"
+                            data-feature="feature1">
+                            Voir plus
                         </a>
                     </div>
                 </div>
@@ -62,11 +64,13 @@
                             <i class="fa fa-chart-line fa-3x"></i>
                         </div>
                         <h4 class="mb-4">{{ __('messages.feature_2_title') }}</h4>
-                        <p class="mb-4">
-                            {{ __('messages.feature_2_text') }}
+                        <p class="mb-4 feature-text" id="feature2">
+                            <span class="text-preview">{{ substr(__('messages.feature_2_text'), 0, 50) }}...</span>
+                            <span class="text-full" style="display: none;">{{ __('messages.feature_2_text') }}</span>
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">
-                            {{ __('messages.view_more') }}
+                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#"
+                            data-feature="feature2">
+                            Voir plus
                         </a>
                     </div>
                 </div>
@@ -78,11 +82,13 @@
                             <i class="fa fa-cogs fa-3x"></i>
                         </div>
                         <h4 class="mb-4">{{ __('messages.feature_3_title') }}</h4>
-                        <p class="mb-4">
-                            {{ __('messages.feature_3_text') }}
+                        <p class="mb-4 feature-text" id="feature3">
+                            <span class="text-preview">{{ substr(__('messages.feature_3_text'), 0, 50) }}...</span>
+                            <span class="text-full" style="display: none;">{{ __('messages.feature_3_text') }}</span>
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">
-                            {{ __('messages.view_more') }}
+                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#"
+                            data-feature="feature3">
+                            Voir plus
                         </a>
                     </div>
                 </div>
@@ -94,11 +100,13 @@
                             <i class="fa fa-handshake fa-3x"></i>
                         </div>
                         <h4 class="mb-4">{{ __('messages.feature_4_title') }}</h4>
-                        <p class="mb-4">
-                            {{ __('messages.feature_4_text') }}
+                        <p class="mb-4 feature-text" id="feature4">
+                            <span class="text-preview">{{ substr(__('messages.feature_4_text'), 0, 50) }}...</span>
+                            <span class="text-full" style="display: none;">{{ __('messages.feature_4_text') }}</span>
                         </p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">
-                            {{ __('messages.view_more') }}
+                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-feature" href="#"
+                            data-feature="feature4">
+                            Voir plus
                         </a>
                     </div>
                 </div>
@@ -106,6 +114,104 @@
         </div>
     </div>
     <!-- Feature End -->
+
+    <!-- Introduction Start -->
+    <div class="container-fluid introduction py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-success">INTRODUCTION</h4>
+                <h1 class="display-4 mb-4">Nos domaines d'intervention</h1>
+                <p class="mb-0">
+                    Découvrez les principales actions du FREMIN pour soutenir les entreprises ivoiriennes
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Introduction 1 - AEP -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="introduction-item bg-white rounded p-5 shadow-sm">
+                        <h4 class="text-success mb-4">INTRODUCTION / AEP</h4>
+                        <p class="introduction-text" id="intro1">
+                            <span class="text-preview">Les effets conjoncturels engendrés par la crise de la COVID-19 et
+                                son corollaire de mesures restrictives, renforcés par la guerre russo-ukrainienne, ont
+                                ouvert le champ à plusieurs difficultés au niveau des secteurs économiques de la Côte
+                                d'Ivoire...</span>
+                            <span class="text-full" style="display: none;">
+                                Les effets conjoncturels engendrés par la crise de la COVID-19 et son corollaire de mesures
+                                restrictives, renforcés par la guerre russo-ukrainienne, ont ouvert le champ à plusieurs
+                                difficultés au niveau des secteurs économiques de la Côte d'Ivoire.
+
+                                En effet, bon nombre d'entreprises locales ont dû se résoudre au ralentissement économique,
+                                imposé par les effets post COVID-19 et à l'inflation suscitée par la guerre
+                                russo-ukrainienne.
+
+                                Ces difficultés ont conduit plusieurs opérateurs économiques à réduire le champ de leurs
+                                activités et laissent certaines firmes dans un état de vulnérabilité qui nécessite l'action
+                                de la politique publique.
+
+                                Pour apporter les solutions à ces difficultés rencontrées par les entreprises, le Ministère
+                                du Commerce et de l'Industrie, propose dans le cadre du Fonds de Restructuration et de Mise
+                                à Niveau des entreprises industrielles (FREMIN) des mesures de soutien aux entreprises en
+                                difficulté en vue de la relance de leurs activités.
+
+                                De façon spécifique, il s'agira de :
+                                • Identifier les entreprises en difficulté
+                                • Réaliser un diagnostic global et stratégique au profit des entreprises en difficulté
+                                identifiées
+                                • Proposer des mesures et actions visant à renforcer la compétitivité des entreprises en
+                                difficulté
+                            </span>
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-introduction" href="#"
+                            data-intro="intro1">
+                            Voir plus
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Introduction 2 - Infrastructure -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="introduction-item bg-white rounded p-5 shadow-sm">
+                        <h4 class="text-success mb-4">INTRODUCTION / Mise en place Infrastructure Zone Industrielle</h4>
+                        <p class="introduction-text" id="intro2">
+                            <span class="text-preview">Dans le cadre du renforcement de la compétitivité des industries à
+                                travers la mise en place des infrastructures industrielles, l'Etat de Côte d'Ivoire et la
+                                société Arise Ivoire ont signé une convention le 14 juin 2022...</span>
+                            <span class="text-full" style="display: none;">
+                                Dans le cadre du renforcement de la compétitivité des industries à travers la mise en place
+                                des infrastructures industrielles, l'Etat de Côte d'Ivoire et la société Arise Ivoire ont
+                                signé une convention le 14 juin 2022. Cette convention porte sur la réalisation des amenées
+                                primaires du site d'Akoupé-Zeudji, PK24 et la réalisation les travaux de réhabilitation des
+                                zones industrielles de Koumassi et Vridi.
+
+                                La mise en place de ce projet revêt une importance stratégique pour la transformation
+                                structurelle de notre économie et la compétitivité industrielle de la Côte d'Ivoire. A cet
+                                effet, le Ministère du Commerce et de l'Industrie, à travers le Fonds de Restructuration et
+                                de Mise à Niveau des entreprises industrielles « FREMIN » est chargé d'assurer la
+                                réalisation de ces travaux, il s'agira de façon spécifique de :
+
+                                • Réaliser les travaux de l'électricité de 5 MW de la zone industrielle d'Akoupé-Zeudji PK24
+                                • Assurer la maîtrise d'œuvre Electricité 5 MW (Convention CI-ENERGIES)
+                                • Installer l'électricité de 35 MW de la zone industrielle d'Akoupé-Zeudji PK24
+                                • Réaliser les travaux de voirie nervure centrale de la zone industrielle d'Akoupé-Zeudji
+                                PK24
+                                • Assurer la maîtrise d'œuvre Voirie nervure centrale (Convention BNETD)
+                                • Réaliser les Travaux d'eau potable de la zone industrielle d'Akoupé-Zeudji PK24
+                                • Assurer la maîtrise d'œuvre eau potable (convention ONEP)
+                                • Réaliser les travaux de réhabilitation de la zone industrielle de Vridi
+                                • Réaliser les travaux de réhabilitation de la zone industrielle de Koumassi
+                            </span>
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4 toggle-introduction" href="#"
+                            data-intro="intro2">
+                            Voir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Introduction End -->
 
     <!-- FAQs Start -->
     <div class="container-fluid faq-section bg-light py-5">
@@ -155,12 +261,13 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
                                         {{ __('messages.faq_3_q') }}
                                     </button>
                                 </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         {{ __('messages.faq_3_a') }}
                                     </div>
@@ -195,19 +302,20 @@
                     $delayIndex = 0;
                 @endphp
 
-                @foreach($teamMembers as $member)
+                @foreach ($teamMembers as $member)
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="{{ $delays[$delayIndex % 5] }}">
                         <div class="team-item">
                             <div class="team-img">
-                                @if($member->image)
-                                    <img src="{{ asset('storage/' . $member->image) }}" class="img-fluid rounded-top w-100"
+                                @if ($member->image)
+                                    <img src="{{ asset('storage/' . $member->image) }}"
+                                        class="img-fluid rounded-top w-100"
                                         alt="{{ $member->image_alt ?? $member->name }}">
                                 @else
                                     <img src="{{ asset('assets/img/avatar.jpg') }}" class="img-fluid rounded-top w-100"
                                         alt="{{ $member->name }}">
                                 @endif
                                 <div class="team-icon">
-                                    @if($member->linkedin_url)
+                                    @if ($member->linkedin_url)
                                         <a class="btn btn-primary btn-sm-square rounded-pill mb-2"
                                             href="{{ $member->linkedin_url }}" target="_blank">
                                             <i class="fab fa-linkedin-in"></i>
@@ -245,7 +353,7 @@
                     <div class="row g-0">
                         <div class="col-4 col-lg-4 col-xl-3">
                             <div class="h-100">
-                                <img src="{{asset('assets/img/avatar.jpg')}}" class="img-fluid h-100 rounded"
+                                <img src="{{ asset('assets/img/avatar.jpg') }}" class="img-fluid h-100 rounded"
                                     style="object-fit: cover;" alt="Entreprise bénéficiaire FREMIN">
                             </div>
                         </div>
@@ -274,7 +382,7 @@
                     <div class="row g-0">
                         <div class="col-4 col-lg-4 col-xl-3">
                             <div class="h-100">
-                                <img src="{{asset('assets/img/avatar.jpg')}}" class="img-fluid h-100 rounded"
+                                <img src="{{ asset('assets/img/avatar.jpg') }}" class="img-fluid h-100 rounded"
                                     style="object-fit: cover;" alt="Partenaire institutionnel FREMIN">
                             </div>
                         </div>
@@ -303,7 +411,7 @@
                     <div class="row g-0">
                         <div class="col-4 col-lg-4 col-xl-3">
                             <div class="h-100">
-                                <img src="{{asset('assets/img/avatar.jpg')}}" class="img-fluid h-100 rounded"
+                                <img src="{{ asset('assets/img/avatar.jpg') }}" class="img-fluid h-100 rounded"
                                     style="object-fit: cover;" alt="Programme de mise à niveau FREMIN">
                             </div>
                         </div>
@@ -342,7 +450,8 @@
                                 <div class="footer-item">
                                     <a href="index.html" class="p-0 mb-4">
                                         {{-- <h3 class="text-white"><i class="fab fa-slack me-3"></i> LifeSure</h3> --}}
-                                        <img src="{{asset('assets/img/logo_fremin.jpg')}}" style="width: 50%" alt="Logo">
+                                        <img src="{{ asset('assets/img/logo_fremin.jpg') }}" style="width: 50%"
+                                            alt="Logo">
                                     </a>
                                     <div class="footer-btn d-flex">
                                         <a class="btn btn-md-square rounded-circle me-3" href="#"><i
@@ -359,13 +468,17 @@
                             <div class="col-md-6 col-lg-6 col-xl-4">
                                 <div class="footer-item">
                                     <h4 class="text-white mb-4">{{ __('messages.useful_links') }}</h4>
-                                    <a href="#"><i class="fas fa-angle-right me-2"></i> {{ __('messages.about') }}</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i>
+                                        {{ __('messages.about') }}</a>
                                     <a href="#"><i class="fas fa-angle-right me-2"></i>
                                         {{ __('messages.features') ?? 'Features' }}</a>
-                                    <a href="#"><i class="fas fa-angle-right me-2"></i> {{ __('messages.programs') }}</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i>
+                                        {{ __('messages.programs') }}</a>
                                     <a href="#"><i class="fas fa-angle-right me-2"></i> FAQs</a>
-                                    <a href="#"><i class="fas fa-angle-right me-2"></i> {{ __('messages.actuality') }}</a>
-                                    <a href="#"><i class="fas fa-angle-right me-2"></i> {{ __('messages.contact') }}</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i>
+                                        {{ __('messages.actuality') }}</a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i>
+                                        {{ __('messages.contact') }}</a>
                                 </div>
                             </div>
 
@@ -463,3 +576,48 @@
     </div> --}}
     <!-- Copyright End -->
 @endsection
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.toggle-feature').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const featureId = this.dataset.feature;
+                const feature = document.getElementById(featureId);
+                const preview = feature.querySelector('.text-preview');
+                const full = feature.querySelector('.text-full');
+
+                if (full.style.display === 'none') {
+                    preview.style.display = 'none';
+                    full.style.display = 'inline';
+                    this.textContent = 'Voir moins';
+                } else {
+                    preview.style.display = 'inline';
+                    full.style.display = 'none';
+                    this.textContent = 'Voir plus';
+                }
+            });
+        });
+
+        // Introduction toggle
+        document.querySelectorAll('.toggle-introduction').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const introId = this.dataset.intro;
+                const intro = document.getElementById(introId);
+                const preview = intro.querySelector('.text-preview');
+                const full = intro.querySelector('.text-full');
+
+                if (full.style.display === 'none') {
+                    preview.style.display = 'none';
+                    full.style.display = 'inline';
+                    this.textContent = 'Voir moins';
+                } else {
+                    preview.style.display = 'inline';
+                    full.style.display = 'none';
+                    this.textContent = 'Voir plus';
+                }
+            });
+        });
+    });
+</script>
