@@ -310,7 +310,7 @@
                         <div class="col-8 col-lg-8 col-xl-9">
                             <div class="d-flex flex-column my-auto text-start p-4">
                                 <h4 class="text-dark mb-0">OUEDRAOGO Salam Jean-Louis</h4>
-                                <p class="mb-3">Responsable d’entreprise industrielle</p>
+                                <p class="mb-3">Responsable d’entreprise</p>
                                 <div class="d-flex text-success mb-3">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
