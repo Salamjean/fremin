@@ -32,10 +32,11 @@
                     <div class="col-lg-6">
                         <div class="hero-image-container">
                             @if ($hero->image)
-                                <img src="{{ asset('storage/' . $hero->image) }}" alt="{{ $hero->image_alt ?? $hero->main_title }}"
-                                    class="hero-image">
+                                <img src="{{ asset('storage/' . $hero->image) }}"
+                                    alt="{{ $hero->image_alt ?? $hero->main_title }}" class="hero-image">
                             @else
-                                <img src="{{ asset('assets/img/groupe.jpeg') }}" alt="Industrie Ivoirienne" class="hero-image">
+                                <img src="{{ asset('assets/img/groupe.jpeg') }}" alt="Industrie Ivoirienne"
+                                    class="hero-image">
                             @endif
                             @if ($hero->stat_number || $hero->stat_label)
                                 <div class="floating-stats">
@@ -213,7 +214,7 @@
                     @php
                         // Récupérer le titre de la première image (ou un titre par défaut)
                         $firstGallery = $galleries->first();
-                        $sectionTitle = $firstGallery ? $gallery->title : __('messages.actions_in_images');
+                        $sectionTitle = $firstGallery ? $firstGallery->title : __('messages.actions_in_images');
                     @endphp
                     <h2 class="section-title">{{ $sectionTitle }}</h2>
                     <div class="title-underline"></div>
@@ -227,8 +228,8 @@
                                     <img src="{{ asset('storage/' . $gallery->image) }}"
                                         alt="{{ $gallery->image_alt ?? $gallery->caption_title }}" class="img-fluid">
                                 @else
-                                    <img src="{{ asset('assets/img/placeholder.jpg') }}" alt="{{ $gallery->caption_title }}"
-                                        class="img-fluid">
+                                    <img src="{{ asset('assets/img/placeholder.jpg') }}"
+                                        alt="{{ $gallery->caption_title }}" class="img-fluid">
                                 @endif
                                 <div class="gallery-caption">
                                     <h5>{{ $gallery->caption_title }}</h5>
@@ -602,7 +603,7 @@
     </style>
     <script>
         // Animation des chiffres
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const counters = document.querySelectorAll('.stat-number[data-count]');
 
             counters.forEach(counter => {
