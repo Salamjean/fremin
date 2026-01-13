@@ -142,7 +142,7 @@
                 <!-- Introduction 2 - Infrastructure -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="introduction-item bg-white rounded p-5 shadow-sm">
-                        <h4 class="text-success mb-4">Projet de Mise en Place Infrastructure Zone Industrielle</h4>
+                        <h4 class="text-success mb-4">Projet de Mise en Place des Infrastructures de la Zone Industrielle</h4>
                         <p class="introduction-text" id="intro2">
                             <span class="text-preview">Dans le cadre du renforcement de la compétitivité des industries à
                                 travers la mise en place des infrastructures industrielles, l'Etat de Côte d'Ivoire et la
