@@ -306,10 +306,16 @@ class PublicationController extends Controller
         return round($bytes, $precision) . ' ' . $units[$pow];
     }
 
-    public function frontIndex()
+    public function frontIndex(Request $request)
     {
-        $publications = Publication::published()
-            ->orderBy('publication_date', 'desc')
+        $query = Publication::published();
+
+        if ($request->has('type')) {
+            $query->where('type', $request->type);
+        }
+
+        $publications = $query->orderBy('publication_date', 'desc')
+            ->orderBy('created_at', 'desc')
             ->paginate(12);
 
         return view('publications.index', compact('publications'));

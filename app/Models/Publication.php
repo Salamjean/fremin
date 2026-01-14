@@ -156,14 +156,14 @@ class Publication extends Model
     public function getTypeTextAttribute()
     {
         $texts = [
-            'rapport' => __('messages.cat_rapports'),
-            'etude' => __('messages.cat_etudes'),
-            'guide' => __('messages.cat_guides'),
-            'brochure' => __('messages.cat_brochures'),
-            'autre' => __('messages.cat_autres')
+            'rapport' => 'Rapport',
+            'etude' => 'Étude',
+            'guide' => 'Guide',
+            'brochure' => 'Brochure',
+            'autre' => 'Autre'
         ];
 
-        return $texts[$this->type] ?? __('messages.cat_autres');
+        return $texts[$this->type] ?? 'Autre';
     }
 
     // Méthode pour obtenir l'URL de téléchargement
