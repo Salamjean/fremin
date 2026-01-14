@@ -18,7 +18,8 @@
                     </a>
                 </div>
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-menu">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                        data-target="ui-sub-menu">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">dashboard</i>
                         Accueil
@@ -32,7 +33,7 @@
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{route('admin.team.index')}}">
+                                <a class="mdc-drawer-link" href="{{ route('admin.team.index') }}">
                                     Équipe
                                 </a>
                             </div>
@@ -40,9 +41,10 @@
                     </div>
                 </div>
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-hero">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                        data-target="ui-sub-hero">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
-                            aria-hidden="true">dashboard</i>
+                            aria-hidden="true">info</i>
                         Présentation
                         <i class="mdc-drawer-arrow material-icons">chevron_right</i>
                     </a>
@@ -81,26 +83,27 @@
                     </a>
                 </div> --}}
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-actu">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                        data-target="ui-sub-actu">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
-                            aria-hidden="true">dashboard</i>
+                            aria-hidden="true">library_books</i>
                         Actualités
                         <i class="mdc-drawer-arrow material-icons">chevron_right</i>
                     </a>
                     <div class="mdc-expansion-panel" id="ui-sub-actu">
                         <nav class="mdc-list mdc-drawer-subactu">
                             <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{route('admin.featured-articles.index')}}">
+                                <a class="mdc-drawer-link" href="{{ route('admin.featured-articles.index') }}">
                                     À la Une
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{route('admin.news.index')}}">
+                                <a class="mdc-drawer-link" href="{{ route('admin.news.index') }}">
                                     Dernières Actualités
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{route('admin.events.index')}}">
+                                <a class="mdc-drawer-link" href="{{ route('admin.events.index') }}">
                                     Evenements
                                 </a>
                             </div>
@@ -111,7 +114,7 @@
                     <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
                         data-target="ui-sub-publi">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
-                            aria-hidden="true">dashboard</i>
+                            aria-hidden="true">folder</i>
                         Publications
                         <i class="mdc-drawer-arrow material-icons">chevron_right</i>
                     </a>
@@ -137,7 +140,8 @@
                 </div>
 
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-prog">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                        data-target="ui-sub-prog">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">assignment</i>
                         Programmes
