@@ -19,7 +19,10 @@ class HomeController extends Controller
         $carousels = Carousel::active()->ordered()->get();
         $teamMembers = TeamMember::active()->ordered()->get();
 
-        return view('home.accueil', compact('carousels', 'teamMembers'));
+        // Fetch news articles or provide dummy data if empty
+        $newsArticles = NewsArticle::active()->ordered()->take(5)->get();
+
+        return view('home.accueil', compact('carousels', 'teamMembers', 'newsArticles'));
     }
     public function about()
     {

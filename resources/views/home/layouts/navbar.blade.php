@@ -1,58 +1,46 @@
-<!-- Navbar & Hero Start -->
-<div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a href="{{route('home')}}" class="navbar-brand p-0">
-                <img src="{{asset('assets/img/logo_fremin.jpg')}}" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-0 mx-lg-auto">
-                    <a href="{{route('home')}}" class="nav-item nav-link active">Accueil</a>
-                    <a href="{{route('home.about')}}" class="nav-item nav-link">Présentation</a>
-                    <a href="{{route('home.actuality')}}" class="nav-item nav-link">Actualités</a>
-                    <a href="{{route('home.publication')}}" class="nav-item nav-link">Publications</a>
-                    <a href="{{route('home.program')}}" class="nav-item nav-link">Programmes</a>
+<header class="institutional-header d-flex align-items-center justify-content-between px-4 py-2">
+  <div class="institutional-logo">
+    <img src="{{ asset('assets/img/logo_fremin.jpg') }}" alt="Logo FREMIN" style="height: 60px;">
+  </div>
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projets</a>
-                        <div class="dropdown-menu rounded">
-                            @php
-                                $navProjects = \App\Models\Project::where('is_active', true)->get();
-                            @endphp
-                            @foreach($navProjects as $navProject)
-                                <a href="{{ route('home.project', $navProject->slug) }}" class="dropdown-item">
-                                    {{ $navProject->type == 'aed' ? 'AED' : ($navProject->type == 'zone' ? 'Zone Industrielle' : $navProject->title) }}
-                                </a>
-                            @endforeach
-                        </div>
-                    </div>
+  <div class="institutional-text text-center flex-grow-1 mx-4">
+    <p class="m-0">Fonds de Restructuration et de Mise à Niveau des Entreprises Industrielles</p>
+  </div>
 
+  <div class="institutional-motto d-none d-lg-block">
+    <img src="{{ asset('assets/img/embleme1111.png') }}" alt="" style="width: 100px;">
+  </div>
+</header>
 
+<header id="header" class="header d-flex align-items-center">
+  <div class="container position-relative d-flex align-items-center justify-content-between">
 
-                    <div class="nav-btn px-3">
-                        <a href="{{route('home.contact')}}"
-                            class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0">
-                            Contact </a>
-                    </div>
-                </div>
-            </div>
-            <div class="d-none d-xl-flex flex-shrink-0 ps-4">
-                <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada"
-                    data-wow-delay=".9s">
-                    <i class="fa fa-phone-alt fa-2x"></i>
-                    <div class="position-absolute" style="top: 7px; right: 12px;">
-                        <span><i class="fa fa-comment-dots text-secondary"></i></span>
-                    </div>
-                </a>
-                <div class="d-flex flex-column ms-3">
-                    <span>Appelez - nous</span>
-                    <a href="tel:+ 0123 456 7890"><span class="text-dark">+225 27 45 678 901</span></a>
-                </div>
-            </div>
-        </nav>
+    <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img src="{{asset('assets/img/logo_fremin.jpg')}}" alt="">
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="{{route('home')}}" class="active">Accueil</a></li>
+        <li><a href="{{route('home.about')}}">Présentation</a></li>
+        <li><a href="{{route('home.actuality')}}">Actualités</a></li>
+        <li><a href="{{route('home.publication')}}">Publications</a></li>
+        <li><a href="{{route('home.program')}}">Programmes</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <a class="btn-getstarted" href="{{route('home.contact')}}">Contactez-nous</a>
+
+  </div>
+
+</header>
+  <div class="hero-ticker-tape">
+    <div class="ticker-content">
+      <div class="ticker-track">
+        <span>MISE À NIVEAU TECHNIQUE • RESTRUCTURATION FINANCIÈRE • CAPITAL HUMAIN • CERTIFICATION ISO •
+          MODERNISATION INDUSTRIELLE • MISE À NIVEAU TECHNIQUE • RESTRUCTURATION FINANCIÈRE • CAPITAL HUMAIN •
+          CERTIFICATION ISO • MODERNISATION INDUSTRIELLE</span>
+      </div>
     </div>
-</div>
-<!-- Navbar & Hero End -->
+  </div>
