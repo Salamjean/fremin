@@ -24,12 +24,6 @@
           <h4>Tutelle Financière</h4>
           <p>Sous la tutelle du <strong>Ministre de l'Économie</strong> en liaison avec le <strong>Budget</strong>.</p>
         </div>
-
-        <div class="inst-card full-width">
-          <div class="inst-icon-box"><i class="fas fa-shield-alt"></i></div>
-          <h4>Mission Régalienne</h4>
-          <p>Instrument stratégique de l'État pour la mise en œuvre du Programme National de Restructuration et de Mise à Niveau des entreprises industrielles.</p>
-        </div>
       </div>
 
       <!-- Mission Theme (Right) -->
@@ -46,12 +40,6 @@
         </div>
 
         <div class="inst-card">
-          <div class="inst-icon-box"><i class="fas fa-rocket"></i></div>
-          <h4>Vision</h4>
-          <p>Faire de l'industrie un moteur de croissance robuste et créateur d'emplois durables.</p>
-        </div>
-
-        <div class="inst-card full-width">
           <div class="inst-icon-box"><i class="fas fa-users-cog"></i></div>
           <h4>Organes de Gestion</h4>
           <ul class="inst-list-modern">
