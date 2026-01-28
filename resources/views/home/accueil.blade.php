@@ -36,7 +36,7 @@
       <div class="inst-col mission-theme">
         <div class="inst-header">
           <span class="inst-label">CADRE OPÉRATIONNEL</span>
-          <h2 class="inst-title">MISSIONS &<br>GOUVERNANCE</h2>
+          <h2 class="inst-title">OBJETS &<br>MISSIONS</h2>
         </div>
 
         <div class="inst-card">
@@ -47,7 +47,7 @@
 
         <div class="inst-card">
           <div class="inst-icon-box"><i class="fas fa-rocket"></i></div>
-          <h4>Vision 2030</h4>
+          <h4>Vision</h4>
           <p>Faire de l'industrie un moteur de croissance robuste et créateur d'emplois durables.</p>
         </div>
 
