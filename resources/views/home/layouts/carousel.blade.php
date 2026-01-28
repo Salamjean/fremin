@@ -7,7 +7,8 @@
                     <div class="refined-row">
                         <div class="refined-col img-col">
                             <div class="refined-frame">
-                                <img src="{{ asset('assets/img/fremin1.jpeg') }}" alt="FREMIN Industry" class="refined-img">
+                                <img src="{{ asset('assets/img/fremin1.jpeg') }}" alt="FREMIN Industry"
+                                    class="refined-img">
                                 <div class="refined-overlay-grid"></div>
                             </div>
                         </div>
@@ -17,8 +18,9 @@
                                 <span>NOTRE VISION</span>
                             </div>
                             <h1 class="refined-title">PROPULSER L'AVENIR <span>INDUSTRIEL</span></h1>
-                            <p class="refined-lead">Accompagnement stratégique pour la restructuration et la modernisation des entreprises de Côte d'Ivoire.</p>
-                            
+                            <p class="refined-lead">Accompagnement stratégique pour la restructuration et la
+                                modernisation des entreprises de Côte d'Ivoire.</p>
+
                             <div class="refined-tricolor">
                                 <span class="t-bar orange"></span>
                                 <span class="t-bar white"></span>
@@ -58,9 +60,11 @@
                                 <span>GOUVERNANCE</span>
                             </div>
                             <h1 class="refined-title">ANCRAGE <span>INSTITUTIONNEL</span></h1>
-                            
+
                             <div class="refined-official-box">
-                                <p>Le <strong>FREMIN</strong> est placé sous la tutelle technique du <strong>Ministre chargé de l'Industrie</strong> et sous la tutelle financière du <strong>Ministre chargé de l'Economie et des Finances</strong>.</p>
+                                <p>Le <strong>FREMIN</strong> est placé sous la tutelle technique du <strong>Ministre
+                                        chargé de l'Industrie</strong> et sous la tutelle financière du <strong>Ministre
+                                        chargé de l'Economie et des Finances</strong>.</p>
                             </div>
 
                             <div class="refined-identity">
@@ -91,8 +95,9 @@
                                 <span>NOS MISSIONS</span>
                             </div>
                             <h1 class="refined-title">MODERNISATION & <span>SOUTIEN</span></h1>
-                            <p class="refined-lead">Fournir un accompagnement expert pour garantir la souveraineté et la compétitivité industrielle nationale.</p>
-                            
+                            <p class="refined-lead">Fournir un accompagnement expert pour garantir la souveraineté et la
+                                compétitivité industrielle nationale.</p>
+
                             <div class="refined-tricolor">
                                 <span class="t-bar orange"></span>
                                 <span class="t-bar white"></span>
@@ -101,7 +106,8 @@
 
                             <div class="stat-block">
                                 <span class="label">OBJECTIF PRINCIPAL</span>
-                                <p style="font-size: 15px; font-weight: 600; margin-top: 10px; color: #111;">Mise à niveau technique et financière des industries.</p>
+                                <p style="font-size: 15px; font-weight: 600; margin-top: 10px; color: #111;">Mise à
+                                    niveau technique et financière des industries.</p>
                             </div>
                         </div>
                     </div>
@@ -117,7 +123,8 @@
                 speed: 1000,
                 autoplay: { delay: 6000, disableOnInteraction: false },
                 effect: 'fade',
-                fadeEffect: { crossFade: true }
+                fadeEffect: { crossFade: true },
+                autoHeight: true
             });
 
             const counters = document.querySelectorAll('.counter');

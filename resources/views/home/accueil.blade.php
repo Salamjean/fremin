@@ -2,6 +2,68 @@
 @section('content')
 
   @include('home.layouts.carousel')
+
+  <!-- Institutional Overview Section (Modern & Intuitive) -->
+  <section id="institutional-overview" class="institutional-overview">
+    <div class="inst-container" data-aos="fade-up">
+      <!-- Ancrage Theme (Left) -->
+      <div class="inst-col ancrage-theme">
+        <div class="inst-header">
+          <span class="inst-label">STRUCTURE D'ÉTAT</span>
+          <h2 class="inst-title">ANCRAGE<br>INSTITUTIONNEL</h2>
+        </div>
+        
+        <div class="inst-card">
+          <div class="inst-icon-box"><i class="fas fa-landmark"></i></div>
+          <h4>Tutelle Technique</h4>
+          <p>Le <strong>FREMIN</strong> est placé sous la tutelle technique du <strong>Ministre en charge de l'Industrie</strong>.</p>
+        </div>
+
+        <div class="inst-card">
+          <div class="inst-icon-box"><i class="fas fa-balance-scale"></i></div>
+          <h4>Tutelle Financière</h4>
+          <p>Sous la tutelle du <strong>Ministre de l'Économie</strong> en liaison avec le <strong>Budget</strong>.</p>
+        </div>
+
+        <div class="inst-card full-width">
+          <div class="inst-icon-box"><i class="fas fa-shield-alt"></i></div>
+          <h4>Mission Régalienne</h4>
+          <p>Instrument stratégique de l'État pour la mise en œuvre du Programme National de Restructuration et de Mise à Niveau des entreprises industrielles.</p>
+        </div>
+      </div>
+
+      <!-- Mission Theme (Right) -->
+      <div class="inst-col mission-theme">
+        <div class="inst-header">
+          <span class="inst-label">CADRE OPÉRATIONNEL</span>
+          <h2 class="inst-title">MISSIONS &<br>GOUVERNANCE</h2>
+        </div>
+
+        <div class="inst-card">
+          <div class="inst-icon-box"><i class="fas fa-bullseye"></i></div>
+          <h4>Objet du Fonds</h4>
+          <p>Appui à la restructuration technique et financière des entreprises industrielles.</p>
+        </div>
+
+        <div class="inst-card">
+          <div class="inst-icon-box"><i class="fas fa-rocket"></i></div>
+          <h4>Vision 2030</h4>
+          <p>Faire de l'industrie un moteur de croissance robuste et créateur d'emplois durables.</p>
+        </div>
+
+        <div class="inst-card full-width">
+          <div class="inst-icon-box"><i class="fas fa-users-cog"></i></div>
+          <h4>Organes de Gestion</h4>
+          <ul class="inst-list-modern">
+            <li>Comité de Gestion (Décision)</li>
+            <li>Direction de la Mise à Niveau</li>
+            <li>Direction Administrative et Financière</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Compact News Section -->
   @if(isset($newsArticles) && $newsArticles->isNotEmpty())
     <section id="compact-news" class="compact-news section">
@@ -101,26 +163,26 @@
           Swal.fire({
             title: '<span style="color: #FF8200;">LE MOT DU MINISTRE</span>',
             html: `
-                                <div class="text-start" style="font-family: 'Inter', sans-serif;">
-                                  <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
-                                    <img src="{{ asset('assets/img/ministre1.jpg') }}" 
-                                         style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
-                                    <div>
-                                      <h5 class="mb-0 fw-bold">M. Ibrahim Khalil Konaté</h5>
-                                      <p class="text-muted small mb-0">Ministre du Commerce et de l'Industrie</p>
+                                    <div class="text-start" style="font-family: 'Inter', sans-serif;">
+                                      <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+                                        <img src="{{ asset('assets/img/ministre1.jpg') }}" 
+                                             style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
+                                        <div>
+                                          <h5 class="mb-0 fw-bold">M. Ibrahim Khalil Konaté</h5>
+                                          <p class="text-muted small mb-0">Ministre du Commerce et de l'Industrie</p>
+                                        </div>
+                                      </div>
+                                      <p style="font-style: italic; color: #555; line-height: 1.6;">
+                                        "Le Fonds de Restructuration et de Mise à Niveau des entreprises industrielles, en abrégé FREMIN, au fil des ans, s’est positionné comme l’un des principaux instruments pour le développement industriel en Côte d’Ivoire. 
+                                          En effet, il poursuit efficacement sa mission de soutien à l’activité industrielle, notamment la mise en œuvre du Programme National de Restructuration et de Mise à Niveau des entreprises industrielles (PNRMN), la promotion de la petite transformation industrielle, l’appui aux entreprises en difficultés, en parfaite cohérence avec la vision du Gouvernement en matière de transformation structurelle de notre économie.
+                                          L’année qui s’achève a été marquée par de nombreuses actions et des résultats concrets, qui traduisent l’engagement, le professionnalisme et le sens élevé des responsabilités des organes de gestion du FREMIN.
+                                          Il me tient à cœur d’exprimer toute ma fierté au regard du travail accompli tout au long de l’année écoulée et vous exhorte à maintenir cette dynamique afin que ce Fonds demeure un outil stratégique et crédible au service du développement industriel de notre pays."
+                                      </p>
+                                      <div class="text-end mt-4">
+                                        <img src="{{ asset('assets/img/signature_minister.png') }}" style="max-height: 50px; opacity: 0.7;">
+                                      </div>
                                     </div>
-                                  </div>
-                                  <p style="font-style: italic; color: #555; line-height: 1.6;">
-                                    "Le Fonds de Restructuration et de Mise à Niveau des entreprises industrielles, en abrégé FREMIN, au fil des ans, s’est positionné comme l’un des principaux instruments pour le développement industriel en Côte d’Ivoire. 
-                                      En effet, il poursuit efficacement sa mission de soutien à l’activité industrielle, notamment la mise en œuvre du Programme National de Restructuration et de Mise à Niveau des entreprises industrielles (PNRMN), la promotion de la petite transformation industrielle, l’appui aux entreprises en difficultés, en parfaite cohérence avec la vision du Gouvernement en matière de transformation structurelle de notre économie.
-                                      L’année qui s’achève a été marquée par de nombreuses actions et des résultats concrets, qui traduisent l’engagement, le professionnalisme et le sens élevé des responsabilités des organes de gestion du FREMIN.
-                                      Il me tient à cœur d’exprimer toute ma fierté au regard du travail accompli tout au long de l’année écoulée et vous exhorte à maintenir cette dynamique afin que ce Fonds demeure un outil stratégique et crédible au service du développement industriel de notre pays."
-                                  </p>
-                                  <div class="text-end mt-4">
-                                    <img src="{{ asset('assets/img/signature_minister.png') }}" style="max-height: 50px; opacity: 0.7;">
-                                  </div>
-                                </div>
-                              `,
+                                  `,
             showCloseButton: true,
             showConfirmButton: true,
             confirmButtonText: 'Fermer',
@@ -138,171 +200,7 @@
   @endif
   <!-- /Compact News Section -->
 
-  <section id="eligibility-quiz" class="quiz-section">
-    <div class="container" data-aos="fade-up">
-      <div class="quiz-container">
-        <div class="quiz-header">
-          <h2>Êtes-vous éligible ?</h2>
-          <p>Répondez à ces 6 questions pour vérifier l'éligibilité de votre entreprise en moins d'une minute.</p>
-        </div>
-
-        <div class="quiz-progress">
-          <div class="quiz-progress-bar" id="quiz-progress"></div>
-        </div>
-
-        <div id="quiz-steps">
-          <!-- Step 1 -->
-          <div class="quiz-step active" data-step="1">
-            <h3 class="quiz-question">1. Votre entreprise est-elle de nature industrielle ?</h3>
-            <div class="quiz-options">
-              <button class="quiz-option" onclick="handleAnswer(1, true)">Oui</button>
-              <button class="quiz-option" onclick="handleAnswer(1, false)">Non</button>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="quiz-step" data-step="2">
-            <h3 class="quiz-question">2. Votre entreprise est-elle basée en Côte d'Ivoire ?</h3>
-            <div class="quiz-options">
-              <button class="quiz-option" onclick="handleAnswer(2, true)">Oui</button>
-              <button class="quiz-option" onclick="handleAnswer(2, false)">Non</button>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="quiz-step" data-step="3">
-            <h3 class="quiz-question">3. Avez-vous besoin d'une restructuration technique ou financière ?</h3>
-            <div class="quiz-options">
-              <button class="quiz-option" onclick="handleAnswer(3, true)">Oui</button>
-              <button class="quiz-option" onclick="handleAnswer(3, false)">Non</button>
-            </div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="quiz-step" data-step="4">
-            <h3 class="quiz-question">4. Souhaitez-vous moderniser votre outil de production ?</h3>
-            <div class="quiz-options">
-              <button class="quiz-option" onclick="handleAnswer(4, true)">Oui</button>
-              <button class="quiz-option" onclick="handleAnswer(4, false)">Non</button>
-            </div>
-          </div>
-
-          <!-- Step 5 -->
-          <div class="quiz-step" data-step="5">
-            <h3 class="quiz-question">5. Avez-vous besoin d'un accompagnement organisationnel ?</h3>
-            <div class="quiz-options">
-              <button class="quiz-option" onclick="handleAnswer(5, true)">Oui</button>
-              <button class="quiz-option" onclick="handleAnswer(5, false)">Non</button>
-            </div>
-          </div>
-
-          <!-- Step 6 -->
-          <div class="quiz-step" data-step="6">
-            <h3 class="quiz-question">6. Êtes-vous prêt à vous engager dans un processus de mise à niveau ?</h3>
-            <div class="quiz-options">
-              <button class="quiz-option" onclick="handleAnswer(6, true)">Oui</button>
-              <button class="quiz-option" onclick="handleAnswer(6, false)">Non</button>
-            </div>
-          </div>
-        </div>
-
-        <div id="quiz-results" class="quiz-results">
-          <!-- Eligible Result -->
-          <div id="result-eligible" class="result-eligible" style="display: none;">
-            <div class="result-icon">
-              <i class="bi bi-check-circle-fill"></i>
-            </div>
-            <h3 class="result-title">Félicitations !</h3>
-            <p class="result-description">Votre entreprise semble être éligible au programme de mise à niveau de FREMIN.
-              Nous vous invitons à soumettre votre candidature officielle dès maintenant.</p>
-            <a href="contact.html" class="btn-candidature">Déposer ma candidature</a>
-          </div>
-
-          <!-- Ineligible Result -->
-          <div id="result-ineligible" class="result-ineligible" style="display: none;">
-            <div class="result-icon">
-              <i class="bi bi-exclamation-circle-fill"></i>
-            </div>
-            <h3 class="result-title">Nous sommes désolés</h3>
-            <p id="ineligible-reason" class="result-description">Selon vos réponses, votre entreprise ne remplit pas tous
-              les critères d'éligibilité pour le moment.</p>
-            <button class="btn-candidature" onclick="resetQuiz()">Recommencer le test</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    let currentStep = 1;
-    const totalSteps = 6;
-    const answers = {};
-
-    function handleAnswer(step, answer) {
-      answers[step] = answer;
-
-      if (step < totalSteps) {
-        nextStep();
-      } else {
-        showResults();
-      }
-    }
-
-    function nextStep() {
-      const currentEl = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
-      currentEl.classList.remove('active');
-
-      currentStep++;
-      const nextEl = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
-      nextEl.classList.add('active');
-
-      updateProgress();
-    }
-
-    function updateProgress() {
-      const progress = ((currentStep - 1) / totalSteps) * 100;
-      document.getElementById('quiz-progress').style.width = `${progress}%`;
-    }
-
-    function showResults() {
-      document.getElementById('quiz-steps').style.display = 'none';
-      document.getElementById('quiz-results').style.display = 'block';
-      document.getElementById('quiz-progress').style.width = '100%';
-
-      // Eligibility logic: Industrial AND CI based AND at least one need
-      const isIndustrial = answers[1];
-      const isCIBased = answers[2];
-      const hasNeeds = answers[3] || answers[4] || answers[5] || answers[6];
-
-      if (isIndustrial && isCIBased && hasNeeds) {
-        document.getElementById('result-eligible').style.display = 'block';
-      } else {
-        const reasonEl = document.getElementById('ineligible-reason');
-        if (!isIndustrial) {
-          reasonEl.innerText = "Le programme de mise à niveau est exclusivement réservé aux entreprises industrielles.";
-        } else if (!isCIBased) {
-          reasonEl.innerText = "Le programme s'adresse uniquement aux entreprises basées en Côte d'Ivoire.";
-        } else {
-          reasonEl.innerText = "Votre entreprise doit exprimer au moins un besoin de restructuration ou de modernisation pour être éligible.";
-        }
-        document.getElementById('result-ineligible').style.display = 'block';
-      }
-    }
-
-    function resetQuiz() {
-      currentStep = 1;
-      document.getElementById('quiz-steps').style.display = 'block';
-      document.getElementById('quiz-results').style.display = 'none';
-      document.getElementById('result-eligible').style.display = 'none';
-      document.getElementById('result-ineligible').style.display = 'none';
-
-      document.querySelectorAll('.quiz-step').forEach(step => step.classList.remove('active'));
-      document.querySelector('.quiz-step[data-step="1"]').classList.add('active');
-
-      updateProgress();
-    }
-  </script>
-  <!-- /Home About Section -->
+  
 
   <!-- Featured Departments Section -->
   <section id="funded-companies" class="funded-companies section">
@@ -314,28 +212,28 @@
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="swiper init-swiper funded-carousel">
         <script type="application/json" class="swiper-config">
-                      {
-                        "loop": true,
-                        "speed": 600,
-                        "autoplay": { "delay": 5000 },
-                        "slidesPerView": "auto",
-                        "pagination": { 
-                          "el": ".swiper-pagination", 
-                          "type": "bullets", 
-                          "clickable": true 
-                        },
-                        "breakpoints": {
-                          "320": { 
-                            "slidesPerView": 1, 
-                            "spaceBetween": 20 
+                        {
+                          "loop": true,
+                          "speed": 600,
+                          "autoplay": { "delay": 5000 },
+                          "slidesPerView": "auto",
+                          "pagination": { 
+                            "el": ".swiper-pagination", 
+                            "type": "bullets", 
+                            "clickable": true 
                           },
-                          "1200": { 
-                            "slidesPerView": 1, 
-                            "spaceBetween": 0 
+                          "breakpoints": {
+                            "320": { 
+                              "slidesPerView": 1, 
+                              "spaceBetween": 20 
+                            },
+                            "1200": { 
+                              "slidesPerView": 1, 
+                              "spaceBetween": 0 
+                            }
                           }
                         }
-                      }
-                      </script>
+                        </script>
         <div class="swiper-wrapper">
 
           <!-- Company 1 -->
