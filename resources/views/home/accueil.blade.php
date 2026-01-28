@@ -56,8 +56,7 @@
           <h4>Organes de Gestion</h4>
           <ul class="inst-list-modern">
             <li>Comité de Gestion (Décision)</li>
-            <li>Direction de la Mise à Niveau</li>
-            <li>Direction Administrative et Financière</li>
+            <li>Cellule technique</li>
           </ul>
         </div>
       </div>
@@ -322,7 +321,7 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Nos Services Industriels</h2>
+      <h2>Nos Accompagnements</h2>
       <p>Un accompagnement sur mesure pour la mise à niveau et la performance de votre entreprise</p>
     </div><!-- End Section Title -->
 
