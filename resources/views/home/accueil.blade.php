@@ -3,49 +3,81 @@
 
   @include('home.layouts.carousel')
 
-  <!-- Institutional Overview Section (Modern & Intuitive) -->
+  <!-- Institutional Overview Section (Comprehensive Content) -->
   <section id="institutional-overview" class="institutional-overview">
     <div class="inst-container" data-aos="fade-up">
-      <!-- Ancrage Theme (Left) -->
+      <!-- Missions Section (Left) -->
       <div class="inst-col ancrage-theme">
         <div class="inst-header">
-          <span class="inst-label">STRUCTURE D'ÉTAT</span>
-          <h2 class="inst-title">ANCRAGE<br>INSTITUTIONNEL</h2>
-        </div>
-        
-        <div class="inst-card">
-          <div class="inst-icon-box"><i class="fas fa-landmark"></i></div>
-          <h4>Tutelle Technique</h4>
-          <p>Le <strong>FREMIN</strong> est placé sous la tutelle technique du <strong>Ministre en charge de l'Industrie</strong>.</p>
+          <span class="inst-label">I.1. CADRE RÉGALIEN</span>
+          <h2 class="inst-title">MISSIONS DU<br><span>FREMIN</span></h2>
         </div>
 
-        <div class="inst-card">
-          <div class="inst-icon-box"><i class="fas fa-balance-scale"></i></div>
-          <h4>Tutelle Financière</h4>
-          <p>Sous la tutelle du <strong>Ministre de l'Économie</strong> en liaison avec le <strong>Budget</strong>.</p>
+        <div class="inst-card full-width">
+          <div class="inst-icon-box"><i class="fas fa-bullseye"></i></div>
+          <p>Le FREMIN assure le financement du <strong>Programme National de Restructuration et de Mise à Niveau
+              (PNRMN)</strong>. Il est notamment destiné à :</p>
+          <ul class="inst-list-modern">
+            <li>Financer l’accompagnement des entreprises via des appuis directs et des primes.</li>
+            <li>Octroyer des garanties aux établissements de crédit pour faciliter l’accès au financement des
+              investissements (modernisation, rénovation, extension).</li>
+            <li>Appuyer les laboratoires techniques locaux et les structures de normalisation (renforcement de capacités).
+            </li>
+            <li>Financer les Centres d’Appui à la Compétitivité et au Développement Industriel (CACDI).</li>
+          </ul>
+        </div>
+
+        <div class="inst-card full-width">
+          <div class="inst-icon-box"><i class="fas fa-virus"></i></div>
+          <h4>Projets Spécifiques</h4>
+          <p>Appui aux entreprises impactées par la <strong>Covid-19</strong> et la <strong>guerre
+              Russo-ukrainienne</strong> via le projet <strong>"AED"</strong> (Appui aux Entreprises en Difficulté).</p>
+        </div>
+
+        <div class="inst-card full-width">
+          <div class="inst-icon-box"><i class="fas fa-industry"></i></div>
+          <h4>Zones Industrielles</h4>
+          <p>Mise en place d'infrastructures à <strong>Koumassi</strong>, <strong>Vridi</strong> et <strong>Akoupé Zeudji
+              PK24</strong>.</p>
         </div>
       </div>
 
-      <!-- Mission Theme (Right) -->
+      <!-- Governance Section (Right) -->
       <div class="inst-col mission-theme">
         <div class="inst-header">
-          <span class="inst-label">CADRE OPÉRATIONNEL</span>
-          <h2 class="inst-title">OBJETS &<br>MISSIONS</h2>
+          <span class="inst-label">I.2. GOUVERNANCE</span>
+          <h2 class="inst-title">PRINCIPAUX ORGANES<br>DE <span>GESTION</span></h2>
         </div>
 
-        <div class="inst-card">
-          <div class="inst-icon-box"><i class="fas fa-bullseye"></i></div>
-          <h4>Objet du Fonds</h4>
-          <p>Appui à la restructuration technique et financière des entreprises industrielles.</p>
-        </div>
-
-        <div class="inst-card">
+        <div class="inst-card full-width">
           <div class="inst-icon-box"><i class="fas fa-users-cog"></i></div>
-          <h4>Organes de Gestion</h4>
+          <h4>I.2.1. Comité de Gestion (Organe de Décision)</h4>
+          <p>Administre le fonds et est composé de représentants des ministères suivants :</p>
           <ul class="inst-list-modern">
-            <li>Comité de Gestion (Décision)</li>
-            <li>Cellule technique</li>
+            <li>Ministère chargé de l’Industrie (Présidence)</li>
+            <li>Ministère chargé des Finances (Vice-Présidence)</li>
+            <li>Ministère chargé du Budget</li>
+            <li>Ministère chargé des PME</li>
+            <li>Le Directeur Général de la BNI (Secrétariat)</li>
           </ul>
+        </div>
+
+        <div class="inst-card full-width">
+          <div class="inst-icon-box"><i class="fas fa-flask"></i></div>
+          <h4>I.2.2. Cellule Technique (Assistance & Analyse)</h4>
+          <p>Chargée d’instruire les dossiers de demande d’appuis et d'assurer le suivi des décisions.</p>
+          <ul class="inst-list-modern">
+            <li>Représentant de l’Industrie (Présidence)</li>
+            <li>Représentant des Finances</li>
+            <li>Représentant du Budget</li>
+            <li>Représentant de la BNI</li>
+          </ul>
+        </div>
+
+        <div class="inst-card full-width">
+          <div class="inst-icon-box"><i class="fas fa-landmark"></i></div>
+          <h4>Tutelles de Tutelles</h4>
+          <p>Placé sous la tutelle technique de l'Industrie et financière de l'Économie en liaison avec le Budget.</p>
         </div>
       </div>
     </div>
@@ -150,26 +182,26 @@
           Swal.fire({
             title: '<span style="color: #FF8200;">LE MOT DU MINISTRE</span>',
             html: `
-                                    <div class="text-start" style="font-family: 'Inter', sans-serif;">
-                                      <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
-                                        <img src="{{ asset('assets/img/ministre1.jpg') }}" 
-                                             style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
-                                        <div>
-                                          <h5 class="mb-0 fw-bold">M. Ibrahim Khalil Konaté</h5>
-                                          <p class="text-muted small mb-0">Ministre du Commerce et de l'Industrie</p>
+                                        <div class="text-start" style="font-family: 'Inter', sans-serif;">
+                                          <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+                                            <img src="{{ asset('assets/img/ministre1.jpg') }}" 
+                                                 style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
+                                            <div>
+                                              <h5 class="mb-0 fw-bold">M. Ibrahim Khalil Konaté</h5>
+                                              <p class="text-muted small mb-0">Ministre du Commerce et de l'Industrie</p>
+                                            </div>
+                                          </div>
+                                          <p style="font-style: italic; color: #555; line-height: 1.6;">
+                                            "Le Fonds de Restructuration et de Mise à Niveau des entreprises industrielles, en abrégé FREMIN, au fil des ans, s’est positionné comme l’un des principaux instruments pour le développement industriel en Côte d’Ivoire. 
+                                              En effet, il poursuit efficacement sa mission de soutien à l’activité industrielle, notamment la mise en œuvre du Programme National de Restructuration et de Mise à Niveau des entreprises industrielles (PNRMN), la promotion de la petite transformation industrielle, l’appui aux entreprises en difficultés, en parfaite cohérence avec la vision du Gouvernement en matière de transformation structurelle de notre économie.
+                                              L’année qui s’achève a été marquée par de nombreuses actions et des résultats concrets, qui traduisent l’engagement, le professionnalisme et le sens élevé des responsabilités des organes de gestion du FREMIN.
+                                              Il me tient à cœur d’exprimer toute ma fierté au regard du travail accompli tout au long de l’année écoulée et vous exhorte à maintenir cette dynamique afin que ce Fonds demeure un outil stratégique et crédible au service du développement industriel de notre pays."
+                                          </p>
+                                          <div class="text-end mt-4">
+                                            <img src="{{ asset('assets/img/signature_minister.png') }}" style="max-height: 50px; opacity: 0.7;">
+                                          </div>
                                         </div>
-                                      </div>
-                                      <p style="font-style: italic; color: #555; line-height: 1.6;">
-                                        "Le Fonds de Restructuration et de Mise à Niveau des entreprises industrielles, en abrégé FREMIN, au fil des ans, s’est positionné comme l’un des principaux instruments pour le développement industriel en Côte d’Ivoire. 
-                                          En effet, il poursuit efficacement sa mission de soutien à l’activité industrielle, notamment la mise en œuvre du Programme National de Restructuration et de Mise à Niveau des entreprises industrielles (PNRMN), la promotion de la petite transformation industrielle, l’appui aux entreprises en difficultés, en parfaite cohérence avec la vision du Gouvernement en matière de transformation structurelle de notre économie.
-                                          L’année qui s’achève a été marquée par de nombreuses actions et des résultats concrets, qui traduisent l’engagement, le professionnalisme et le sens élevé des responsabilités des organes de gestion du FREMIN.
-                                          Il me tient à cœur d’exprimer toute ma fierté au regard du travail accompli tout au long de l’année écoulée et vous exhorte à maintenir cette dynamique afin que ce Fonds demeure un outil stratégique et crédible au service du développement industriel de notre pays."
-                                      </p>
-                                      <div class="text-end mt-4">
-                                        <img src="{{ asset('assets/img/signature_minister.png') }}" style="max-height: 50px; opacity: 0.7;">
-                                      </div>
-                                    </div>
-                                  `,
+                                      `,
             showCloseButton: true,
             showConfirmButton: true,
             confirmButtonText: 'Fermer',
@@ -187,7 +219,7 @@
   @endif
   <!-- /Compact News Section -->
 
-  
+
 
   <!-- Featured Departments Section -->
   <section id="funded-companies" class="funded-companies section">
@@ -199,28 +231,28 @@
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="swiper init-swiper funded-carousel">
         <script type="application/json" class="swiper-config">
-                        {
-                          "loop": true,
-                          "speed": 600,
-                          "autoplay": { "delay": 5000 },
-                          "slidesPerView": "auto",
-                          "pagination": { 
-                            "el": ".swiper-pagination", 
-                            "type": "bullets", 
-                            "clickable": true 
-                          },
-                          "breakpoints": {
-                            "320": { 
-                              "slidesPerView": 1, 
-                              "spaceBetween": 20 
+                          {
+                            "loop": true,
+                            "speed": 600,
+                            "autoplay": { "delay": 5000 },
+                            "slidesPerView": "auto",
+                            "pagination": { 
+                              "el": ".swiper-pagination", 
+                              "type": "bullets", 
+                              "clickable": true 
                             },
-                            "1200": { 
-                              "slidesPerView": 1, 
-                              "spaceBetween": 0 
+                            "breakpoints": {
+                              "320": { 
+                                "slidesPerView": 1, 
+                                "spaceBetween": 20 
+                              },
+                              "1200": { 
+                                "slidesPerView": 1, 
+                                "spaceBetween": 0 
+                              }
                             }
                           }
-                        }
-                        </script>
+                          </script>
         <div class="swiper-wrapper">
 
           <!-- Company 1 -->

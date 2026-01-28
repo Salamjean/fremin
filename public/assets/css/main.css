@@ -583,6 +583,41 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Institutional Header
+--------------------------------------------------------------*/
+.institutional-header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    min-height: 80px;
+    z-index: 1000;
+}
+
+.institutional-text p {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #111;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+@media (max-width: 991px) {
+    .institutional-header { min-height: 70px; padding: 10px 15px !important; }
+    .institutional-logo img { height: 45px !important; }
+    .institutional-text p { font-size: 11px; }
+}
+
+@media (max-width: 576px) {
+    .institutional-header { min-height: 60px; padding: 5px 10px !important; }
+    .institutional-logo img { height: 35px !important; }
+    .institutional-text p { font-size: 9px; letter-spacing: 0; line-height: 1.1; }
+    .institutional-text { margin-left: 10px !important; margin-right: 10px !important; }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
 #preloader {
