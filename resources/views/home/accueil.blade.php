@@ -9,7 +9,6 @@
       <!-- Missions Section (Left) -->
       <div class="inst-col ancrage-theme">
         <div class="inst-header">
-          <span class="inst-label">I.1. CADRE RÉGALIEN</span>
           <h2 class="inst-title">MISSIONS DU<br><span>FREMIN</span></h2>
         </div>
 
@@ -45,7 +44,6 @@
       <!-- Governance Section (Right) -->
       <div class="inst-col mission-theme">
         <div class="inst-header">
-          <span class="inst-label">I.2. GOUVERNANCE</span>
           <h2 class="inst-title">PRINCIPAUX ORGANES<br>DE <span>GESTION</span></h2>
         </div>
 
