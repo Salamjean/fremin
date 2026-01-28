@@ -1,50 +1,108 @@
-<section id="hero" class="hero section">
-
-
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5">
-                <div class="hero-content" data-aos="fade-right" data-aos-delay="200">
-                    <div class="badge-container">
-                        <span class="hero-badge">Bienvenue sur FREMIN</span>
-                    </div>
-
-                    <h1 class="hero-title">Partenaire du Développement Industriel</h1>
-                    <p class="hero-description">Nous accompagnons les entreprises ivoiriennes dans leur modernisation
-                        technique, financière et organisationnelle pour un tissu productif national fort.</p>
-
-                    <div class="hero-stats-classic">
-                        <div class="stat-item">
-                            <i class="bi bi-briefcase-fill"></i>
-                            <div class="stat-text">
-                                <span class="number"><span class="counter" data-target="127">0</span>+</span>
-                                <span class="label">Entreprises</span>
+<section id="hero" class="hero section refined-hero">
+    <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+            <!-- Slide 1: Welcome -->
+            <div class="swiper-slide">
+                <div class="refined-container">
+                    <div class="refined-row">
+                        <div class="refined-col img-col">
+                            <div class="refined-frame">
+                                <img src="{{ asset('assets/img/fremin1.jpeg') }}" alt="FREMIN Industry" class="refined-img">
+                                <div class="refined-overlay-grid"></div>
                             </div>
                         </div>
-                        <div class="stat-item">
-                            <i class="bi bi-people-fill"></i>
-                            <div class="stat-text">
-                                <span class="number"><span class="counter" data-target="5842">0</span>+</span>
-                                <span class="label">Emplois</span>
+                        <div class="refined-col text-col">
+                            <div class="refined-tag">
+                                <span class="line"></span>
+                                <span>NOTRE VISION</span>
+                            </div>
+                            <h1 class="refined-title">PROPULSER L'AVENIR <span>INDUSTRIEL</span></h1>
+                            <p class="refined-lead">Accompagnement stratégique pour la restructuration et la modernisation des entreprises de Côte d'Ivoire.</p>
+                            
+                            <div class="refined-tricolor">
+                                <span class="t-bar orange"></span>
+                                <span class="t-bar white"></span>
+                                <span class="t-bar green"></span>
+                            </div>
+
+                            <div class="refined-stats">
+                                <div class="stat-block">
+                                    <span class="num counter" data-target="127">0</span>
+                                    <span class="label">Entreprises</span>
+                                </div>
+                                <div class="stat-block">
+                                    <span class="num counter" data-target="5842">0</span>
+                                    <span class="label">Emplois</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-7">
-                <div class="hero-image-wrapper" data-aos="fade-left" data-aos-delay="100">
-                    <video src="{{ asset('assets/img/video.mp4') }}" autoplay muted loop playsinline
-                        class="img-fluid hero-main-video">
-                        Votre navigateur ne supporte pas la balise vidéo.
-                    </video>
+            <!-- Slide 2: Ancrage Institutionnel -->
+            <div class="swiper-slide">
+                <div class="refined-container">
+                    <div class="refined-row reversed">
+                        <div class="refined-col img-col">
+                            <div class="refined-frame">
+                                <video autoplay muted loop playsinline class="refined-video">
+                                    <source src="{{ asset('assets/img/video.mp4') }}" type="video/mp4">
+                                </video>
+                                <div class="refined-overlay-grid"></div>
+                            </div>
+                        </div>
+                        <div class="refined-col text-col">
+                            <div class="refined-tag">
+                                <span class="line"></span>
+                                <span>GOUVERNANCE</span>
+                            </div>
+                            <h1 class="refined-title">ANCRAGE <span>INSTITUTIONNEL</span></h1>
+                            
+                            <div class="refined-official-box">
+                                <p>Le <strong>FREMIN</strong> est placé sous la tutelle technique du <strong>Ministre chargé de l'Industrie</strong> et sous la tutelle financière du <strong>Ministre chargé de l'Economie et des Finances</strong>.</p>
+                            </div>
 
-                    <!-- Floating Stats Cards -->
-                    <div class="floating-stat-card card-1" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bi bi-cash-stack"></i>
-                        <div>
-                            <span class="val"><span class="counter" data-target="68">0</span> Mrd</span>
-                            <span class="lab">Décaissés</span>
+                            <div class="refined-identity">
+                                <img src="{{ asset('assets/img/logo_fremin.jpg') }}" alt="Logo">
+                                <div class="refined-id-meta">
+                                    <span class="m-top">République de Côte d'Ivoire</span>
+                                    <span class="m-bot">Gouvernance Stratégique</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Missions -->
+            <div class="swiper-slide">
+                <div class="refined-container">
+                    <div class="refined-row">
+                        <div class="refined-col img-col">
+                            <div class="refined-frame">
+                                <img src="{{ asset('assets/img/fremin7.jpeg') }}" alt="Missions" class="refined-img">
+                                <div class="refined-overlay-grid"></div>
+                            </div>
+                        </div>
+                        <div class="refined-col text-col">
+                            <div class="refined-tag">
+                                <span class="line"></span>
+                                <span>NOS MISSIONS</span>
+                            </div>
+                            <h1 class="refined-title">MODERNISATION & <span>SOUTIEN</span></h1>
+                            <p class="refined-lead">Fournir un accompagnement expert pour garantir la souveraineté et la compétitivité industrielle nationale.</p>
+                            
+                            <div class="refined-tricolor">
+                                <span class="t-bar orange"></span>
+                                <span class="t-bar white"></span>
+                                <span class="t-bar green"></span>
+                            </div>
+
+                            <div class="stat-block">
+                                <span class="label">OBJECTIF PRINCIPAL</span>
+                                <p style="font-size: 15px; font-weight: 600; margin-top: 10px; color: #111;">Mise à niveau technique et financière des industries.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -52,50 +110,38 @@
         </div>
     </div>
 
-    <div class="mesh-gradient-container">
-        <div class="mesh-circle orange"></div>
-        <div class="mesh-circle white"></div>
-        <div class="mesh-circle green"></div>
-    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.hero-swiper', {
+                loop: true,
+                speed: 1000,
+                autoplay: { delay: 6000, disableOnInteraction: false },
+                effect: 'fade',
+                fadeEffect: { crossFade: true }
+            });
+
             const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
-
-            const startCounters = () => {
-                counters.forEach(counter => {
-                    const updateCount = () => {
-                        const target = +counter.getAttribute('data-target');
-                        const count = +counter.innerText;
-
-                        // Lower inc means slower and more precise animation
-                        const inc = target / speed;
-
-                        if (count < target) {
-                            counter.innerText = Math.ceil(count + inc);
-                            setTimeout(updateCount, 15);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
-                    updateCount();
-                });
-            };
-
-            // Using Intersection Observer to start animation when visible
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        startCounters();
+                        counters.forEach(counter => {
+                            const updateCount = () => {
+                                const target = +counter.getAttribute('data-target');
+                                const count = +counter.innerText;
+                                const inc = target / 100;
+                                if (count < target) {
+                                    counter.innerText = Math.ceil(count + inc);
+                                    setTimeout(updateCount, 20);
+                                } else { counter.innerText = target; }
+                            };
+                            updateCount();
+                        });
                         observer.unobserve(entry.target);
                     }
                 });
             }, { threshold: 0.5 });
-
-            const heroSection = document.getElementById('hero');
-            if (heroSection) {
-                observer.observe(heroSection);
-            }
+            const hero = document.querySelector('.refined-hero');
+            if (hero) observer.observe(hero);
         });
     </script>
 </section>

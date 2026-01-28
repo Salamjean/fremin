@@ -101,23 +101,26 @@
           Swal.fire({
             title: '<span style="color: #FF8200;">LE MOT DU MINISTRE</span>',
             html: `
-                        <div class="text-start" style="font-family: 'Inter', sans-serif;">
-                          <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
-                            <img src="{{ asset('assets/img/ministre1.jpg') }}" 
-                                 style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
-                            <div>
-                              <h5 class="mb-0 fw-bold">M. Ibrahim Khalil Konaté</h5>
-                              <p class="text-muted small mb-0">Ministre du Commerce et de l'Industrie</p>
-                            </div>
-                          </div>
-                          <p style="font-style: italic; color: #555; line-height: 1.6;">
-                            "La restructuration et la mise à niveau de nos entreprises industrielles constituent le socle d'une économie résiliente et compétitive. À travers le FREMIN, nous nous engageons à transformer notre tissu industriel pour faire de la Côte d'Ivoire un hub manufacturier incontournable dans la sous-région."
-                          </p>
-                          <div class="text-end mt-4">
-                            <img src="{{ asset('assets/img/signature_minister.png') }}" style="max-height: 50px; opacity: 0.7;">
-                          </div>
-                        </div>
-                      `,
+                                <div class="text-start" style="font-family: 'Inter', sans-serif;">
+                                  <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+                                    <img src="{{ asset('assets/img/ministre1.jpg') }}" 
+                                         style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
+                                    <div>
+                                      <h5 class="mb-0 fw-bold">M. Ibrahim Khalil Konaté</h5>
+                                      <p class="text-muted small mb-0">Ministre du Commerce et de l'Industrie</p>
+                                    </div>
+                                  </div>
+                                  <p style="font-style: italic; color: #555; line-height: 1.6;">
+                                    "Le Fonds de Restructuration et de Mise à Niveau des entreprises industrielles, en abrégé FREMIN, au fil des ans, s’est positionné comme l’un des principaux instruments pour le développement industriel en Côte d’Ivoire. 
+                                      En effet, il poursuit efficacement sa mission de soutien à l’activité industrielle, notamment la mise en œuvre du Programme National de Restructuration et de Mise à Niveau des entreprises industrielles (PNRMN), la promotion de la petite transformation industrielle, l’appui aux entreprises en difficultés, en parfaite cohérence avec la vision du Gouvernement en matière de transformation structurelle de notre économie.
+                                      L’année qui s’achève a été marquée par de nombreuses actions et des résultats concrets, qui traduisent l’engagement, le professionnalisme et le sens élevé des responsabilités des organes de gestion du FREMIN.
+                                      Il me tient à cœur d’exprimer toute ma fierté au regard du travail accompli tout au long de l’année écoulée et vous exhorte à maintenir cette dynamique afin que ce Fonds demeure un outil stratégique et crédible au service du développement industriel de notre pays."
+                                  </p>
+                                  <div class="text-end mt-4">
+                                    <img src="{{ asset('assets/img/signature_minister.png') }}" style="max-height: 50px; opacity: 0.7;">
+                                  </div>
+                                </div>
+                              `,
             showCloseButton: true,
             showConfirmButton: true,
             confirmButtonText: 'Fermer',
@@ -311,28 +314,28 @@
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="swiper init-swiper funded-carousel">
         <script type="application/json" class="swiper-config">
-                  {
-                    "loop": true,
-                    "speed": 600,
-                    "autoplay": { "delay": 5000 },
-                    "slidesPerView": "auto",
-                    "pagination": { 
-                      "el": ".swiper-pagination", 
-                      "type": "bullets", 
-                      "clickable": true 
-                    },
-                    "breakpoints": {
-                      "320": { 
-                        "slidesPerView": 1, 
-                        "spaceBetween": 20 
-                      },
-                      "1200": { 
-                        "slidesPerView": 1, 
-                        "spaceBetween": 0 
+                      {
+                        "loop": true,
+                        "speed": 600,
+                        "autoplay": { "delay": 5000 },
+                        "slidesPerView": "auto",
+                        "pagination": { 
+                          "el": ".swiper-pagination", 
+                          "type": "bullets", 
+                          "clickable": true 
+                        },
+                        "breakpoints": {
+                          "320": { 
+                            "slidesPerView": 1, 
+                            "spaceBetween": 20 
+                          },
+                          "1200": { 
+                            "slidesPerView": 1, 
+                            "spaceBetween": 0 
+                          }
+                        }
                       }
-                    }
-                  }
-                  </script>
+                      </script>
         <div class="swiper-wrapper">
 
           <!-- Company 1 -->
