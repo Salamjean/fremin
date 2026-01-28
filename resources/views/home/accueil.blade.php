@@ -67,7 +67,7 @@
                 <div class="spotlight-content">
                   <div class="spotlight-title-wrap">
                     <span class="spotlight-cat mb-2 d-inline-block">FONCTION PUBLIQUE</span>
-                    <h3>Dernière rencontre trimestrielle des DRH au titre de l'année 2025</h3>
+                    <h3 style="color:white">Dernière rencontre trimestrielle des DRH au titre de l'année 2025</h3>
                     <a href="{{ route('home.actuality') }}" class="spotlight-link">Découvrir l'article <i
                         class="fas fa-chevron-right ms-2"></i></a>
                   </div>
