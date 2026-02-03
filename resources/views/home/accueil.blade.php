@@ -504,7 +504,7 @@
                         </div>
                         <div class="testimonial-footer">
                             <div class="author-photo">
-                                <img src="{{ asset('assets/img/default-avatar.jpg') }}"
+                                <img src="{{ asset('assets/img/avatarDecla.png') }}"
                                     alt="{{ $testimonial->author_name }}">
                             </div>
                             <div class="author-info">
