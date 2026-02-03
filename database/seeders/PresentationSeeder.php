@@ -22,6 +22,7 @@ class PresentationSeeder extends Seeder
             [
                 'subtitle' => 'Le moteur de la restructuration et de la modernisation industrielle en Côte d\'Ivoire.',
                 'description' => 'Découvrez notre vision et notre engagement pour l\'industrie ivoirienne.',
+                'image' => 'assets/img/hero-bg.jpg',
                 'is_active' => true
             ]
         );
