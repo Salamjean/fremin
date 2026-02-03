@@ -542,7 +542,7 @@
             <!-- Section Header -->
             <div class="partners-header" data-aos="fade-up">
                 <span class="partners-count">Nos Partenaires</span>
-                <h2>Ils nous font <span>confiance</span></h2>
+                <h2>Ils nous font confiance</h2>
                 <p>Des partenaires stratégiques qui accompagnent notre mission de développement industriel</p>
             </div>
 
