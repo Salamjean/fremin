@@ -550,7 +550,7 @@
             <div class="partners-carousel" data-aos="fade-up" data-aos-delay="200">
 
                 @foreach ($partners as $partner)
-                    <div class="partner-logo placeholder">
+                    <div class="partner-logo">
                         <img src="{{ asset('storage/' . $partner->logo) }}" alt="{{ $partner->name }}">
                     </div>
                 @endforeach

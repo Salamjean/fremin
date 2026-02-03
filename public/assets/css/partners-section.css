@@ -27,7 +27,7 @@
 }
 
 .partners-header h2 span {
-    background: linear-gradient(135deg, #FF8200 0%, #009B3A 100%);
+    background: linear-gradient(135deg, #ff8200 0%, #009b3a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -76,13 +76,18 @@
 }
 
 .partner-logo::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 130, 0, 0.1), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 130, 0, 0.1),
+        transparent
+    );
     transition: left 0.5s;
 }
 
@@ -92,14 +97,14 @@
 
 .partner-logo:hover {
     transform: translateY(-5px);
-    border-color: #FF8200;
+    border-color: #ff8200;
     box-shadow: 0 10px 30px rgba(255, 130, 0, 0.15);
 }
 
 .partner-logo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 12px;
     transition: all 0.3s ease;
 }
@@ -115,7 +120,7 @@
 }
 
 .partner-logo.placeholder::after {
-    content: 'Logo';
+    content: "Logo";
     font-size: 14px;
     color: #ccc;
     font-weight: 600;
@@ -142,7 +147,7 @@
 /* Stats Badge */
 .partners-count {
     display: inline-block;
-    background: linear-gradient(135deg, #FF8200 0%, #009B3A 100%);
+    background: linear-gradient(135deg, #ff8200 0%, #009b3a 100%);
     color: #ffffff;
     padding: 8px 20px;
     border-radius: 20px;
@@ -158,11 +163,11 @@
     .partners-section {
         padding: 60px 0;
     }
-    
+
     .partners-header h2 {
         font-size: 36px;
     }
-    
+
     .partner-logo {
         min-width: 180px;
         max-width: 180px;
@@ -174,19 +179,19 @@
     .partners-section {
         padding: 50px 0;
     }
-    
+
     .partners-header {
         margin-bottom: 40px;
     }
-    
+
     .partners-header h2 {
         font-size: 30px;
     }
-    
+
     .partners-carousel {
         gap: 30px;
     }
-    
+
     .partner-logo {
         min-width: 160px;
         max-width: 160px;
@@ -199,11 +204,11 @@
     .partners-header h2 {
         font-size: 26px;
     }
-    
+
     .partners-header p {
         font-size: 16px;
     }
-    
+
     .partner-logo {
         min-width: 140px;
         max-width: 140px;
