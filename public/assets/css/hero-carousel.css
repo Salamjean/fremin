@@ -1,0 +1,293 @@
+/*--------------------------------------------------------------
+# Modern Hero Carousel Styles
+--------------------------------------------------------------*/
+
+/* Navigation Arrows */
+.hero-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid transparent;
+}
+
+.hero-prev {
+    left: 40px;
+}
+
+.hero-next {
+    right: 40px;
+}
+
+.hero-nav-btn i {
+    font-size: 28px;
+    color: #06634e;
+    transition: all 0.3s ease;
+}
+
+.hero-nav-btn:hover {
+    background: #06634e;
+    border-color: #FF8200;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 30px rgba(6, 99, 78, 0.3);
+}
+
+.hero-nav-btn:hover i {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.hero-nav-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Modern Pagination with National Colors */
+.hero-pagination {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.hero-bullet {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    opacity: 0.7;
+}
+
+.hero-bullet.orange-bullet {
+    background: #FF8200;
+}
+
+.hero-bullet.white-bullet {
+    background: #ffffff;
+    border-color: #06634e;
+}
+
+.hero-bullet.green-bullet {
+    background: #009B3A;
+}
+
+.hero-bullet:hover {
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+.hero-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.5);
+    box-shadow: 0 0 20px currentColor;
+}
+
+.hero-bullet.swiper-pagination-bullet-active::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    opacity: 0.3;
+    animation: pulse-ring 1.5s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* Progress Bar */
+.hero-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    overflow: hidden;
+}
+
+.hero-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #FF8200 0%, #009B3A 100%);
+    width: 0%;
+    transition: width 0.1s linear;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 130, 0, 0.5);
+}
+
+.hero-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5));
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-nav-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .hero-nav-btn i {
+        font-size: 24px;
+    }
+    
+    .hero-prev {
+        left: 20px;
+    }
+    
+    .hero-next {
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-nav-btn {
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    .hero-nav-btn i {
+        font-size: 20px;
+    }
+    
+    .hero-prev {
+        left: 15px;
+    }
+    
+    .hero-next {
+        right: 15px;
+    }
+    
+    .hero-pagination {
+        bottom: 20px;
+        gap: 10px;
+    }
+    
+    .hero-bullet {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .hero-bullet.swiper-pagination-bullet-active {
+        transform: scale(1.3);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .hero-nav-btn i {
+        font-size: 18px;
+    }
+    
+    .hero-prev {
+        left: 10px;
+    }
+    
+    .hero-next {
+        right: 10px;
+    }
+    
+    .hero-pagination {
+        bottom: 15px;
+        gap: 8px;
+    }
+    
+    .hero-bullet {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Enhanced Swiper Transitions */
+.hero-swiper {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-swiper .swiper-slide {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.hero-swiper .swiper-slide-active {
+    opacity: 1;
+}
+
+/* Smooth entrance animations */
+.swiper-slide-active .refined-title,
+.swiper-slide-active .refined-lead,
+.swiper-slide-active .refined-tag {
+    animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+}
+
+.swiper-slide-active .refined-title {
+    animation-delay: 0.2s;
+}
+
+.swiper-slide-active .refined-lead {
+    animation-delay: 0.4s;
+}
+
+.swiper-slide-active .refined-tag {
+    animation-delay: 0.1s;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

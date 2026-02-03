@@ -15,6 +15,8 @@ class Carousel extends Model
         'description',
         'image',
         'image_alt',
+        'button_text',
+        'button_link',
         'layout',
         'sort_order',
         'is_active'

@@ -1,0 +1,314 @@
+/*--------------------------------------------------------------
+# Institutional Detail Pages - Modern Design
+# Style pour les pages dédiées institutionnelles
+--------------------------------------------------------------*/
+
+/* Page Container */
+.inst-detail-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 120px 0 80px;
+}
+
+.inst-detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Back Button */
+.inst-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: #ffffff;
+    border: 2px solid #FF8200;
+    border-radius: 8px;
+    color: #FF8200;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.inst-back-btn:hover {
+    background: #FF8200;
+    color: #ffffff;
+    transform: translateX(-5px);
+}
+
+/* Header Section */
+.inst-detail-header {
+    margin-bottom: 50px;
+}
+
+.inst-detail-title-block {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.inst-detail-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #FF8200 0%, #ff9a33 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 8px 24px rgba(255, 130, 0, 0.3);
+}
+
+.inst-detail-icon.green {
+    background: linear-gradient(135deg, #009B3A 0%, #00c04b 100%);
+    box-shadow: 0 8px 24px rgba(0, 155, 58, 0.3);
+}
+
+.inst-detail-icon i {
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.inst-detail-title {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1f2f31;
+    margin: 0;
+}
+
+.inst-detail-title span {
+    background: linear-gradient(135deg, #FF8200 0%, #009B3A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Content Cards */
+.inst-detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inst-detail-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #FF8200;
+}
+
+.inst-detail-card.zone-card {
+    border-left-color: #009B3A;
+}
+
+.inst-detail-card.highlight-card {
+    border-left-color: #009B3A;
+    background: linear-gradient(135deg, rgba(255, 130, 0, 0.05) 0%, rgba(0, 155, 58, 0.05) 100%);
+}
+
+.inst-detail-card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2f31;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.inst-detail-card h2 i {
+    color: #FF8200;
+}
+
+.inst-detail-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1f2f31;
+    margin: 20px 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inst-detail-card h3 i {
+    color: #009B3A;
+}
+
+.inst-detail-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2f31;
+    margin: 15px 0 10px;
+}
+
+.inst-detail-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Sub Cards */
+.inst-detail-subcard {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 3px solid #009B3A;
+}
+
+.inst-detail-subcard.president {
+    border-left-color: #FF8200;
+    background: rgba(255, 130, 0, 0.05);
+}
+
+.inst-detail-subcard.vice-president {
+    border-left-color: #009B3A;
+    background: rgba(0, 155, 58, 0.05);
+}
+
+/* Lists */
+.inst-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.inst-detail-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.inst-detail-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, #FF8200 0%, #009B3A 100%);
+    border-radius: 4px;
+}
+
+ol.inst-detail-list {
+    counter-reset: item;
+    list-style: none;
+}
+
+ol.inst-detail-list li {
+    counter-increment: item;
+}
+
+ol.inst-detail-list li::before {
+    content: counter(item);
+    background: linear-gradient(135deg, #FF8200 0%, #009B3A 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+/* CTA Button */
+.inst-detail-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #FF8200 0%, #009B3A 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(255, 130, 0, 0.3);
+}
+
+.inst-detail-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 155, 58, 0.4);
+}
+
+.inst-detail-cta i {
+    transition: transform 0.3s ease;
+}
+
+.inst-detail-cta:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .inst-detail-page {
+        padding: 100px 0 60px;
+    }
+    
+    .inst-detail-title-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .inst-detail-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .inst-detail-icon i {
+        font-size: 36px;
+    }
+    
+    .inst-detail-title {
+        font-size: 32px;
+    }
+    
+    .inst-detail-card {
+        padding: 30px 20px;
+    }
+    
+    .inst-detail-card h2 {
+        font-size: 26px;
+    }
+    
+    .inst-detail-card h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .inst-detail-title {
+        font-size: 26px;
+    }
+    
+    .inst-detail-card {
+        padding: 25px 15px;
+    }
+    
+    .inst-detail-card h2 {
+        font-size: 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .inst-detail-subcard {
+        padding: 20px 15px;
+    }
+}

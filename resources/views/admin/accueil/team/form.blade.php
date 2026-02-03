@@ -809,6 +809,38 @@
                                             <span class="toggle-slider"></span>
                                         </label>
                                     </div>
+
+                                    <div class="toggle-wrapper">
+                                        <label class="toggle-label" for="is_president">
+                                            <i class="fas fa-crown"></i>
+                                            Est le Président (Message activé)
+                                        </label>
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" id="is_president" name="is_president" value="1"
+                                                {{ old('is_president', $teamMember->is_president ?? false) ? 'checked' : '' }}>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <div class="section-header">
+                                    <i class="fas fa-align-left"></i>
+                                    Biographie & Message
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="bio">
+                                        <i class="fas fa-quote-left"></i>
+                                        Biographie / Message du Président
+                                    </label>
+                                    <textarea class="form-control @error('bio') is-invalid @enderror" 
+                                        id="bio" name="bio" rows="6" 
+                                        placeholder="Saisissez la biographie ou le message ici...">{{ old('bio', $teamMember->bio ?? '') }}</textarea>
+                                    <div class="form-hint">Ce texte sera affiché dans le modal de message du président.</div>
+                                    @error('bio')
+                                        <span class="error-message">{{ $message }}</span>
+                                    @enderror
                                 </div>
                             </div>
                         </div>

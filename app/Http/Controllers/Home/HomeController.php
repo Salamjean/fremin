@@ -9,7 +9,19 @@ use App\Models\Event;
 use App\Models\FeaturedArticle;
 use App\Models\HeroSection;
 use App\Models\NewsArticle;
+use App\Models\Publication;
 use App\Models\TeamMember;
+use App\Models\Statistic;
+use App\Models\Partner;
+use App\Models\Testimonial;
+use App\Models\MissionCard;
+use App\Models\GovernanceCard;
+use App\Models\Program;
+use App\Models\Opportunity;
+use App\Models\FinancedCompany;
+use App\Models\PresentationStat;
+use App\Models\PresentationMission;
+use App\Models\PresentationValue;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -18,37 +30,71 @@ class HomeController extends Controller
     {
         $carousels = Carousel::active()->ordered()->get();
         $teamMembers = TeamMember::active()->ordered()->get();
+        $statistics = Statistic::active()->ordered()->get();
+        $partners = Partner::active()->ordered()->get();
+        $testimonials = Testimonial::active()->ordered()->get();
+        $missionCards = MissionCard::active()->ordered()->get();
+        $governanceCards = GovernanceCard::active()->ordered()->get();
+        $programs = Program::active()->ordered()->get();
+
+
+        $financedCompanies = FinancedCompany::active()->ordered()->get();
 
         // Fetch news articles or provide dummy data if empty
         $newsArticles = NewsArticle::active()->ordered()->take(5)->get();
 
-        return view('home.accueil', compact('carousels', 'teamMembers', 'newsArticles'));
+        return view('home.accueil', compact(
+            'carousels',
+            'teamMembers',
+            'newsArticles',
+            'statistics',
+            'partners',
+            'testimonials',
+            'missionCards',
+            'governanceCards',
+            'programs',
+            'financedCompanies'
+        ));
     }
     public function about()
     {
         $hero = HeroSection::getActive();
         $about = AboutSection::getActive();
-        return view('home.pages.presentation', compact('hero', 'about'));
+        $stats = PresentationStat::active()->ordered()->get();
+        $missions = PresentationMission::active()->ordered()->get();
+        $values = PresentationValue::active()->ordered()->get();
+
+        return view('home.pages.presentation', compact('hero', 'about', 'stats', 'missions', 'values'));
     }
 
     public function actuality()
     {
+        $hero = HeroSection::where('main_title', 'ACTUALITÉS & ÉVÉNEMENTS')->first() ?? HeroSection::getActive();
         $featuredArticle = FeaturedArticle::getFeatured();
         $newsArticles = NewsArticle::getActive();
         $upcomingEvents = Event::getActive();
-        return view('home.pages.actuality', compact('featuredArticle', 'newsArticles', 'upcomingEvents'));
+        return view('home.pages.actuality', compact('hero', 'featuredArticle', 'newsArticles', 'upcomingEvents'));
     }
 
     public function publication()
     {
-        return view('home.pages.publication');
+        $hero = HeroSection::where('main_title', 'PUBLICATIONS & RESSOURCES')->first() ?? HeroSection::getActive();
+        $publications = Publication::published()->orderBy('sort_order')->get();
+
+        $rapports = $publications->where('type', 'rapport');
+        $etudes = $publications->where('type', 'etude');
+        $guides = $publications->where('type', 'guide');
+        $autres = $publications->where('type', 'autre');
+
+        return view('home.pages.publication', compact('hero', 'rapports', 'etudes', 'guides', 'autres'));
     }
 
     public function program()
     {
-        $programs = \App\Models\Program::active()->ordered()->get();
-        $opportunities = \App\Models\Opportunity::active()->ordered()->get();
-        return view('home.pages.program', compact('programs', 'opportunities'));
+        $hero = HeroSection::where('main_title', 'NOS PROGRAMMES')->first() ?? HeroSection::getActive();
+        $programs = Program::active()->ordered()->get();
+        $opportunities = Opportunity::active()->ordered()->get();
+        return view('home.pages.program', compact('hero', 'programs', 'opportunities'));
     }
 
     public function contact()
@@ -60,5 +106,91 @@ class HomeController extends Controller
     {
         $project = \App\Models\Project::where('slug', $slug)->firstOrFail();
         return view('home.pages.project', compact('project'));
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('q');
+        $results = [];
+
+        if ($query) {
+            // Search in Actualités
+            $actualites = \App\Models\NewsArticle::where('title', 'LIKE', "%{$query}%")
+                ->orWhere('excerpt', 'LIKE', "%{$query}%")
+                ->where('is_active', true)
+                ->get()
+                ->map(function ($item) {
+                    return [
+                        'type' => 'Actualité',
+                        'title' => $item->title,
+                        'excerpt' => $item->excerpt,
+                        'url' => $item->link ?: route('home.actuality'),
+                        'date' => $item->date,
+                    ];
+                });
+
+            // Search in Publications
+            $publications = \App\Models\Publication::where('title', 'LIKE', "%{$query}%")
+                ->orWhere('description', 'LIKE', "%{$query}%")
+                ->get()
+                ->map(function ($item) {
+                    return [
+                        'type' => 'Publication',
+                        'title' => $item->title,
+                        'excerpt' => $item->description,
+                        'url' => route('home.publication') . '#publication-' . $item->id,
+                        'date' => $item->created_at,
+                    ];
+                });
+
+            // Search in Programs
+            $programs = \App\Models\Program::where('title', 'LIKE', "%{$query}%")
+                ->orWhere('description', 'LIKE', "%{$query}%")
+                ->get()
+                ->map(function ($item) {
+                    return [
+                        'type' => 'Programme',
+                        'title' => $item->title,
+                        'excerpt' => $item->description,
+                        'url' => route('home.program') . '#program-' . $item->id,
+                        'date' => $item->created_at,
+                    ];
+                });
+
+            $results = $actualites->concat($publications)->concat($programs)->sortByDesc('date');
+        }
+
+        return view('home.pages.search-results', compact('query', 'results'));
+    }
+
+    // Pages Institutionnelles Dédiées
+    public function pnrmn()
+    {
+        return view('home.institutional.pnrmn');
+    }
+
+    public function projetsSpecifiques()
+    {
+        return view('home.institutional.projets-specifiques');
+    }
+
+    public function zonesIndustrielles()
+    {
+        return view('home.institutional.zones-industrielles');
+    }
+
+    public function comiteGestion()
+    {
+        return view('home.institutional.comite-gestion');
+    }
+
+    public function celluleTechnique()
+    {
+        return view('home.institutional.cellule-technique');
+    }
+
+    public function tutelles()
+    {
+        return view('home.institutional.tutelles');
     }
 }

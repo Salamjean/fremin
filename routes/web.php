@@ -8,6 +8,9 @@ use App\Http\Controllers\Admin\Home\TeamController;
 use App\Http\Controllers\Admin\Presentation\AboutSectionController;
 use App\Http\Controllers\Admin\Presentation\GalleryController;
 use App\Http\Controllers\Admin\Presentation\HeroSectionController;
+use App\Http\Controllers\Admin\Presentation\PresentationStatController;
+use App\Http\Controllers\Admin\Presentation\PresentationMissionController;
+use App\Http\Controllers\Admin\Presentation\PresentationValueController;
 use App\Http\Controllers\Admin\Actualite\FeaturedArticleController;
 use App\Http\Controllers\Admin\Actualite\NewsArticleController;
 use App\Http\Controllers\Admin\Program\ProgramController;
@@ -26,6 +29,15 @@ Route::prefix('home')->group(function () {
     Route::get('/program', [HomeController::class, 'program'])->name('home.program');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
     Route::get('/project/{slug}', [HomeController::class, 'project'])->name('home.project');
+    Route::get('/search', [HomeController::class, 'search'])->name('home.search');
+
+    // Pages Institutionnelles Dédiées
+    Route::get('/missions/pnrmn', [HomeController::class, 'pnrmn'])->name('home.pnrmn');
+    Route::get('/missions/projets-specifiques', [HomeController::class, 'projetsSpecifiques'])->name('home.projets-specifiques');
+    Route::get('/missions/zones-industrielles', [HomeController::class, 'zonesIndustrielles'])->name('home.zones-industrielles');
+    Route::get('/gouvernance/comite-gestion', [HomeController::class, 'comiteGestion'])->name('home.comite-gestion');
+    Route::get('/gouvernance/cellule-technique', [HomeController::class, 'celluleTechnique'])->name('home.cellule-technique');
+    Route::get('/gouvernance/tutelles', [HomeController::class, 'tutelles'])->name('home.tutelles');
 });
 
 
@@ -58,6 +70,66 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::delete('/{teamMember}', [TeamController::class, 'destroy'])->name('destroy');
     });
 
+    Route::prefix('statistics')->name('admin.statistics.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Home\StatisticController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Home\StatisticController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Home\StatisticController::class, 'store'])->name('store');
+        Route::get('/{statistic}/edit', [\App\Http\Controllers\Admin\Home\StatisticController::class, 'edit'])->name('edit');
+        Route::put('/{statistic}', [\App\Http\Controllers\Admin\Home\StatisticController::class, 'update'])->name('update');
+        Route::delete('/{statistic}', [\App\Http\Controllers\Admin\Home\StatisticController::class, 'destroy'])->name('destroy');
+        Route::post('/{statistic}/toggle-status', [\App\Http\Controllers\Admin\Home\StatisticController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('partners')->name('admin.partners.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Home\PartnerController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Home\PartnerController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Home\PartnerController::class, 'store'])->name('store');
+        Route::get('/{partner}/edit', [\App\Http\Controllers\Admin\Home\PartnerController::class, 'edit'])->name('edit');
+        Route::put('/{partner}', [\App\Http\Controllers\Admin\Home\PartnerController::class, 'update'])->name('update');
+        Route::delete('/{partner}', [\App\Http\Controllers\Admin\Home\PartnerController::class, 'destroy'])->name('destroy');
+        Route::post('/{partner}/toggle-status', [\App\Http\Controllers\Admin\Home\PartnerController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('testimonials')->name('admin.testimonials.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Home\TestimonialController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Home\TestimonialController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Home\TestimonialController::class, 'store'])->name('store');
+        Route::get('/{testimonial}/edit', [\App\Http\Controllers\Admin\Home\TestimonialController::class, 'edit'])->name('edit');
+        Route::put('/{testimonial}', [\App\Http\Controllers\Admin\Home\TestimonialController::class, 'update'])->name('update');
+        Route::delete('/{testimonial}', [\App\Http\Controllers\Admin\Home\TestimonialController::class, 'destroy'])->name('destroy');
+        Route::post('/{testimonial}/toggle-status', [\App\Http\Controllers\Admin\Home\TestimonialController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('mission-cards')->name('admin.mission-cards.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Home\MissionCardController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Home\MissionCardController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Home\MissionCardController::class, 'store'])->name('store');
+        Route::get('/{missionCard}/edit', [\App\Http\Controllers\Admin\Home\MissionCardController::class, 'edit'])->name('edit');
+        Route::put('/{missionCard}', [\App\Http\Controllers\Admin\Home\MissionCardController::class, 'update'])->name('update');
+        Route::delete('/{missionCard}', [\App\Http\Controllers\Admin\Home\MissionCardController::class, 'destroy'])->name('destroy');
+        Route::post('/{missionCard}/toggle-status', [\App\Http\Controllers\Admin\Home\MissionCardController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('governance-cards')->name('admin.governance-cards.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Home\GovernanceCardController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Home\GovernanceCardController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Home\GovernanceCardController::class, 'store'])->name('store');
+        Route::get('/{governanceCard}/edit', [\App\Http\Controllers\Admin\Home\GovernanceCardController::class, 'edit'])->name('edit');
+        Route::put('/{governanceCard}', [\App\Http\Controllers\Admin\Home\GovernanceCardController::class, 'update'])->name('update');
+        Route::delete('/{governanceCard}', [\App\Http\Controllers\Admin\Home\GovernanceCardController::class, 'destroy'])->name('destroy');
+        Route::post('/{governanceCard}/toggle-status', [\App\Http\Controllers\Admin\Home\GovernanceCardController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('financed-companies')->name('admin.financed-companies.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Home\FinancedCompanyController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Home\FinancedCompanyController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Home\FinancedCompanyController::class, 'store'])->name('store');
+        Route::get('/{financedCompany}/edit', [\App\Http\Controllers\Admin\Home\FinancedCompanyController::class, 'edit'])->name('edit');
+        Route::put('/{financedCompany}', [\App\Http\Controllers\Admin\Home\FinancedCompanyController::class, 'update'])->name('update');
+        Route::delete('/{financedCompany}', [\App\Http\Controllers\Admin\Home\FinancedCompanyController::class, 'destroy'])->name('destroy');
+        Route::post('/{financedCompany}/toggle-status', [\App\Http\Controllers\Admin\Home\FinancedCompanyController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
     //les routes de la page presentation
     Route::prefix('hero')->name('admin.hero.')->group(function () {
         Route::get('/', [HeroSectionController::class, 'index'])->name('index');
@@ -87,6 +159,36 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::put('/{gallery}', [GalleryController::class, 'update'])->name('update');
         Route::delete('/{gallery}', [GalleryController::class, 'destroy'])->name('destroy');
         Route::post('/{gallery}/toggle-status', [GalleryController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('presentation-stats')->name('admin.presentation-stats.')->group(function () {
+        Route::get('/', [PresentationStatController::class, 'index'])->name('index');
+        Route::get('/create', [PresentationStatController::class, 'create'])->name('create');
+        Route::post('/', [PresentationStatController::class, 'store'])->name('store');
+        Route::get('/{presentationStat}/edit', [PresentationStatController::class, 'edit'])->name('edit');
+        Route::put('/{presentationStat}', [PresentationStatController::class, 'update'])->name('update');
+        Route::delete('/{presentationStat}', [PresentationStatController::class, 'destroy'])->name('destroy');
+        Route::post('/{presentationStat}/toggle-status', [PresentationStatController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('presentation-missions')->name('admin.presentation-missions.')->group(function () {
+        Route::get('/', [PresentationMissionController::class, 'index'])->name('index');
+        Route::get('/create', [PresentationMissionController::class, 'create'])->name('create');
+        Route::post('/', [PresentationMissionController::class, 'store'])->name('store');
+        Route::get('/{presentationMission}/edit', [PresentationMissionController::class, 'edit'])->name('edit');
+        Route::put('/{presentationMission}', [PresentationMissionController::class, 'update'])->name('update');
+        Route::delete('/{presentationMission}', [PresentationMissionController::class, 'destroy'])->name('destroy');
+        Route::post('/{presentationMission}/toggle-status', [PresentationMissionController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('presentation-values')->name('admin.presentation-values.')->group(function () {
+        Route::get('/', [PresentationValueController::class, 'index'])->name('index');
+        Route::get('/create', [PresentationValueController::class, 'create'])->name('create');
+        Route::post('/', [PresentationValueController::class, 'store'])->name('store');
+        Route::get('/{presentationValue}/edit', [PresentationValueController::class, 'edit'])->name('edit');
+        Route::put('/{presentationValue}', [PresentationValueController::class, 'update'])->name('update');
+        Route::delete('/{presentationValue}', [PresentationValueController::class, 'destroy'])->name('destroy');
+        Route::post('/{presentationValue}/toggle-status', [PresentationValueController::class, 'toggleStatus'])->name('toggle-status');
     });
 
     //Les routes de la page actualité et evenements

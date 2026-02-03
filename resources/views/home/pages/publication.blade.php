@@ -5,10 +5,9 @@
     <div class="contact-header-v2">
         <div class="container text-center py-5">
             <h1 class="text-white display-2 mb-3 fw-black animate__animated animate__zoomIn"
-                style="font-weight: 900; font-size: 45px; letter-spacing: -1px;">PUBLICATIONS & RESSOURCES</h1>
+                style="font-weight: 900; font-size: 45px; letter-spacing: -1px;">{{ $hero->main_title ?? 'PUBLICATIONS & RESSOURCES' }}</h1>
             <div class="mx-auto bg-white mb-4" style="height: 4px; width: 80px;"></div>
-            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">Documentation officielle, études
-                sectorielles et ressources stratégiques pour l'industrie.</p>
+            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">{{ $hero->subtitle ?? 'Documentation officielle, études sectorielles et ressources stratégiques pour l\'industrie.' }}</p>
         </div>
     </div>
 
@@ -53,111 +52,103 @@
         <div class="container py-5">
 
             <!-- Rapports Section -->
+            @if($rapports->count() > 0)
             <div id="rapports" class="mb-5 pt-4">
                 <div class="d-flex align-items-center gap-3 mb-4" data-aos="fade-right">
                     <div style="width: 10px; height: 35px; background: #009B3A;"></div>
                     <h3 class="fw-bold mb-0">Rapports d'Activités</h3>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    @foreach($rapports as $doc)
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
                         <div class="doc-card-v2">
                             <span class="doc-type-badge-v2">BIBLIOTHÈQUE</span>
-                            <h4 class="doc-title-v2">Rapport Annuel de Performance 2025</h4>
+                            <h4 class="doc-title-v2">{{ $doc->title }}</h4>
                             <div class="doc-meta-v2">
-                                <span><i class="far fa-calendar-alt me-1"></i> Déc 2025</span>
-                                <span><i class="far fa-file-pdf me-1"></i> 4.5 MB</span>
+                                <span><i class="far fa-calendar-alt me-1"></i> {{ $doc->formatted_date }}</span>
+                                <span><i class="far fa-file-pdf me-1"></i> {{ $doc->file_size }}</span>
                             </div>
-                            <a href="#" class="btn-doc-download">TÉLÉCHARGER LE PDF <i class="fas fa-download"></i></a>
+                            <a href="{{ route('admin.publications.download', $doc->id) }}" class="btn-doc-download">TÉLÉCHARGER LE PDF <i class="fas fa-download"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="doc-card-v2">
-                            <span class="doc-type-badge-v2">BILAN</span>
-                            <h4 class="doc-title-v2">Synthèse du Plan Stratégique 2020-2025</h4>
-                            <div class="doc-meta-v2">
-                                <span><i class="far fa-calendar-alt me-1"></i> Jan 2026</span>
-                                <span><i class="far fa-file-pdf me-1"></i> 2.1 MB</span>
-                            </div>
-                            <a href="#" class="btn-doc-download">TÉLÉCHARGER LE PDF <i class="fas fa-download"></i></a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
+            @endif
 
             <!-- Études Section -->
+            @if($etudes->count() > 0)
             <div id="etudes" class="mb-5 pt-4">
                 <div class="d-flex align-items-center gap-3 mb-4" data-aos="fade-right">
                     <div style="width: 10px; height: 35px; background: #FF8200;"></div>
                     <h3 class="fw-bold mb-0">Études & Analyses</h3>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    @foreach($etudes as $doc)
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
                         <div class="doc-card-v2">
                             <span class="doc-type-badge-v2">RECHERCHE</span>
-                            <h4 class="doc-title-v2">Cartographie de l'Industrie 4.0 en Côte d'Ivoire</h4>
+                            <h4 class="doc-title-v2">{{ $doc->title }}</h4>
                             <div class="doc-meta-v2">
-                                <span><i class="far fa-calendar-alt me-1"></i> Nov 2025</span>
-                                <span><i class="far fa-file-pdf me-1"></i> 8.2 MB</span>
+                                <span><i class="far fa-calendar-alt me-1"></i> {{ $doc->formatted_date }}</span>
+                                <span><i class="far fa-file-pdf me-1"></i> {{ $doc->file_size }}</span>
                             </div>
-                            <a href="#" class="btn-doc-download">TÉLÉCHARGER LE PDF <i class="fas fa-download"></i></a>
+                            <a href="{{ route('admin.publications.download', $doc->id) }}" class="btn-doc-download">TÉLÉCHARGER LE PDF <i class="fas fa-download"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="doc-card-v2">
-                            <span class="doc-type-badge-v2">ANALYSE</span>
-                            <h4 class="doc-title-v2">Impact de la Modernisation sur la Compétitivité</h4>
-                            <div class="doc-meta-v2">
-                                <span><i class="far fa-calendar-alt me-1"></i> Oct 2025</span>
-                                <span><i class="far fa-file-pdf me-1"></i> 3.7 MB</span>
-                            </div>
-                            <a href="#" class="btn-doc-download">TÉLÉCHARGER LE PDF <i class="fas fa-download"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="doc-card-v2">
-                            <span class="doc-type-badge-v2">ÉTUDE</span>
-                            <h4 class="doc-title-v2">Baromètre de Satisfaction Industrielle 2025</h4>
-                            <div class="doc-meta-v2">
-                                <span><i class="far fa-calendar-alt me-1"></i> Sept 2025</span>
-                                <span><i class="far fa-file-pdf me-1"></i> 1.5 MB</span>
-                            </div>
-                            <a href="#" class="btn-doc-download">TÉLÉCHARGER LE PDF <i class="fas fa-download"></i></a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
+            @endif
 
             <!-- Guides Section -->
+            @if($guides->count() > 0)
             <div id="guides" class="pt-4">
                 <div class="d-flex align-items-center gap-3 mb-4" data-aos="fade-right">
                     <div style="width: 10px; height: 35px; background: #009B3A;"></div>
                     <h3 class="fw-bold mb-0">Guides & Formulaires</h3>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-6" data-aos="fade-up">
+                    @foreach($guides as $doc)
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
                         <div class="doc-card-v2 d-flex flex-column h-100">
                             <span class="doc-type-badge-v2"
-                                style="background: rgba(0, 155, 58, 0.1); color: #009B3A;">GUIDE</span>
-                            <h4 class="doc-title-v2">Le Guide de l'Entreprise en Mise à Niveau</h4>
-                            <p class="small text-muted mb-4">Un manuel complet détaillant chaque phase du processus
-                                d'accompagnement du FREMIN, de l'audit à la certification.</p>
-                            <a href="#" class="btn-doc-download mt-auto">TÉLÉCHARGER LE GUIDE COMPLET <i
+                                style="background: rgba(0, 155, 58, 0.1); color: #009B3A;">{{ strtoupper($doc->type) }}</span>
+                            <h4 class="doc-title-v2">{{ $doc->title }}</h4>
+                            <p class="small text-muted mb-4">{{ $doc->description }}</p>
+                            <a href="{{ route('admin.publications.download', $doc->id) }}" class="btn-doc-download mt-auto">TÉLÉCHARGER LE DOCUMENT <i
                                     class="fas fa-download"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="doc-card-v2 d-flex flex-column h-100">
-                            <span class="doc-type-badge-v2"
-                                style="background: rgba(0, 155, 58, 0.1); color: #009B3A;">DESSIN</span>
-                            <h4 class="doc-title-v2">Kit de Communication pour les Entreprises Lauréates</h4>
-                            <p class="small text-muted mb-4">Pack comprenant les logos officiels et les directives
-                                graphiques pour la visibilité des projets financés par le fonds.</p>
-                            <a href="#" class="btn-doc-download mt-auto">TÉLÉCHARGER LE KIT (ZIP) <i
-                                    class="fas fa-download"></i></a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
+            @endif
+
+            <!-- Autres Section -->
+            @if($autres->count() > 0)
+            <div id="autres" class="pt-5">
+                <div class="d-flex align-items-center gap-3 mb-4" data-aos="fade-right">
+                    <div style="width: 10px; height: 35px; background: #6c757d;"></div>
+                    <h3 class="fw-bold mb-0">Autres Ressources</h3>
+                </div>
+                <div class="row g-4">
+                    @foreach($autres as $doc)
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                        <div class="doc-card-v2">
+                            <span class="doc-type-badge-v2">DIVERS</span>
+                            <h4 class="doc-title-v2">{{ $doc->title }}</h4>
+                            <div class="doc-meta-v2">
+                                <span><i class="far fa-calendar-alt me-1"></i> {{ $doc->formatted_date }}</span>
+                                <span><i class="far fa-file-pdf me-1"></i> {{ $doc->file_size }}</span>
+                            </div>
+                            <a href="{{ route('admin.publications.download', $doc->id) }}" class="btn-doc-download">TÉLÉCHARGER <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+            @endif
 
         </div>
     </section>

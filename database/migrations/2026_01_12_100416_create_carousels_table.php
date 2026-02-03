@@ -17,6 +17,8 @@ return new class extends Migration {
             $table->text('description');
             $table->string('image');
             $table->string('image_alt')->nullable();
+            $table->string('button_text')->nullable();
+            $table->string('button_link')->nullable();
             $table->enum('layout', ['left', 'right'])->default('left');
             $table->integer('sort_order')->default(0);
             $table->boolean('is_active')->default(true);

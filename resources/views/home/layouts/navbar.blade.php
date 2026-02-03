@@ -23,24 +23,36 @@
       <ul>
         <li><a href="{{route('home')}}" class="active">Accueil</a></li>
         <li><a href="{{route('home.about')}}">Présentation</a></li>
-        <li><a href="{{route('home.actuality')}}">Actualités</a></li>
-        <li><a href="{{route('home.publication')}}">Publications</a></li>
+        <li><a href="{{route('home.actuality')}}">Actualités & Evénements</a></li>
+        <li><a href="{{route('home.publication')}}">Publications & Ressources</a></li>
         <li><a href="{{route('home.program')}}">Programmes</a></li>
+        <li><a href="{{route('home.contact')}}">Contact</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
 
-    <a class="btn-getstarted" href="{{route('home.contact')}}">Contactez-nous</a>
+    <!-- Global Search -->
+    <div class="global-search-wrapper">
+      <form action="{{route('home.search')}}" method="GET" class="global-search-form">
+        <div class="search-input-group">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" name="q" class="search-input" placeholder="Rechercher..." autocomplete="off" required>
+          <button type="submit" class="search-submit-btn">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+    </div>
 
   </div>
 
 </header>
-  <div class="hero-ticker-tape">
-    <div class="ticker-content">
-      <div class="ticker-track">
-        <span>MISE À NIVEAU TECHNIQUE • RESTRUCTURATION FINANCIÈRE • CAPITAL HUMAIN • CERTIFICATION ISO •
-          MODERNISATION INDUSTRIELLE • MISE À NIVEAU TECHNIQUE • RESTRUCTURATION FINANCIÈRE • CAPITAL HUMAIN •
-          CERTIFICATION ISO • MODERNISATION INDUSTRIELLE</span>
-      </div>
+<div class="hero-ticker-tape">
+  <div class="ticker-content">
+    <div class="ticker-track">
+      <span>MISE À NIVEAU TECHNIQUE • RESTRUCTURATION FINANCIÈRE • CAPITAL HUMAIN • CERTIFICATION ISO •
+        MODERNISATION INDUSTRIELLE • MISE À NIVEAU TECHNIQUE • RESTRUCTURATION FINANCIÈRE • CAPITAL HUMAIN •
+        CERTIFICATION ISO • MODERNISATION INDUSTRIELLE</span>
     </div>
   </div>
+</div>

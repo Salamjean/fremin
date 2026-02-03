@@ -1,132 +1,112 @@
 <section id="hero" class="hero section refined-hero">
     <div class="swiper hero-swiper">
         <div class="swiper-wrapper">
-            <!-- Slide 1: Welcome -->
-            <div class="swiper-slide">
-                <div class="refined-container">
-                    <div class="refined-row">
-                        <div class="refined-col img-col">
-                            <div class="refined-frame">
-                                <img src="{{ asset('assets/img/fremin1.jpeg') }}" alt="FREMIN Industry"
-                                    class="refined-img">
-                                <div class="refined-overlay-grid"></div>
-                            </div>
-                        </div>
-                        <div class="refined-col text-col">
-                            <div class="refined-tag">
-                                <span class="line"></span>
-                                <span>NOTRE VISION</span>
-                            </div>
-                            <h1 class="refined-title">PROPULSER L'AVENIR <span>INDUSTRIEL</span></h1>
-                            <p class="refined-lead">Accompagnement stratégique pour la restructuration et la
-                                modernisation des entreprises de Côte d'Ivoire.</p>
-
-                            <div class="refined-tricolor">
-                                <span class="t-bar orange"></span>
-                                <span class="t-bar white"></span>
-                                <span class="t-bar green"></span>
-                            </div>
-
-                            <div class="refined-stats">
-                                <div class="stat-block">
-                                    <span class="num counter" data-target="127">0</span>
-                                    <span class="label">Entreprises</span>
-                                </div>
-                                <div class="stat-block">
-                                    <span class="num counter" data-target="5842">0</span>
-                                    <span class="label">Emplois</span>
+            @foreach($carousels as $carousel)
+                <div class="swiper-slide">
+                    <div class="refined-container">
+                        <div class="refined-row {{ $carousel->layout == 'right' ? 'reversed' : '' }}">
+                            <div class="refined-col img-col">
+                                <div class="refined-frame">
+                                    @if(Str::endsWith($carousel->image, '.mp4'))
+                                        <video autoplay muted loop playsinline class="refined-video">
+                                            <source src="{{ asset('assets/img/video.mp4') }}" type="video/mp4">
+                                        </video>
+                                    @else
+                                        <img src="{{ asset('storage/' . $carousel->image) }}" alt="{{ $carousel->image_alt }}"
+                                            class="refined-img">
+                                    @endif
+                                    <div class="refined-overlay-grid"></div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <div class="refined-col text-col">
+                                <div class="refined-tag">
+                                    <span class="line"></span>
+                                    <span>{{ $carousel->subtitle }}</span>
+                                </div>
+                                <h1 class="refined-title">{!! $carousel->title !!}</h1>
+                                <p class="refined-lead">{{ $carousel->description }}</p>
 
-            <!-- Slide 2: Ancrage Institutionnel -->
-            <div class="swiper-slide">
-                <div class="refined-container">
-                    <div class="refined-row reversed">
-                        <div class="refined-col img-col">
-                            <div class="refined-frame">
-                                <video autoplay muted loop playsinline class="refined-video">
-                                    <source src="{{ asset('assets/img/video.mp4') }}" type="video/mp4">
-                                </video>
-                                <div class="refined-overlay-grid"></div>
-                            </div>
-                        </div>
-                        <div class="refined-col text-col">
-                            <div class="refined-tag">
-                                <span class="line"></span>
-                                <span>GOUVERNANCE</span>
-                            </div>
-                            <h1 class="refined-title">ANCRAGE <span>INSTITUTIONNEL</span></h1>
+                                @if($carousel->button_text)
+                                    <a href="{{ $carousel->button_link }}" class="btn-action mt-4">
+                                        {{ $carousel->button_text }}
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                @endif
 
-                            <div class="refined-official-box">
-                                <p>Le <strong>FREMIN</strong> est placé sous la tutelle technique du <strong>Ministre
-                                        chargé de l'Industrie</strong> et sous la tutelle financière du <strong>Ministre
-                                        chargé de l'Economie et des Finances</strong>.</p>
-                            </div>
-
-                            <div class="refined-identity">
-                                <img src="{{ asset('assets/img/logo_fremin.jpg') }}" alt="Logo">
-                                <div class="refined-id-meta">
-                                    <span class="m-top">République de Côte d'Ivoire</span>
-                                    <span class="m-bot">Gouvernance Stratégique</span>
+                                <div class="refined-tricolor">
+                                    <span class="t-bar orange"></span>
+                                    <span class="t-bar white"></span>
+                                    <span class="t-bar green"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Slide 3: Missions -->
-            <div class="swiper-slide">
-                <div class="refined-container">
-                    <div class="refined-row">
-                        <div class="refined-col img-col">
-                            <div class="refined-frame">
-                                <img src="{{ asset('assets/img/fremin7.jpeg') }}" alt="Missions" class="refined-img">
-                                <div class="refined-overlay-grid"></div>
-                            </div>
-                        </div>
-                        <div class="refined-col text-col">
-                            <div class="refined-tag">
-                                <span class="line"></span>
-                                <span>NOS MISSIONS</span>
-                            </div>
-                            <h1 class="refined-title">MODERNISATION & <span>SOUTIEN</span></h1>
-                            <p class="refined-lead">Fournir un accompagnement expert pour garantir la souveraineté et la
-                                compétitivité industrielle nationale.</p>
-
-                            <div class="refined-tricolor">
-                                <span class="t-bar orange"></span>
-                                <span class="t-bar white"></span>
-                                <span class="t-bar green"></span>
-                            </div>
-
-                            <div class="stat-block">
-                                <span class="label">OBJECTIF PRINCIPAL</span>
-                                <p style="font-size: 15px; font-weight: 600; margin-top: 10px; color: #111;">Mise à
-                                    niveau technique et financière des industries.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
+    </div>
+
+    <!-- Modern Navigation Arrows -->
+    <div class="hero-nav-btn hero-prev">
+        <i class="bi bi-chevron-left"></i>
+    </div>
+    <div class="hero-nav-btn hero-next">
+        <i class="bi bi-chevron-right"></i>
+    </div>
+
+    <!-- Modern Pagination with National Colors -->
+    <div class="hero-pagination"></div>
+
+    <!-- Progress Bar -->
+    <div class="hero-progress-bar">
+        <div class="hero-progress-fill"></div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const swiper = new Swiper('.hero-swiper', {
                 loop: true,
-                speed: 1000,
-                autoplay: { delay: 6000, disableOnInteraction: false },
-                effect: 'fade',
-                fadeEffect: { crossFade: true },
-                autoHeight: true
+                speed: 1200,
+                autoplay: {
+                    delay: 9000, // 9 seconds as requested
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                effect: 'creative',
+                creativeEffect: {
+                    prev: {
+                        translate: ['-120%', 0, -500],
+                        opacity: 0
+                    },
+                    next: {
+                        translate: ['120%', 0, -500],
+                        opacity: 0
+                    }
+                },
+                autoHeight: true,
+                navigation: {
+                    nextEl: '.hero-next',
+                    prevEl: '.hero-prev',
+                },
+                pagination: {
+                    el: '.hero-pagination',
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        const colors = ['orange-bullet', 'white-bullet', 'green-bullet'];
+                        return '<span class="' + className + ' hero-bullet ' + colors[index % 3] + '"></span>';
+                    },
+                },
+                on: {
+                    autoplayTimeLeft(s, time, progress) {
+                        const progressBar = document.querySelector('.hero-progress-fill');
+                        if (progressBar) {
+                            progressBar.style.width = ((1 - progress) * 100) + '%';
+                        }
+                    }
+                }
             });
 
+            // Counter animation
             const counters = document.querySelectorAll('.counter');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {

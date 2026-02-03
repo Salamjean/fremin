@@ -33,11 +33,10 @@ class HeroSectionController extends Controller
             'is_active' => 'boolean'
         ]);
 
-        $data = $request->all();
-        
+        $data = $request->except(['image', 'is_active']);
+
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('hero', 'public');
-            $data['image'] = $path;
+            $data['image'] = $request->file('image')->store('hero', 'public');
         }
 
         $data['is_active'] = $request->has('is_active');
@@ -66,15 +65,14 @@ class HeroSectionController extends Controller
             'is_active' => 'boolean'
         ]);
 
-        $data = $request->all();
-        
+        $data = $request->except(['image', 'is_active']);
+
         if ($request->hasFile('image')) {
             if ($hero->image && Storage::disk('public')->exists($hero->image)) {
                 Storage::disk('public')->delete($hero->image);
             }
-            
-            $path = $request->file('image')->store('hero', 'public');
-            $data['image'] = $path;
+
+            $data['image'] = $request->file('image')->store('hero', 'public');
         }
 
         $data['is_active'] = $request->has('is_active');

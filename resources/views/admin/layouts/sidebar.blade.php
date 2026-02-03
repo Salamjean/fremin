@@ -18,8 +18,7 @@
                     </a>
                 </div>
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
-                        data-target="ui-sub-menu">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-menu">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">dashboard</i>
                         Accueil
@@ -37,12 +36,46 @@
                                     Équipe
                                 </a>
                             </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.statistics.index') }}">
+                                    Statistiques
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.partners.index') }}">
+                                    Partenaires
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.testimonials.index') }}">
+                                    Témoignages
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.mission-cards.index') }}">
+                                    Missions
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.governance-cards.index') }}">
+                                    Gouvernance
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.financed-companies.index') }}">
+                                    Entreprises
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.programs.index') }}">
+                                    Accompagnements
+                                </a>
+                            </div>
                         </nav>
                     </div>
                 </div>
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
-                        data-target="ui-sub-hero">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-hero">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">info</i>
                         Présentation
@@ -65,6 +98,21 @@
                                     Galerie
                                 </a>
                             </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.presentation-stats.index') }}">
+                                    Statistiques
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.presentation-missions.index') }}">
+                                    Missions
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.presentation-values.index') }}">
+                                    Valeurs
+                                </a>
+                            </div>
                         </nav>
                     </div>
                 </div>
@@ -83,8 +131,7 @@
                     </a>
                 </div> --}}
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
-                        data-target="ui-sub-actu">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-actu">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">library_books</i>
                         Actualités
@@ -125,23 +172,12 @@
                                     Rapports
                                 </a>
                             </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="#">
-                                    Dernières Actualités
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="#">
-                                    Evenements
-                                </a>
-                            </div>
                         </nav>
                     </div>
                 </div>
 
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
-                        data-target="ui-sub-prog">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-prog">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">assignment</i>
                         Programmes

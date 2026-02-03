@@ -890,7 +890,7 @@ section,
 }
 
 .refined-tag .line { width: 40px; height: 1px; background: #000; }
-.refined-tag span { font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: #666; }
+.refined-tag span { font-size: 16px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: #666; }
 
 .refined-title {
     font-size: 56px;
@@ -959,8 +959,7 @@ section,
     gap: 20px;
 }
 
-.refined-identity img { height: 55px; filter: grayscale(1); opacity: 0.8; transition: 0.3s; }
-.refined-identity:hover img { filter: none; opacity: 1; }
+.refined-identity img { height: 55px}
 .refined-id-meta { display: flex; flex-direction: column; }
 .refined-id-meta .m-top { font-size: 10px; font-weight: 800; color: #999; text-transform: uppercase; }
 .refined-id-meta .m-bot { font-size: 14px; font-weight: 700; color: #111; }
@@ -983,7 +982,8 @@ section,
 }
 
 .inst-container {
-    max-width: 1440px;
+    width: 100%;
+    max-width: 2000px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -7057,11 +7057,11 @@ section,
 # Floating Page Layered Design
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Floating Page Layered Design
+# Page Layout - Clean, Full Width
 --------------------------------------------------------------*/
 .floating-page-container {
-  background-color: #f0f2f5; 
-  padding: 0 300px !important; /* Increased side margins as requested */
+  background-color: #ffffff; 
+  padding: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7069,48 +7069,24 @@ section,
 
 .floating-page-wrapper {
   background-color: #ffffff; 
-  border-radius: 0; /* Sharp corners */
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
   overflow: hidden;
-  border-left: 1px solid rgba(0,0,0,0.05);
-  border-right: 1px solid rgba(0,0,0,0.05);
   position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* Ensure sections inside have no duplicate backgrounds */
+/* Ensure sections inside have consistent backgrounds */
 .floating-page-wrapper .section,
 .floating-page-wrapper .main,
 .floating-page-wrapper .footer {
-  background-color: #ffffff !important;
+  background-color: transparent !important;
 }
 
 .floating-page-wrapper .footer {
   margin-top: auto;
   border-top: 1px solid #f0f0f0;
-}
-
-@media (max-width: 1400px) {
-  .floating-page-container {
-    padding: 0 100px !important;
-  }
-}
-
-@media (max-width: 1200px) {
-  .floating-page-container {
-    padding: 0 50px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .floating-page-container {
-    padding: 0 15px !important; /* Minimum padding for small screens */
-  }
-  .floating-page-wrapper {
-    border-radius: 0;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -8330,3 +8306,6 @@ section,
 
 #hero { margin-bottom: 0 !important; padding-bottom: 0 !important; }
 .swiss-hero { margin-bottom: 0 !important; }
+
+ 
+ 

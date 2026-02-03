@@ -16,7 +16,8 @@ return new class extends Migration {
             $table->string('position');
             $table->string('image')->nullable();
             $table->string('image_alt')->nullable();
-            $table->string('linkedin_url')->nullable();
+            $table->text('bio')->nullable(); // For President's message
+            $table->boolean('is_president')->default(false);
             $table->integer('sort_order')->default(0);
             $table->boolean('is_active')->default(true);
             $table->timestamps();

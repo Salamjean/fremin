@@ -159,10 +159,31 @@
 
             <div class="form-section">
                 <h3 class="section-title"><i class="fas fa-info-circle"></i> Détails</h3>
-                <div class="form-group">
-                    <label class="form-label">Titre du Programme</label>
-                    <input type="text" name="title" class="form-control"
-                        value="{{ old('title', $program->title ?? '') }}" required>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label class="form-label">Titre du Programme</label>
+                            <input type="text" name="title" class="form-control"
+                                value="{{ old('title', $program->title ?? '') }}" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="form-label">Icone (FontAwesome)</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0"
+                                    style="border-radius: 0.75rem 0 0 0.75rem;">
+                                    <i id="icon-preview-display"
+                                        class="{{ old('icon', $program->icon ?? 'fas fa-briefcase') }}"></i>
+                                </span>
+                                <input type="text" name="icon" class="form-control border-start-0"
+                                    style="border-radius: 0 0.75rem 0.75rem 0;"
+                                    value="{{ old('icon', $program->icon ?? 'fas fa-briefcase') }}"
+                                    onkeyup="document.getElementById('icon-preview-display').className = this.value"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Sous-titre / Catégorie</label>

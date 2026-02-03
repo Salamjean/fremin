@@ -31,19 +31,21 @@ class TeamController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'image_alt' => 'nullable|string|max:255',
             'linkedin_url' => 'nullable|url|max:255',
+            'bio' => 'nullable|string',
+            'is_president' => 'boolean',
             'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
-        $data = $request->all();
+        $data = $request->except(['image', 'is_active', 'is_president']);
 
         // Gestion de l'upload de l'image
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('team', 'public');
-            $data['image'] = $path;
+            $data['image'] = $request->file('image')->store('team', 'public');
         }
 
         $data['is_active'] = $request->has('is_active');
+        $data['is_president'] = $request->has('is_president');
 
         TeamMember::create($data);
 
@@ -66,11 +68,13 @@ class TeamController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'image_alt' => 'nullable|string|max:255',
             'linkedin_url' => 'nullable|url|max:255',
+            'bio' => 'nullable|string',
+            'is_president' => 'boolean',
             'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
 
-        $data = $request->all();
+        $data = $request->except(['image', 'is_active', 'is_president']);
 
         // Gestion de l'upload de la nouvelle image
         if ($request->hasFile('image')) {
@@ -79,11 +83,11 @@ class TeamController extends Controller
                 Storage::disk('public')->delete($teamMember->image);
             }
 
-            $path = $request->file('image')->store('team', 'public');
-            $data['image'] = $path;
+            $data['image'] = $request->file('image')->store('team', 'public');
         }
 
         $data['is_active'] = $request->has('is_active');
+        $data['is_president'] = $request->has('is_president');
 
         $teamMember->update($data);
 

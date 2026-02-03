@@ -1,0 +1,383 @@
+/*--------------------------------------------------------------
+# Modern Institutional Section - Missions & Governance
+# Utilise les couleurs nationales: Orange #FF8200, Blanc, Vert #009B3A
+--------------------------------------------------------------*/
+
+/* Section Container */
+.institutional-overview {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.institutional-overview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 130, 0, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+/* Container Grid - Full Width */
+.inst-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* Column Styling */
+.inst-col {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Header avec Badge Tricolore */
+.inst-header {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.inst-title {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1f2f31;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    position: relative;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.inst-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, #FF8200 0%, #ffffff 50%, #009B3A 100%);
+    border-radius: 3px;
+}
+
+.inst-title span {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF8200 0%, #009B3A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Modern Cards */
+.inst-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.inst-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FF8200 0%, #ffffff 50%, #009B3A 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.inst-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 155, 58, 0.15);
+    border-color: #009B3A;
+}
+
+.inst-card:hover::before {
+    opacity: 1;
+}
+
+/* Icon Box */
+.inst-icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #FF8200 0%, #ff9a33 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(255, 130, 0, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.inst-icon-box::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #FF8200, #009B3A);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.inst-card:hover .inst-icon-box {
+    transform: rotate(10deg) scale(1.05);
+}
+
+.inst-card:hover .inst-icon-box::after {
+    opacity: 1;
+}
+
+.inst-icon-box i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+/* Card Content */
+.inst-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2f31;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.inst-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Modern List Styling */
+.inst-list-modern {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inst-list-modern li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.inst-list-modern li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, #FF8200 0%, #009B3A 100%);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.inst-list-modern li:hover {
+    padding-left: 35px;
+    color: #333;
+}
+
+.inst-list-modern li:hover::before {
+    transform: rotate(45deg);
+    box-shadow: 0 4px 12px rgba(255, 130, 0, 0.4);
+}
+
+/* Modern 'Voir Plus' Button */
+.inst-btn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: 150px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #FF8200 0%, #ff9a33 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 130, 0, 0.3);
+}
+
+.inst-btn-more::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #009B3A 0%, #00c04b 100%);
+    opacity: 0;
+    color: white;
+    transition: opacity 0.4s ease;
+}
+
+.inst-btn-more span,
+.inst-btn-more i {
+    position: relative;
+    z-index: 1;
+}
+
+.inst-btn-more i {
+    transition: transform 0.3s ease;
+}
+
+.inst-btn-more:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 25px rgba(0, 155, 58, 0.4);
+}
+
+.inst-btn-more:hover::before {
+    opacity: 1;
+}
+
+.inst-btn-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Theme Variations */
+.ancrage-theme .inst-icon-box {
+    background: linear-gradient(135deg, #FF8200 0%, #ff9a33 100%);
+}
+
+.mission-theme .inst-icon-box {
+    background: linear-gradient(135deg, #009B3A 0%, #00c04b 100%);
+    box-shadow: 0 8px 24px rgba(0, 155, 58, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .inst-container {
+        gap: 30px;
+    }
+    
+    .inst-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .institutional-overview {
+        padding: 60px 0;
+    }
+    
+    .inst-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 15px;
+    }
+    
+    .inst-title {
+        font-size: 26px;
+    }
+    
+    .inst-card {
+        padding: 25px;
+    }
+    
+    .inst-icon-box {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .inst-icon-box i {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .inst-title {
+        font-size: 24px;
+        padding-left: 15px;
+    }
+    
+    .inst-title::before {
+        width: 4px;
+    }
+    
+    .inst-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+    
+    .inst-card h4 {
+        font-size: 18px;
+    }
+    
+    .inst-card p,
+    .inst-list-modern li {
+        font-size: 14px;
+    }
+    
+    .inst-icon-box {
+        width: 55px;
+        height: 55px;
+        border-radius: 12px;
+    }
+    
+    .inst-icon-box i {
+        font-size: 24px;
+    }
+}
+
+/* Animation d'entrée */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inst-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.inst-col:nth-child(1) .inst-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.inst-col:nth-child(1) .inst-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.inst-col:nth-child(1) .inst-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.inst-col:nth-child(2) .inst-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.inst-col:nth-child(2) .inst-card:nth-child(3) {
+    animation-delay: 0.25s;
+}
+
+.inst-col:nth-child(2) .inst-card:nth-child(4) {
+    animation-delay: 0.35s;
+}

@@ -36,12 +36,11 @@ class AccueilController extends Controller
             'is_active' => 'boolean'
         ]);
 
-        $data = $request->all();
+        $data = $request->except(['image', 'is_active']);
 
         // Gestion de l'upload de l'image
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('carousels', 'public');
-            $data['image'] = $path;
+            $data['image'] = $request->file('image')->store('carousels', 'public');
         }
 
         $data['is_active'] = $request->has('is_active');
@@ -72,7 +71,7 @@ class AccueilController extends Controller
             'is_active' => 'boolean'
         ]);
 
-        $data = $request->all();
+        $data = $request->except(['image', 'is_active']);
 
         // Gestion de l'upload de la nouvelle image
         if ($request->hasFile('image')) {
@@ -81,8 +80,7 @@ class AccueilController extends Controller
                 Storage::disk('public')->delete($carousel->image);
             }
 
-            $path = $request->file('image')->store('carousels', 'public');
-            $data['image'] = $path;
+            $data['image'] = $request->file('image')->store('carousels', 'public');
         }
 
         $data['is_active'] = $request->has('is_active');

@@ -18,6 +18,7 @@ class Program extends Model
         'category',
         'link',
         'link_text',
+        'icon',
         'sort_order',
         'is_active'
     ];

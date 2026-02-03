@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Bienvenu - Fremin</title>
+  <title>Bienvenue - Fremin</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -28,6 +28,30 @@
 
   <!-- Main CSS File -->
   <link href="{{asset('assets/css/main.css')}}" rel="stylesheet">
+
+  <!-- Hero Carousel Modern Styles -->
+  <link href="{{asset('assets/css/hero-carousel.css')}}" rel="stylesheet">
+
+  <!-- Institutional Section Modern Styles -->
+  <link href="{{asset('assets/css/institutional-section.css')}}" rel="stylesheet">
+
+  <!-- Institutional Detail Pages Styles -->
+  <link href="{{asset('assets/css/institutional-detail.css')}}" rel="stylesheet">
+
+  <!-- Team Section Modern Styles -->
+  <link href="{{asset('assets/css/team-section-modern.css')}}" rel="stylesheet">
+
+  <!-- Testimonials Section Styles -->
+  <link href="{{asset('assets/css/testimonials-section.css')}}" rel="stylesheet">
+
+  <!-- Organizational Chart Styles -->
+  <link href="{{asset('assets/css/org-chart.css')}}" rel="stylesheet">
+
+  <!-- Partners Section Styles -->
+  <link href="{{asset('assets/css/partners-section.css')}}" rel="stylesheet">
+
+  <!-- Global Search Styles -->
+  <link href="{{asset('assets/css/global-search.css')}}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: MediNest
@@ -128,7 +152,6 @@
                 <div class="social-links d-flex mt-4">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </ul>

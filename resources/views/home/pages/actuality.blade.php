@@ -5,36 +5,42 @@
     <div class="contact-header-v2">
         <div class="container text-center py-5">
             <h1 class="text-white display-2 mb-3 fw-black animate__animated animate__zoomIn"
-                style="font-weight: 900; font-size: 45px; letter-spacing: -1px;">ACTUALITÉS & ÉVÉNEMENTS</h1>
+                style="font-weight: 900; font-size: 45px; letter-spacing: -1px;">
+                {{ $hero->main_title ?? 'ACTUALITÉS & ÉVÉNEMENTS' }}</h1>
             <div class="mx-auto bg-white mb-4" style="height: 4px; width: 80px;"></div>
-            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">Suivez les moments forts de l'industrie
-                Ivoirienne et les actions du FREMIN.</p>
+            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">
+                {{ $hero->subtitle ?? 'Suivez les moments forts de l\'industrie Ivoirienne et les actions du FREMIN.' }}</p>
         </div>
     </div>
 
     <!-- Featured News -->
-    <section class="py-5 bg-white">
-        <div class="container py-5">
-            <div class="row g-0 shadow-lg overflow-hidden border" data-aos="fade-up">
-                <div class="col-lg-7">
-                    <img src="{{ asset('assets/img/fremin8.jpeg') }}" alt="Featured News"
-                        class="img-fluid h-100 object-fit-cover">
-                </div>
-                <div class="col-lg-5 bg-light p-5 d-flex flex-column justify-content-center">
-                    <div class="contact-badge mb-3">À LA UNE</div>
-                    <h2 class="fw-bold mb-4">Lancement du Programme National de Mise à Niveau 2026</h2>
-                    <p class="text-muted mb-4">Un jalon historique pour l'industrie nationale. Le FREMIN déploie une
-                        enveloppe stratégique pour accompagner 50 PME industrielles vers l'excellence régionale.</p>
-                    <div class="mb-4 d-flex align-items-center gap-3">
-                        <span class="text-success fw-bold"><i class="far fa-calendar-alt me-2"></i> 25 Jan 2026</span>
-                        <span class="text-secondary">|</span>
-                        <span class="text-secondary"><i class="far fa-user me-2"></i> Par Admin</span>
+    @if($featuredArticle)
+        <section class="py-5 bg-white">
+            <div class="container py-5">
+                <div class="row g-0 shadow-lg overflow-hidden border" data-aos="fade-up">
+                    <div class="col-lg-7">
+                        <img src="{{ (str_contains($featuredArticle->image, 'assets/')) ? asset($featuredArticle->image) : asset('storage/' . $featuredArticle->image) }}"
+                            alt="{{ $featuredArticle->image_alt ?? $featuredArticle->title }}"
+                            class="img-fluid h-100 object-fit-cover">
                     </div>
-                    <a href="#" class="news-link-premium">LIRE L'ARTICLE COMPLET <i class="fas fa-arrow-right"></i></a>
+                    <div class="col-lg-5 bg-light p-5 d-flex flex-column justify-content-center">
+                        <div class="contact-badge mb-3">{{ $featuredArticle->badge_text ?? 'À LA UNE' }}</div>
+                        <h2 class="fw-bold mb-4">{{ $featuredArticle->title }}</h2>
+                        <p class="text-muted mb-4">{{ $featuredArticle->excerpt }}</p>
+                        <div class="mb-4 d-flex align-items-center gap-3">
+                            <span class="text-success fw-bold"><i class="far fa-calendar-alt me-2"></i>
+                                {{ $featuredArticle->formatted_date }}</span>
+                            <span class="text-secondary">|</span>
+                            <span class="text-secondary"><i class="far fa-user me-2"></i> Par Admin</span>
+                        </div>
+                        <a href="{{ $featuredArticle->read_more_link ?? '#' }}"
+                            class="news-link-premium">{{ $featuredArticle->read_more_text ?? "LIRE L'ARTICLE COMPLET" }} <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
     <!-- News Grid -->
     <section class="py-5 bg-light">
@@ -44,101 +50,67 @@
                     <h2 class="fw-bold mb-0">Articles Récents</h2>
                     <div class="mt-2" style="height: 3px; width: 50px; background: #FF8200;"></div>
                 </div>
-                <div class="d-none d-md-block">
-                    <ul class="nav nav-pills custom-pills">
-                        <li class="nav-item"><a class="nav-link active" href="#">Tous</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Actualités</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Événements</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Rapports</a></li>
-                    </ul>
-                </div>
             </div>
 
             <div class="row g-4">
-                <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                @forelse($newsArticles as $article)
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
                     <div class="news-card-premium">
                         <div class="news-img-box">
-                            <span class="news-date-tag">15 Jan</span>
-                            <img src="{{ asset('assets/img/fremin3.jpeg') }}" alt="News">
+                            <span class="news-date-tag">{{ $article->formatted_date }}</span>
+                            <img src="{{ (str_contains($article->image, 'assets/')) ? asset($article->image) : asset('storage/' . $article->image) }}" alt="{{ $article->title }}">
                         </div>
                         <div class="news-body-premium">
-                            <span class="news-category-v2">Industrialisation</span>
-                            <h4 class="news-title-v2">Atelier sur la transformation numérique des usines</h4>
-                            <p class="news-text-v2">Favoriser l'adoption de l'industrie 4.0 pour une meilleure efficacité
-                                énergétique et opérationnelle...</p>
-                            <a href="#" class="news-link-premium">EN SAVOIR PLUS <i class="fas fa-arrow-right"></i></a>
+                            <span class="news-category-v2" style="background-color: {{ $article->category_color ?? '#009B3A' }}">{{ $article->category }}</span>
+                            <h4 class="news-title-v2">{{ $article->title }}</h4>
+                            <p class="news-text-v2">{{ Str::limit($article->excerpt, 120) }}</p>
+                            <a href="{{ $article->link ?? '#' }}" class="news-link-premium">{{ $article->link_text ?? 'EN SAVOIR PLUS' }} <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="news-card-premium">
-                        <div class="news-img-box">
-                            <span class="news-date-tag">10 Jan</span>
-                            <img src="{{ asset('assets/img/fremin4.jpeg') }}" alt="News">
-                        </div>
-                        <div class="news-body-premium">
-                            <span class="news-category-v2">Événement</span>
-                            <h4 class="news-title-v2">Forum des Partenaires Industriels 2026</h4>
-                            <p class="news-text-v2">Le rendez-vous incontournable pour les acteurs du secteur privé et les
-                                bailleurs de fond internationaux...</p>
-                            <a href="#" class="news-link-premium">EN SAVOIR PLUS <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                @empty
+                <div class="col-12 text-center py-5">
+                    <p class="text-muted">Aucun article récent disponible pour le moment.</p>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="news-card-premium">
-                        <div class="news-img-box">
-                            <span class="news-date-tag">05 Jan</span>
-                            <img src="{{ asset('assets/img/fremin5.jpeg') }}" alt="News">
-                        </div>
-                        <div class="news-body-premium">
-                            <span class="news-category-v2">Finance</span>
-                            <h4 class="news-title-v2">Nouveaux mécanismes de garantie pour les PME</h4>
-                            <p class="news-text-v2">Une solution innovante pour lever les barrières à l'accès au crédit pour
-                                les entreprises industrielles...</p>
-                            <a href="#" class="news-link-premium">EN SAVOIR PLUS <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="news-card-premium">
-                        <div class="news-img-box">
-                            <span class="news-date-tag">02 Jan</span>
-                            <img src="{{ asset('assets/img/fremin2.jpeg') }}" alt="News">
-                        </div>
-                        <div class="news-body-premium">
-                            <span class="news-category-v2">Qualité</span>
-                            <h4 class="news-title-v2">Remise de certificats ISO à 12 lauréats</h4>
-                            <p class="news-text-v2">Célébration du mérite et de la rigueur opérationnelle pour les
-                                entreprises ayant achevé leur mise à niveau...</p>
-                            <a href="#" class="news-link-premium">EN SAVOIR PLUS <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pagination dummy -->
-            <div class="mt-5 pt-3 d-flex justify-content-center">
-                <nav>
-                    <ul class="pagination">
-                        <li class="page-item disabled"><a class="page-link" href="#">Précédent</a></li>
-                        <li class="page-item active"><a class="page-link" href="#"
-                                style="background: #009B3A; border-color: #009B3A;">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#" style="color: #009B3A;">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#" style="color: #009B3A;">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#" style="color: #009B3A;">Suivant</a></li>
-                    </ul>
-                </nav>
+                @endforelse
             </div>
         </div>
     </section>
+
+    <!-- Upcoming Events Section -->
+    @if($upcomingEvents->count() > 0)
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold" style="color: #009B3A;">Événements à Venir</h2>
+                <div class="mx-auto" style="height: 3px; width: 60px; background: #FF8200; margin-top: 10px;"></div>
+            </div>
+            <div class="row g-4">
+                @foreach($upcomingEvents as $event)
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
+                    <div class="d-flex bg-light rounded shadow-sm overflow-hidden p-0 h-100">
+                        <div class="col-4 p-0">
+                            <img src="{{ (str_contains($event->image, 'assets/')) ? asset($event->image) : asset('storage/' . $event->image) }}" class="img-fluid h-100 object-fit-cover" alt="{{ $event->title }}">
+                        </div>
+                        <div class="col-8 p-4 d-flex flex-column justify-content-center">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="badge bg-success me-2">{{ $event->day }} {{ $event->month_short }} {{ $event->year }}</span>
+                                <small class="text-muted"><i class="far fa-clock me-1"></i> {{ $event->formatted_time }}</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">{{ $event->title }}</h5>
+                            <p class="small text-muted mb-3">{{ Str::limit($event->description, 100) }}</p>
+                            <div class="mt-auto">
+                                <small class="text-secondary d-block mb-3"><i class="{{ $event->location_icon }} me-1"></i> {{ $event->location }}</small>
+                                <a href="{{ $event->button_link ?? '#' }}" class="btn btn-sm {{ $event->button_css }}">{{ $event->button_text }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    @endif
 
     <!-- Newsletter V2 -->
     <section class="newsletter-v2">

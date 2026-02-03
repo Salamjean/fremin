@@ -5,10 +5,12 @@
     <div class="contact-header-v2">
         <div class="container text-center py-5">
             <h1 class="text-white display-2 mb-3 fw-black animate__animated animate__zoomIn"
-                style="font-weight: 900; font-size: 45px; letter-spacing: -1px;">NOS PROGRAMMES</h1>
+                style="font-weight: 900; font-size: 45px; letter-spacing: -1px;">{{ $hero->main_title ?? 'NOS PROGRAMMES' }}
+            </h1>
             <div class="mx-auto bg-white mb-4" style="height: 4px; width: 80px;"></div>
-            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">Des solutions stratégiques pour la
-                compétitivité et la croissance de l'industrie Ivoirienne.</p>
+            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">
+                {{ $hero->subtitle ?? 'Des solutions stratégiques pour la compétitivité et la croissance de l\'industrie Ivoirienne.' }}
+            </p>
         </div>
     </div>
 
@@ -21,45 +23,67 @@
             </div>
 
             <div class="row g-4">
-                <!-- Program 1 -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="prog-card-v2">
-                        <div class="prog-icon-v2"><i class="fas fa-industry"></i></div>
-                        <h4 class="fw-bold mb-3">Mise à Niveau Globale</h4>
-                        <p class="text-muted mb-4">Un accompagnement complet (technique, financier et humain) pour aligner
-                            votre entreprise sur les standards internationaux.</p>
-                        <a href="#" class="news-link-premium mt-auto">DÉCOUVRIR LE PROGRAMME <i
-                                class="fas fa-arrow-right"></i></a>
+                @forelse($programs as $program)
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
+                        <div class="prog-card-v2">
+                            <div class="prog-icon-v2"><i class="{{ $program->icon ?? 'fas fa-industry' }}"></i></div>
+                            <h4 class="fw-bold mb-3">{{ $program->title }}</h4>
+                            <p class="text-muted mb-4">{{ $program->description }}</p>
+                            <a href="{{ $program->link ?? '#' }}"
+                                class="news-link-premium mt-auto">{{ $program->link_text ?? 'DÉCOUVRIR LE PROGRAMME' }} <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
-                </div>
-                <!-- Program 2 -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="prog-card-v2">
-                        <div class="prog-icon-v2"><i class="fas fa-microchip"></i></div>
-                        <h4 class="fw-bold mb-3">Industrie 4.0</h4>
-                        <p class="text-muted mb-4">Soutien à la transformation numérique, à l'automatisation et à
-                            l'intégration des technologies intelligentes en usine.</p>
-                        <a href="#" class="news-link-premium mt-auto">DÉCOUVRIR LE PROGRAMME <i
-                                class="fas fa-arrow-right"></i></a>
+                @empty
+                    <div class="col-12 text-center py-5">
+                        <p class="text-muted">Aucun programme disponible pour le moment.</p>
                     </div>
-                </div>
-                <!-- Program 3 -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="prog-card-v2">
-                        <div class="prog-icon-v2"><i class="fas fa-leaf"></i></div>
-                        <h4 class="fw-bold mb-3">Développement Durable</h4>
-                        <p class="text-muted mb-4">Promotion de l'efficacité énergétique et des processus de production
-                            respectueux de l'environnement.</p>
-                        <a href="#" class="news-link-premium mt-auto">DÉCOUVRIR LE PROGRAMME <i
-                                class="fas fa-arrow-right"></i></a>
+                @endforelse
+            </div>
+        </div>
+    </section>
+
+    <!-- Opportunities Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Appels à Projets en Cours</h2>
+                <p class="text-muted">Opportunités et appels à candidatures ouverts aux entreprises.</p>
+                <div class="mx-auto mt-3" style="height: 3px; width: 60px; background: #06634e;"></div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                @forelse($opportunities as $opportunity)
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
+                        <div class="prog-card-v2 bg-white border-0 shadow-sm">
+                            <div class="prog-icon-v2 text-white" style="background: #06634e;"><i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">{{ $opportunity->title }}</h4>
+
+                            @if($opportunity->deadline)
+                                <div class="mb-3">
+                                    <span class="badge bg-warning text-dark"><i class="far fa-clock me-1"></i> Date limite :
+                                        {{ \Carbon\Carbon::parse($opportunity->deadline)->format('d/m/Y') }}</span>
+                                </div>
+                            @endif
+
+                            <p class="text-muted mb-4">{{ Str::limit($opportunity->description, 120) }}</p>
+                            <a href="{{ $opportunity->link ?? '#' }}" class="news-link-premium mt-auto"
+                                style="color: #06634e;">{{ $opportunity->link_text ?? 'POSTULER MAINTENANT' }} <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
-                </div>
+                @empty
+                    <div class="col-12 text-center py-5">
+                        <p class="text-muted">Aucun appel à projets en cours actuellement.</p>
+                    </div>
+                @endforelse
             </div>
         </div>
     </section>
 
     <!-- Application Process -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-white">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-6" data-aos="fade-right">
@@ -118,93 +142,41 @@
                                         <h6 class="fw-bold mb-0">Taille</h6>
                                     </div>
                                     <ul class="criteria-list-v2">
-                                        <li class="check"><i class="fas fa-check"></i> PME / PMI Ivoirienne</li>
-                                        <li class="check"><i class="fas fa-check"></i> Min. 2 ans d'existence</li>
-                                        <li class="cross"><i class="fas fa-times"></i> Secteur tertiaire pur</li>
+                                        <li class="check"><i class="fas fa-check"></i> PME / PMI</li>
+                                        <li class="check"><i class="fas fa-check"></i> Grande Entreprise</li>
+                                        <li class="check"><i class="fas fa-check"></i> Start-up industrielle</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="criteria-box-v2">
+                                    <div class="criteria-header-v2"><i class="fas fa-file-invoice-dollar"></i>
+                                        <h6 class="fw-bold mb-0">Statut</h6>
+                                    </div>
+                                    <ul class="criteria-list-v2">
+                                        <li class="check"><i class="fas fa-check"></i> Formellement constituée</li>
+                                        <li class="check"><i class="fas fa-check"></i> À jour fiscalement</li>
+                                        <li class="check"><i class="fas fa-check"></i> +2 ans d'activité</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="criteria-box-v2">
+                                    <div class="criteria-header-v2"><i class="fas fa-globe-africa"></i>
+                                        <h6 class="fw-bold mb-0">Localisation</h6>
+                                    </div>
+                                    <ul class="criteria-list-v2">
+                                        <li class="check"><i class="fas fa-check"></i> Territoire ivoirien</li>
+                                        <li class="check"><i class="fas fa-check"></i> Siège en Côte d'Ivoire</li>
+                                        <li class="check"><i class="fas fa-check"></i> Zones industrielles</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-5 p-4 bg-light border-start border-4 border-success">
-                            <h6 class="fw-bold mb-2">Besoin d'aide pour votre dossier ?</h6>
-                            <p class="small text-muted mb-3">Téléchargez notre guide complet pour préparer sereinement votre
-                                candidature.</p>
-                            <a href="#" class="btn btn-sm btn-getstarted w-100">TÉLÉCHARGER LE GUIDE PDF</a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Support & FAQ -->
-    <section class="py-5 bg-white">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <img src="{{ asset('assets/img/fremin4.jpeg') }}" alt="Support" class="img-fluid rounded shadow-lg">
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <h2 class="fw-bold mb-4">FAQ & Assistance</h2>
-                    <div class="accordion" id="progFaq">
-                        <div class="accordion-item border-0 mb-3 shadow-sm">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#q1">
-                                    Quels sont les délais de sélection ?
-                                </button>
-                            </h2>
-                            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#progFaq">
-                                <div class="accordion-body text-muted">
-                                    Le processus complet, de l'audit initial à la validation finale, prend généralement
-                                    entre 45 et 60 jours selon la complexité du dossier.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-3 shadow-sm">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#q2">
-                                    Le FREMIN finance-t-il directement ?
-                                </button>
-                            </h2>
-                            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#progFaq">
-                                <div class="accordion-body text-muted">
-                                    Le FREMIN agit comme un levier en facilitant l'accès au crédit et en prenant en charge
-                                    une partie des coûts liés aux audits techniques et à la mise à niveau.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 shadow-sm">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#q3">
-                                    Quelles régions sont couvertes ?
-                                </button>
-                            </h2>
-                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#progFaq">
-                                <div class="accordion-body text-muted">
-                                    Nos programmes couvrent l'ensemble du territoire de la République de Côte d'Ivoire. Nous
-                                    avons des équipes capables d'intervenir dans toutes les zones industrielles.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global CTA -->
-    <!-- <section class="newsletter-v2 bg-primary">
-        <div class="container text-center text-white p-5">
-            <h2 class="fw-bold mb-3">Une question précise sur nos solutions ?</h2>
-            <p class="lead mb-4">Nos conseillers sont disponibles pour vous guider vers le programme le plus adapté.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="{{ route('home.contact') }}" class="btn btn-news-subscribe px-5">NOUS CONTACTER</a>
-                <a href="#" class="btn btn-outline-light px-5 fw-bold" style="border-width: 2px;">TÉLÉPHONER</a>
-            </div>
-        </div>
-    </section> -->
 
 @endsection

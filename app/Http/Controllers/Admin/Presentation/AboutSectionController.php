@@ -51,12 +51,11 @@ class AboutSectionController extends Controller
             'is_active' => 'boolean'
         ]);
 
-        $data = $request->all();
+        $data = $request->except(['main_image', 'is_active']);
 
         // Gestion de l'upload de l'image
         if ($request->hasFile('main_image')) {
-            $path = $request->file('main_image')->store('about', 'public');
-            $data['main_image'] = $path;
+            $data['main_image'] = $request->file('main_image')->store('about', 'public');
         }
 
         $data['is_active'] = $request->has('is_active');
@@ -102,7 +101,7 @@ class AboutSectionController extends Controller
             'is_active' => 'boolean'
         ]);
 
-        $data = $request->all();
+        $data = $request->except(['main_image', 'is_active']);
 
         // Gestion de l'upload de la nouvelle image
         if ($request->hasFile('main_image')) {
@@ -111,8 +110,7 @@ class AboutSectionController extends Controller
                 Storage::disk('public')->delete($about->main_image);
             }
 
-            $path = $request->file('main_image')->store('about', 'public');
-            $data['main_image'] = $path;
+            $data['main_image'] = $request->file('main_image')->store('about', 'public');
         }
 
         $data['is_active'] = $request->has('is_active');

@@ -1,0 +1,213 @@
+/*--------------------------------------------------------------
+# Partners Section - Logo Carousel
+# Section partenaires avec carousel de logos
+--------------------------------------------------------------*/
+
+/* Section Container */
+.partners-section {
+    background: #ffffff;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Section Header */
+.partners-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.partners-header h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.partners-header h2 span {
+    background: linear-gradient(135deg, #FF8200 0%, #009B3A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.partners-header p {
+    font-size: 17px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Partners Carousel */
+.partners-carousel {
+    display: flex;
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.partners-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Partner Logo Box */
+.partner-logo {
+    min-width: 200px;
+    max-width: 200px;
+    height: 120px;
+    background: #ffffff;
+    border: 2px solid #f5f5f5;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 130, 0, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.partner-logo:hover::before {
+    left: 100%;
+}
+
+.partner-logo:hover {
+    transform: translateY(-5px);
+    border-color: #FF8200;
+    box-shadow: 0 10px 30px rgba(255, 130, 0, 0.15);
+}
+
+.partner-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Placeholder for empty logos */
+.partner-logo.placeholder {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-style: dashed;
+}
+
+.partner-logo.placeholder::after {
+    content: 'Logo';
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 600;
+}
+
+/* Auto Scroll Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.partners-carousel.auto-scroll {
+    animation: scroll 30s linear infinite;
+}
+
+.partners-carousel.auto-scroll:hover {
+    animation-play-state: paused;
+}
+
+/* Stats Badge */
+.partners-count {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF8200 0%, #009B3A 100%);
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .partners-section {
+        padding: 60px 0;
+    }
+    
+    .partners-header h2 {
+        font-size: 36px;
+    }
+    
+    .partner-logo {
+        min-width: 180px;
+        max-width: 180px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-section {
+        padding: 50px 0;
+    }
+    
+    .partners-header {
+        margin-bottom: 40px;
+    }
+    
+    .partners-header h2 {
+        font-size: 30px;
+    }
+    
+    .partners-carousel {
+        gap: 30px;
+    }
+    
+    .partner-logo {
+        min-width: 160px;
+        max-width: 160px;
+        height: 100px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .partners-header h2 {
+        font-size: 26px;
+    }
+    
+    .partners-header p {
+        font-size: 16px;
+    }
+    
+    .partner-logo {
+        min-width: 140px;
+        max-width: 140px;
+        height: 90px;
+        padding: 15px;
+    }
+}

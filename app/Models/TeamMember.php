@@ -14,6 +14,8 @@ class TeamMember extends Model
         'position',
         'image',
         'image_alt',
+        'bio',
+        'is_president',
         'linkedin_url',
         'sort_order',
         'is_active'
@@ -21,6 +23,7 @@ class TeamMember extends Model
 
     protected $casts = [
         'is_active' => 'boolean',
+        'is_president' => 'boolean',
         'sort_order' => 'integer'
     ];
 
