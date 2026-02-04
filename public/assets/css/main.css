@@ -988,7 +988,6 @@ section,
     display: flex;
     flex-wrap: wrap;
     background: #fff;
-    border-top: 1px solid #111;
 }
 
 .inst-col {
@@ -1003,7 +1002,6 @@ section,
 
 .inst-col.ancrage-theme {
     background: linear-gradient(to bottom right, #f8fdf9, #fff);
-    border-right: 1px solid #111;
 }
 
 .inst-col.mission-theme {
@@ -1049,7 +1047,6 @@ section,
 }
 
 .inst-card:hover {
-    border-color: #111;
     transform: translateY(-5px);
 }
 
