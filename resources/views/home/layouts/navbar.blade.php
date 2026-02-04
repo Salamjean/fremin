@@ -15,9 +15,9 @@
 <header id="header" class="header d-flex align-items-center">
   <div class="container position-relative d-flex align-items-center justify-content-between">
 
-    <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto me-xl-0">
+    {{-- <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto me-xl-0">
       <img src="{{asset('assets/img/logo_fremin.jpg')}}" alt="">
-    </a>
+    </a> --}}
 
     <nav id="navmenu" class="navmenu">
       <ul>
