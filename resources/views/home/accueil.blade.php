@@ -26,12 +26,10 @@
                                 @endforeach
                             </ul>
                         @endif
-                        @if ($card->link)
-                            <a href="{{ Route::has($card->link) ? route($card->link) : '#' }}" class="inst-btn-more">
-                                <span>Voir plus</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        @endif
+                        <a href="{{ route('home.missions.show', $card->slug) }}" class="inst-btn-more">
+                            <span>{{ __('view_more') }}</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 @endforeach
             </div>
@@ -54,12 +52,10 @@
                                 @endforeach
                             </ul>
                         @endif
-                        @if ($card->link)
-                            <a href="{{ Route::has($card->link) ? route($card->link) : '#' }}" class="inst-btn-more">
-                                <span>Voir plus</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        @endif
+                        <a href="{{ route('home.governance.show', $card->slug) }}" class="inst-btn-more">
+                            <span>{{ __('view_more') }}</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 @endforeach
             </div>
@@ -165,15 +161,23 @@
                         <div class="institutional-card-v2">
                             <div class="decorative-top"></div>
                             <div class="official-profile text-center py-4">
-                                <div class="official-portrait-wrap mb-3 shadow-sm">
-                                    <img src="{{ asset('assets/img/ministre.jpg') }}" alt="Commissaire General">
-                                </div>
-                                <h5 class="fw-bold mb-1">M. Souleymane Diarrassouba</h5>
-                                <p class="text-success small fw-bold mb-3">MINISTRE DU COMMERCE, DE L'INDUSTRIE ET DE
-                                    L'ARTISANAT</p>
-                                <button onclick="showMinisterMessage()" class="btn-action-outline w-100 border-0">
-                                    <i class="fas fa-quote-left me-2"></i> MOT DU MINISTRE
-                                </button>
+                                @if(isset($ministerInfo))
+                                    <div class="official-portrait-wrap mb-3 shadow-sm">
+                                        <img src="{{ asset('storage/' . $ministerInfo->image) }}" alt="{{ $ministerInfo->name }}">
+                                    </div>
+                                    <h5 class="fw-bold mb-1">{{ $ministerInfo->name }}</h5>
+                                    <p class="text-success small fw-bold mb-3">{{Str::upper($ministerInfo->function)}}</p>
+                                    <button onclick="showMinisterMessage()" class="btn-action-outline w-100 border-0">
+                                        <i class="fas fa-quote-left me-2"></i> MOT DU MINISTRE
+                                    </button>
+                                @else
+                                    <div class="official-portrait-wrap mb-3 shadow-sm">
+                                        <img src="{{ asset('assets/img/ministre.jpg') }}" alt="Commissaire General">
+                                    </div>
+                                    <h5 class="fw-bold mb-1">M. Souleymane Diarrassouba</h5>
+                                    <p class="text-success small fw-bold mb-3">MINISTRE DU COMMERCE, DE L'INDUSTRIE ET DE
+                                        L'ARTISANAT</p>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -183,41 +187,86 @@
 
             <script>
                 function showMinisterMessage() {
-                    Swal.fire({
-                        title: '<span style="color: #FF8200;">LE MOT DU MINISTRE</span>',
-                        html: `
-                                                                                                                                                    <div class="text-start" style="font-family: 'Inter', sans-serif;">
-                                                                                                                                                      <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
-                                                                                                                                                        <img src="{{ asset('assets/img/mot_ministre.jpg') }}" 
-                                                                                                                                                             style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
-                                                                                                                                                        <div>
-                                                                                                                                                          <h5 class="mb-0 fw-bold">M. Souleymane Diarrassouba</h5>
-                                                                                                                                                          <p class="text-muted small mb-0">Ministre du Commerce et de l'Industrie</p>
-                                                                                                                                                        </div>
-                                                                                                                                                      </div>
-                                                                                                                                                      <p style="font-style: italic; color: #555; line-height: 1.6;">
-                                                                                                                                                        "Le Fonds de Restructuration et de Mise à Niveau des entreprises industrielles, en abrégé FREMIN, au fil des ans, s’est positionné comme l’un des principaux instruments pour le développement industriel en Côte d’Ivoire. 
-                                                                                                                                                          En effet, il poursuit efficacement sa mission de soutien à l’activité industrielle, notamment la mise en œuvre du Programme National de Restructuration et de Mise à Niveau des entreprises industrielles (PNRMN), la promotion de la petite transformation industrielle, l’appui aux entreprises en difficultés, en parfaite cohérence avec la vision du Gouvernement en matière de transformation structurelle de notre économie.
-                                                                                                                                                          L’année qui s’achève a été marquée par de nombreuses actions et des résultats concrets, qui traduisent l’engagement, le professionnalisme et le sens élevé des responsabilités des organes de gestion du FREMIN.
-                                                                                                                                                          Il me tient à cœur d’exprimer toute ma fierté au regard du travail accompli tout au long de l’année écoulée et vous exhorte à maintenir cette dynamique afin que ce Fonds demeure un outil stratégique et crédible au service du développement industriel de notre pays."
-                                                                                                                                                      </p>
-                                                                                                                                                      <div class="text-end mt-4">
-                                                                                                                                                        <img src="{{ asset('assets/img/signature_minister.png') }}" style="max-height: 50px; opacity: 0.7;">
-                                                                                                                                                      </div>
-                                                                                                                                                    </div>
-                                                                                                                                                  `,
-                        showCloseButton: true,
-                        showConfirmButton: true,
-                        confirmButtonText: 'Fermer',
-                        confirmButtonColor: '#009B3A',
-                        width: '600px',
-                        background: '#fff',
-                        padding: '2em',
-                        customClass: {
-                            popup: 'institutional-swal-popup'
+                    @if(isset($ministerInfo))
+                        const ministerName = @json($ministerInfo->name);
+                        const ministerFunction = @json($ministerInfo->function);
+                        const ministerImage = "{{ asset('storage/' . $ministerInfo->image) }}";
+                        const ministerSignature = "{{ $ministerInfo->signature ? asset('storage/' . $ministerInfo->signature) : '' }}";
+                        const ministerMessage = `{!! nl2br(e($ministerInfo->message)) !!}`;
+
+                        let signatureHtml = '';
+                        if (ministerSignature) {
+                            signatureHtml = `<div class="text-end mt-4">
+                                                                                                                                <img src="${ministerSignature}" style="max-height: 50px; opacity: 0.7;">
+                                                                                                                            </div>`;
                         }
-                    });
-                }
+
+                        Swal.fire({
+                            title: '<span style="color: #FF8200;">LE MOT DU MINISTRE</span>',
+                            html: `
+                                                                                                                                <div class="text-start" style="font-family: 'Inter', sans-serif;">
+                                                                                                                                    <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+                                                                                                                                    <img src="${ministerImage}" 
+                                                                                                                                            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
+                                                                                                                                    <div>
+                                                                                                                                        <h5 class="mb-0 fw-bold">${ministerName}</h5>
+                                                                                                                                        <p class="text-muted small mb-0">${ministerFunction}</p>
+                                                                                                                                    </div>
+                                                                                                                                    </div>
+                                                                                                                                    <div style="font-style: italic; color: #555; line-height: 1.6;">
+                                                                                                                                    "${ministerMessage}"
+                                                                                                                                    </div>
+                                                                                                                                    ${signatureHtml}
+                                                                                                                                </div>
+                                                                                                                            `,
+                            showCloseButton: true,
+                            showConfirmButton: true,
+                            confirmButtonText: 'Fermer',
+                            confirmButtonColor: '#009B3A',
+                            width: '600px',
+                            background: '#fff',
+                            padding: '2em',
+                            customClass: {
+                                popup: 'institutional-swal-popup'
+                            }
+                        });
+                    @else
+                        Swal.fire({
+                            title: '<span style="color: #FF8200;">LE MOT DU MINISTRE</span>',
+                            html: `
+                                                                                                                                <div class="text-start" style="font-family: 'Inter', sans-serif;">
+                                                                                                                                    <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+                                                                                                                                    <img src="{{ asset('assets/img/mot_ministre.jpg') }}" 
+                                                                                                                                            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
+                                                                                                                                    <div>
+                                                                                                                                        <h5 class="mb-0 fw-bold">M. Souleymane Diarrassouba</h5>
+                                                                                                                                        <p class="text-muted small mb-0">Ministre du Commerce et de l'Industrie</p>
+                                                                                                                                    </div>
+                                                                                                                                    </div>
+                                                                                                                                    <p style="font-style: italic; color: #555; line-height: 1.6;">
+                                                                                                                                    "Le Fonds de Restructuration et de Mise à Niveau des entreprises industrielles, en abrégé FREMIN, au fil des ans, s’est positionné comme l’un des principaux instruments pour le développement industriel en Côte d’Ivoire. 
+                                                                                                                                    En effet, il poursuit efficacement sa mission de soutien à l’activité industrielle, notamment la mise en œuvre du Programme National de Restructuration et de Mise à Niveau des entreprises industrielles (PNRMN), la promotion de la petite transformation industrielle, l’appui aux entreprises en difficultés, en parfaite cohérence avec la vision du Gouvernement en matière de transformation structurelle de notre économie.
+                                                                                                                                    L’année qui s’achève a été marquée par de nombreuses actions et des résultats concrets, qui traduisent l’engagement, le professionnalisme et le sens élevé des responsabilités des organes de gestion du FREMIN.
+                                                                                                                                    Il me tient à cœur d’exprimer toute ma fierté au regard du travail accompli tout au long de l’année écoulée et vous exhorte à maintenir cette dynamique afin que ce Fonds demeure un outil stratégique et crédible au service du développement industriel de notre pays."
+                                                                                                                                    </p>
+                                                                                                                                    <div class="text-end mt-4">
+                                                                                                                                    <img src="{{ asset('assets/img/signature_minister.png') }}" style="max-height: 50px; opacity: 0.7;">
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            `,
+                            showCloseButton: true,
+                            showConfirmButton: true,
+                            confirmButtonText: 'Fermer',
+                            confirmButtonColor: '#009B3A',
+                            width: '600px',
+                            background: '#fff',
+                            padding: '2em',
+                            customClass: {
+                                popup: 'institutional-swal-popup'
+                            }
+                        });
+                    @endif
+                                                                                }
             </script>
 
             <script>
@@ -225,27 +274,27 @@
                     Swal.fire({
                         title: '<span style="color: #FF8200;">LE MOT DU PRÉSIDENT</span>',
                         html: `
-                                                                                                  <div class="text-start" style="font-family: 'Inter', sans-serif;">
-                                                                                                    <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
-                                                                                                      <img src="{{ asset('assets/img/Esso.jpeg') }}" 
-                                                                                                           style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
-                                                                                                      <div>
-                                                                                                        <h5 class="mb-0 fw-bold">M. ESSO Jacques</h5>
-                                                                                                        <p class="text-muted small mb-0">Président du Comité de Gestion</p>
-                                                                                                      </div>
-                                                                                                    </div>
-                                                                                                    <p style="font-style: italic; color: #555; line-height: 1.6;">
-                                                                                                      "En ma qualité de Président du Comité de Gestion du FREMIN, je tiens à souligner l'importance stratégique de notre mission dans l'accompagnement des entreprises industrielles ivoiriennes vers l'excellence et la compétitivité internationale.
-                                                                                                      Le FREMIN constitue un levier essentiel de la politique industrielle nationale. À travers le Programme National de Restructuration et de Mise à Niveau (PNRMN), nous œuvrons quotidiennement pour moderniser notre tissu industriel et renforcer les capacités de nos entreprises.
-                                                                                                      Notre engagement se traduit par un accompagnement technique et financier de qualité, une gouvernance transparente et des décisions guidées par l'intérêt supérieur du développement industriel de notre pays.
-                                                                                                      Je félicite l'ensemble des acteurs du FREMIN pour leur professionnalisme et leur dévouement, et j'encourage toutes les entreprises éligibles à solliciter nos appuis pour leurs projets de modernisation et d'expansion."
-                                                                                                    </p>
-                                                                                                    <div class="text-end mt-4">
-                                                                                                      <p class="mb-0" style="font-weight: 600; color: #009B3A;">M. ESSO Jacques</p>
-                                                                                                      <p class="small text-muted">Président du Comité de Gestion du FREMIN</p>
-                                                                                                    </div>
-                                                                                                  </div>
-                                                                                                `,
+                                                                                                                                                                  <div class="text-start" style="font-family: 'Inter', sans-serif;">
+                                                                                                                                                                    <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+                                                                                                                                                                      <img src="{{ asset('assets/img/Esso.jpeg') }}" 
+                                                                                                                                                                           style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
+                                                                                                                                                                      <div>
+                                                                                                                                                                        <h5 class="mb-0 fw-bold">M. ESSO Jacques</h5>
+                                                                                                                                                                        <p class="text-muted small mb-0">Président du Comité de Gestion</p>
+                                                                                                                                                                      </div>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    <p style="font-style: italic; color: #555; line-height: 1.6;">
+                                                                                                                                                                      "En ma qualité de Président du Comité de Gestion du FREMIN, je tiens à souligner l'importance stratégique de notre mission dans l'accompagnement des entreprises industrielles ivoiriennes vers l'excellence et la compétitivité internationale.
+                                                                                                                                                                      Le FREMIN constitue un levier essentiel de la politique industrielle nationale. À travers le Programme National de Restructuration et de Mise à Niveau (PNRMN), nous œuvrons quotidiennement pour moderniser notre tissu industriel et renforcer les capacités de nos entreprises.
+                                                                                                                                                                      Notre engagement se traduit par un accompagnement technique et financier de qualité, une gouvernance transparente et des décisions guidées par l'intérêt supérieur du développement industriel de notre pays.
+                                                                                                                                                                      Je félicite l'ensemble des acteurs du FREMIN pour leur professionnalisme et leur dévouement, et j'encourage toutes les entreprises éligibles à solliciter nos appuis pour leurs projets de modernisation et d'expansion."
+                                                                                                                                                                    </p>
+                                                                                                                                                                    <div class="text-end mt-4">
+                                                                                                                                                                      <p class="mb-0" style="font-weight: 600; color: #009B3A;">M. ESSO Jacques</p>
+                                                                                                                                                                      <p class="small text-muted">Président du Comité de Gestion du FREMIN</p>
+                                                                                                                                                                    </div>
+                                                                                                                                                                  </div>
+                                                                                                                                                                `,
                         showCloseButton: true,
                         showConfirmButton: true,
                         confirmButtonText: 'Fermer',
@@ -268,35 +317,35 @@
     <!-- Featured Departments Section -->
     <section id="funded-companies" class="funded-companies section">
         <div class="container section-title" data-aos="fade-up">
-            <h2>Dernières Entreprises Financées</h2>
-            <p>Découvrez l'impact concret de nos financements sur le tissu industriel national</p>
+            <h2>{{ __('supported_companies') }}</h2>
+            <p>{{ __('supported_companies_desc') }}</p>
         </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper init-swiper funded-carousel">
                 <script type="application/json" class="swiper-config">
-                                                                                {
-                                                                                  "loop": true,
-                                                                                  "speed": 600,
-                                                                                  "autoplay": { "delay": 5000 },
-                                                                                  "slidesPerView": "auto",
-                                                                                  "pagination": { 
-                                                                                    "el": ".swiper-pagination", 
-                                                                                    "type": "bullets", 
-                                                                                    "clickable": true 
-                                                                                  },
-                                                                                  "breakpoints": {
-                                                                                    "320": { 
-                                                                                      "slidesPerView": 1, 
-                                                                                      "spaceBetween": 20 
-                                                                                    },
-                                                                                    "1200": { 
-                                                                                      "slidesPerView": 1, 
-                                                                                      "spaceBetween": 0 
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                                </script>
+                                                                                                                {
+                                                                                                                  "loop": true,
+                                                                                                                  "speed": 600,
+                                                                                                                  "autoplay": { "delay": 5000 },
+                                                                                                                  "slidesPerView": "auto",
+                                                                                                                  "pagination": { 
+                                                                                                                    "el": ".swiper-pagination", 
+                                                                                                                    "type": "bullets", 
+                                                                                                                    "clickable": true 
+                                                                                                                  },
+                                                                                                                  "breakpoints": {
+                                                                                                                    "320": { 
+                                                                                                                      "slidesPerView": 1, 
+                                                                                                                      "spaceBetween": 20 
+                                                                                                                    },
+                                                                                                                    "1200": { 
+                                                                                                                      "slidesPerView": 1, 
+                                                                                                                      "spaceBetween": 0 
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                                </script>
                 <div class="swiper-wrapper">
 
                     @foreach ($financedCompanies as $company)
@@ -359,8 +408,8 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>Nos Accompagnements</h2>
-            <p>Un accompagnement sur mesure pour la mise à niveau et la performance de votre entreprise</p>
+            <h2>Projets réalisés</h2>
+            <p>Les projets réalisés par le FREMIN </p>
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -402,11 +451,9 @@
 
             <!-- Section Header -->
             <div class="section-header-modern" data-aos="fade-up">
-                <span class="section-badge">Notre Équipe</span>
-                <h2>Une équipe au service du<br>développement industriel</h2>
-                <p>Le FREMIN s'appuie sur une équipe pluridisciplinaire composée de professionnels expérimentés, engagés
-                    dans
-                    l'accompagnement des entreprises industrielles ivoiriennes.</p>
+                <span class="section-badge">{{ __('management_committee') }}</span>
+                <h2>{{ __('management_committee') }}</h2>
+                <p>{{ __('management_committee_desc') }}</p>
             </div>
 
             <!-- Team Grid -->
@@ -480,9 +527,9 @@
 
             <!-- Section Header -->
             <div class="section-header-testimonials" data-aos="fade-up">
-                <span class="section-badge">Témoignages</span>
-                <h2>Ce que disent nos bénéficiaires</h2>
-                <p>Découvrez les success stories des entreprises accompagnées par le FREMIN</p>
+                <span class="section-badge">{{ __('testimonials') }}</span>
+                <h2>{{ __('testimonials') }}</h2>
+                <p>{{ __('testimonials_desc') }}</p>
             </div>
 
             <!-- Testimonials Grid -->
@@ -558,17 +605,28 @@
 
             <!-- Section Header -->
             <div class="partners-header" data-aos="fade-up">
-                <span class="partners-count">Nos Partenaires</span>
-                <h2>Ils nous font confiance</h2>
-                <p>Des partenaires stratégiques qui accompagnent notre mission de développement industriel</p>
+                <span class="partners-count">{{ __('our_partners') }}</span>
+                <h2>{{ __('they_trust_us') }}</h2>
+                <p>{{ __('partners_desc') }}</p>
             </div>
 
             <!-- Partners Carousel -->
             <div class="partners-carousel" data-aos="fade-up" data-aos-delay="200">
 
                 @foreach ($partners as $partner)
-                    <div class="partner-logo">
-                        <img src="{{ asset('storage/' . $partner->logo) }}" alt="{{ $partner->name }}">
+                    <div class="partner-item" style="text-align: center; margin: 0 10px;">
+                        <div class="partner-logo">
+                            @if($partner->website)
+                                <a href="{{ $partner->website }}" target="_blank" rel="noopener noreferrer">
+                                    <img src="{{ asset('storage/' . $partner->logo) }}" alt="{{ $partner->name }}">
+                                </a>
+                            @else
+                                <img src="{{ asset('storage/' . $partner->logo) }}" alt="{{ $partner->name }}">
+                            @endif
+                        </div>
+                        <p class="partner-name" style="margin-top: 8px; font-size: 14px; font-weight: 600; color: #333;">
+                            {{ $partner->name }}
+                        </p>
                     </div>
                 @endforeach
 

@@ -11,8 +11,10 @@ class Program extends Model
 
     protected $fillable = [
         'title',
+        'title_en',
         'subtitle',
         'description',
+        'description_en',
         'image',
         'image_alt',
         'category',
@@ -22,6 +24,22 @@ class Program extends Model
         'sort_order',
         'is_active'
     ];
+
+    public function getTitleAttribute($value)
+    {
+        if (app()->getLocale() === 'en' && !empty($this->attributes['title_en'])) {
+            return $this->attributes['title_en'];
+        }
+        return $value;
+    }
+
+    public function getDescriptionAttribute($value)
+    {
+        if (app()->getLocale() === 'en' && !empty($this->attributes['description_en'])) {
+            return $this->attributes['description_en'];
+        }
+        return $value;
+    }
 
     protected $casts = [
         'is_active' => 'boolean',

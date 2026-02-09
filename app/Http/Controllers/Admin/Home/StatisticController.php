@@ -23,6 +23,7 @@ class StatisticController extends Controller
     {
         $request->validate([
             'label' => 'required|string|max:255',
+            'label_en' => 'nullable|string|max:255',
             'value' => 'required|string|max:255',
             'icon' => 'required|string|max:255',
             'sort_order' => 'required|integer',
@@ -47,6 +48,7 @@ class StatisticController extends Controller
     {
         $request->validate([
             'label' => 'required|string|max:255',
+            'label_en' => 'nullable|string|max:255',
             'value' => 'required|string|max:255',
             'icon' => 'required|string|max:255',
             'sort_order' => 'required|integer',

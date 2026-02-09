@@ -23,8 +23,12 @@ class MissionCardController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
+            'title_en' => 'nullable|string|max:255',
             'icon' => 'required|string|max:255',
             'description' => 'required|string',
+            'description_en' => 'nullable|string',
+            'content' => 'nullable|string',
+            'content_en' => 'nullable|string',
             'list_items' => 'nullable|string',
             'link' => 'nullable|string|max:255',
             'theme' => 'required|in:orange,green,dark',
@@ -60,8 +64,12 @@ class MissionCardController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
+            'title_en' => 'nullable|string|max:255',
             'icon' => 'required|string|max:255',
             'description' => 'required|string',
+            'description_en' => 'nullable|string',
+            'content' => 'nullable|string',
+            'content_en' => 'nullable|string',
             'list_items' => 'nullable|string',
             'link' => 'nullable|string|max:255',
             'theme' => 'required|in:orange,green,dark',

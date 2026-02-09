@@ -71,6 +71,11 @@
                                     Accompagnements
                                 </a>
                             </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.minister-infos.index') }}">
+                                    Mot du Ministre
+                                </a>
+                            </div>
                         </nav>
                     </div>
                 </div>

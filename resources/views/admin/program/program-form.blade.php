@@ -162,9 +162,14 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="form-group">
-                            <label class="form-label">Titre du Programme</label>
+                            <label class="form-label">Titre du Programme (FR)</label>
                             <input type="text" name="title" class="form-control"
                                 value="{{ old('title', $program->title ?? '') }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Titre du Programme (EN)</label>
+                            <input type="text" name="title_en" class="form-control"
+                                value="{{ old('title_en', $program->title_en ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -192,9 +197,14 @@
                         placeholder="Ex: Accompagnement technique">
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Description détaillée</label>
+                    <label class="form-label">Description détaillée (FR)</label>
                     <textarea name="description" class="form-control" rows="6"
                         required>{{ old('description', $program->description ?? '') }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description détaillée (EN)</label>
+                    <textarea name="description_en" class="form-control"
+                        rows="6">{{ old('description_en', $program->description_en ?? '') }}</textarea>
                 </div>
             </div>
 

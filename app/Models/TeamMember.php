@@ -12,14 +12,32 @@ class TeamMember extends Model
     protected $fillable = [
         'name',
         'position',
+        'position_en',
         'image',
         'image_alt',
         'bio',
+        'bio_en',
         'is_president',
         'linkedin_url',
         'sort_order',
         'is_active'
     ];
+
+    public function getPositionAttribute($value)
+    {
+        if (app()->getLocale() === 'en' && !empty($this->attributes['position_en'])) {
+            return $this->attributes['position_en'];
+        }
+        return $value;
+    }
+
+    public function getBioAttribute($value)
+    {
+        if (app()->getLocale() === 'en' && !empty($this->attributes['bio_en'])) {
+            return $this->attributes['bio_en'];
+        }
+        return $value;
+    }
 
     protected $casts = [
         'is_active' => 'boolean',

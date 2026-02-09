@@ -224,9 +224,9 @@
                 @endif
 
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-label">Titre de la carte</label>
+                            <label class="form-label">Titre (FR)</label>
                             <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" 
                                    value="{{ old('title', $governanceCard->title ?? '') }}" 
                                    placeholder="Ex: Notre Organisation" required>
@@ -235,6 +235,18 @@
                             @enderror
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Titre (EN)</label>
+                            <input type="text" name="title_en" class="form-control @error('title_en') is-invalid @enderror" 
+                                   value="{{ old('title_en', $governanceCard->title_en ?? '') }}" 
+                                   placeholder="Ex: Our Organization">
+                            @error('title_en')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="form-label">Ordre d'affichage</label>
@@ -264,10 +276,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Description (Contenu de la carte)</label>
+                    <label class="form-label">Description (FR)</label>
                     <textarea name="description" class="form-control @error('description') is-invalid @enderror" required 
-                              placeholder="Description de la structure de gouvernance...">{{ old('description', $governanceCard->description ?? '') }}</textarea>
+                               placeholder="Description de la structure de gouvernance...">{{ old('description', $governanceCard->description ?? '') }}</textarea>
                     @error('description')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description (EN)</label>
+                    <textarea name="description_en" class="form-control @error('description_en') is-invalid @enderror" 
+                               placeholder="Description of the governance structure...">{{ old('description_en', $governanceCard->description_en ?? '') }}</textarea>
+                    @error('description_en')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
@@ -277,6 +297,22 @@
                     <textarea name="list_items" class="form-control @error('list_items') is-invalid @enderror" rows="4" 
                               placeholder="Point 1&#10;Point 2&#10;Point 3">{{ old('list_items', $governanceCard->list_items_string ?? '') }}</textarea>
                     @error('list_items')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Contenu détaillé (FR)</label>
+                    <textarea name="content" id="editor_fr" class="form-control @error('content') is-invalid @enderror">{{ old('content', $governanceCard->content ?? '') }}</textarea>
+                    @error('content')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Contenu détaillé (EN)</label>
+                    <textarea name="content_en" id="editor_en" class="form-control @error('content_en') is-invalid @enderror">{{ old('content_en', $governanceCard->content_en ?? '') }}</textarea>
+                    @error('content_en')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
@@ -299,9 +335,19 @@
         </div>
     </div>
 
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <script>
         function updateIconPreview(iconClass) {
             document.getElementById('icon-preview').className = iconClass;
         }
+
+        CKEDITOR.replace('editor_fr', {
+            height: 300,
+            removeButtons: 'PasteFromWord'
+        });
+        CKEDITOR.replace('editor_en', {
+            height: 300,
+            removeButtons: 'PasteFromWord'
+        });
     </script>
 @endsection

@@ -222,10 +222,16 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-label">Secteur d'activité</label>
+                            <label class="form-label">Secteur d'activité (FR)</label>
                             <input type="text" name="sector" class="form-control" 
                                    value="{{ old('sector', $testimonial->sector ?? '') }}" 
                                    placeholder="Ex: BTP, Agroalimentaire...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Secteur d'activité (EN)</label>
+                            <input type="text" name="sector_en" class="form-control" 
+                                   value="{{ old('sector_en', $testimonial->sector_en ?? '') }}" 
+                                   placeholder="Ex: Construction, Agri-food...">
                         </div>
                     </div>
                 </div>
@@ -241,10 +247,16 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="form-label">Poste de l'Auteur</label>
+                            <label class="form-label">Poste de l'Auteur (FR)</label>
                             <input type="text" name="author_position" class="form-control" 
                                    value="{{ old('author_position', $testimonial->author_position ?? '') }}" 
                                    placeholder="Ex: Directeur Général">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Poste de l'Auteur (EN)</label>
+                            <input type="text" name="author_position_en" class="form-control" 
+                                   value="{{ old('author_position_en', $testimonial->author_position_en ?? '') }}" 
+                                   placeholder="Ex: General Manager">
                         </div>
                     </div>
                 </div>
@@ -272,9 +284,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Témoignage (Citation)</label>
+                    <label class="form-label">Témoignage / Citation (FR)</label>
                     <textarea name="quote" class="form-control" required 
                               placeholder="Écrivez le témoignage ici...">{{ old('quote', $testimonial->quote ?? '') }}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Témoignage / Citation (EN)</label>
+                    <textarea name="quote_en" class="form-control" 
+                              placeholder="Write the testimonial here...">{{ old('quote_en', $testimonial->quote_en ?? '') }}</textarea>
                 </div>
 
                 <div class="form-group">

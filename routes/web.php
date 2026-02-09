@@ -21,6 +21,13 @@ use Illuminate\Support\Facades\Route;
 
 
 //Les routes de la page
+Route::get('lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'fr'])) {
+        session()->put('locale', $locale);
+    }
+    return redirect()->back();
+})->name('lang.switch');
+
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::prefix('home')->group(function () {
     Route::get('/about', [HomeController::class, 'about'])->name('home.about');
@@ -38,6 +45,10 @@ Route::prefix('home')->group(function () {
     Route::get('/gouvernance/comite-gestion', [HomeController::class, 'comiteGestion'])->name('home.comite-gestion');
     Route::get('/gouvernance/cellule-technique', [HomeController::class, 'celluleTechnique'])->name('home.cellule-technique');
     Route::get('/gouvernance/tutelles', [HomeController::class, 'tutelles'])->name('home.tutelles');
+
+    // Pages de détail dynamiques
+    Route::get('/missions/v/{slug}', [HomeController::class, 'showMission'])->name('home.missions.show');
+    Route::get('/governance/v/{slug}', [HomeController::class, 'showGovernance'])->name('home.governance.show');
 });
 
 
@@ -222,6 +233,11 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::delete('/{event}', [EventController::class, 'destroy'])->name('destroy');
         Route::post('/{event}/toggle-status', [EventController::class, 'toggleStatus'])->name('toggle-status');
         Route::post('/{event}/toggle-featured', [EventController::class, 'toggleFeatured'])->name('toggle-featured');
+    });
+
+    Route::prefix('minister-infos')->name('admin.minister-infos.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Home\MinisterInfoController::class, 'index'])->name('index');
+        Route::post('/', [\App\Http\Controllers\Admin\Home\MinisterInfoController::class, 'store'])->name('store');
     });
 
     //Les routes de la page publications et ressources 

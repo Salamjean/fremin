@@ -109,10 +109,18 @@
 
                     <div class="row g-4">
                         <div class="col-md-6">
-                            <label class="form-label">Libellé</label>
+                            <label class="form-label">Libellé (FR)</label>
                             <input type="text" name="label" class="form-control @error('label') is-invalid @enderror" 
                                    value="{{ old('label', $statistic->label ?? '') }}" placeholder="Ex: Entreprises Assistées" required>
                             @error('label')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Libellé (EN)</label>
+                            <input type="text" name="label_en" class="form-control @error('label_en') is-invalid @enderror" 
+                                   value="{{ old('label_en', $statistic->label_en ?? '') }}" placeholder="Ex: Assisted Companies">
+                            @error('label_en')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>

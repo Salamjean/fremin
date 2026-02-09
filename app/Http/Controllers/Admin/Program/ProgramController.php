@@ -43,8 +43,10 @@ class ProgramController extends Controller
         try {
             $validated = $request->validate([
                 'title' => 'required|string|max:255',
+                'title_en' => 'nullable|string|max:255',
                 'subtitle' => 'nullable|string|max:255',
                 'description' => 'required|string',
+                'description_en' => 'nullable|string',
                 'icon' => 'nullable|string|max:255',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5120',
                 'image_alt' => 'nullable|string|max:255',
@@ -108,8 +110,10 @@ class ProgramController extends Controller
         try {
             $request->validate([
                 'title' => 'required|string|max:255',
+                'title_en' => 'nullable|string|max:255',
                 'subtitle' => 'nullable|string|max:255',
                 'description' => 'required|string',
+                'description_en' => 'nullable|string',
                 'icon' => 'nullable|string|max:255',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5120',
                 'image_alt' => 'nullable|string|max:255',

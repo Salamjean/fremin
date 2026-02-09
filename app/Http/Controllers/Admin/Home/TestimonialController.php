@@ -26,10 +26,13 @@ class TestimonialController extends Controller
             'company_name' => 'required|string|max:255',
             'company_logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'sector' => 'required|string|max:255',
+            'sector_en' => 'nullable|string|max:255',
             'rating' => 'required|integer|min:1|max:5',
             'quote' => 'required|string',
+            'quote_en' => 'nullable|string',
             'author_name' => 'required|string|max:255',
             'author_position' => 'required|string|max:255',
+            'author_position_en' => 'nullable|string|max:255',
             'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
@@ -59,10 +62,13 @@ class TestimonialController extends Controller
             'company_name' => 'required|string|max:255',
             'company_logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'sector' => 'required|string|max:255',
+            'sector_en' => 'nullable|string|max:255',
             'rating' => 'required|integer|min:1|max:5',
             'quote' => 'required|string',
+            'quote_en' => 'nullable|string',
             'author_name' => 'required|string|max:255',
             'author_position' => 'required|string|max:255',
+            'author_position_en' => 'nullable|string|max:255',
             'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);

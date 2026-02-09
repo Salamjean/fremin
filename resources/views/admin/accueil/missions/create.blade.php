@@ -81,8 +81,8 @@
                     @csrf @if(isset($missionCard)) @method('PUT') @endif
 
                     <div class="row g-4">
-                        <div class="col-md-8">
-                            <label class="form-label">Titre de la carte</label>
+                        <div class="col-md-6">
+                            <label class="form-label">Titre (FR)</label>
                             <input type="text" name="title" class="form-control @error('title') is-invalid @enderror"
                                 value="{{ old('title', $missionCard->title ?? '') }}" placeholder="Ex: Notre Vision"
                                 required>
@@ -90,7 +90,16 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Titre (EN)</label>
+                            <input type="text" name="title_en" class="form-control @error('title_en') is-invalid @enderror"
+                                value="{{ old('title_en', $missionCard->title_en ?? '') }}" placeholder="Ex: Our Vision">
+                            @error('title_en')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="col-md-8">
                             <label class="form-label">Thème Couleur</label>
                             <select name="theme" class="form-select @error('theme') is-invalid @enderror" required>
                                 <option value="orange" {{ old('theme', $missionCard->theme ?? '') == 'orange' ? 'selected' : '' }}>Orange</option>
@@ -128,10 +137,19 @@
                         </div>
 
                         <div class="col-12">
-                            <label class="form-label">Description principale</label>
+                            <label class="form-label">Description principale (FR)</label>
                             <textarea name="description" class="form-control @error('description') is-invalid @enderror"
                                 rows="3" required>{{ old('description', $missionCard->description ?? '') }}</textarea>
                             @error('description')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Description principale (EN)</label>
+                            <textarea name="description_en"
+                                class="form-control @error('description_en') is-invalid @enderror"
+                                rows="3">{{ old('description_en', $missionCard->description_en ?? '') }}</textarea>
+                            @error('description_en')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
@@ -144,6 +162,24 @@
                             <small class="text-muted">Ces points apparaîtront sous forme de liste à puces sous la
                                 description.</small>
                             @error('list_items')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Contenu détaillé (FR)</label>
+                            <textarea name="content" id="editor_fr"
+                                class="form-control @error('content') is-invalid @enderror">{{ old('content', $missionCard->content ?? '') }}</textarea>
+                            @error('content')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label">Contenu détaillé (EN)</label>
+                            <textarea name="content_en" id="editor_en"
+                                class="form-control @error('content_en') is-invalid @enderror">{{ old('content_en', $missionCard->content_en ?? '') }}</textarea>
+                            @error('content_en')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
@@ -176,4 +212,16 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor_fr', {
+            height: 300,
+            removeButtons: 'PasteFromWord'
+        });
+        CKEDITOR.replace('editor_en', {
+            height: 300,
+            removeButtons: 'PasteFromWord'
+        });
+    </script>
 @endsection

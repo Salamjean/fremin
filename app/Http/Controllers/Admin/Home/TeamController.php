@@ -28,10 +28,12 @@ class TeamController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'position' => 'required|string|max:255',
+            'position_en' => 'nullable|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'image_alt' => 'nullable|string|max:255',
             'linkedin_url' => 'nullable|url|max:255',
             'bio' => 'nullable|string',
+            'bio_en' => 'nullable|string',
             'is_president' => 'boolean',
             'sort_order' => 'required|integer',
             'is_active' => 'boolean'
@@ -65,10 +67,12 @@ class TeamController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'position' => 'required|string|max:255',
+            'position_en' => 'nullable|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'image_alt' => 'nullable|string|max:255',
             'linkedin_url' => 'nullable|url|max:255',
             'bio' => 'nullable|string',
+            'bio_en' => 'nullable|string',
             'is_president' => 'boolean',
             'sort_order' => 'required|integer',
             'is_active' => 'boolean'

@@ -85,17 +85,31 @@
                         </div>
 
                         <div class="col-md-12">
-                            <label class="form-label">Secteur d'Activité</label>
+                            <label class="form-label">Secteur d'Activité (FR)</label>
                             <input type="text" name="industry" class="form-control @error('industry') is-invalid @enderror" 
                                    value="{{ old('industry', $company->industry ?? '') }}" placeholder="Ex: Agro-industrie">
                             @error('industry') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
 
                         <div class="col-md-12">
-                            <label class="form-label">Description de l'Impact</label>
+                            <label class="form-label">Secteur d'Activité (EN)</label>
+                            <input type="text" name="industry_en" class="form-control @error('industry_en') is-invalid @enderror" 
+                                   value="{{ old('industry_en', $company->industry_en ?? '') }}" placeholder="Ex: Agro-industry">
+                            @error('industry_en') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label">Description de l'Impact (FR)</label>
                             <textarea name="description" class="form-control @error('description') is-invalid @enderror" rows="3"
                                       placeholder="Comment le financement a aidé cette entreprise...">{{ old('description', $company->description ?? '') }}</textarea>
                             @error('description') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label">Description de l'Impact (EN)</label>
+                            <textarea name="description_en" class="form-control @error('description_en') is-invalid @enderror" rows="3"
+                                      placeholder="How funding helped this company...">{{ old('description_en', $company->description_en ?? '') }}</textarea>
+                            @error('description_en') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
 
                         <div class="col-md-6 text-center">

@@ -8,11 +8,20 @@ class Statistic extends Model
 {
     protected $fillable = [
         'label',
+        'label_en',
         'value',
         'icon',
         'sort_order',
         'is_active'
     ];
+
+    public function getLabelAttribute($value)
+    {
+        if (app()->getLocale() === 'en' && !empty($this->attributes['label_en'])) {
+            return $this->attributes['label_en'];
+        }
+        return $value;
+    }
 
     protected $casts = [
         'is_active' => 'boolean',

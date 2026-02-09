@@ -714,7 +714,7 @@
                                 <div class="form-group">
                                     <label class="form-label" for="position">
                                         <i class="fas fa-briefcase"></i>
-                                        Poste
+                                        Poste (FR)
                                         <span class="required">*</span>
                                     </label>
                                     <div class="input-wrapper">
@@ -727,6 +727,25 @@
                                         </span>
                                     </div>
                                     @error('position')
+                                        <span class="error-message">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="position_en">
+                                        <i class="fas fa-briefcase"></i>
+                                        Poste (EN)
+                                    </label>
+                                    <div class="input-wrapper">
+                                        <input type="text" class="form-control @error('position_en') is-invalid @enderror"
+                                            id="position_en" name="position_en"
+                                            value="{{ old('position_en', $teamMember->position_en ?? '') }}"
+                                            placeholder="Ex: Marketing Director">
+                                        <span class="input-icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </span>
+                                    </div>
+                                    @error('position_en')
                                         <span class="error-message">{{ $message }}</span>
                                     @enderror
                                 </div>
@@ -832,13 +851,27 @@
                                 <div class="form-group">
                                     <label class="form-label" for="bio">
                                         <i class="fas fa-quote-left"></i>
-                                        Biographie / Message du Président
+                                        Biographie / Message (FR)
                                     </label>
                                     <textarea class="form-control @error('bio') is-invalid @enderror" 
                                         id="bio" name="bio" rows="6" 
                                         placeholder="Saisissez la biographie ou le message ici...">{{ old('bio', $teamMember->bio ?? '') }}</textarea>
                                     <div class="form-hint">Ce texte sera affiché dans le modal de message du président.</div>
                                     @error('bio')
+                                        <span class="error-message">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="bio_en">
+                                        <i class="fas fa-quote-left"></i>
+                                        Biographie / Message (EN)
+                                    </label>
+                                    <textarea class="form-control @error('bio_en') is-invalid @enderror" 
+                                        id="bio_en" name="bio_en" rows="6" 
+                                        placeholder="Enter the biography or message here...">{{ old('bio_en', $teamMember->bio_en ?? '') }}</textarea>
+                                    <div class="form-hint">This text will be displayed in the president's message modal.</div>
+                                    @error('bio_en')
                                         <span class="error-message">{{ $message }}</span>
                                     @enderror
                                 </div>

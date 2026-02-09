@@ -35,13 +35,15 @@ class HomeController extends Controller
         $testimonials = Testimonial::active()->ordered()->get();
         $missionCards = MissionCard::active()->ordered()->get();
         $governanceCards = GovernanceCard::active()->ordered()->get();
-        $programs = Program::active()->ordered()->get();
+        $programs = Program::active()->ordered()->take(3)->get();
 
 
         $financedCompanies = FinancedCompany::active()->ordered()->get();
 
         // Fetch news articles or provide dummy data if empty
         $newsArticles = NewsArticle::active()->ordered()->take(5)->get();
+
+        $ministerInfo = \App\Models\MinisterInfo::first();
 
         return view('home.accueil', compact(
             'carousels',
@@ -53,7 +55,8 @@ class HomeController extends Controller
             'missionCards',
             'governanceCards',
             'programs',
-            'financedCompanies'
+            'financedCompanies',
+            'ministerInfo'
         ));
     }
     public function about()
@@ -192,5 +195,23 @@ class HomeController extends Controller
     public function tutelles()
     {
         return view('home.institutional.tutelles');
+    }
+
+    public function showMission($slug)
+    {
+        $card = MissionCard::where('slug', $slug)->active()->firstOrFail();
+        return view('home.institutional.detail', [
+            'card' => $card,
+            'type' => 'mission'
+        ]);
+    }
+
+    public function showGovernance($slug)
+    {
+        $card = GovernanceCard::where('slug', $slug)->active()->firstOrFail();
+        return view('home.institutional.detail', [
+            'card' => $card,
+            'type' => 'governance'
+        ]);
     }
 }

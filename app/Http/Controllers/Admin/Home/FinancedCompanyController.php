@@ -25,9 +25,11 @@ class FinancedCompanyController extends Controller
         $request->validate([
             'company_name' => 'required|string|max:255',
             'industry' => 'nullable|string|max:255',
+            'industry_en' => 'nullable|string|max:255',
             'image_before' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5120',
             'image_after' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5120',
             'description' => 'nullable|string',
+            'description_en' => 'nullable|string',
             'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
@@ -61,9 +63,11 @@ class FinancedCompanyController extends Controller
         $request->validate([
             'company_name' => 'required|string|max:255',
             'industry' => 'nullable|string|max:255',
+            'industry_en' => 'nullable|string|max:255',
             'image_before' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5120',
             'image_after' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5120',
             'description' => 'nullable|string',
+            'description_en' => 'nullable|string',
             'sort_order' => 'required|integer',
             'is_active' => 'boolean'
         ]);
