@@ -14,6 +14,8 @@
         </div>
     </section>
 
+    @include('home.projets.modernisation-nav')
+
     <section class="realizations-list py-5">
         <div class="container">
             @php

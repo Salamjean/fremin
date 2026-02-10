@@ -14,6 +14,8 @@
         </div>
     </section>
 
+    @include('home.projets.modernisation-nav')
+
     <section class="project-presentation py-5">
         <div class="container">
             <div class="row align-items-center g-5">

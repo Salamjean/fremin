@@ -14,6 +14,8 @@
         </div>
     </section>
 
+    @include('home.projets.modernisation-nav')
+
     <section class="media-gallery py-5">
         <div class="container">
             <h3 class="mb-4" style="font-weight: 800; color: #1a1a1a;">Vidéos & Documentaires</h3>
