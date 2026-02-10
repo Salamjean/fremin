@@ -15,28 +15,21 @@
     <section class="py-5 bg-white">
         <div class="container py-5">
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="#rapports" class="pub-cat-card-v2 shadow-sm">
                         <div class="pub-cat-icon-v2"><i class="fas fa-file-invoice"></i></div>
                         <h5 class="fw-bold mb-2">Rapports Annuels</h5>
                         <p class="small text-muted mb-0">Bilans et activités institutionnelles du FREMIN.</p>
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <a href="#etudes" class="pub-cat-card-v2 shadow-sm">
                         <div class="pub-cat-icon-v2"><i class="fas fa-microscope"></i></div>
                         <h5 class="fw-bold mb-2">Études Sectorielles</h5>
                         <p class="small text-muted mb-0">Analyses approfondies du tissu industriel national.</p>
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <a href="#guides" class="pub-cat-card-v2 shadow-sm">
-                        <div class="pub-cat-icon-v2"><i class="fas fa-book-open"></i></div>
-                        <h5 class="fw-bold mb-2">Guides Pratiques</h5>
-                        <p class="small text-muted mb-0">Accompagnement dans vos processus de mise à niveau.</p>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <a href="#autres" class="pub-cat-card-v2 shadow-sm">
                         <div class="pub-cat-icon-v2"><i class="fas fa-folder-plus"></i></div>
                         <h5 class="fw-bold mb-2">Autres Ressources</h5>

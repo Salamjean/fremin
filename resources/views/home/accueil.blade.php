@@ -96,7 +96,7 @@
     </section>
 
     <!-- Stats Bar -->
-    <section class="pres-stats-bar">
+    <section class="pres-stats-bar" style="height: auto;">
         <div class="container">
             <div class="row g-4 justify-content-center">
                 @foreach($statistics as $stat)
