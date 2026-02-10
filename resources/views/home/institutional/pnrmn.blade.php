@@ -2,7 +2,7 @@
 
 @section('title', 'PNRMN - Programme National de Restructuration et Mise à Niveau')
 
-@section('main')
+@section('content')
     <!-- Institutional Detail Page -->
     <section class="inst-detail-page">
         <div class="inst-detail-container">

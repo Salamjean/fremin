@@ -10,13 +10,8 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('statistics', function (Blueprint $table) {
+        Schema::create('project_contents_and_media_tables', function (Blueprint $table) {
             $table->id();
-            $table->string('label');
-            $table->string('value'); // String to handle "25+", "350+", etc.
-            $table->string('icon')->nullable();
-            $table->integer('sort_order')->default(0);
-            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
@@ -26,6 +21,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('statistics');
+        Schema::dropIfExists('project_contents_and_media_tables');
     }
 };

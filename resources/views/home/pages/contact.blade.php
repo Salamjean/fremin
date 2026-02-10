@@ -87,9 +87,9 @@
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="map-container-v2 h-100">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.339121!2d-4.019!3d5.333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMTknNTguOCJOIDTCsDAxJzA4LjQiVw!5e0!3m2!1sfr!2sci!4v1690000000000!5m2!1sfr!2sci"
-                            width="100%" height="100%" style="border:0; min-height: 450px;" allowfullscreen=""
-                            loading="lazy">
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.3021893585474!2d-3.9933947257574567!3d5.37080243548577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb006be9a845%3A0x3e30fbbd06970562!2sFREMIN%2C%20fonds%20de%20restructuration%20et%20de%20mise%20%C3%A0%20niveau%20des%20entreprises%20industrielles!5e0!3m2!1sfr!2sci!4v1770657856389!5m2!1sfr!2sci"
+                            width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>

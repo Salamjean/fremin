@@ -2,7 +2,7 @@
 
 @section('title', $card->title)
 
-@section('main')
+@section('content')
     <!-- Institutional Detail Page -->
     <section class="inst-detail-page">
         <div class="inst-detail-container">

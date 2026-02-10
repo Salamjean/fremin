@@ -184,7 +184,8 @@ class HomeController extends Controller
 
     public function comiteGestion()
     {
-        return view('home.institutional.comite-gestion');
+        $teamMembers = TeamMember::active()->ordered()->get();
+        return view('home.institutional.comite-gestion', compact('teamMembers'));
     }
 
     public function celluleTechnique()
@@ -213,5 +214,55 @@ class HomeController extends Controller
             'card' => $card,
             'type' => 'governance'
         ]);
+    }
+
+    public function etudes()
+    {
+        $hero = HeroSection::getActive();
+        return view('home.activities.etudes', compact('hero'));
+    }
+
+    public function ceremonies()
+    {
+        $hero = HeroSection::getActive();
+        return view('home.activities.ceremonies', compact('hero'));
+    }
+
+    public function accompagnement()
+    {
+        $hero = HeroSection::getActive();
+        return view('home.activities.accompagnement', compact('hero'));
+    }
+
+    public function modernisationPresentation()
+    {
+        $hero = HeroSection::getActive();
+        return view('home.projets.modernisation-presentation', compact('hero'));
+    }
+
+    public function modernisationRealisation()
+    {
+        $hero = HeroSection::getActive();
+        // Fetch financed companies for realization display
+        $financedCompanies = FinancedCompany::active()->ordered()->get();
+        return view('home.projets.modernisation-realisation', compact('hero', 'financedCompanies'));
+    }
+
+    public function modernisationMedia()
+    {
+        $hero = HeroSection::getActive();
+        return view('home.projets.modernisation-media', compact('hero'));
+    }
+
+    public function aedProjet()
+    {
+        $hero = HeroSection::getActive();
+        return view('home.projets.aed', compact('hero'));
+    }
+
+    public function infrastructures()
+    {
+        $hero = HeroSection::getActive();
+        return view('home.projets.infrastructures', compact('hero'));
     }
 }

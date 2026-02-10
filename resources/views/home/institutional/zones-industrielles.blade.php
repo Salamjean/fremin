@@ -2,7 +2,7 @@
 
 @section('title', 'Zones Industrielles - Infrastructures FREMIN')
 
-@section('main')
+@section('content')
     <section class="inst-detail-page">
         <div class="inst-detail-container">
 

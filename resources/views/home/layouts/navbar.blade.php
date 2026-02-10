@@ -32,11 +32,48 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="{{route('home')}}" class="active">{{ __('home') }}</a></li>
-        <li><a href="{{route('home.about')}}">{{ __('presentation') }}</a></li>
+        <li><a href="{{route('home')}}" class="{{ Route::is('home') ? 'active' : '' }}">{{ __('home') }}</a></li>
+        <li class="dropdown">
+          <a href="{{route('home.about')}}"
+            class="{{ Route::is('home.about', 'home.comite-gestion') ? 'active' : '' }}">
+            <span>{{ __('presentation') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+          <ul>
+            <li><a href="{{route('home.about')}}">{{ __('fremin_short') }}</a></li>
+            <li><a href="{{route('home.comite-gestion')}}">{{ __('management_committee_short') }}</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="{{ Request::is('home/activities/*') ? 'active' : '' }}">
+            <span>{{ __('activities') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+          <ul>
+            <li><a href="{{route('home.activities.etudes')}}">{{ __('studies_conducted') }}</a></li>
+            <li><a href="{{route('home.activities.ceremonies')}}">{{ __('ceremonies') }}</a></li>
+            <li><a href="{{route('home.activities.accompagnement')}}">{{ __('direct_support') }}</a></li>
+          </ul>
+        </li>
         <li><a href="{{route('home.actuality')}}">{{ __('news_events') }}</a></li>
         <li><a href="{{route('home.publication')}}">{{ __('publications') }}</a></li>
-        <li><a href="{{route('home.program')}}">{{ __('programs') }}</a></li>
+        <li class="dropdown">
+          <a href="#" class="{{ Request::is('home/projects/*') ? 'active' : '' }}">
+            <span>{{ __('projects') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+          <ul>
+            <li class="dropdown">
+              <a href="#"><span>{{ __('modernization_industrial') }}</span> <i
+                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="{{route('home.projets.modernisation.presentation')}}">{{ __('project_presentation') }}</a>
+                </li>
+                <li><a href="{{route('home.projets.modernisation.realisation')}}">{{ __('realizations') }}</a></li>
+                <li><a href="{{route('home.projets.modernisation.media')}}">{{ __('media') }}</a></li>
+              </ul>
+            </li>
+            <li><a href="{{route('home.projets.aed')}}">{{ __('aed_program') }}</a></li>
+            <li><a href="{{route('home.projets.infrastructures')}}">{{ __('industrial_infrastructure') }}</a></li>
+          </ul>
+        </li>
         <li><a href="{{route('home.contact')}}">{{ __('contact') }}</a></li>
 
       </ul>

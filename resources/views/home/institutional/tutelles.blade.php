@@ -2,7 +2,7 @@
 
 @section('title', 'Tutelles Techniques - Gouvernance FREMIN')
 
-@section('main')
+@section('content')
     <section class="inst-detail-page">
         <div class="inst-detail-container">
 

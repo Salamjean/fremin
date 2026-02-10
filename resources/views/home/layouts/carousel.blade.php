@@ -38,6 +38,14 @@
                                     <span class="t-bar white"></span>
                                     <span class="t-bar green"></span>
                                 </div>
+
+                                <!-- "Voir plus" button integrated in the slide -->
+                                <div class="carousel-action mt-4">
+                                    <a href="{{ route('home.about') }}" class="btn-more-minimal">
+                                        <span class="text">DÉCOUVRIR FREMIN</span>
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

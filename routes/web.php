@@ -46,6 +46,18 @@ Route::prefix('home')->group(function () {
     Route::get('/gouvernance/cellule-technique', [HomeController::class, 'celluleTechnique'])->name('home.cellule-technique');
     Route::get('/gouvernance/tutelles', [HomeController::class, 'tutelles'])->name('home.tutelles');
 
+    // Projets
+    Route::get('/projects/modernisation/presentation', [HomeController::class, 'modernisationPresentation'])->name('home.projets.modernisation.presentation');
+    Route::get('/projects/modernisation/realisation', [HomeController::class, 'modernisationRealisation'])->name('home.projets.modernisation.realisation');
+    Route::get('/projects/modernisation/media', [HomeController::class, 'modernisationMedia'])->name('home.projets.modernisation.media');
+    Route::get('/projects/aed', [HomeController::class, 'aedProjet'])->name('home.projets.aed');
+    Route::get('/projects/infrastructures', [HomeController::class, 'infrastructures'])->name('home.projets.infrastructures');
+
+    // Pages d'Activités
+    Route::get('/activities/etudes', [HomeController::class, 'etudes'])->name('home.activities.etudes');
+    Route::get('/activities/ceremonies', [HomeController::class, 'ceremonies'])->name('home.activities.ceremonies');
+    Route::get('/activities/accompagnement', [HomeController::class, 'accompagnement'])->name('home.activities.accompagnement');
+
     // Pages de détail dynamiques
     Route::get('/missions/v/{slug}', [HomeController::class, 'showMission'])->name('home.missions.show');
     Route::get('/governance/v/{slug}', [HomeController::class, 'showGovernance'])->name('home.governance.show');

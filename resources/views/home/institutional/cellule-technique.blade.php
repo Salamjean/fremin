@@ -2,7 +2,7 @@
 
 @section('title', 'Cellule Technique - Assistance et Analyse')
 
-@section('main')
+@section('content')
     <section class="inst-detail-page">
         <div class="inst-detail-container">
 

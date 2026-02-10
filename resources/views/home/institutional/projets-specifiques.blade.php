@@ -2,7 +2,7 @@
 
 @section('title', 'Projets Spécifiques - Appui aux Entreprises en Difficulté')
 
-@section('main')
+@section('content')
     <section class="inst-detail-page">
         <div class="inst-detail-container">
 
