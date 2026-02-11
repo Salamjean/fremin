@@ -23,7 +23,7 @@
                         <span class="section-badge">{{ __('legal_framework_title') }}</span>
                         <h2 class="mb-4">{{ __('legal_framework_title') }}</h2>
                         <div class="lead-text">
-                            {!! $about->content_text ?? __('legal_framework_text_1') !!}
+                             {!! 'Le Fonds de Restructuration et de Mise à Niveau des Entreprises Industrielles (FREMIN) a été créé par le décret n° 2014-781 du 11 décembre 2014. Le FREMIN est un instrument stratégique de l\'État Ivoirien dédié à la compétitivité industrielle. Il est Créé dans le cadre du Programme National de Restructuration et de Mise à Niveau (PNRMN). Il vise à renforcer la compétitivité et la transformation des industries ivoiriennes afin de stimuler la croissance, l’emploi et l’accès aux marchés internationaux' !!}
                         </div>
                         <ul class="legal-list">
                             <li><i class="fas fa-file-contract"></i> {{ __('legal_framework_item_1') }}</li>
@@ -174,8 +174,7 @@
                             <span class="section-badge">HISTORIQUE</span>
                             <h2 class="mb-4">{{ __('history_title') }}</h2>
                             <div class="history-content card-premium p-4">
-                                <p>Le Fonds de Restructuration et de Mise à Niveau (FREMIN) est né de la volonté de l'État Ivoirien, avec l'appui de ses partenaires au développement, de doter le secteur industriel d'un cadre d'accompagnement performant.</p>
-                                <p>Son historique remonte aux premières réformes structurelles visant à préparer l'industrie ivoirienne aux défis de la compétitivité régionale et internationale. Aujourd'hui, le FREMIN s'impose comme l'acteur central de la modernisation industrielle, ayant accompagné plus d'une centaine d'entreprises dans leur transformation.</p>
+                                <p>Le FREMIN, moteur du développement industriel ivoirien, finance et accompagne le PNRMN pour renforcer la compétitivité, moderniser les entreprises et stimuler la création d’emplois. Avec l’appui de l’ADCI et du Projet PARCSI de la BAD, il catalyse la transformation structurelle de l’économie, favorise l’innovation industrielle et élève la qualité des productions nationales.</p>
                                 <a href="{{ route('home.contact') }}" class="btn-read-more">Plus d'informations <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>

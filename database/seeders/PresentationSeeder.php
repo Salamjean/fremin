@@ -34,7 +34,7 @@ class PresentationSeeder extends Seeder
                 'section_subtitle' => 'Le moteur de la restructuration industrielle',
                 'main_image' => 'assets/img/fremin9.jpeg',
                 'content_title' => 'Un Engagement Stratégique',
-                'content_text' => 'Le Fonds de Restructuration et de Mise à Niveau (FREMIN) est un instrument stratégique de l\'État Ivoirien dédié à la compétitivité industrielle. Créé pour répondre aux défis de la mondialisation, le FREMIN accompagne les entreprises industrielles dans leurs processus de transformation technique, financière et managériale.',
+                'content_text' => 'Le Fonds de Restructuration et de Mise à Niveau des Entreprises Industrielles (FREMIN) a été créé par le décret n° 2014-781 du 11 décembre 2014. Le FREMIN est un instrument stratégique de l\'État Ivoirien dédié à la compétitivité industrielle. Il est Créé dans le cadre du Programme National de Restructuration et de Mise à Niveau (PNRMN). Il vise à renforcer la compétitivité et la transformation des industries ivoiriennes afin de stimuler la croissance, l’emploi et l’accès aux marchés internationaux',
                 'feature1_title' => 'Expertise',
                 'feature1_text' => 'Accompagnement de pointe',
                 'feature2_title' => 'Impact',

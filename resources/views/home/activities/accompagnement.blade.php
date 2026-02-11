@@ -40,7 +40,7 @@
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="image-grid">
                         <div class="primary-image">
-                            <img src="{{ asset('assets/img/agro-main.jpg') }}" alt="Accompagnement industriel"
+                            <img src="{{ asset('assets/img/fremin6.jpeg') }}" alt="Accompagnement industriel"
                                 class="img-fluid rounded-4 shadow-lg">
                         </div>
                     </div>

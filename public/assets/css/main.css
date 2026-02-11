@@ -874,7 +874,6 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-    text-align: center;
     padding-bottom: 60px;
     position: relative;
 }

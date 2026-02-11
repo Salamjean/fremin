@@ -228,6 +228,12 @@ class HomeController extends Controller
         return view('home.activities.ceremonies', compact('hero'));
     }
 
+    public function ateliers()
+    {
+        $hero = HeroSection::getActive();
+        return view('home.activities.ateliers', compact('hero'));
+    }
+
     public function accompagnement()
     {
         $hero = HeroSection::getActive();

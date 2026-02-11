@@ -56,6 +56,7 @@ Route::prefix('home')->group(function () {
     // Pages d'Activités
     Route::get('/activities/etudes', [HomeController::class, 'etudes'])->name('home.activities.etudes');
     Route::get('/activities/ceremonies', [HomeController::class, 'ceremonies'])->name('home.activities.ceremonies');
+    Route::get('/activities/ateliers', [HomeController::class, 'ateliers'])->name('home.activities.ateliers');
     Route::get('/activities/accompagnement', [HomeController::class, 'accompagnement'])->name('home.activities.accompagnement');
 
     // Pages de détail dynamiques

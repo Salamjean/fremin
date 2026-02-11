@@ -24,8 +24,6 @@
                             petite transformation</h4>
                         <p class="text-muted">Analyse approfondie et plan d'action pour dynamiser le secteur de la petite
                             agro-transformation en Côte d'Ivoire.</p>
-                        <a href="{{ route('home.publication') }}" class="btn-read-more">En savoir plus <i
-                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -38,20 +36,64 @@
                         </h4>
                         <p style="color: rgba(255,255,255,0.9);">Étude stratégique sur la modernisation du secteur textile
                             et de l'agro-transformation pour une meilleure compétitivité.</p>
-                        <a href="{{ route('home.publication') }}" class="btn-read-more"
-                            style="background: #fff; color: #009B3A;">En savoir plus <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- Study 3 -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="mission-item-card h-100 last" style="border-bottom: 5px solid #FF8200;">
+                    <div class="mission-item-card h-100" style="border-bottom: 5px solid #009B3A;">
                         <div class="m-icon"><i class="fas fa-file-alt"></i></div>
                         <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Fiches filières industrielles</h4>
                         <p class="text-muted">Répertoire détaillé des opportunités et des contraintes techniques par filière
                             industrielle prioritaire.</p>
-                        <a href="{{ route('home.publication') }}" class="btn-read-more">En savoir plus <i
-                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Study 4 (C1.4) -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mission-item-card h-100">
+                        <div class="m-icon"><i class="fas fa-vault"></i></div>
+                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">création d’un fonds dédié au financement du développement industriel en Côte d’Ivoire</h4>
+                        <p class="text-muted">Étude et mise en place d'un fonds de financement spécialisé pour le développement industriel en Côte d’Ivoire.</p>
+                    </div>
+                </div>
+
+                <!-- Study 5 (C1.5) -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mission-item-card h-100 highlighted">
+                        <div class="m-icon" style="background: rgba(255,255,255,0.2); color: #fff;"><i class="fas fa-project-diagram"></i></div>
+                        <h4 class="mb-3" style="font-weight: 700; color: #fff;">Stratégies de développement de Clusters</h4>
+                        <p style="color: rgba(255,255,255,0.9);">Élaboration de cinq (05) stratégies de développement pour cinq (05) grappes industrielles (clusters).</p>
+                    </div>
+                </div>
+
+                <!-- Study 6 (C1.6) -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="mission-item-card h-100 last" style="border-bottom: 5px solid #FF8200;">
+                        <div class="m-icon"><i class="fas fa-sync-alt"></i></div>
+                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Actualisation du PNRMN</h4>
+                        <p class="text-muted">Mise à jour du Programme National de Restructuration et de Mise à Niveau pour l'aligner sur les nouveaux objectifs nationaux.</p>
+                    </div>
+                </div>
+
+                <!-- Validation Workshop -->
+                <div class="col-lg-12 mt-4" data-aos="fade-up" data-aos-delay="700">
+                    <div class="card shadow-sm border-0 rounded-4 overflow-hidden" style="background: linear-gradient(135deg, #009B3A 0%, #007d2f 100%);">
+                        <div class="card-body p-4 p-lg-5 text-white">
+                            <div class="row align-items-center">
+                                <div class="col-lg-2 text-center mb-4 mb-lg-0">
+                                    <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center shadow" style="width: 80px; height: 80px;">
+                                        <i class="fas fa-calendar-check text-success fs-2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10">
+                                    <h3 class="fw-bold mb-3 text-white">Atelier de validation de l’actualisation du PNRMN</h3>
+                                    <p class="lead mb-0" style="font-size: 1.1rem; opacity: 0.95;">
+                                        Le jeudi 7 mars 2024, s’est tenu à Seen Hôtel d’Abidjan Plateau, l’atelier de validation du rapport final relatif à l’actualisation du PNRMN en vue de l’adapter aux objectifs du développement assigné par le Gouvernement dans le cadre du Plan National du Développement (PND 2021-2025).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

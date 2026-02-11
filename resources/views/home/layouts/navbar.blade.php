@@ -50,11 +50,15 @@
           <ul>
             <li><a href="{{route('home.activities.etudes')}}">{{ __('studies_conducted') }}</a></li>
             <li><a href="{{route('home.activities.ceremonies')}}">{{ __('ceremonies') }}</a></li>
+            <li><a href="{{route('home.activities.ateliers')}}">{{ __('ateliers') }}</a></li>
             <li><a href="{{route('home.activities.accompagnement')}}">{{ __('direct_support') }}</a></li>
           </ul>
         </li>
-        <li><a href="{{route('home.actuality')}}" class="{{ Route::is('home.actuality') ? 'active' : '' }}">{{ __('news_events') }}</a></li>
-        <li><a href="{{route('home.publication')}}" class="{{ Route::is('home.publication', 'publications.*') ? 'active' : '' }}">{{ __('publications') }}</a></li>
+        <li><a href="{{route('home.actuality')}}"
+            class="{{ Route::is('home.actuality') ? 'active' : '' }}">{{ __('news_events') }}</a></li>
+        <li><a href="{{route('home.publication')}}"
+            class="{{ Route::is('home.publication', 'publications.*') ? 'active' : '' }}">{{ __('publications') }}</a>
+        </li>
         <li class="dropdown">
           <a href="#" class="{{ Request::is('home/projects/*') ? 'active' : '' }}">
             <span>{{ __('projects') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
@@ -70,7 +74,8 @@
             <li><a href="{{route('home.projets.infrastructures')}}">{{ __('industrial_infrastructure') }}</a></li>
           </ul>
         </li>
-        <li><a href="{{route('home.contact')}}" class="{{ Route::is('home.contact') ? 'active' : '' }}">{{ __('contact') }}</a></li>
+        <li><a href="{{route('home.contact')}}"
+            class="{{ Route::is('home.contact') ? 'active' : '' }}">{{ __('contact') }}</a></li>
 
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
