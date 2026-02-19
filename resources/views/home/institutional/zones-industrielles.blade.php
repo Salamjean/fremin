@@ -17,8 +17,7 @@
                         <i class="fas fa-industry"></i>
                     </div>
                     <h1 class="inst-detail-title">
-                        Zones Industrielles<br>
-                        Infrastructures Modernes
+                        Mise en place des infrastructures industrielles
                     </h1>
                 </div>
             </div>
