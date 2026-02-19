@@ -83,7 +83,7 @@
       </main>
 
       <!-- Flash Info Ticker -->
-      <div class="flash-info-bar">
+      <!-- <div class="flash-info-bar">
         <div class="flash-label"><i class="fas fa-bolt me-2"></i> Flash Info</div>
         <div class="ticker-wrap">
           <div class="ticker">
@@ -95,7 +95,7 @@
               des PME</div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <footer id="footer" class="footer position-relative">
 
