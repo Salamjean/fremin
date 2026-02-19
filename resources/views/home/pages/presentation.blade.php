@@ -98,7 +98,7 @@
                             <span class="axis-num">01</span>
                             <h4 class="text-white">Soutenir la restructuration et la mise à niveau des entreprises
                                 industrielles</h4>
-                            <i class="fas fa-industry"></i>
+                            <!-- <i class="fas fa-industry"></i> -->
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                         <div class="axis-content">
                             <span class="axis-num">02</span>
                             <h4 class="text-white">Améliorer les infrastructures et la qualité</h4>
-                            <i class="fas fa-check-circle"></i>
+                            <!-- <i class="fas fa-check-circle"></i> -->
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
                             <span class="axis-num">03</span>
                             <h4 class="text-white">Créer des Centres d’Appui à la compétitivité et au développement
                                 industriel</h4>
-                            <i class="fas fa-building"></i>
+                            <!-- <i class="fas fa-building"></i> -->
                         </div>
                     </div>
                 </div>
