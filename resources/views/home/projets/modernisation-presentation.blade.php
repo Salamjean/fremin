@@ -70,14 +70,15 @@
                             financer les investissements matériels des entreprises industrielles (équipements industriels ou
                             de laboratoires, locaux techniques)</li>
                     </ul>
-                    <p class="mb-3">Le programme a pour objectif de développer la production industrielle, de promouvoir
-                        l’investissement et l’emploi, tout en améliorant la compétitivité des entreprises industrielles au
-                        niveau régional et international.</p>
-                    <p class="mb-3">Le FREMIN est l’instrument financier de la mise en œuvre du PNRMN.</p>
-                    <p>L’ADCI participe à la mise en œuvre du Programme National de Restructuration et de Mise à Niveau
-                        (PNRMN) en tant qu’organe d’exécution de la composante relative à l’appui direct aux entreprises. A
-                        ce titre, elle accompagne les entreprises industrielles dans le renforcement de leurs capacités
-                        opérationnelles et de leur compétitivité.</p>
+                    <p class="mb-3">Le Programme National de Restructuration et de Mise à Niveau (PNRMN) a pour objectif de
+                        stimuler la production industrielle, de promouvoir l’investissement et l’emploi, tout en renforçant
+                        la compétitivité des entreprises industrielles aux niveaux régional et international.</p>
+                    <p class="mb-3">Le Fonds de Restructuration et de Mise à Niveau des entreprises industrielles (FREMIN)
+                        constitue l’instrument financier dédié à la mise en œuvre de ce programme.</p>
+                    <p>Dans ce cadre, l’Agence de Developpement de la Compétitivité des entreprises de Côte d'Ivoire (ADCI)
+                        intervient en tant qu’organe d’exécution de la composante relative à l’appui direct aux entreprises.
+                        À ce titre, elle accompagne les entreprises industrielles dans le renforcement de leurs capacités
+                        opérationnelles et l’amélioration durable de leur compétitivité.</p>
                 </div>
             </div>
         </div>
