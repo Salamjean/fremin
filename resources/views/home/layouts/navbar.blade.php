@@ -36,11 +36,8 @@
         <li class="dropdown">
           <a href="{{route('home.about')}}"
             class="{{ Route::is('home.about', 'home.comite-gestion') ? 'active' : '' }}">
-            <span>{{ __('presentation') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+            <span>{{ __('presentation') }}</span>
           </a>
-          <ul>
-            <li><a href="{{route('home.about')}}">{{ __('fremin_short') }}</a></li>
-          </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="{{ Request::is('home/activities/*') ? 'active' : '' }}">
