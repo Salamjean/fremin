@@ -41,7 +41,7 @@
                     </p>
                 </div>
 
-                <div class="inst-detail-card zone-card">
+                <!-- <div class="inst-detail-card zone-card">
                     <h2><i class="fas fa-map-marker-alt"></i> Zone Industrielle de Koumassi</h2>
                     <div class="inst-detail-subcard">
                         <h3>Caractéristiques</h3>
@@ -122,7 +122,7 @@
                     </a>
                 </div>
 
-            </div>
+            </div> -->
         </div>
     </section>
 @endsection
