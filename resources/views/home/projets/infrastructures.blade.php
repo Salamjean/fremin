@@ -46,7 +46,7 @@
                         <div class="row align-items-center mb-5">
                             <div class="col-lg-12">
                                 <div class="section-header text-start mb-4">
-                                    <h3 style="color: #009B3A; font-weight: 700;">Contexte et Financement</h3>
+                                    <h3 style="color: #009B3A; font-weight: 700;">Contexte</h3>
                                     <div class="divider"
                                         style="width: 60px; height: 3px; background: #FF8200; margin-bottom: 20px;"></div>
                                 </div>
@@ -56,7 +56,7 @@
                                     Ministère du Budget et des Finances pour la prise en charge des engagements de l’Etat au
                                     titre de la Convention de concession signée le 14 juin 2022 entre l’Etat de Côte
                                     d’Ivoire et la société Arise Ivoire portant sur la réalisation des amenées primaires du
-                                    site de la <strong>ZEI PK24</strong> et la réalisation les travaux de réhabilitation des
+                                    site de la <strong>ZI PK24</strong> et la réalisation les travaux de réhabilitation des
                                     zones industrielles de <strong>Koumassi et Vridi</strong>.
                                 </p>
 
