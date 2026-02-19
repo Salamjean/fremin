@@ -61,22 +61,21 @@
             <div class="row g-4">
                 <div class="col-lg-12" data-aos="fade-up" data-aos-delay="1000">
                     <div class="mission-item-card last">
-                        <div class="m-icon"><i class="fas fa-bullseye"></i></div>
                         <p><span class="text-success">✓</span> Le financement de l’accompagnement des entreprises à travers
-                            des appuis directs et des primes ;</p>
+                            des appuis directs et des primes</p>
                         <p><span class="text-success">✓</span> Les garanties à octroyer aux banques pour faciliter l’accès
                             des entreprises au financement de leurs investissements matériels destinés à la rénovation et la
                             modernisation de leur outil de production, à l’extension de leurs infrastructures de production,
                             et de leurs activités, dans des secteurs jugés prioritaires au regard de la politique
-                            industrielle nationale ;</p>
+                            industrielle nationale</p>
                         <p><span class="text-success">✓</span> Les appuis financiers aux laboratoires techniques locaux
                             ainsi qu’aux structures d’accréditation et de normalisation pour le renforcement de leurs
-                            capacités ;</p>
+                            capacités</p>
                         <p><span class="text-success">✓</span> Le financement des centres d’appui à la compétitivité et au
-                            développement industriel ;</p>
+                            développement industriel</p>
                         <p><span class="text-success">✓</span> Toute autre intervention qui contribue à l’atteinte des
                             objectifs du Gouvernement en matière de compétitivité des entreprises industrielles
-                            manufacturières.</p>
+                            manufacturières</p>
                     </div>
                 </div>
             </div>
