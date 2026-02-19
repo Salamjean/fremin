@@ -194,49 +194,91 @@
                         </div>
 
                         <div class="row g-4">
-                            <!-- Image 1: PK24 -->
-                            <div class="col-lg-6 col-md-6">
+                            <!-- Image 1 -->
+                            <div class="col-lg-4 col-md-6">
                                 <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative">
-                                    <img src="https://placehold.co/800x600/009B3A/white?text=Zone+Industrielle+PK24"
-                                        alt="Zone Industrielle PK24" class="img-fluid w-100"
-                                        style="height: 300px; object-fit: cover; transition: transform 0.5s ease;">
-                                    <div class="gallery-overlay d-flex align-items-end p-4 position-absolute bottom-0 start-0 w-100 h-100"
-                                        style="background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);">
+                                    <img src="{{ asset('assets/img/z1.jpg') }}" alt="Infrastructure 1"
+                                        class="img-fluid w-100"
+                                        style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+                                    <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
+                                        style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
                                         <div class="text-white">
-                                            <h5 class="fw-bold mb-1">Aménagement ZI PK24</h5>
-                                            <p class="small mb-0">Travaux d'amenées primaires et voiries</p>
+                                            <h6 class="fw-bold mb-0">ZI PK24 - Phase 1</h6>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Image 2: Electricité -->
-                            <div class="col-lg-6 col-md-6">
+                            <!-- Image 2 -->
+                            <div class="col-lg-4 col-md-6">
                                 <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative">
-                                    <img src="https://placehold.co/800x600/FF8200/white?text=Infrastructures+Electriques"
-                                        alt="Infrastructures Électriques" class="img-fluid w-100"
-                                        style="height: 300px; object-fit: cover; transition: transform 0.5s ease;">
-                                    <div class="gallery-overlay d-flex align-items-end p-4 position-absolute bottom-0 start-0 w-100 h-100"
-                                        style="background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);">
+                                    <img src="{{ asset('assets/img/z2.jpg') }}" alt="Infrastructure 2"
+                                        class="img-fluid w-100"
+                                        style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+                                    <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
+                                        style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
                                         <div class="text-white">
-                                            <h5 class="fw-bold mb-1">Réseaux Électriques</h5>
-                                            <p class="small mb-0">Postes transformateurs et haute tension</p>
+                                            <h6 class="fw-bold mb-0">Réseaux Électriques</h6>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Image 3: Réhabilitation -->
-                            <div class="col-lg-12">
+                            <!-- Image 3 -->
+                            <div class="col-lg-4 col-md-6">
                                 <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative">
-                                    <img src="https://placehold.co/1200x600/212529/white?text=Rehabilitation+Koumassi+et+Vridi"
-                                        alt="Réhabilitation Vridi et Koumassi" class="img-fluid w-100"
-                                        style="height: 400px; object-fit: cover; transition: transform 0.5s ease;">
-                                    <div class="gallery-overlay d-flex align-items-end p-4 position-absolute bottom-0 start-0 w-100 h-100"
-                                        style="background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);">
+                                    <img src="{{ asset('assets/img/z3.jpg') }}" alt="Infrastructure 3"
+                                        class="img-fluid w-100"
+                                        style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+                                    <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
+                                        style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
                                         <div class="text-white">
-                                            <h5 class="fw-bold mb-1">Réhabilitation Zones Koumassi & Vridi</h5>
-                                            <p class="small mb-0">Rénovation des voiries et réseaux divers</p>
+                                            <h6 class="fw-bold mb-0">Aménagement Voiries</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image 4 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative">
+                                    <img src="{{ asset('assets/img/z4.jpg') }}" alt="Infrastructure 4"
+                                        class="img-fluid w-100"
+                                        style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+                                    <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
+                                        style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
+                                        <div class="text-white">
+                                            <h6 class="fw-bold mb-0">Réhabilitation Koumassi</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image 5 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative">
+                                    <img src="{{ asset('assets/img/z5.jpg') }}" alt="Infrastructure 5"
+                                        class="img-fluid w-100"
+                                        style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+                                    <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
+                                        style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
+                                        <div class="text-white">
+                                            <h6 class="fw-bold mb-0">Zone Industrielle Vridi</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image 6 -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative">
+                                    <img src="{{ asset('assets/img/z6.jpg') }}" alt="Infrastructure 6"
+                                        class="img-fluid w-100"
+                                        style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+                                    <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
+                                        style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
+                                        <div class="text-white">
+                                            <h6 class="fw-bold mb-0">Infrastructures Primaires</h6>
                                         </div>
                                     </div>
                                 </div>
