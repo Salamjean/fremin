@@ -188,10 +188,6 @@
                 <!-- Tab 3: Média -->
                 <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
                     <div class="content-box-premium p-4 p-md-5" data-aos="fade-up">
-                        <div class="section-header text-center mb-5">
-                            <h3 style="color: #1a1a1a; font-weight: 700;">Galerie Multimédia</h3>
-                            <p class="text-muted">Aperçu visuel des travaux et infrastructures</p>
-                        </div>
 
                         <div class="row g-4">
                             <!-- Image 1 -->
@@ -202,9 +198,6 @@
                                         style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
                                     <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
                                         style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
-                                        <div class="text-white">
-                                            <h6 class="fw-bold mb-0">ZI PK24 - Phase 1</h6>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -217,9 +210,6 @@
                                         style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
                                     <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
                                         style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
-                                        <div class="text-white">
-                                            <h6 class="fw-bold mb-0">Réseaux Électriques</h6>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -232,9 +222,6 @@
                                         style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
                                     <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
                                         style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
-                                        <div class="text-white">
-                                            <h6 class="fw-bold mb-0">Aménagement Voiries</h6>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -247,9 +234,6 @@
                                         style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
                                     <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
                                         style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
-                                        <div class="text-white">
-                                            <h6 class="fw-bold mb-0">Réhabilitation Koumassi</h6>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -262,9 +246,6 @@
                                         style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
                                     <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
                                         style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
-                                        <div class="text-white">
-                                            <h6 class="fw-bold mb-0">Zone Industrielle Vridi</h6>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -277,9 +258,6 @@
                                         style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
                                     <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"
                                         style="background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
-                                        <div class="text-white">
-                                            <h6 class="fw-bold mb-0">Infrastructures Primaires</h6>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

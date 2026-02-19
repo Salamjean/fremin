@@ -173,11 +173,6 @@
                 <!-- Tab 3: Média -->
                 <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
                     <div class="content-box-premium p-4 p-md-5" data-aos="fade-up">
-                        <div class="section-header text-center mb-5">
-                            <h3 style="color: #1a1a1a; font-weight: 700;">Galerie Multimédia AED</h3>
-                            <p class="text-muted">Impact visuel et témoignages du programme d'appui (11 réalisations)</p>
-                        </div>
-
                         <div class="media-masonry-grid">
                             <div class="row g-4">
                                 <!-- Item 1: Featured Video (Placeholder as before) -->
