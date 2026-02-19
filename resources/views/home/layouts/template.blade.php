@@ -121,7 +121,7 @@
                 <li><a href="{{route('home.actuality')}}">Actualités</a></li>
                 <li><a href="{{route('home.program')}}">Programmes</a></li>
                 <li><a href="{{route('home.contact')}}">Contact</a></li>
-                <li><a href="https://www.commerce.gouv.ci/accueil" target="_blank">Ministère du Commerce</a></li>
+                <li><a href="https://www.commerce.gouv.ci/accueil" target="_blank">Ministère en charge de l'Industrie</a></li>
               </ul>
             </div>
 
