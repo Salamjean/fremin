@@ -37,7 +37,7 @@
                         Akoupé-Zeudji PK24 <br>
                         • La réalisation de la voirie centrale de ce site et la maîtrise d’œuvre associée <br>
                         • L’installation d’eau potable et la maîtrise d’œuvre correspondante <br>
-                        • La réhabilitation des zones industrielles de Vridi et Koumassi <br>
+                        • La réhabilitation des zones industrielles de Vridi et Koumassi. <br>
                     </p>
                 </div>
 
