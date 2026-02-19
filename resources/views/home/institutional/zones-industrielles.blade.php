@@ -18,7 +18,7 @@
                     </div>
                     <h1 class="inst-detail-title">
                         Zones Industrielles<br>
-                        <span>Infrastructures Modernes</span>
+                        Infrastructures Modernes
                     </h1>
                 </div>
             </div>

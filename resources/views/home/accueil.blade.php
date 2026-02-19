@@ -90,7 +90,7 @@
                         <h4>Mise en place des infrastructures industrielles</h4>
                         <p>Développement et réhabilitation des zones industrielles pour offrir un écosystème performant aux
                             investisseurs.</p>
-                        <a href="{{ route('home.projets-specifiques') }}" class="card-link-compact">En savoir plus <i
+                        <a href="{{ route('home.zones-industrielles') }}" class="card-link-compact">En savoir plus <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
