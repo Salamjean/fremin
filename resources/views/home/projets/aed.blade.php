@@ -43,7 +43,7 @@
                 <div class="tab-pane fade show active" id="presentation" role="tabpanel" aria-labelledby="presentation-tab">
                     <div class="content-box-premium mb-4" data-aos="fade-up">
                         <h3 class="section-title" style="color: #009B3A; font-weight: 800; margin-bottom: -50px;">Contexte & Présentation</h3>
-                        <p class="lead-text">Les effets conjoncturels engendrés par la crise de la COVID-19 et son
+                        <p class="">Les effets conjoncturels engendrés par la crise de la COVID-19 et son
                             corollaire de mesures restrictives, renforcés par la guerre russo-ukrainienne, ont ouvert le
                             champ à plusieurs difficultés au niveau des secteurs économiques de la Côte d’Ivoire. Ainsi,
                             dans le secteur industriel, plusieurs entreprises, notamment les PME industrielles, ont dû se
