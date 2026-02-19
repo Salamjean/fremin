@@ -210,15 +210,15 @@
                             <p class="mb-3">Le FREMIN est administré par un Comité de Gestion composé comme suit :</p>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> un représentant du
-                                    Ministre chargé de l'Industrie; (Présidence)</li>
+                                    Ministre chargé de l'Industrie (Présidence)</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> un représentant du
-                                    Ministre chargé de l'Economie et des Finances;</li>
+                                    Ministre chargé de l'Economie et des Finances</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> un représentant du
-                                    Ministre chargé du Budget;</li>
+                                    Ministre chargé du Budget</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> un représentant du
-                                    Ministre chargé des Petites et Moyennes Entreprises;</li>
+                                    Ministre chargé des Petites et Moyennes Entreprises</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> le Directeur Général
-                                    de la BNI.</li>
+                                    de la BNI</li>
                             </ul>
 
                             <h5 class="fw-bold mt-4 mb-2">Rôle</h5>
@@ -245,13 +245,13 @@
                             </p>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> un représentant du
-                                    Ministre chargé de l'Industrie; (Présidence)</li>
+                                    Ministre chargé de l'Industrie (Présidence)</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> un représentant du
-                                    Ministre chargé de l'Economie et des Finances;</li>
+                                    Ministre chargé de l'Economie et des Finances</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> un représentant du
-                                    Ministre chargé du Budget;</li>
+                                    Ministre chargé du Budget</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> un représentant de la
-                                    BNI.</li>
+                                    BNI</li>
                             </ul>
 
                             <h5 class="fw-bold mt-4 mb-2">Rôle</h5>
