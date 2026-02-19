@@ -240,7 +240,6 @@
                 <!-- Cellule Technique -->
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="governance-box">
-                        <span class="section-badge">ASISTANCE TECHNIQUE</span>
                         <h2 class="mb-4">Cellule Technique</h2>
                         <div class="card-premium p-4">
                             <p class="mb-3">Le Comité de Gestion est assisté par une Cellule Technique composée comme suit :
