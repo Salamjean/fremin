@@ -108,7 +108,7 @@
               <div class="footer-contact pt-3">
                 <p>Deux plateaux, Vallon, non loin du siège de Burida</p>
                 <p>Abidjan, Côte d'Ivoire</p>
-                <p class="mt-3"><strong>Téléphone:</strong> <span>+225 27 22 52 44 44</span></p>
+                <p class="mt-3"><strong>Téléphone:</strong> <span>+225 27 22 41 72 92</span></p>
                 <p><strong>Email:</strong> <span>contact@fremin.ci</span></p>
               </div>
             </div>
