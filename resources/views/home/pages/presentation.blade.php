@@ -181,7 +181,7 @@
 
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="values-box">
-                        <h3 class="fw-bold mb-4">Nos Valeurs</h3>
+                        <h3 class=" mb-4">Nos Valeurs</h3>
                         @foreach($values as $val)
                             <div class="value-item shadow-sm bg-white p-3 rounded-3 mb-3">
                                 <div class="value-icon"><i class="{{ $val->icon }} text-success"></i></div>
@@ -202,7 +202,7 @@
         <div class="container">
             <div class="row gy-5">
                 <!-- Comité de Gestion -->
-                <h2 style="text-align: center;">Gouvernance</h2>
+                <h2>Gouvernance</h2>
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="governance-box">
                         <h2 class="mb-4">Comité de Gestion</h2>
