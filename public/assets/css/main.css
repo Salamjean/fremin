@@ -8693,7 +8693,7 @@ section,
 }
 
 .lead-text {
-    font-size: 1rem;
+    font-size: 1.0rem;
     line-height: 1.8;
     margin-bottom: 30px;
 }
