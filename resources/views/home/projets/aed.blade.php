@@ -43,7 +43,7 @@
                 <div class="tab-pane fade show active" id="presentation" role="tabpanel" aria-labelledby="presentation-tab">
                     <div class="content-box-premium mb-4" data-aos="fade-up">
                         <h3 class="section-title" style="color: #009B3A; font-weight: 800; margin-bottom: -50px;">Contexte & Présentation</h3>
-                        <p class="">Les effets conjoncturels engendrés par la crise de la COVID-19 et son
+                        <p>Les effets conjoncturels engendrés par la crise de la COVID-19 et son
                             corollaire de mesures restrictives, renforcés par la guerre russo-ukrainienne, ont ouvert le
                             champ à plusieurs difficultés au niveau des secteurs économiques de la Côte d’Ivoire. Ainsi,
                             dans le secteur industriel, plusieurs entreprises, notamment les PME industrielles, ont dû se
@@ -172,30 +172,143 @@
 
                 <!-- Tab 3: Média -->
                 <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
-                    <div class="content-box-premium text-center py-5" data-aos="fade-up">
-                        <div class="mb-4">
-                            <i class="fas fa-photo-video fa-3x text-muted mb-3"></i>
-                            <h4 class="text-muted">Galerie Multimédia</h4>
-                            <p class="text-muted">Des images et vidéos des réalisations seront bientôt disponibles.</p>
+                    <div class="content-box-premium p-4 p-md-5" data-aos="fade-up">
+                        <div class="section-header text-center mb-5">
+                            <h3 style="color: #1a1a1a; font-weight: 700;">Galerie Multimédia AED</h3>
+                            <p class="text-muted">Impact visuel et témoignages du programme d'appui (11 réalisations)</p>
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-4 mb-3">
-                                <div class="bg-secondary rounded d-flex align-items-center justify-content-center text-white shadow-sm"
-                                    style="height: 200px;">
-                                   <img src="https://placehold.co/800x600/009B3A/white?text=Zone+Industrielle+PK24"
-                                        alt="Zone Industrielle PK24" class="img-fluid w-100"
-                                        style="height: 300px; object-fit: cover; transition: transform 0.5s ease;">
+
+                        <div class="media-masonry-grid">
+                            <div class="row g-4">
+                                <!-- Item 1: Featured Video (Placeholder as before) -->
+                                <div class="col-lg-8 col-md-12">
+                                    <div class="media-card video-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 420px;">
+                                        <img src="https://placehold.co/1200x800/212529/white?text=Video+Story:+Relance+Industrielle" alt="Vidéo AED" class="w-100 h-100 object-fit-cover transition-transform">
+                                        <div class="media-overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
+                                            <div class="play-button-wrapper mb-3">
+                                                <i class="fas fa-play-circle fa-4x text-white"></i>
+                                            </div>
+                                            <h4 class="text-white fw-bold mb-2">Témoignage de Relance</h4>
+                                            <p class="text-white-50 small mb-0">Découvrez l'impact direct du programme sur les entreprises</p>
+                                        </div>
+                                        <div class="badge-type position-absolute top-0 end-0 m-3 px-3 py-1 bg-warning text-dark rounded-pill fw-bold">Vidéo</div>
+                                    </div>
+                                </div>
+
+                                <!-- Item 2: Square Image (fremin1) -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 420px;">
+                                        <img src="{{ asset('assets/img/1.jpg') }}" alt="AED 1" class="w-100 h-100 object-fit-cover transition-transform">
+                                        <div class="media-overlay d-flex align-items-end p-4">
+                                            <div class="text-white">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Item 3: small Landscape (fremin2) -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 200px;">
+                                        <img src="{{ asset('assets/img/2.jpg') }}" alt="AED 2" class="w-100 h-100 object-fit-cover transition-transform">
+                                    </div>
+                                </div>
+
+                                <!-- Item 4: small Landscape (fremin3) -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 200px;">
+                                        <img src="{{ asset('assets/img/3.jpg') }}" alt="AED 3" class="w-100 h-100 object-fit-cover transition-transform">
+                                    </div>
+                                </div>
+
+                                <!-- Item 5: small Landscape (fremin4) -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 200px;">
+                                        <img src="{{ asset('assets/img/4.jpg') }}" alt="AED 4" class="w-100 h-100 object-fit-cover transition-transform">
+                                    </div>
+                                </div>
+
+                                <!-- Item 6: Wide (groupe) -->
+                                <div class="col-lg-8 col-md-12">
+                                    <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 300px;">
+                                        <img src="{{ asset('assets/img/5.jpg') }}" alt="AED Groupe" class="w-100 h-100 object-fit-cover transition-transform">
+                                    </div>
+                                </div>
+
+                                <!-- Item 7: Square (fremin5) -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 300px;">
+                                        <img src="{{ asset('assets/img/6.jpg') }}" alt="AED 5" class="w-100 h-100 object-fit-cover transition-transform">
+                                    </div>
+                                </div>
+
+                                <!-- Item 8: Square (fremin6) -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 250px;">
+                                        <img src="{{ asset('assets/img/7.jpg') }}" alt="AED 6" class="w-100 h-100 object-fit-cover transition-transform">
+                                    </div>
+                                </div>
+
+                                <!-- Item 9: Square (fremin7) -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 250px;">
+                                        <img src="{{ asset('assets/img/8.jpg') }}" alt="AED 7" class="w-100 h-100 object-fit-cover transition-transform">
+                                    </div>
+                                </div>
+
+                                <!-- Item 10: Square (fremin8) -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 250px;">
+                                        <img src="{{ asset('assets/img/9.jpg') }}" alt="AED 8" class="w-100 h-100 object-fit-cover transition-transform">
+                                    </div>
+                                </div>
+
+                                <!-- Item 11: Square (fremin9) -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm" style="height: 250px;">
+                                        <img src="{{ asset('assets/img/10.jpg') }}" alt="AED 9" class="w-100 h-100 object-fit-cover transition-transform">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-3">
-                                <div class="bg-secondary rounded d-flex align-items-center justify-content-center text-white shadow-sm"
-                                    style="height: 200px;">
-                                   <img src="https://placehold.co/800x600/009B3A/white?text=Zone+Industrielle+PK24"
-                                        alt="Zone Industrielle PK24" class="img-fluid w-100"
-                                        style="height: 300px; object-fit: cover; transition: transform 0.5s ease;">
-                                </div>
-                            </div>
                         </div>
+
+                        <style>
+                            .media-card {
+                                cursor: pointer;
+                                transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                            }
+                            .media-card img {
+                                transition: transform 0.8s ease;
+                            }
+                            .media-card:hover img {
+                                transform: scale(1.1);
+                            }
+                            .media-overlay {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+                                opacity: 0.9;
+                                transition: opacity 0.4s ease;
+                            }
+                            .media-card:hover .media-overlay {
+                                opacity: 1;
+                                background: linear-gradient(to top, rgba(0, 155, 58, 0.8) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+                            }
+                            .video-card .play-button-wrapper i {
+                                transition: transform 0.3s ease;
+                            }
+                            .video-card:hover .play-button-wrapper i {
+                                transform: scale(1.2);
+                            }
+                            .object-fit-cover {
+                                object-fit: cover;
+                            }
+                            .transition-transform {
+                                transition: transform 0.8s ease;
+                            }
+                        </style>
                     </div>
                 </div>
 
