@@ -70,7 +70,7 @@
                     </div>
                 </div>
 
-                <div class="inst-detail-card">
+                <!-- <div class="inst-detail-card">
                     <h2>Secteurs Prioritaires</h2>
                     <p>Le projet AED cible en priorité les secteurs les plus touchés :</p>
                     <ul class="inst-detail-list">
@@ -79,7 +79,7 @@
                         <li>BTP et matériaux de construction</li>
                         <li>Services aux entreprises</li>
                     </ul>
-                </div>
+                </div> -->
 
                 <!-- <div class="inst-detail-card highlight-card">
                     <h2>Conditions d'Éligibilité</h2>
