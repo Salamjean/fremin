@@ -16,34 +16,56 @@
 
     <section class="infrastructure-content py-5">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-7" data-aos="fade-right">
-                    <div class="content-box-premium">
-                        <h2 class="section-title mb-4" style="color: #111; font-weight: 800;">Zones et plateformes
-                            industrielles</h2>
-                        <p class="lead-text">Le FREMIN participe à la mise à disposition d'infrastructures modernes pour
-                            faciliter l'implantation des unités de production.</p>
 
-                        <div class="p-4 bg-white rounded-4 shadow-sm border mb-4">
-                            <h5 style="font-weight: 700; color: #009B3A;"><i class="fas fa-map-marked-alt me-2"></i>
-                                Aménagement de zones</h5>
-                            <p class="text-muted mb-0">Viabilisation des terrains et accès aux services de base (eau,
-                                électricité, voirie).</p>
-                        </div>
+            <!-- Tabs Navigation -->
+            <ul class="nav nav-tabs nav-tabs-bordered mb-4" id="infraTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="presentation-tab" data-bs-toggle="tab"
+                        data-bs-target="#presentation" type="button" role="tab" aria-controls="presentation"
+                        aria-selected="true" style="color: #009B3A; font-weight: 700;">Présentation</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="realisation-tab" data-bs-toggle="tab" data-bs-target="#realisation"
+                        type="button" role="tab" aria-controls="realisation" aria-selected="false"
+                        style="color: #1a1a1a; font-weight: 600;">Réalisations</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="media-tab" data-bs-toggle="tab" data-bs-target="#media" type="button"
+                        role="tab" aria-controls="media" aria-selected="false"
+                        style="color: #1a1a1a; font-weight: 600;">Images & Vidéo</button>
+                </li>
+            </ul>
 
-                        <div class="p-4 bg-white rounded-4 shadow-sm border">
-                            <h5 style="font-weight: 700; color: #009B3A;"><i class="fas fa-warehouse me-2"></i> Incubateurs
-                                et Plateformes</h5>
-                            <p class="text-muted mb-0">Construction de bâtiments industriels intelligents et partagés.</p>
-                        </div>
+            <!-- Tabs Content -->
+            <div class="tab-content pt-2" id="infraTabContent">
+
+                <!-- Tab 1: Présentation -->
+                <div class="tab-pane fade show active" id="presentation" role="tabpanel" aria-labelledby="presentation-tab">
+                    <div class="content-box-premium py-5 text-center" data-aos="fade-up">
+                        <i class="fas fa-info-circle fa-3x text-muted mb-3"></i>
+                        <h4 class="text-muted">Présentation</h4>
+                        <p class="lead text-muted">Contenu en attente d'information.</p>
                     </div>
                 </div>
-                <div class="col-lg-5" data-aos="fade-left">
-                    <div class="card-premium h-100 p-0 overflow-hidden">
-                        <img src="{{ asset('assets/img/hero-carousel/agro-3.jpg') }}" alt="Infrastructures"
-                            class="img-fluid h-100" style="object-fit: cover;">
+
+                <!-- Tab 2: Réalisations -->
+                <div class="tab-pane fade" id="realisation" role="tabpanel" aria-labelledby="realisation-tab">
+                    <div class="content-box-premium py-5 text-center" data-aos="fade-up">
+                        <i class="fas fa-clipboard-list fa-3x text-muted mb-3"></i>
+                        <h4 class="text-muted">Réalisations</h4>
+                        <p class="lead text-muted">Liste des entreprises accompagnées en attente.</p>
                     </div>
                 </div>
+
+                <!-- Tab 3: Média -->
+                <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
+                    <div class="content-box-premium py-5 text-center" data-aos="fade-up">
+                        <i class="fas fa-photo-video fa-3x text-muted mb-3"></i>
+                        <h4 class="text-muted">Galerie Multimédia</h4>
+                        <p class="lead text-muted">Images et vidéos en attente.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

@@ -106,7 +106,7 @@
                 <span class="sitename">FREMIN</span>
               </a>
               <div class="footer-contact pt-3">
-                <p>Cocody, II Plateaux, Rue des Jardins</p>
+                <p>Deux plateaux, Vallon, non loin du siège de Burida</p>
                 <p>Abidjan, Côte d'Ivoire</p>
                 <p class="mt-3"><strong>Téléphone:</strong> <span>+225 27 22 52 44 44</span></p>
                 <p><strong>Email:</strong> <span>contact@fremin.ci</span></p>
