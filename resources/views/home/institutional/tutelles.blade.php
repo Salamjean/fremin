@@ -18,7 +18,7 @@
                     </div>
                     <h1 class="inst-detail-title">
                         Tutelles Techniques<br>
-                        <span>Gouvernance et Contrôle</span>
+                        Gouvernance et Contrôle
                     </h1>
                 </div>
             </div>

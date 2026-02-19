@@ -18,7 +18,7 @@
                     </div>
                     <h1 class="inst-detail-title">
                         Projets Spécifiques<br>
-                        <span>Appui aux Entreprises en Difficulté (AED)</span>
+                        Appui aux Entreprises en Difficulté (AED)
                     </h1>
                 </div>
             </div>

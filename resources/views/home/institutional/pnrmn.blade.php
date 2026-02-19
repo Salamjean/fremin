@@ -20,7 +20,7 @@
                     </div>
                     <h1 class="inst-detail-title">
                         Programme National de Restructuration<br>
-                        et de <span>Mise à Niveau (PNRMN)</span>
+                        et de Mise à Niveau (PNRMN)
                     </h1>
                 </div>
             </div>
