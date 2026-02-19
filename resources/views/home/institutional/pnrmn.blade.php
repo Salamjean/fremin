@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="inst-detail-card">
-                    <h2>Bénéficiaires</h2>
+                    <h2>Cibles</h2>
                     <p>Le programme s'adresse à toutes les entreprises ivoiriennes souhaitant améliorer leur compétitivité,
                         notamment :</p>
                     <ul class="inst-detail-list">
@@ -119,7 +119,7 @@
                     </ul>
                 </div>
 
-                <div class="inst-detail-card highlight-card">
+                <!-- <div class="inst-detail-card highlight-card">
                     <h2>Comment Bénéficier du Programme ?</h2>
                     <p>Pour bénéficier des appuis du PNRMN, les entreprises doivent :</p>
                     <ol class="inst-detail-list">
@@ -132,7 +132,7 @@
                         <span>Nous Contacter</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                </div>
+                </div> -->
 
             </div>
         </div>

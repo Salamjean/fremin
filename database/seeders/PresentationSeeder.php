@@ -46,10 +46,9 @@ class PresentationSeeder extends Seeder
 
         // 3. Presentation Stats
         $stats = [
-            ['value' => '25+', 'label' => 'Années d\'Expérience', 'sort_order' => 1],
-            ['value' => '350+', 'label' => 'Entreprises Assistées', 'sort_order' => 2],
-            ['value' => '150+', 'label' => 'Missions Réalisées', 'sort_order' => 3],
-            ['value' => '98%', 'label' => 'Taux de Satisfaction', 'sort_order' => 4],
+            ['value' => '12+', 'label' => 'Années d\'Expérience', 'sort_order' => 1],
+            ['value' => '56+', 'label' => 'Entreprises appuyées', 'sort_order' => 2],
+            ['value' => '10+', 'label' => 'Etudes réalisées', 'sort_order' => 3],
         ];
 
         foreach ($stats as $stat) {

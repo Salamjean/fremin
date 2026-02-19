@@ -81,7 +81,7 @@
                     </ul>
                 </div>
 
-                <div class="inst-detail-card highlight-card">
+                <!-- <div class="inst-detail-card highlight-card">
                     <h2>Conditions d'Éligibilité</h2>
                     <ol class="inst-detail-list">
                         <li>Être une entreprise légalement établie en Côte d'Ivoire</li>
@@ -93,7 +93,7 @@
                         <span>Déposer une Demande</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                </div>
+                </div> -->
 
             </div>
         </div>
