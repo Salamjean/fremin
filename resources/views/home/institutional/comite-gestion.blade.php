@@ -135,7 +135,7 @@
             <h1
                 style="font-size: 42px; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 10px;">
                 GOUVERNANCE</h1>
-            <p style="opacity: 0.8; font-size: 18px;">Organes de Gestion et de Contrôle du FREMIN</p>
+            <p style="opacity: 0.8; font-size: 18px;">Organes de gestion et de contrôle du FREMIN</p>
         </div>
     </section>
 
@@ -155,11 +155,11 @@
                             <h2>Composition</h2>
                             <p>Le FREMIN est administré par un Comité de Gestion composé comme suit :</p>
                             <ul class="inst-detail-list">
-                                <li>un représentant du Ministre chargé de l'Industrie; (Présidence)</li>
-                                <li>un représentant du Ministre chargé de l'Economie et des Finances;</li>
-                                <li>un représentant du Ministre chargé du Budget;</li>
-                                <li>un représentant du Ministre chargé des Petites et Moyennes Entreprises;</li>
-                                <li>le Directeur Général de la BNI.</li>
+                                <li>un représentant du Ministre chargé de l'Industrie (Présidence)</li>
+                                <li>un représentant du Ministre chargé de l'Economie et des Finances</li>
+                                <li>un représentant du Ministre chargé du Budget</li>
+                                <li>un représentant du Ministre chargé des Petites et Moyennes Entreprises</li>
+                                <li>le Directeur Général de la BNI</li>
                             </ul>
                         </div>
                         <div class="inst-detail-card">
@@ -312,10 +312,10 @@
                             <h2>Composition</h2>
                             <p>Le Comité de Gestion est assisté par une Cellule Technique composée comme suit :</p>
                             <ul class="inst-detail-list">
-                                <li>un représentant du Ministre chargé de l'Industrie; (Présidence)</li>
-                                <li>un représentant du Ministre chargé de l'Economie et des Finances;</li>
-                                <li>un représentant du Ministre chargé du Budget;</li>
-                                <li>un représentant de la BNI.</li>
+                                <li>un représentant du Ministre chargé de l'Industrie (Présidence)</li>
+                                <li>un représentant du Ministre chargé de l'Economie et des Finances</li>
+                                <li>un représentant du Ministre chargé du Budget</li>
+                                <li>un représentant de la BNI</li>
                             </ul>
                         </div>
                         <div class="inst-detail-card">
