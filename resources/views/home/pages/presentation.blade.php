@@ -276,7 +276,7 @@
                     <div
                         class="tutelles-box text-center card-premium p-5 bg-white shadow-sm border-top border-4 border-success">
                         <h2 class="mb-3">Tutelles</h2>
-                        <p class="lead mb-0">Le FREMIN est placé sous la tutelle technique du Ministre chargé de l'Industrie
+                        <p class="mb-2" style="font-size:17px; font-weight:200px;">Le FREMIN est placé sous la tutelle technique du Ministre chargé de l'Industrie
                             et sous la tutelle financière du Ministre chargé de l'Economie et des Finances, en liaison avec
                             le Ministre chargé du Budget.</p>
                     </div>
