@@ -20,7 +20,7 @@
         <div class="container">
             <div data-aos="fade-up">
                 <div class="content-box-premium mb-5">
-                    <h2 class="section-title mb-4" style="color: #009B3A; font-weight: 800;">Contexte et Objectifs</h2>
+                    <h2 class="section-title" style="color: #009B3A; font-weight: 800; margin-bottom: -50px;">Contexte et Objectifs</h2>
                     <p class="lead-text mb-4">La Côte d’Ivoire a adopté en 2013 un Programme National de Restructuration et
                         de Mise à Niveau (PNRMN) destiné à préparer les entreprises manufacturières ivoiriennes à faire face
                         à une concurrence accrue dans le cadre des accords multilatéraux de libre-échange. L’objectif
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="content-box-premium mb-5">
-                    <h2 class="section-title mb-4" style="color: #009B3A; font-weight: 800;">Composantes du Programme</h2>
+                    <h2 class="section-title" style="color: #009B3A; font-weight: 800; margin-bottom: -50px;">Composantes du Programme</h2>
                     <p>Le PNRMN est structuré autour de trois (3) composantes, à savoir :</p>
                     <ul class="list-unstyled">
                         <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> <strong>Composante 1
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="content-box-premium">
-                    <h2 class="section-title mb-4" style="color: #009B3A; font-weight: 800;">Avantages</h2>
+                    <h2 class="section-title" style="color: #009B3A; font-weight: 800; margin-bottom: -50px;">Avantages</h2>
                     <p class="mb-3">La Mise à Niveau des entreprises industrielles s’opère par le biais d’avantages accordés
                         aux entreprises, à savoir :</p>
                     <ul class="list-unstyled mb-4">
