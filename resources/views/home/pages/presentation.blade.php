@@ -133,7 +133,6 @@
             <div class="row gy-5">
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="history-box">
-                        <span class="section-badge">HISTORIQUE</span>
                         <h2 class="mb-4">{{ __('history_title') }}</h2>
                         <div class="history-content card-premium p-4">
                             <p>Le FREMIN, moteur du développement industriel ivoirien, finance et accompagne le PNRMN pour
@@ -203,9 +202,9 @@
         <div class="container">
             <div class="row gy-5">
                 <!-- Comité de Gestion -->
+                <h2 style="text-align: center;">Gouvernance</h2>
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="governance-box">
-                        <span class="section-badge">GOUVERNANCE</span>
                         <h2 class="mb-4">Comité de Gestion</h2>
                         <div class="card-premium p-4">
                             <p class="mb-3">Le FREMIN est administré par un Comité de Gestion composé comme suit :</p>
