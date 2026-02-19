@@ -25,9 +25,20 @@
             <div class="inst-detail-content" data-aos="fade-up">
 
                 <div class="inst-detail-card">
-                    <h2>Vision et Objectifs</h2>
-                    <p>Le FREMIN développe des zones industrielles modernes pour accueillir les entreprises dans un
-                        environnement propice à la productivité et à la compétitivité.</p>
+                    <h2>Contexte</h2>
+                    <p>Dans le cadre du renforcement de la compétitivité industrielle, l’État de Côte d’Ivoire et la société
+                        Arise Ivoire ont signé le 14 juin 2022 une convention pour développer les infrastructures
+                        industrielles sur les sites d’Akoupé-Zeudji PK24, Koumassi et Vridi.</p>
+                    <p>Le projet, crucial pour la transformation économique et la compétitivité industrielle du pays, est
+                        piloté par le Fonds de Restructuration et de Mise à Niveau des entreprises industrielles (FREMIN) et
+                        prévoit notamment :</p>
+                    <p>
+                        • L’installation d’électricité (5 MW puis 35 MW) et la maîtrise d’œuvre correspondante à
+                        Akoupé-Zeudji PK24 <br>
+                        • La réalisation de la voirie centrale de ce site et la maîtrise d’œuvre associée <br>
+                        • L’installation d’eau potable et la maîtrise d’œuvre correspondante <br>
+                        • La réhabilitation des zones industrielles de Vridi et Koumassi <br>
+                    </p>
                 </div>
 
                 <div class="inst-detail-card zone-card">
