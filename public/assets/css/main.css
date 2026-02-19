@@ -8690,11 +8690,11 @@ section,
 
 .content-box-premium {
     padding-right: 40px;
+    font-size: 1rem;
 }
 
 .lead-text {
-    font-size: 1.15rem;
-    color: #444;
+    font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 30px;
 }
