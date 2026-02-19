@@ -187,10 +187,76 @@
 
                 <!-- Tab 3: Média -->
                 <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
-                    <div class="content-box-premium py-5 text-center" data-aos="fade-up">
-                        <i class="fas fa-photo-video fa-3x text-muted mb-3"></i>
-                        <h4 class="text-muted">Galerie Multimédia</h4>
-                        <p class="lead text-muted">Images et vidéos en attente.</p>
+                    <div class="content-box-premium p-4 p-md-5" data-aos="fade-up">
+                        <div class="section-header text-center mb-5">
+                            <h3 style="color: #1a1a1a; font-weight: 700;">Galerie Multimédia</h3>
+                            <p class="text-muted">Aperçu visuel des travaux et infrastructures</p>
+                        </div>
+
+                        <div class="row g-4">
+                            <!-- Image 1: PK24 -->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative">
+                                    <img src="https://placehold.co/800x600/009B3A/white?text=Zone+Industrielle+PK24"
+                                        alt="Zone Industrielle PK24" class="img-fluid w-100"
+                                        style="height: 300px; object-fit: cover; transition: transform 0.5s ease;">
+                                    <div class="gallery-overlay d-flex align-items-end p-4 position-absolute bottom-0 start-0 w-100 h-100"
+                                        style="background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);">
+                                        <div class="text-white">
+                                            <h5 class="fw-bold mb-1">Aménagement ZI PK24</h5>
+                                            <p class="small mb-0">Travaux d'amenées primaires et voiries</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image 2: Electricité -->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative">
+                                    <img src="https://placehold.co/800x600/FF8200/white?text=Infrastructures+Electriques"
+                                        alt="Infrastructures Électriques" class="img-fluid w-100"
+                                        style="height: 300px; object-fit: cover; transition: transform 0.5s ease;">
+                                    <div class="gallery-overlay d-flex align-items-end p-4 position-absolute bottom-0 start-0 w-100 h-100"
+                                        style="background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);">
+                                        <div class="text-white">
+                                            <h5 class="fw-bold mb-1">Réseaux Électriques</h5>
+                                            <p class="small mb-0">Postes transformateurs et haute tension</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image 3: Réhabilitation -->
+                            <div class="col-lg-12">
+                                <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative">
+                                    <img src="https://placehold.co/1200x600/212529/white?text=Rehabilitation+Koumassi+et+Vridi"
+                                        alt="Réhabilitation Vridi et Koumassi" class="img-fluid w-100"
+                                        style="height: 400px; object-fit: cover; transition: transform 0.5s ease;">
+                                    <div class="gallery-overlay d-flex align-items-end p-4 position-absolute bottom-0 start-0 w-100 h-100"
+                                        style="background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);">
+                                        <div class="text-white">
+                                            <h5 class="fw-bold mb-1">Réhabilitation Zones Koumassi & Vridi</h5>
+                                            <p class="small mb-0">Rénovation des voiries et réseaux divers</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            .gallery-item:hover img {
+                                transform: scale(1.1);
+                            }
+
+                            .gallery-overlay {
+                                opacity: 0.9;
+                                transition: opacity 0.3s ease;
+                            }
+
+                            .gallery-item:hover .gallery-overlay {
+                                opacity: 1;
+                            }
+                        </style>
                     </div>
                 </div>
 

@@ -42,7 +42,7 @@
                 <!-- Tab 1: Présentation -->
                 <div class="tab-pane fade show active" id="presentation" role="tabpanel" aria-labelledby="presentation-tab">
                     <div class="content-box-premium mb-4" data-aos="fade-up">
-                        <h3 class="section-title mb-3" style="color: #009B3A; font-weight: 800;">Contexte</h3>
+                        <h3 class="section-title" style="color: #009B3A; font-weight: 800; margin-bottom: -50px;">Contexte & Présentation</h3>
                         <p class="lead-text">Les effets conjoncturels engendrés par la crise de la COVID-19 et son
                             corollaire de mesures restrictives, renforcés par la guerre russo-ukrainienne, ont ouvert le
                             champ à plusieurs difficultés au niveau des secteurs économiques de la Côte d’Ivoire. Ainsi,
@@ -59,16 +59,12 @@
                         <p class="mb-3">De façon spécifique, il s’agira de :</p>
                         <ul class="list-unstyled ms-3">
                             <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Identifier les
-                                entreprises en difficulté ;</li>
+                                entreprises en difficulté </li>
                             <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Réaliser un diagnostic
-                                global et stratégique au profit des entreprises en difficulté identifiées ;</li>
+                                global et stratégique au profit des entreprises en difficulté identifiées </li>
                             <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Proposer des mesures et
-                                actions visant à renforcer la compétitivité des entreprises en difficulté.</li>
+                                actions visant à renforcer la compétitivité des entreprises en difficulté </li>
                         </ul>
-                    </div>
-
-                    <div class="content-box-premium" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="section-title mb-3" style="color: #009B3A; font-weight: 800;">Présentation du projet</h3>
                         <p>Ce projet vise à soutenir les PME industrielles en difficulté dans leur développement et le
                             renforcement de leur compétitivité sur le marché national et régional, à travers des actions
                             d’appui à l’amélioration des processus de production et de la qualité des produits. Dans le
@@ -186,13 +182,17 @@
                             <div class="col-md-4 mb-3">
                                 <div class="bg-secondary rounded d-flex align-items-center justify-content-center text-white shadow-sm"
                                     style="height: 200px;">
-                                    <span>[Espace Vidéo]</span>
+                                   <img src="https://placehold.co/800x600/009B3A/white?text=Zone+Industrielle+PK24"
+                                        alt="Zone Industrielle PK24" class="img-fluid w-100"
+                                        style="height: 300px; object-fit: cover; transition: transform 0.5s ease;">
                                 </div>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <div class="bg-secondary rounded d-flex align-items-center justify-content-center text-white shadow-sm"
                                     style="height: 200px;">
-                                    <span>[Espace Photo]</span>
+                                   <img src="https://placehold.co/800x600/009B3A/white?text=Zone+Industrielle+PK24"
+                                        alt="Zone Industrielle PK24" class="img-fluid w-100"
+                                        style="height: 300px; object-fit: cover; transition: transform 0.5s ease;">
                                 </div>
                             </div>
                         </div>
