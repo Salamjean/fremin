@@ -73,8 +73,7 @@
                     <p class="mb-3">Le Programme National de Restructuration et de Mise à Niveau (PNRMN) a pour objectif de
                         stimuler la production industrielle, de promouvoir l’investissement et l’emploi, tout en renforçant
                         la compétitivité des entreprises industrielles aux niveaux régional et international.</p>
-                    <p class="mb-3">Le Fonds de Restructuration et de Mise à Niveau des entreprises industrielles (FREMIN)
-                        constitue l’instrument financier dédié à la mise en œuvre de ce programme.</p>
+                    <p class="mb-3">Le FREMIN constitue l’instrument financier dédié à la mise en œuvre de ce programme.</p>
                     <p>Dans ce cadre, l’Agence de Developpement de la Compétitivité des entreprises de Côte d'Ivoire (ADCI)
                         intervient en tant qu’organe d’exécution de la composante relative à l’appui direct aux entreprises.
                         À ce titre, elle accompagne les entreprises industrielles dans le renforcement de leurs capacités
