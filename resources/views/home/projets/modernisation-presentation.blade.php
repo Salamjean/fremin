@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="content-box-premium">
-                    <h2 class="section-title mb-4" style="color: #009B3A; font-weight: 800;">Présentation et Avantages</h2>
+                    <h2 class="section-title mb-4" style="color: #009B3A; font-weight: 800;">Avantages</h2>
                     <p class="mb-3">La Mise à Niveau des entreprises industrielles s’opère par le biais d’avantages accordés
                         aux entreprises, à savoir :</p>
                     <ul class="list-unstyled mb-4">
