@@ -26,7 +26,7 @@
             <div class="inst-detail-content" data-aos="fade-up">
 
                 <div class="inst-detail-card">
-                    <h2>Contexte et Objectif</h2>
+                    <h2>Contexte</h2>
                     <p>Face aux crises mondiales récentes, le FREMIN a mis en place le projet <strong>"AED" (Appui aux
                             Entreprises en Difficulté)</strong> pour soutenir les entreprises ivoiriennes impactées par :
                     </p>

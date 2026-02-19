@@ -65,7 +65,7 @@
                             (PNRMN) des entreprises industrielles. Le PNRMN vise à préparer les entreprises manufacturières
                             ivoiriennes à faire face à une concurrence accrue, dans le cadre des accords multilatéraux de
                             libre-échange. Le FREMIN est l’instrument financier de mise en œuvre des activités du PNRMN.</p>
-                        <a href="{{ route('home.pnrmn') }}" class="card-link-compact">En savoir plus <i
+                        <a href="{{ route('home.projets.modernisation.presentation') }}" class="card-link-compact">En savoir plus <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                         <p>Le projet d’Appui aux Entreprises en Difficulté (AED) a été mis en place pour soutenir les
                             entreprises impactées par les effets post COVID-19 et à l’inflation suscitée par la guerre
                             russo-ukrainienne.</p>
-                        <a href="{{ route('home.projets-specifiques') }}" class="card-link-compact">En savoir plus <i
+                        <a href="{{ route('home.projets.aed') }}" class="card-link-compact">En savoir plus <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                         <h4>Mise en place des infrastructures industrielles</h4>
                         <p>Développement et réhabilitation des zones industrielles pour offrir un écosystème performant aux
                             investisseurs.</p>
-                        <a href="{{ route('home.zones-industrielles') }}" class="card-link-compact">En savoir plus <i
+                        <a href="{{ route('home.projets.infrastructures') }}" class="card-link-compact">En savoir plus <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
