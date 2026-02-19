@@ -107,7 +107,7 @@
                         style="background-image: linear-gradient(rgba(255,130,0,0.85), rgba(255,130,0,0.85)), url('{{ asset('assets/img/service-certification.png') }}');">
                         <div class="axis-content">
                             <span class="axis-num">02</span>
-                            <h4 class="text-white">Amélioration des infrastructures de la qualité</h4>
+                            <h4 class="text-white">Amélioration des infrastructures et de la qualité</h4>
                             <i class="fas fa-check-circle"></i>
                         </div>
                     </div>
