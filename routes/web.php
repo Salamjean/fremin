@@ -19,7 +19,6 @@ use App\Http\Controllers\Admin\Publication\PublicationController;
 use App\Http\Controllers\Home\HomeController;
 use Illuminate\Support\Facades\Route;
 
-
 //Les routes de la page
 Route::get('lang/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'fr'])) {
@@ -112,6 +111,16 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::put('/{partner}', [\App\Http\Controllers\Admin\Home\PartnerController::class, 'update'])->name('update');
         Route::delete('/{partner}', [\App\Http\Controllers\Admin\Home\PartnerController::class, 'destroy'])->name('destroy');
         Route::post('/{partner}/toggle-status', [\App\Http\Controllers\Admin\Home\PartnerController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('faqs')->name('admin.faqs.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Home\FaqController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Home\FaqController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Home\FaqController::class, 'store'])->name('store');
+        Route::get('/{faq}/edit', [\App\Http\Controllers\Admin\Home\FaqController::class, 'edit'])->name('edit');
+        Route::put('/{faq}', [\App\Http\Controllers\Admin\Home\FaqController::class, 'update'])->name('update');
+        Route::delete('/{faq}', [\App\Http\Controllers\Admin\Home\FaqController::class, 'destroy'])->name('destroy');
+        Route::post('/{faq}/toggle-status', [\App\Http\Controllers\Admin\Home\FaqController::class, 'toggleStatus'])->name('toggle-status');
     });
 
     Route::prefix('testimonials')->name('admin.testimonials.')->group(function () {

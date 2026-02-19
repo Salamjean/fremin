@@ -150,35 +150,23 @@
             <!-- Tab 1: Comité de Gestion -->
             <div id="comite" class="gov-tab-content active">
                 <div class="row">
-                    <div class="col-lg-8" data-aos="fade-right">
+                    <div class="col-lg-12" data-aos="fade-right">
                         <div class="inst-detail-card">
-                            <h2>Rôle et Mandat</h2>
-                            <p>Le <strong>Comité de Gestion</strong> est l'organe de décision principal du FREMIN. Il est
-                                responsable de l'administration du fonds et de la validation des décisions stratégiques.</p>
-                        </div>
-                        <div class="inst-detail-card">
-                            <h2>Missions Principales</h2>
+                            <h2>Composition</h2>
+                            <p>Le FREMIN est administré par un Comité de Gestion composé comme suit :</p>
                             <ul class="inst-detail-list">
-                                <li><strong>Validation des Dossiers</strong> : Examiner et approuver les demandes d'appui
-                                </li>
-                                <li><strong>Définition des Orientations</strong> : Établir les priorités et les stratégies
-                                </li>
-                                <li><strong>Gestion Financière</strong> : Superviser l'utilisation des ressources</li>
-                                <li><strong>Approbation du Budget</strong> : Valider les budgets et plans de financement
-                                </li>
+                                <li>un représentant du Ministre chargé de l'Industrie; (Présidence)</li>
+                                <li>un représentant du Ministre chargé de l'Economie et des Finances;</li>
+                                <li>un représentant du Ministre chargé du Budget;</li>
+                                <li>un représentant du Ministre chargé des Petites et Moyennes Entreprises;</li>
+                                <li>le Directeur Général de la BNI.</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-lg-4" data-aos="fade-left">
-                        <div class="inst-detail-subcard president">
-                            <h3><i class="fas fa-crown"></i> Présidence</h3>
-                            <p><strong>Ministère chargé de l'Industrie</strong></p>
-                            <p class="small text-muted">Définit l'ordre du jour et assure le suivi des décisions.</p>
-                        </div>
-                        <div class="inst-detail-subcard vice-president">
-                            <h3><i class="fas fa-user-tie"></i> Vice-Présidence</h3>
-                            <p><strong>Ministère chargé des Finances</strong></p>
-                            <p class="small text-muted">Supervise les aspects financiers et valide les projets d'appui.</p>
+                        <div class="inst-detail-card">
+                            <h2>Rôle</h2>
+                            <p>Le Comité de Gestion suit l'exécution des opérations du FREMIN et établit des rapports
+                                trimestriels et un rapport annuel de fin d'exercice, au plus tard le 31 mars de l'année
+                                suivante.</p>
                         </div>
                     </div>
                 </div>
@@ -319,27 +307,22 @@
             <!-- Tab 2: Cellule Technique -->
             <div id="cellule" class="gov-tab-content">
                 <div class="row">
-                    <div class="col-lg-8" data-aos="fade-right">
+                    <div class="col-lg-12" data-aos="fade-right">
                         <div class="inst-detail-card">
-                            <h2>Rôle et Missions</h2>
-                            <p>La <strong>Cellule Technique</strong> est l'organe d'appui technique du FREMIN. Elle assure
-                                l'instruction des dossiers de demande d'appuis et le suivi des décisions.</p>
-                        </div>
-                        <div class="inst-detail-card">
-                            <h2>Instruction des Dossiers</h2>
+                            <h2>Composition</h2>
+                            <p>Le Comité de Gestion est assisté par une Cellule Technique composée comme suit :</p>
                             <ul class="inst-detail-list">
-                                <li>Analyse technique et financière des projets</li>
-                                <li>Évaluation de la viabilité économique</li>
-                                <li>Formulation de recommandations au Comité</li>
-                                <li>Suivi de la mise en œuvre des décisions</li>
+                                <li>un représentant du Ministre chargé de l'Industrie; (Présidence)</li>
+                                <li>un représentant du Ministre chargé de l'Economie et des Finances;</li>
+                                <li>un représentant du Ministre chargé du Budget;</li>
+                                <li>un représentant de la BNI.</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-lg-4" data-aos="fade-left">
-                        <div class="inst-detail-subcard">
-                            <h3><i class="fas fa-flask"></i> Expertise</h3>
-                            <p>Composée de représentants techniques des ministères en charge de l'Industrie, des Finances,
-                                du Budget et des PME.</p>
+                        <div class="inst-detail-card">
+                            <h2>Rôle</h2>
+                            <p>La Cellule Technique est chargée d'instruire et d'analyser les dossiers de demande d'appuis
+                                transmis au Comité de Gestion. Elle assure le suivi de la mise en œuvre des décisions prises
+                                par le Comité de Gestion.</p>
                         </div>
                     </div>
                 </div>
@@ -347,27 +330,13 @@
 
             <!-- Tab 3: Tutelles -->
             <div id="tutelles" class="gov-tab-content">
-                <div class="row gy-4">
-                    <div class="col-md-6" data-aos="fade-up">
-                        <div class="inst-detail-card h-100">
-                            <h2><i class="fas fa-industry"></i> Tutelle Technique</h2>
-                            <p><strong>Ministère chargé de l'Industrie</strong></p>
-                            <ul class="inst-detail-list">
-                                <li>Définition des orientations stratégiques</li>
-                                <li>Validation des programmes et projets</li>
-                                <li>Supervision des activités techniques</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="inst-detail-card h-100">
-                            <h2><i class="fas fa-coins"></i> Tutelle Financière</h2>
-                            <p><strong>Ministère chargé des Finances</strong></p>
-                            <ul class="inst-detail-list">
-                                <li>Contrôle de la gestion financière</li>
-                                <li>Validation des budgets et plans financiers</li>
-                                <li>Suivi de l'exécution budgétaire</li>
-                            </ul>
+                <div class="row">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="inst-detail-card">
+                            <h2>Tutelles</h2>
+                            <p>Le FREMIN est placé sous la tutelle technique du Ministre chargé de l'Industrie et sous la
+                                tutelle financière du Ministre chargé de l'Economie et des Finances, en liaison avec le
+                                Ministre chargé du Budget.</p>
                         </div>
                     </div>
                 </div>
@@ -394,21 +363,21 @@
             Swal.fire({
                 title: '<span style="color: #FF8200;">LE MOT DU PRÉSIDENT</span>',
                 html: `
-                                        <div class="text-start" style="font-family: 'Inter', sans-serif;">
-                                            <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
-                                                <img src="${image}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
-                                                <div>
-                                                    <h5 class="mb-0 fw-bold">${name}</h5>
-                                                    <p class="text-muted small mb-0">${role}</p>
-                                                </div>
-                                            </div>
-                                            <p style="font-style: italic; color: #555; line-height: 1.6;">"${bio}"</p>
-                                            <div class="text-end mt-4">
-                                                <p class="mb-0" style="font-weight: 600; color: #009B3A;">${name}</p>
-                                                <p class="small text-muted">Président du Comité de Gestion</p>
-                                            </div>
-                                        </div>
-                                    `,
+                                                    <div class="text-start" style="font-family: 'Inter', sans-serif;">
+                                                        <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+                                                            <img src="${image}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
+                                                            <div>
+                                                                <h5 class="mb-0 fw-bold">${name}</h5>
+                                                                <p class="text-muted small mb-0">${role}</p>
+                                                            </div>
+                                                        </div>
+                                                        <p style="font-style: italic; color: #555; line-height: 1.6;">"${bio}"</p>
+                                                        <div class="text-end mt-4">
+                                                            <p class="mb-0" style="font-weight: 600; color: #009B3A;">${name}</p>
+                                                            <p class="small text-muted">Président du Comité de Gestion</p>
+                                                        </div>
+                                                    </div>
+                                                `,
                 showCloseButton: true,
                 showConfirmButton: true,
                 confirmButtonText: 'Fermer',

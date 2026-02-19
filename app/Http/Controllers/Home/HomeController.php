@@ -13,6 +13,7 @@ use App\Models\Publication;
 use App\Models\TeamMember;
 use App\Models\Statistic;
 use App\Models\Partner;
+use App\Models\Faq;
 use App\Models\Testimonial;
 use App\Models\MissionCard;
 use App\Models\GovernanceCard;
@@ -30,7 +31,7 @@ class HomeController extends Controller
     {
         $carousels = Carousel::active()->ordered()->get();
         $teamMembers = TeamMember::active()->ordered()->get();
-        $statistics = Statistic::active()->ordered()->get();
+        $statistics = PresentationStat::active()->ordered()->get();
         $partners = Partner::active()->ordered()->get();
         $testimonials = Testimonial::active()->ordered()->get();
         $missionCards = MissionCard::active()->ordered()->get();
@@ -39,6 +40,7 @@ class HomeController extends Controller
 
 
         $financedCompanies = FinancedCompany::active()->ordered()->get();
+        $faqs = Faq::active()->ordered()->get();
 
         // Fetch news articles or provide dummy data if empty
         $newsArticles = NewsArticle::active()->ordered()->take(5)->get();
@@ -56,6 +58,7 @@ class HomeController extends Controller
             'governanceCards',
             'programs',
             'financedCompanies',
+            'faqs',
             'ministerInfo'
         ));
     }
@@ -225,13 +228,15 @@ class HomeController extends Controller
     public function ceremonies()
     {
         $hero = HeroSection::getActive();
-        return view('home.activities.ceremonies', compact('hero'));
+        $activeTab = 'ceremonies';
+        return view('home.activities.ceremonies', compact('hero', 'activeTab'));
     }
 
     public function ateliers()
     {
         $hero = HeroSection::getActive();
-        return view('home.activities.ateliers', compact('hero'));
+        $activeTab = 'ateliers';
+        return view('home.activities.ceremonies', compact('hero', 'activeTab'));
     }
 
     public function accompagnement()

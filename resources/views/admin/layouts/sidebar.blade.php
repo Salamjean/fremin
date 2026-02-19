@@ -37,7 +37,7 @@
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.statistics.index') }}">
+                                <a class="mdc-drawer-link" href="{{ route('admin.presentation-stats.index') }}">
                                     Statistiques
                                 </a>
                             </div>
@@ -76,6 +76,11 @@
                                     Mot du Ministre
                                 </a>
                             </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.faqs.index') }}">
+                                    FAQ
+                                </a>
+                            </div>
                         </nav>
                     </div>
                 </div>
@@ -101,11 +106,6 @@
                             <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{ route('admin.gallery.index') }}">
                                     Galerie
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.presentation-stats.index') }}">
-                                    Statistiques
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">

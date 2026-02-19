@@ -40,7 +40,6 @@
           </a>
           <ul>
             <li><a href="{{route('home.about')}}">{{ __('fremin_short') }}</a></li>
-            <li><a href="{{route('home.comite-gestion')}}">{{ __('management_committee_short') }}</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -49,8 +48,8 @@
           </a>
           <ul>
             <li><a href="{{route('home.activities.etudes')}}">{{ __('studies_conducted') }}</a></li>
-            <li><a href="{{route('home.activities.ceremonies')}}">{{ __('ceremonies') }}</a></li>
-            <li><a href="{{route('home.activities.ateliers')}}">{{ __('ateliers') }}</a></li>
+            <li><a href="{{route('home.activities.ceremonies')}}">{{ __('ceremonies') . ' &  ' . __('ateliers') }}</a>
+            </li>
             <li><a href="{{route('home.activities.accompagnement')}}">{{ __('direct_support') }}</a></li>
           </ul>
         </li>
