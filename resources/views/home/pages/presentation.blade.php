@@ -117,7 +117,7 @@
                         style="background-image: linear-gradient(rgba(17,17,17,0.85), rgba(17,17,17,0.85)), url('{{ asset('assets/img/service-capacites.png') }}');">
                         <div class="axis-content">
                             <span class="axis-num">03</span>
-                            <h4 class="text-white">Création de Centres d’Appui à la compétitivité et au développement
+                            <h4 class="text-white">Créer des Centres d’Appui à la compétitivité et au développement
                                 industriel</h4>
                             <i class="fas fa-building"></i>
                         </div>
