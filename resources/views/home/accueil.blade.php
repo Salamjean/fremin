@@ -147,10 +147,10 @@
                                 <div class="col-lg-7">
                                     <div class="agro-gallery">
                                         <div class="agro-img-main">
-                                            <img src="{{ asset('assets/img/remises.png') }}" alt="Remise équipements 1">
+                                            <img src="{{ asset('assets/img/cluster.jpeg') }}" alt="Remise équipements 1">
                                         </div>
                                         <div class="agro-img-sub">
-                                            <img src="{{ asset('assets/img/remises1.png') }}" alt="Remise équipements 2">
+                                            <img src="{{ asset('assets/img/csm_Fruits_seches_ad043c787a.jpeg') }}" alt="Remise équipements 2">
                                         </div>
                                     </div>
                                 </div>
@@ -182,10 +182,10 @@
                                 <div class="col-lg-7">
                                     <div class="agro-gallery">
                                         <div class="agro-img-main">
-                                            <img src="{{ asset('assets/img/image.png') }}" alt="Tricycles 1">
+                                            <img src="{{ asset('assets/img/actu_image_37702_maxi2.jpg.jpeg') }}" alt="Tricycles 1">
                                         </div>
                                         <div class="agro-img-sub">
-                                            <img src="{{ asset('assets/img/moto1.png') }}" alt="Tricycles 2">
+                                            <img src="{{ asset('assets/img/zzzzzzz.jpeg') }}" alt="Tricycles 2">
                                         </div>
                                     </div>
                                 </div>
@@ -212,10 +212,10 @@
                                 <div class="col-lg-7">
                                     <div class="agro-gallery">
                                         <div class="agro-img-main">
-                                            <img src="{{ asset('assets/img/image.png') }}" alt="Tricycles 1">
+                                            <img src="{{ asset('assets/img/galerie176588060124.jpg.jpeg') }}" alt="Tricycles 1">
                                         </div>
                                         <div class="agro-img-sub">
-                                            <img src="{{ asset('assets/img/moto1.png') }}" alt="Tricycles 2">
+                                            <img src="{{ asset('assets/img/176609253766.jpg.jpeg') }}" alt="Tricycles 2">
                                         </div>
                                     </div>
                                 </div>
@@ -246,10 +246,10 @@
                                 <div class="col-lg-7">
                                     <div class="agro-gallery">
                                         <div class="agro-img-main">
-                                            <img src="{{ asset('assets/img/image.png') }}" alt="Tricycles 1">
+                                            <img src="{{ asset('assets/img/112.jpg.jpeg') }}" alt="Tricycles 1">
                                         </div>
                                         <div class="agro-img-sub">
-                                            <img src="{{ asset('assets/img/moto1.png') }}" alt="Tricycles 2">
+                                            <img src="{{ asset('assets/img/galerie175037452310.jpg.jpeg') }}" alt="Tricycles 2">
                                         </div>
                                     </div>
                                 </div>
