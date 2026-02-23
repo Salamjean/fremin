@@ -119,116 +119,37 @@
     </section>
 
     <!-- Compact News Section -->
-    @if (isset($newsArticles) && $newsArticles->isNotEmpty())
-        <section id="compact-news" class="compact-news section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Dernières Actualités</h2>
-                <p>L'actualité industrielle et les activités du FREMIN en un coup d'œil</p>
-            </div>
+    <section id="compact-news" class="compact-news section">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Mot du ministre</h2>
+        </div>
 
-            <div class="container-fluid px-5" data-aos="fade-up" data-aos-delay="100">
-                <div class="row g-5 align-items-stretch">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row justify-content-center">
 
-                    <!-- Trending News List (Left) -->
-                    <div class="col-lg-4">
-                        <div class="news-side-panel">
-                            <div class="panel-header d-flex justify-content-between align-items-center mb-4">
-                            </div>
-
-                            <div class="side-news-list">
-                                <div class="side-news-item active">
-                                    <div class="side-news-img">
-                                        <img src="{{ asset('assets/img/fremin1.jpeg') }}" alt="">
-                                    </div>
-                                    <div class="side-news-info">
-                                        <span class="news-category">RAPPORT</span>
-                                        <h5> Le rapport d’activités 2025 du FREMIN présente les actions menées pour soutenir le
-                                            développement industriel en Côte d’Ivoire, notamment la finalisation du CEPPTA de
-                                            Yamoussoukro, l’appui à des entreprises industrielles et acteurs de
-                                            l’agro-transformation, la réalisation d’études stratégiques et le lancement de
-                                            projets d’infrastructures industrielles. Malgré des résultats encourageants,
-                                            l’exécution a été limitée par de faibles décaissements, et plusieurs actions sont
-                                            prévues en 2026 pour renforcer la compétitivité industrielle.</h5>
-                                        <span class="news-date"><i class="far fa-calendar-alt"></i> 27 Jan. 2026</span>
-                                    </div>
-                                </div>
-
-                                <div class="side-news-item">
-                                    <div class="side-news-img">
-                                        <img src="{{ asset('assets/img/fremin3.jpeg') }}" alt="">
-                                    </div>
-                                    <div class="side-news-info">
-                                        <span class="news-category">CEREMONIE</span>
-                                        <h5>Cérémonie de remise des équipements de productions aux acteurs de la petite
-                                            agro-transformation</h5>
-                                        <h6>Le 19 juin 2025, le Ministre Souleymane Diarrassouba a remis des équipements de
-                                            production aux acteurs de la petite agro-transformation au Centre de Démonstration
-                                            et de Promotion de Technologies (CDT) à Marcory, Abidjan. Cette initiative vise à
-                                            moderniser les outils, améliorer la productivité et soutenir le développement
-                                            industriel du secteur.</h6>
-                                        <span class="news-date"><i class="far fa-calendar-alt"></i> 20 Jan. 2026</span>
-                                    </div>
-                                </div>
-
-                                <div class="side-news-item">
-                                    <div class="side-news-img">
-                                        <img src="{{ asset('assets/img/fremin1.jpeg') }}" alt="">
-                                    </div>
-                                    <div class="side-news-info">
-                                        <span class="news-category">ATELIER</span>
-                                        <h5>Atelier de validation de la stratégie de la petite transformation.</h5>
-                                        <h6>Le 10 juillet 2025, le Ministre du Commerce et de l’Industrie, Souleymane
-                                            Diarrassouba, a lancé un atelier pour valider l’étude stratégique sur la petite
-                                            transformation industrielle en Côte d’Ivoire. Cet événement s’est tenu à Marcory
-                                            (Abidjan) et a réuni des acteurs du secteur privé, des organisations
-                                            professionnelles et des opérateurs économiques.</h6>
-                                        <span class="news-date"><i class="far fa-calendar-alt"></i> 15 Jan. 2026</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Featured News Spotlight (Center) -->
+                    <!-- Official/Contact Spotlight -->
                     <div class="col-lg-5">
-                        <div class="news-spotlight">
-                            <div class="spotlight-badge">À LA UNE</div>
-                            <div class="spotlight-img-wrap">
-                                <img src="{{ asset('assets/img/fremin3.jpeg') }}" alt="Featured">
-                                <div class="spotlight-content">
-                                    <div class="spotlight-title-wrap">
-                                        <span class="spotlight-cat mb-2 d-inline-block">FONCTION PUBLIQUE</span>
-                                        <h3 style="color:white">Dernière rencontre trimestrielle des DRH au titre de l'année
-                                            2025</h3>
-                                        <a href="{{ route('home.actuality') }}" class="spotlight-link">Découvrir l'article
-                                            <i class="fas fa-chevron-right ms-2"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Official/Contact Spotlight (Right) -->
-                    <div class="col-lg-3">
                         <div class="institutional-card-v2">
                             <div class="decorative-top"></div>
-                            <div class="official-profile text-center py-4">
+                            <div class="official-profile text-center py-5">
                                 @if(isset($ministerInfo))
-                                    <div class="official-portrait-wrap mb-3 shadow-sm">
+                                    <div class="official-portrait-wrap mb-4 shadow-sm mx-auto">
                                         <img src="{{ asset('storage/' . $ministerInfo->image) }}" alt="{{ $ministerInfo->name }}">
                                     </div>
-                                    <h5 class="fw-bold mb-1">{{ $ministerInfo->name }}</h5>
-                                    <p class="text-success small fw-bold mb-3">{{Str::upper($ministerInfo->function)}}</p>
-                                    <button onclick="showMinisterMessage()" class="btn-action-outline w-100 border-0">
+                                    <h4 class="fw-bold mb-2">{{ $ministerInfo->name }}</h4>
+                                    <p class="text-success fw-bold mb-4">{{Str::upper($ministerInfo->function)}}</p>
+                                    <button onclick="showMinisterMessage()" class="btn-action-outline px-4 py-2">
                                         <i class="fas fa-quote-left me-2"></i> MOT DU MINISTRE
                                     </button>
                                 @else
-                                    <div class="official-portrait-wrap mb-3 shadow-sm">
-                                        <img src="{{ asset('assets/img/ministre.jpg') }}" alt="Commissaire General">
+                                    <div class="official-portrait-wrap mb-4 shadow-sm mx-auto">
+                                        <img src="{{ asset('assets/img/ministre.jpg') }}" alt="Ministre">
                                     </div>
-                                    <h5 class="fw-bold mb-1">M. Souleymane Diarrassouba</h5>
-                                    <p class="text-success small fw-bold mb-3">MINISTRE DU COMMERCE, DE L'INDUSTRIE ET DE
-                                        L'ARTISANAT</p>
+                                    <h4 class="fw-bold mb-2">M. Souleymane Diarrassouba</h4>
+                                    <p class="text-success fw-bold mb-4">MINISTRE DU COMMERCE ET DE L'INDUSTRIE</p>
+                                    <button onclick="showMinisterMessage()" class="btn-action-outline px-4 py-2">
+                                        <i class="fas fa-quote-left me-2"></i> MOT DU MINISTRE
+                                    </button>
                                 @endif
                             </div>
                         </div>
@@ -360,8 +281,7 @@
                     });
                 }
             </script>
-        </section>
-    @endif
+    </section>
     <!-- /Compact News Section -->
 
     <!-- Agro-transformation Success Stories Section -->
