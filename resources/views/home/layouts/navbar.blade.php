@@ -39,6 +39,21 @@
             <span>{{ __('presentation') }}</span>
           </a>
         </li>
+         <li class="dropdown">
+          <a href="#" class="{{ Request::is('home/projects/*') ? 'active' : '' }}">
+            <span>{{ __('projects') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+          <ul>
+            <li>
+              <a href="{{route('home.projets.modernisation.presentation')}}"
+                class="{{ Request::is('home/projects/modernisation*') ? 'active' : '' }}">
+                {{ __('modernization_industrial') }}
+              </a>
+            </li>
+            <li><a href="{{route('home.projets.aed')}}">{{ __('aed_program') }}</a></li>
+            <li><a href="{{route('home.projets.infrastructures')}}">{{ __('industrial_infrastructure') }}</a></li>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#" class="{{ Request::is('home/activities/*') ? 'active' : '' }}">
             <span>{{ __('activities') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
@@ -55,21 +70,7 @@
         <li><a href="{{route('home.publication')}}"
             class="{{ Route::is('home.publication', 'publications.*') ? 'active' : '' }}">{{ __('publications') }}</a>
         </li>
-        <li class="dropdown">
-          <a href="#" class="{{ Request::is('home/projects/*') ? 'active' : '' }}">
-            <span>{{ __('projects') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
-          </a>
-          <ul>
-            <li>
-              <a href="{{route('home.projets.modernisation.presentation')}}"
-                class="{{ Request::is('home/projects/modernisation*') ? 'active' : '' }}">
-                {{ __('modernization_industrial') }}
-              </a>
-            </li>
-            <li><a href="{{route('home.projets.aed')}}">{{ __('aed_program') }}</a></li>
-            <li><a href="{{route('home.projets.infrastructures')}}">{{ __('industrial_infrastructure') }}</a></li>
-          </ul>
-        </li>
+       
         <li><a href="{{route('home.contact')}}"
             class="{{ Route::is('home.contact') ? 'active' : '' }}">{{ __('contact') }}</a></li>
 
