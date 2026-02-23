@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('admin.layouts.template')
 
 @section('title', 'Gestion de la FAQ')
 
