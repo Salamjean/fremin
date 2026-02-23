@@ -400,9 +400,7 @@
 
             <!-- Section Header -->
             <div class="partners-header" data-aos="fade-up">
-                <span class="partners-count">{{ __('our_partners') }}</span>
-                <h2>{{ __('they_trust_us') }}</h2>
-                <p>{{ __('partners_desc') }}</p>
+                <h2>{{ __('our_partners') }}</h2>
             </div>
 
             <!-- Partners Carousel -->
