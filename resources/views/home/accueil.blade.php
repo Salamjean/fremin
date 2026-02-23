@@ -138,9 +138,9 @@
                                             secteur ou d’une filière donnée. Ils se caractérisent par un réseau
                                             d’entreprises industrielles et d’institutions proches géographiquement et
                                             interdépendantes liées par des métiers, des technologies et des savoir-faire.
-                                            . Il s’agit notamment des clusters de la chimie et plasturgie, des matériaux de
+                                            Il s’agit notamment des clusters de la <strong>chimie et plasturgie, des matériaux de
                                             construction, d’ameublement et d’équipement, de l’emballage, de l’agro-industrie
-                                            et de l’industrie pharmaceutique.
+                                            et de l’industrie pharmaceutique</strong>.
                                         </p>
                                     </div>
                                 </div>
