@@ -101,7 +101,7 @@
     <section id="agro-success" class="agro-success section">
         <div class="inst-container-compact" data-aos="fade-up">
             <div class="inst-header-compact mb-4 text-center">
-                <h2 class="inst-title-compact">RÉALISATIONS</h2>
+                <h2 class="inst-title-compact">RÉALISATIONS PRINCIPALES</h2>
                 <div class="tricolor-accent-compact mx-auto">
                     <span class="bar orange"></span>
                     <span class="bar white"></span>
