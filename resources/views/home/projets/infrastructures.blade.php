@@ -33,7 +33,7 @@
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="media-tab" data-bs-toggle="tab" data-bs-target="#media" type="button"
                         role="tab" aria-controls="media" aria-selected="false"
-                        style="color: #1a1a1a; font-weight: 600;">Images & Vidéo</button>
+                        style="color: #1a1a1a; font-weight: 600;">{{ __('media') }}</button>
                 </li>
             </ul>
 
