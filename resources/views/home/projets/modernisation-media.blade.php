@@ -32,7 +32,7 @@
                             </div>
                             <div class="p-4">
                                 <span class="badge bg-success mb-2">Événement</span>
-                                <h5 class="fw-bold mb-2">D.2/ Passation de charge</h5>
+                                <h5 class="fw-bold mb-2">Passation de charge</h5>
                                 <p class="text-muted small mb-3">Cérémonie de passation de charges avec la date.</p>
                                 <a href="#" class="btn btn-sm btn-outline-success">Lire plus</a>
                             </div>
@@ -48,7 +48,7 @@
                             </div>
                             <div class="p-4">
                                 <span class="badge bg-warning text-dark mb-2">Atelier</span>
-                                <h5 class="fw-bold mb-2">D.3/ Atelier de validation</h5>
+                                <h5 class="fw-bold mb-2">Atelier de validation</h5>
                                 <p class="text-muted small mb-3">Atelier de validation de l’étude stratégique pour le
                                     développement de la petite transformation.</p>
                                 <a href="#" class="btn btn-sm btn-outline-success">Lire plus</a>
@@ -65,7 +65,7 @@
                             </div>
                             <div class="p-4">
                                 <span class="badge bg-success mb-2">Cérémonie</span>
-                                <h5 class="fw-bold mb-2">D.4/ Cérémonie de distribution</h5>
+                                <h5 class="fw-bold mb-2">Cérémonie de distribution</h5>
                                 <p class="text-muted small mb-3">Cérémonie de distribution des équipements de production aux
                                     acteurs de la petite transformation.</p>
                                 <a href="#" class="btn btn-sm btn-outline-success">Lire plus</a>
