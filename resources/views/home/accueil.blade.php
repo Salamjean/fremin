@@ -203,7 +203,7 @@
                                 <div class="col-lg-5">
                                     <div class="agro-content-box">
                                         <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
-                                        <h3>Construction du centre Centre des Expositions des Produits de la Petite
+                                        <h3>Construction du centre des Expositions des Produits de la Petite
                                             Transformation et de l’Artisanat (CEPPTA) </h3>
                                         <p>Le Ministère du Commerce, de l’Industrie et de l’Artisanat, à travers le FREMIN a
                                             réalisé la première phase du CEPPTA dans la zone industrielle de Yamoussoukro.
