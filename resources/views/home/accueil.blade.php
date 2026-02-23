@@ -98,6 +98,105 @@
         </div>
     </section>
 
+    <section id="agro-success" class="agro-success section">
+        <div class="inst-container-compact" data-aos="fade-up">
+            <div class="inst-header-compact mb-4 text-center">
+                <h2 class="inst-title-compact">RÉALISATIONS</h2>
+                <div class="tricolor-accent-compact mx-auto">
+                    <span class="bar orange"></span>
+                    <span class="bar white"></span>
+                    <span class="bar green"></span>
+                </div>
+                <p class="mt-3">Les réalisations du FREMIN au profit des acteurs du secteur de la petite agro-transformation
+                </p>
+            </div>
+        </div>
+
+        <div class="container" data-aos="fade-up">
+            <div class="swiper init-swiper agro-carousel">
+                <script type="application/json" class="swiper-config">
+                                                                        {
+                                                                            "loop": true,
+                                                                            "speed": 600,
+                                                                            "autoplay": { "delay": 6000 },
+                                                                            "slidesPerView": 1,
+                                                                            "pagination": { "el": ".agro-pagination", "clickable": true },
+                                                                            "navigation": { "nextEl": ".agro-next", "prevEl": ".agro-prev" }
+                                                                        }
+                                                                        </script>
+
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="agro-slide-card">
+                            <div class="row align-items-center g-0">
+                                <div class="col-lg-5">
+                                    <div class="agro-content-box">
+                                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                                        <h3>Équipements de production</h3>
+                                        <p>Remise symbolique des équipements de production aux bénéficiaires par Monsieur le
+                                            Ministre du Commerce et de l'Industrie.</p>
+                                        <div class="agro-meta">
+                                            <span class="location"><i class="fas fa-map-marker-alt"></i> Abidjan</span>
+                                            <span class="impact">Modernisation industrielle</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="agro-gallery">
+                                        <div class="agro-img-main">
+                                            <img src="{{ asset('assets/img/remises.png') }}" alt="Remise équipements 1">
+                                        </div>
+                                        <div class="agro-img-sub">
+                                            <img src="{{ asset('assets/img/remises1.png') }}" alt="Remise équipements 2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="agro-slide-card">
+                            <div class="row align-items-center g-0">
+                                <div class="col-lg-5">
+                                    <div class="agro-content-box">
+                                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                                        <h3>Distribution de tricycles</h3>
+                                        <p>La remise de 25 tricycles aux acteurs de la petite transformation pour faciliter
+                                            la logistique et l'acheminement des produits.</p>
+                                        <div class="agro-meta">
+                                            <span class="location"><i class="fas fa-truck"></i> Logistique locale</span>
+                                            <span class="impact">25 bénéficiaires</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="agro-gallery">
+                                        <div class="agro-img-main">
+                                            <img src="{{ asset('assets/img/image.png') }}" alt="Tricycles 1">
+                                        </div>
+                                        <div class="agro-img-sub">
+                                            <img src="{{ asset('assets/img/moto1.png') }}" alt="Tricycles 2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="agro-controls">
+                    <div class="agro-prev"><i class="fas fa-chevron-left"></i></div>
+                    <div class="agro-pagination"></div>
+                    <div class="agro-next"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Bar -->
     <section class="pres-stats-bar" style="height: auto;">
         <div class="container">
@@ -291,104 +390,7 @@
     </section>
     <!-- /Compact News Section -->
 
-    <section id="agro-success" class="agro-success section">
-        <div class="inst-container-compact" data-aos="fade-up">
-            <div class="inst-header-compact mb-4 text-center">
-                <h2 class="inst-title-compact">RÉALISATIONS</h2>
-                <div class="tricolor-accent-compact mx-auto">
-                    <span class="bar orange"></span>
-                    <span class="bar white"></span>
-                    <span class="bar green"></span>
-                </div>
-                <p class="mt-3">Les réalisations du FREMIN au profit des acteurs du secteur de la petite agro-transformation
-                </p>
-            </div>
-        </div>
-
-        <div class="container" data-aos="fade-up">
-            <div class="swiper init-swiper agro-carousel">
-                <script type="application/json" class="swiper-config">
-                                                                        {
-                                                                            "loop": true,
-                                                                            "speed": 600,
-                                                                            "autoplay": { "delay": 6000 },
-                                                                            "slidesPerView": 1,
-                                                                            "pagination": { "el": ".agro-pagination", "clickable": true },
-                                                                            "navigation": { "nextEl": ".agro-next", "prevEl": ".agro-prev" }
-                                                                        }
-                                                                        </script>
-
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="agro-slide-card">
-                            <div class="row align-items-center g-0">
-                                <div class="col-lg-5">
-                                    <div class="agro-content-box">
-                                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
-                                        <h3>Équipements de production</h3>
-                                        <p>Remise symbolique des équipements de production aux bénéficiaires par Monsieur le
-                                            Ministre du Commerce et de l'Industrie.</p>
-                                        <div class="agro-meta">
-                                            <span class="location"><i class="fas fa-map-marker-alt"></i> Abidjan</span>
-                                            <span class="impact">Modernisation industrielle</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-7">
-                                    <div class="agro-gallery">
-                                        <div class="agro-img-main">
-                                            <img src="{{ asset('assets/img/remises.png') }}" alt="Remise équipements 1">
-                                        </div>
-                                        <div class="agro-img-sub">
-                                            <img src="{{ asset('assets/img/remises1.png') }}" alt="Remise équipements 2">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="agro-slide-card">
-                            <div class="row align-items-center g-0">
-                                <div class="col-lg-5">
-                                    <div class="agro-content-box">
-                                        <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
-                                        <h3>Distribution de tricycles</h3>
-                                        <p>La remise de 25 tricycles aux acteurs de la petite transformation pour faciliter
-                                            la logistique et l'acheminement des produits.</p>
-                                        <div class="agro-meta">
-                                            <span class="location"><i class="fas fa-truck"></i> Logistique locale</span>
-                                            <span class="impact">25 bénéficiaires</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-7">
-                                    <div class="agro-gallery">
-                                        <div class="agro-img-main">
-                                            <img src="{{ asset('assets/img/image.png') }}" alt="Tricycles 1">
-                                        </div>
-                                        <div class="agro-img-sub">
-                                            <img src="{{ asset('assets/img/moto1.png') }}" alt="Tricycles 2">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Navigation Controls -->
-                <div class="agro-controls">
-                    <div class="agro-prev"><i class="fas fa-chevron-left"></i></div>
-                    <div class="agro-pagination"></div>
-                    <div class="agro-next"><i class="fas fa-chevron-right"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     
 
