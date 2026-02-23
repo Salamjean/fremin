@@ -9,7 +9,7 @@
             <p class="lead-text" style="max-width: 800px; margin: 20px auto;">Accompagnement et appuis directs aux
                 entreprises industrielles en difficulté.</p>
             <div class="tricolor-line shadow-sm mx-auto"
-                style="width: 100px; height: 4px; background: linear-gradient(to right, #009B3A 33.33%, #fff 33.33%, #fff 66.66%, #FF8200 66.66%);">
+                style="width: 100px; height: 4px; background: linear-gradient(to right, #FF8200 33.33%, #fff 33.33%, #fff 66.66%, #009B3A 66.66%);">
             </div>
         </div>
     </section>
