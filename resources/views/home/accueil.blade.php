@@ -505,7 +505,7 @@
         </div>
     </section><!-- /Partners Section -->
 
-    @include('home.layouts.faq')
+    <!-- @include('home.layouts.faq') -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
