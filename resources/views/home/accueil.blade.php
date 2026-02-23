@@ -107,7 +107,7 @@
                     <span class="bar white"></span>
                     <span class="bar green"></span>
                 </div>
-                <p class="mt-3">Les réalisations du FREMIN au profit des acteurs du secteur de la petite agro-transformation
+                <p class="mt-3">Les principales réalisations du FREMIN au profit des acteurs du secteur de la petite agro-transformation
                 </p>
             </div>
         </div>
