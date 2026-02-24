@@ -60,7 +60,7 @@
                         <div class="news-body-premium">
                             <span class="news-category-v2" style="background-color: {{ $article->category_color ?? '#009B3A' }}">{{ $article->category }}</span>
                             <h4 class="news-title-v2">{{ $article->title }}</h4>
-                            <p class="news-text-v2">{{ Str::limit($article->excerpt, 120) }}</p>
+                            <p class="news-text-v2">{{ Str::limit($article->excerpt, 250) }}</p>
                            
                         </div>
                     </div>
