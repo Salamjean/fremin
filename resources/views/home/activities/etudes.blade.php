@@ -8,7 +8,7 @@
             <h1 class="refined-title" style="color: #1a1a1a; font-weight: 800;">{{ __('studies_conducted') }}</h1>
             <p class="lead-text" style="max-width: 800px; margin: 20px auto;">{{ __('activities_desc') }}</p>
             <div class="tricolor-line shadow-sm mx-auto"
-                style="width: 100px; height: 4px; background: linear-gradient(to right, #009B3A 33.33%, #fff 33.33%, #fff 66.66%, #FF8200 66.66%);">
+                style="width: 100px; height: 4px; background: linear-gradient(to right, #FF8200 33.33%, #fff 33.33%, #fff 66.66%, #009B3A 66.66%);">
             </div>
         </div>
     </section>
@@ -186,35 +186,6 @@
                                 data-bs-toggle="collapse" data-bs-target="#studyCollapse5">
                                 Voir plus <i class="fas fa-chevron-down ms-1"></i>
                             </a>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                <!-- Validation Workshop -->
-                <div class="col-lg-12 mt-4" data-aos="fade-up" data-aos-delay="700">
-                    <div class="card shadow-sm border-0 rounded-4 overflow-hidden"
-                        style="background: linear-gradient(135deg, #009B3A 0%, #007d2f 100%);">
-                        <div class="card-body p-4 p-lg-5 text-white">
-                            <div class="row align-items-center">
-                                <div class="col-lg-2 text-center mb-4 mb-lg-0">
-                                    <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center shadow"
-                                        style="width: 80px; height: 80px;">
-                                        <i class="fas fa-calendar-check text-success fs-2"></i>
-                                    </div>
-                                </div>
-                                <div class="col-lg-10">
-                                    <h3 class="fw-bold mb-3 text-white">Atelier de validation de l’actualisation du PNRMN
-                                    </h3>
-                                    <p class="lead mb-0" style="font-size: 1.1rem; opacity: 0.95;">
-                                        Le jeudi 7 mars 2024, s’est tenu à Seen Hôtel d’Abidjan Plateau, l’atelier de
-                                        validation du rapport final relatif à l’actualisation du PNRMN en vue de l’adapter
-                                        aux objectifs du développement assigné par le Gouvernement dans le cadre du Plan
-                                        National du Développement (PND 2021-2025).
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
