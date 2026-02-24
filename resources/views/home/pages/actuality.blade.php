@@ -44,7 +44,7 @@
         <div class="container py-5">
             <div class="d-flex justify-content-between align-items-end mb-5" data-aos="fade-up">
                 <div>
-                    <h2 class="fw-bold mb-0">Articles Récents</h2>
+                    <h2 class="fw-bold mb-0">Evènements récents</h2>
                     <div class="mt-2" style="height: 3px; width: 50px; background: #FF8200;"></div>
                 </div>
             </div>
