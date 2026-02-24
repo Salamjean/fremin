@@ -62,7 +62,6 @@
             <li><a href="{{route('home.activities.etudes')}}">{{ __('studies_conducted') }}</a></li>
             <li><a href="{{route('home.activities.ceremonies')}}">{{ __('ceremonies') . ' &  ' . __('ateliers') }}</a>
             </li>
-            <li><a href="{{route('home.activities.accompagnement')}}">{{ __('direct_support') }}</a></li>
           </ul>
         </li>
         <li><a href="{{route('home.actuality')}}"
