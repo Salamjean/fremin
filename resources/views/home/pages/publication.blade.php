@@ -18,22 +18,19 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="#rapports" class="pub-cat-card-v2 shadow-sm">
                         <div class="pub-cat-icon-v2"><i class="fas fa-file-invoice"></i></div>
-                        <h5 class="fw-bold mb-2">Rapports Annuels</h5>
-                        <p class="small text-muted mb-0">Bilans et activités institutionnelles du FREMIN.</p>
+                        <h5 class="fw-bold mb-2">Rapports</h5>
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <a href="#etudes" class="pub-cat-card-v2 shadow-sm">
                         <div class="pub-cat-icon-v2"><i class="fas fa-microscope"></i></div>
-                        <h5 class="fw-bold mb-2">Études Sectorielles</h5>
-                        <p class="small text-muted mb-0">Analyses approfondies du tissu industriel national.</p>
+                        <h5 class="fw-bold mb-2">Études</h5>
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <a href="#autres" class="pub-cat-card-v2 shadow-sm">
                         <div class="pub-cat-icon-v2"><i class="fas fa-folder-plus"></i></div>
                         <h5 class="fw-bold mb-2">Autres Ressources</h5>
-                        <p class="small text-muted mb-0">Textes réglementaires et formulaires divers.</p>
                     </a>
                 </div>
             </div>
@@ -49,7 +46,7 @@
             <div id="rapports" class="mb-5 pt-4">
                 <div class="d-flex align-items-center gap-3 mb-4" data-aos="fade-right">
                     <div style="width: 10px; height: 35px; background: #009B3A;"></div>
-                    <h3 class="fw-bold mb-0">Rapports d'Activités</h3>
+                    <h3 class="fw-bold mb-0">Rapports d'activités</h3>
                 </div>
                 <div class="row g-4">
                     @foreach($rapports as $doc)
@@ -74,7 +71,7 @@
             <div id="etudes" class="mb-5 pt-4">
                 <div class="d-flex align-items-center gap-3 mb-4" data-aos="fade-right">
                     <div style="width: 10px; height: 35px; background: #FF8200;"></div>
-                    <h3 class="fw-bold mb-0">Études & Analyses</h3>
+                    <h3 class="fw-bold mb-0">Études </h3>
                 </div>
                 <div class="row g-4">
                     @foreach($etudes as $doc)
