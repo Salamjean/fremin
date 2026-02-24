@@ -61,7 +61,7 @@
                             <span class="news-category-v2" style="background-color: {{ $article->category_color ?? '#009B3A' }}">{{ $article->category }}</span>
                             <h4 class="news-title-v2">{{ $article->title }}</h4>
                             <p class="news-text-v2">{{ Str::limit($article->excerpt, 120) }}</p>
-                            <a href="{{ $article->link ?? '#' }}" class="news-link-premium">{{ $article->link_text ?? 'EN SAVOIR PLUS' }} <i class="fas fa-arrow-right"></i></a>
+                           
                         </div>
                     </div>
                 </div>
