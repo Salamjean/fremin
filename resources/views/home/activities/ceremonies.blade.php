@@ -9,7 +9,7 @@
             <p class="lead-text" style="max-width: 800px; margin: 20px auto;">Retrouvez ici les cérémonies officielles et
                 les ateliers techniques organisés par le FREMIN.</p>
             <div class="tricolor-line shadow-sm mx-auto"
-                style="width: 100px; height: 4px; background: linear-gradient(to right, #FF8200 33.33%, #fff 33.33%, #fff 66.66%, #009B3A 66.66%);">
+                style="width: 100px; height: 4px; background: linear-gradient(to right, #FF8200 33.33%, #fff 33.33%, #fff 66.66%, black 66.66%);">
             </div>
         </div>
     </section>
@@ -49,7 +49,7 @@
                         <!-- C2.1 -->
                         <div class="col-12" data-aos="fade-up">
                             <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
-                                <h3 class="mb-3" style="color: #009B3A; font-weight: 700;">Cérémonie d’inauguration et la
+                                <h3 class="mb-3" style="color: black; font-weight: 700;">Cérémonie d’inauguration et la
                                     pose de la première pierre de la construction de la seconde phase du Centre des
                                     Expositions des
                                     Produits de la Petite Transformation et de l’Artisanat (CEPPTA)</h3>
@@ -98,7 +98,7 @@
                         <!-- C2.3 -->
                         <div class="col-12" data-aos="fade-up">
                             <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
-                                <h3 class="mb-3" style="color: #009B3A; font-weight: 700;">La cérémonie de distribution
+                                <h3 class="mb-3" style="color: black; font-weight: 700;">La cérémonie de distribution
                                     d’équipements de production au profit des acteurs de la petite agro-transformation</h3>
                                 <div class="row g-2 mb-3">
                                     <!-- Placeholders for images -->
@@ -108,8 +108,6 @@
                                             <img src="{{ asset('assets/img/frrrr.png') }}"
                                                 style="width: 100%; height: 100%; object-fit: cover;" alt="">
                                         </div>
-                                        <p class="text-center small text-muted">Remise symbolique des équipements de
-                                            production aux bénéficiaires par Monsieur le Ministre</p>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="bg-secondary rounded mb-2"
@@ -117,8 +115,6 @@
                                             <img src="{{ asset('assets/img/geeee.png') }}"
                                                 style="width: 100%; height: 100%; object-fit: cover;" alt="">
                                         </div>
-                                        <p class="text-center small text-muted">Remise symbolique des équipements de
-                                            production aux bénéficiaires par Monsieur le Ministre</p>
                                     </div>
                                     <div class="col-12">
                                         <div class="bg-secondary rounded mb-2"
@@ -126,7 +122,6 @@
                                             <img src="{{ asset('assets/img/equuuuu.png') }}"
                                                 style="width: 100%; height: 100%; object-fit: cover;" alt="">
                                         </div>
-                                        <p class="text-center small text-muted">PDes équipements de production</p>
                                     </div>
                                 </div>
                                 <p class="text-muted">Dans le cadre d’un vaste programme d’appui aux acteurs transformateurs
@@ -146,7 +141,7 @@
                         <!-- C2.6 (Second one in list - Ceremony) -->
                         <div class="col-12" data-aos="fade-up">
                             <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
-                                <h3 class="mb-3" style="color: #009B3A; font-weight: 700;">Cérémonie de la pose de la
+                                <h3 class="mb-3" style="color: black; font-weight: 700;">Cérémonie de la pose de la
                                     première pierre de la construction de la première phase du CEPPTA</h3>
                                 <div class="row g-2 mb-3">
                                     <!-- Placeholders for images -->
@@ -179,7 +174,7 @@
                         <!-- C2.2 -->
                         <div class="col-12" data-aos="fade-up">
                             <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
-                                <h3 class="mb-3" style="color: #009B3A; font-weight: 700;">Atelier de validation de l’étude
+                                <h3 class="mb-3" style="color: black; font-weight: 700;">Atelier de validation de l’étude
                                     stratégique pour le développement de la petite transformation</h3>
                                 <div class="row g-2 mb-3">
                                     <!-- Placeholders for photos -->
@@ -217,7 +212,7 @@
                         <!-- C2.4 -->
                         <div class="col-12" data-aos="fade-up">
                             <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
-                                <h3 class="mb-3" style="color: #009B3A; font-weight: 700;">Atelier de validation du rapport
+                                <h3 class="mb-3" style="color: black; font-weight: 700;">Atelier de validation du rapport
                                     d’actualisation du PNRMN</h3>
                                 <div class="row g-2 mb-3">
                                     <!-- Placeholders for images -->
@@ -248,7 +243,7 @@
                         <!-- C2.5 (First one) -->
                         <div class="col-12" data-aos="fade-up">
                             <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
-                                <h3 class="mb-3" style="color: #009B3A; font-weight: 700;">Atelier de finalisation des
+                                <h3 class="mb-3" style="color: black; font-weight: 700;">Atelier de finalisation des
                                     projets de communication en conseil des ministres relatifs aux stratégies de
                                     développement de cinq (5) clusters industriels prioritaires</h3>
                                 <div class="row g-2 mb-3">
@@ -277,7 +272,7 @@
                         <!-- C2.5 (Second one) -->
                         <div class="col-12" data-aos="fade-up">
                             <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
-                                <h3 class="mb-3" style="color: #009B3A; font-weight: 700;">Ateliers de lancement des études
+                                <h3 class="mb-3" style="color: black; font-weight: 700;">Ateliers de lancement des études
                                     stratégique pour le développement de cinq (05) clusters</h3>
                                 <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
                                     <iframe src="https://www.youtube.com/embed/GbSaUTFXIfQ" title="YouTube video"
@@ -301,7 +296,7 @@
                         <!-- C2.6 (First one) -->
                         <div class="col-12" data-aos="fade-up">
                             <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
-                                <h3 class="mb-3" style="color: #009B3A; font-weight: 700;">Atelier de validation des
+                                <h3 class="mb-3" style="color: black; font-weight: 700;">Atelier de validation des
                                     rapports et des plans d’actions des stratégies de développement de cinq (05) clusters
                                     industriels.</h3>
                                 <!-- <div class="row g-2 mb-3"> -->
@@ -347,7 +342,7 @@
         }
 
         .nav-pills .nav-link.active {
-            background-color: #009B3A;
+            background-color: black;
             color: white;
             box-shadow: 0 4px 10px rgba(0, 155, 58, 0.3);
         }
