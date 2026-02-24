@@ -44,17 +44,15 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Study 2: Actualisation du PNRMN (C1.2) -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="mission-item-card h-100 highlighted position-relative pb-5">
-                        <div class="m-icon" style="background: rgba(255,255,255,0.2); color: #fff;"><i
-                                class="fas fa-sync-alt"></i></div>
-                        <h4 class="mb-3" style="font-weight: 700; color: #fff;">Actualisation du Programme National de
+                <!-- Study 1: Stratégies de développement de Clustders (C1.1) -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-item-card h-100 position-relative pb-5">
+                        <div class="m-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Actualisation du Programme National de
                             Restructuration et de Mise à Niveau des entreprises industrielles « PNRMN Durable »</h4>
 
-                        <div class="collapse" id="studyCollapse2" data-bs-parent="#studiesAccordion">
-                            <p style="color: rgba(255,255,255,0.9);">Dans le cadre du renforcement de la compétitivité des
+                        <div class="collapse" id="studyCollapse1" data-bs-parent="#studiesAccordion">
+                            <p class="text-muted">Dans le cadre du renforcement de la compétitivité des
                                 entreprises ivoiriennes, le Gouvernement a mis en œuvre, depuis 2014, le Programme National
                                 de Restructuration et de Mise à Niveau (PNRMN). Il a pour objectif d’accompagner les
                                 entreprises dans le cadre de la définition et de la mise en œuvre d’un plan d’actions visant
@@ -63,12 +61,11 @@
                                 et de l’Industrie a entrepris depuis 2024, l’actualisation du PNRMN « PNRMN Durable ». Il
                                 s’agira d’une part, d’aligner les composantes et les activités du nouveau Programme aux
                                 objectifs du Plan National de Développement (PND) 2021-2025 et d’autre part, de l’adapter
-                                aux besoins sans cesse croissants des entreprises industrielles</p>
+                                aux besoins sans cesse croissants des entreprises industrielles.</p>
                         </div>
                         <div class="position-absolute bottom-0 start-0 w-100 p-4">
-                            <a href="javascript:void(0)" class="btn btn-light btn-sm w-100 toggle-btn"
-                                style="color: #009B3A; font-weight: bold;" data-bs-toggle="collapse"
-                                data-bs-target="#studyCollapse2">
+                            <a href="javascript:void(0)" class="btn btn-outline-success btn-sm w-100 toggle-btn"
+                                data-bs-toggle="collapse" data-bs-target="#studyCollapse1">
                                 Voir plus <i class="fas fa-chevron-down ms-1"></i>
                             </a>
                         </div>
@@ -99,17 +96,16 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Study 4: Petite transformation (C1.4) -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="mission-item-card h-100 highlighted position-relative pb-5">
-                        <div class="m-icon" style="background: rgba(255,255,255,0.2); color: #fff;"><i
-                                class="fas fa-chart-line"></i></div>
-                        <h4 class="mb-3" style="font-weight: 700; color: #fff;">Stratégie pour le développement de la petite
+                
+                <!-- Study 3: Fiches filières (C1.3) -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mission-item-card h-100 position-relative pb-5" style="border-bottom: 5px solid #009B3A;">
+                        <div class="m-icon"><i class="fas fa-file-alt"></i></div>
+                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Stratégie pour le développement de la petite
                             transformation</h4>
 
-                        <div class="collapse" id="studyCollapse4" data-bs-parent="#studiesAccordion">
-                            <p style="color: rgba(255,255,255,0.9);">La création d’emplois décents constitue un enjeu majeur
+                        <div class="collapse" id="studyCollapse3" data-bs-parent="#studiesAccordion">
+                            <p class="text-muted">La création d’emplois décents constitue un enjeu majeur
                                 pour le Gouvernement ivoirien. Afin d’y répondre, les autorités ont placé
                                 l’industrialisation au cœur de la transformation structurelle de l’économie, conformément
                                 aux orientations du PND 2021-2025. À ce titre, la stratégie du Ministère du Commerce, de
@@ -118,17 +114,18 @@
                                 Dans cette dynamique, le Ministère, à travers le Fonds de Restructuration et de Mise à
                                 Niveau des entreprises industrielles (FREMIN), a initié une étude stratégique pour le
                                 développement de la petite transformation (Très Petite Entreprise et des Petites et Moyennes
-                                Industries en Côte d’Ivoire)</p>
+                                Industries en Côte d’Ivoire).</p>
                         </div>
                         <div class="position-absolute bottom-0 start-0 w-100 p-4">
-                            <a href="javascript:void(0)" class="btn btn-light btn-sm w-100 toggle-btn"
-                                style="color: #009B3A; font-weight: bold;" data-bs-toggle="collapse"
-                                data-bs-target="#studyCollapse4">
+                            <a href="javascript:void(0)" class="btn btn-outline-success btn-sm w-100 toggle-btn"
+                                data-bs-toggle="collapse" data-bs-target="#studyCollapse3">
                                 Voir plus <i class="fas fa-chevron-down ms-1"></i>
                             </a>
                         </div>
                     </div>
                 </div>
+
+                
 
                 <!-- Study 5: Textile et Agro (C1.5) -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
@@ -157,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Study 5: Textile et Agro (C1.5) -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="mission-item-card h-100 position-relative pb-5">
