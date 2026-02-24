@@ -14,34 +14,79 @@
         </div>
     </section>
 
-    <section class="support-details py-5">
+    <section class="support-cards py-5">
         <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="content-box-premium">
-                        <h2 class="section-title mb-4" style="color: #009B3A; font-weight: 800;">Diagnostic et secteurs
-                            d'intervention</h2>
-                        <p class="lead-text mb-4">Le FREMIN déploie des diagnostics approfondis pour identifier les besoins
-                            spécifiques des entreprises industrielles manufacturières et agro-industrielles.</p>
+            <div class="row g-4 justify-content-center" id="supportAccordion">
+                <!-- Card 1: Diagnostic -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-item-card h-100 position-relative pb-5">
+                        <div class="m-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">L’appui aux acteurs exerçant dans
+                            l’agro-transformation
+                        </h4>
 
-                        <ul class="legal-list">
-                            <li><i class="fas fa-check-circle"></i> Agro-industrie et transformation locale</li>
-                            <li><i class="fas fa-check-circle"></i> Textile et cuirs</li>
-                            <li><i class="fas fa-check-circle"></i> Matériaux de construction</li>
-                            <li><i class="fas fa-check-circle"></i> Chimie et plasturgie</li>
-                        </ul>
-
-                        <div class="p-4 mt-4 bg-light rounded-3 border-start border-4 border-warning">
-                            <p class="mb-0 text-dark"><strong>Le Diagnostic :</strong> Évaluation technique, financière et
-                                managériale préalable à tout accompagnement direct.</p>
+                        <div class="collapse" id="supportCollapse1" data-bs-parent="#supportAccordion">
+                            <p class="text-muted">Le dynamisme des acteurs de la petite agro-transformation dans la
+                                croissance économique nationale est largement reconnu. Leur capacité à générer des emplois
+                                décents et à participer à la réduction de la pauvreté demeure incontestable.
+                                Afin de renforcer leur compétitivité et d’accélérer la transformation des matières premières
+                                agricoles, le Gouvernement, à travers le Ministère du Commerce et de l’Industrie et le
+                                FREMIN, a décidé d’acquérir des équipements de production au profit des acteurs de ce
+                                secteur. Ces équipements ont été réceptionnés le 30 avril 2025 sur le site du Centre de
+                                Démonstration et de Promotion des Technologies (CDT).
+                                Des missions de visite ont été organisées par la Cellule Technique du FREMIN dans les
+                                Districts d’Abidjan et de Yamoussoukro, en amont des actions opérationnelles, afin
+                                d’identifier les bénéficiaires potentiels des équipements de production et d’évaluer de
+                                manière précise leurs besoins spécifiques. Ces visites ont constitué une étape déterminante
+                                dans la planification et le ciblage des interventions au titre de l’exercice 2025.
+                                Sur la base des besoins identifiés, dix-sept (17) équipements de production ont été acquis
+                                pour onze (11) bénéficiaires. Une cérémonie officielle de remise de ces équipements a été
+                                organisée à cet effet. Ci-dessous, la liste des équipements.
+                            </p>
+                        </div>
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4">
+                            <a href="javascript:void(0)" class="btn btn-outline-success btn-sm w-100 toggle-btn"
+                                data-bs-toggle="collapse" data-bs-target="#supportCollapse1">
+                                Voir plus <i class="fas fa-chevron-down ms-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="image-grid">
-                        <div class="primary-image">
-                            <img src="{{ asset('assets/img/fremin6.jpeg') }}" alt="Accompagnement industriel"
-                                class="img-fluid rounded-4 shadow-lg">
+
+                <!-- Card 2: Secteurs d'Intervention -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mission-item-card h-100 highlighted position-relative pb-5">
+                        <div class="m-icon" style="background: rgba(255,255,255,0.2); color: #fff;"><i
+                                class="fas fa-industry"></i></div>
+                        <h4 class="mb-3" style="font-weight: 700; color: #fff;">Appui aux acteurs exerçant dans le secteur
+                            textile-habillement et de l’agro-transformation
+
+                        </h4>
+
+                        <div class="collapse" id="supportCollapse2" data-bs-parent="#supportAccordion">
+                            <p style="color: rgba(255,255,255,0.9);">En Côte d’Ivoire, le secteur textile-habillement reste
+                                peu valorisé, avec seulement 1 % du coton transformé localement malgré un fort potentiel
+                                productif et créatif. Parallèlement, les crises récentes (COVID-19 et guerre
+                                russo-ukrainienne) ont fragilisé les entreprises industrielles, notamment dans
+                                l’agro-transformation, entraînant un ralentissement des activités et une vulnérabilité
+                                accrue des PME.
+                                Face à cette situation, le Ministère du Commerce et de l’Industrie, à travers le FREMIN, a
+                                recruté deux consultants pour identifier les PME éligibles à un appui en équipements et
+                                évaluer leurs besoins. À l’issue des missions, des conventions ont été signées avec
+                                plusieurs structures techniques pour l’acquisition d’équipements de production au profit des
+                                secteurs textile-habillement (machines de confection, teinture, logiciels de conception) et
+                                agro-transformation (équipements pour légumes, fruits, karité, manioc et cacao).
+                                Cette initiative vise à renforcer la compétitivité, la qualité des produits et la relance
+                                des entreprises en difficulté.
+
+                            </p>
+                        </div>
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4">
+                            <a href="javascript:void(0)" class="btn btn-light btn-sm w-100 toggle-btn"
+                                style="color: #009B3A; font-weight: bold;" data-bs-toggle="collapse"
+                                data-bs-target="#supportCollapse2">
+                                Voir plus <i class="fas fa-chevron-down ms-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -50,3 +95,33 @@
     </section>
 
 @endsection
+
+@push('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapses = document.querySelectorAll('.collapse');
+            collapses.forEach(function (collapseElement) {
+                const id = collapseElement.id;
+                const btn = document.querySelector(`[data-bs-target="#${id}"]`);
+
+                if (btn) {
+                    collapseElement.addEventListener('shown.bs.collapse', function () {
+                        if (collapseElement.parentElement.classList.contains('highlighted')) {
+                            btn.innerHTML = 'Voir moins <i class="fas fa-chevron-up ms-1"></i>';
+                        } else {
+                            btn.innerHTML = 'Voir moins <i class="fas fa-chevron-up ms-1"></i>';
+                        }
+                    });
+
+                    collapseElement.addEventListener('hidden.bs.collapse', function () {
+                        if (collapseElement.parentElement.classList.contains('highlighted')) {
+                            btn.innerHTML = 'Voir plus <i class="fas fa-chevron-down ms-1"></i>';
+                        } else {
+                            btn.innerHTML = 'Voir plus <i class="fas fa-chevron-down ms-1"></i>';
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+@endpush

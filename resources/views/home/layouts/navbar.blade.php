@@ -54,14 +54,17 @@
             <li><a href="{{route('home.projets.infrastructures')}}">{{ __('industrial_infrastructure') }}</a></li>
           </ul>
         </li>
+        
         <li class="dropdown">
           <a href="#" class="{{ Request::is('home/activities/*') ? 'active' : '' }}">
             <span>{{ __('activities') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
           </a>
           <ul>
             <li><a href="{{route('home.activities.etudes')}}">{{ __('studies_conducted') }}</a></li>
+             <li><a href="{{route('home.activities.accompagnement')}}">{{ __('direct_support') }}</a></li>
             <li><a href="{{route('home.activities.ceremonies')}}">{{ __('ceremonies') . ' &  ' . __('ateliers') }}</a>
             </li>
+           
           </ul>
         </li>
         <li><a href="{{route('home.actuality')}}"

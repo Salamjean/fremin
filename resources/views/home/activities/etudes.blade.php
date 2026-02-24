@@ -157,6 +157,40 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Study 5: Textile et Agro (C1.5) -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mission-item-card h-100 position-relative pb-5">
+                        <div class="m-icon"><i class="fas fa-industry"></i></div>
+                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Appui direct aux entreprises</h4>
+
+                        <div class="collapse" id="studyCollapse5" data-bs-parent="#studiesAccordion">
+                            <p class="text-muted">Le Programme National de Restructuration et de Mise à Niveau (PNRMN) des
+                                entreprises industrielles vise à préparer les entreprises manufacturières ivoiriennes à
+                                faire face à une concurrence accrue, dans le contexte de la libéralisation des échanges
+                                induite par les accords multilatéraux de libre-échange.
+                                Le PNRMN s’articule autour de trois (03) composantes principales : (i) l’appui direct aux
+                                entreprises ;
+                                (ii) le renforcement de l’environnement de la qualité et des infrastructures existantes ;
+                                (iii) la création de trois (03) Centres d’Appui à la Compétitivité et au Développement
+                                Industriel (CACDI).
+                                Le Programme est exécuté sous la tutelle technique du Ministère en charge de l’Industrie. En
+                                ce qui concerne la composante relative à l’appui direct aux entreprises, l’Agence pour le
+                                Développement et la Compétitivité des Industries de Côte d’Ivoire (ADCI) mandatée par le
+                                FREMIN se charge de la sélection et de l’accompagnement des entreprises devant bénéficier
+                                d’un appui.
+                            </p>
+                        </div>
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4">
+                            <a href="javascript:void(0)" class="btn btn-outline-success btn-sm w-100 toggle-btn"
+                                data-bs-toggle="collapse" data-bs-target="#studyCollapse5">
+                                Voir plus <i class="fas fa-chevron-down ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
 
                 <!-- Validation Workshop -->
                 <div class="col-lg-12 mt-4" data-aos="fade-up" data-aos-delay="700">
