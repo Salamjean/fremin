@@ -58,7 +58,7 @@
                                     <div class="col-md-4">
                                         <div class="bg-secondary rounded"
                                             style="height: 300px; display: flex; align-items: center; justify-content: center; color: white;">
-                                            <img src="{{ asset('assets/img/pierre.png') }}"
+                                            <img src="{{ asset('assets/img/galerie176588060124.jpg') }}"
                                                 style="width: 100%; height: 100%; object-fit: cover;" alt="">
                                         </div>
                                     </div>
@@ -137,32 +137,6 @@
                                     torréfacteurs et de séchoirs.</p>
                             </div>
                         </div>
-
-                        <!-- C2.6 (Second one in list - Ceremony) -->
-                        <div class="col-12" data-aos="fade-up">
-                            <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
-                                <h3 class="mb-3" style="color: black; font-weight: 700;">Cérémonie de la pose de la
-                                    première pierre de la construction de la première phase du CEPPTA</h3>
-                                <div class="row g-2 mb-3">
-                                    <!-- Placeholders for images -->
-                                    <div class="col-md-12">
-                                        <div class="bg-secondary rounded"
-                                            style="height: 500px; display: flex; align-items: center; justify-content: center; color: white;">
-                                            <img src="{{ asset('assets/img/pierre.png') }}"
-                                                style="width: 100%; height: 100%; object-fit: cover;" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-muted">Ce centre permettra, d’une part, d’offrir un meilleur environnement de
-                                    travail aux artisans industriels du pays, à travers la valorisation des produits locaux
-                                    issus notamment de l’agro-transformation à petite échelle et d’autre part, d’améliorer
-                                    le revenu des femmes et des jeunes dans l’optique de réduire la pauvreté
-                                    La cérémonie de pose de première pierre pour la construction de ce Centre a été
-                                    organisée le samedi 19 août 2023, à Yamoussoukro. Cette cérémonie a été présidée par
-                                    Monsieur le Ministre chargé de l’Industrie.</p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
@@ -299,14 +273,14 @@
                                 <h3 class="mb-3" style="color: black; font-weight: 700;">Atelier de validation des
                                     rapports et des plans d’actions des stratégies de développement de cinq (05) clusters
                                     industriels.</h3>
-                                <!-- <div class="row g-2 mb-3"> -->
+                                <div class="row g-2 mb-3">
                                     <!-- Placeholders for images -->
-                                    <!-- <div class="col-md-12">
+                                    <div class="col-md-12">
                                         <div class="bg-secondary rounded"
-                                            style="height: 200px; display: flex; align-items: center; justify-content: center; color: white;">
-                                           <img src="{{ asset('assets/img/ooooo.png') }}" style="width: 100%; height: 100%; object-fit: cover;" alt=""></div>
-                                    </div> -->
-                                <!-- </div> -->
+                                            style="height: 500px; display: flex; align-items: center; justify-content: center; color: white;">
+                                           <img src="{{ asset('assets/img/promotion-industrielle-le-ministre-souleymane-diarrassouba-procede-a-louver_uu3nr3q4jqk.jpg') }}" style="width: 100%; height: 100%; object-fit: cover;" alt=""></div>
+                                    </div>
+                                </div>
                                 <p class="text-muted">Dans le cadre du développement des cinq (05) clusters, le Ministère en
                                     charge de l’Industrie a organisé à travers le FREMIN la cérémonie de lancement de ces
                                     études le jeudi 30 mars 2023 au Pullman Hôtel sous la présidence de Monsieur le Ministre
