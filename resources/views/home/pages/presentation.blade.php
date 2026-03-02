@@ -35,17 +35,17 @@
     <section class="pres-stats-bar">
         <div class="container">
             <!-- <div class="row g-4 justify-content-center">
-                                    @foreach($stats as $stat)
-                                        <div class="col-md-3">
-                                            <div class="stat-v2">
-                                                <span class="number">
-                                                    <span class="counter"
-                                                        data-target="{{ preg_replace('/[^0-9]/', '', $stat->value) }}">0</span>{{ preg_replace('/[0-9]/', '', $stat->value) }}
-                                                </span>
-                                                <span class="label">{{ $stat->label }}</span>
-                                            </div>
-                                        </div>
-                                    @endforeach -->
+                                                    @foreach($stats as $stat)
+                                                        <div class="col-md-3">
+                                                            <div class="stat-v2">
+                                                                <span class="number">
+                                                                    <span class="counter"
+                                                                        data-target="{{ preg_replace('/[^0-9]/', '', $stat->value) }}">0</span>{{ preg_replace('/[0-9]/', '', $stat->value) }}
+                                                                </span>
+                                                                <span class="label">{{ $stat->label }}</span>
+                                                            </div>
+                                                        </div>
+                                                    @endforeach -->
         </div>
         </div>
     </section>
@@ -135,21 +135,35 @@
                     <div class="history-box">
                         <h2 class="mb-4">{{ __('history_title') }}</h2>
                         <div class="history-content card-premium p-4">
-                            <p>Le FREMIN, moteur du développement industriel ivoirien, finance et accompagne le PNRMN pour
-                                renforcer la compétitivité, moderniser les entreprises et stimuler la création d’emplois.</p>
+                            <p>Le Fonds de Restauration et de Mise à Niveau des Entreprises Industrielles (FREMIN) a été
+                                institué en décembre 2014 par le décret n°2014-781, dans le cadre de la mise en œuvre de la
+                                politique industrielle de la Côte d’Ivoire. Cette politique vise à renforcer, restructurer
+                                et moderniser l’appareil productif national afin d’améliorer la compétitivité des
+                                entreprises industrielles sur les marchés régional et international.
+                                Logé à la Banque Nationale d’Investissement (BNI), le FREMIN fonctionne sous l’autorité d’un
+                                Comité de Gestion composé de représentants des ministères sectoriels concernés ainsi que du
+                                Directeur Général de la BNI. Cette gouvernance garantit une coordination efficace entre les
+                                orientations stratégiques de l’État et les mécanismes opérationnels de financement.
+                                Le FREMIN constitue l’instrument financier du Programme National de Restructuration et de
+                                Mise à Niveau (PNRMN). À ce titre, il accompagne les entreprises industrielles dans leurs
+                                efforts de modernisation, d’amélioration de la qualité, d’optimisation de leurs performances
+                                et de renforcement de leur compétitivité.
+                            </p>
 
                             <div class="collapse" id="historyCollapse">
-                                <p>Avec l’appui de l’ADCI et du Projet PARCSI de la BAD, il catalyse la transformation
-                                    structurelle de l’économie, favorise l’innovation industrielle et élève la qualité des
-                                    productions nationales.</p>
+                                <p>Depuis sa mise en place, le Comité de Gestion du FREMIN a été successivement présidé par
+                                    :
+                                </p>
 
                                 <ul class="list-unstyled mt-3">
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Création et mise en place
-                                        des structures</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Lancement des premiers
-                                        programmes</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Expansion et partenariats
-                                        stratégiques</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> De 2015 à 2018 : Mme
+                                        CISSE ANOMA Patricia</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> De 2018 à 2019 : Mme
+                                        TCHIKAYA Mockey Laure</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> De 2020 à 2021 : Mme
+                                        ATTIA Yao Victorine</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Depuis 2021 : M. ESSO
+                                        Loesse Jacques </li>
                                 </ul>
                             </div>
 
@@ -161,16 +175,16 @@
                         </div>
 
                         <script>
-                            document.addEventListener('DOMContentLoaded', function() {
+                            document.addEventListener('DOMContentLoaded', function () {
                                 const btn = document.getElementById('historyToggleBtn');
                                 const collapseElement = document.getElementById('historyCollapse');
 
                                 if (collapseElement && btn) {
-                                    collapseElement.addEventListener('shown.bs.collapse', function() {
+                                    collapseElement.addEventListener('shown.bs.collapse', function () {
                                         btn.innerHTML = 'Voir moins <i class="fas fa-chevron-up ms-1"></i>';
                                     });
 
-                                    collapseElement.addEventListener('hidden.bs.collapse', function() {
+                                    collapseElement.addEventListener('hidden.bs.collapse', function () {
                                         btn.innerHTML = 'Voir plus <i class="fas fa-chevron-down ms-1"></i>';
                                     });
                                 }
@@ -276,7 +290,8 @@
                     <div
                         class="tutelles-box text-center card-premium p-5 bg-white shadow-sm border-top border-4 border-success">
                         <h2 class="mb-3">Tutelles</h2>
-                        <p class="mb-2" style="font-size:17px; font-weight:200px;">Le FREMIN est placé sous la tutelle technique du Ministre chargé de l'Industrie
+                        <p class="mb-2" style="font-size:17px; font-weight:200px;">Le FREMIN est placé sous la tutelle
+                            technique du Ministre chargé de l'Industrie
                             et sous la tutelle financière du Ministre chargé de l'Economie et des Finances, en liaison avec
                             le Ministre chargé du Budget.</p>
                     </div>
