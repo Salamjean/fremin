@@ -41,7 +41,7 @@
                                 dans la planification et le ciblage des interventions au titre de l’exercice 2025.
                                 Sur la base des besoins identifiés, dix-sept (17) équipements de production ont été acquis
                                 pour onze (11) bénéficiaires. Une cérémonie officielle de remise de ces équipements a été
-                                organisée à cet effet. Ci-dessous, la liste des équipements.
+                                organisée à cet effet.
                             </p>
                         </div>
                         <div class="position-absolute bottom-0 start-0 w-100 p-4">
