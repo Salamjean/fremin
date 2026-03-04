@@ -156,14 +156,14 @@
                                 </p>
 
                                 <ul class="list-unstyled mt-3">
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> De 2015 à 2018 : Mme
-                                        CISSE ANOMA Patricia</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> De 2018 à 2019 : Mme
-                                        TCHIKAYA Mockey Laure</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> De 2020 à 2021 : Mme
-                                        ATTIA Yao Victorine</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Depuis 2021 : M. ESSO
-                                        Loesse Jacques </li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mme
+                                        CISSE ANOMA Patricia :  De 2015 à 2018 </li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mme
+                                        TCHIKAYA Mockey Laure :  De 2018 à 2019 </li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mme
+                                        ATTIA Yao Victorine :  De 2020 à 2021 </li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>M. ESSO
+                                        Loesse Jacques : Depuis 2021 </li>
                                 </ul>
                             </div>
 
