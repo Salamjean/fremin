@@ -95,7 +95,7 @@
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
                     <div class="mission-item-card position-relative pb-5">
                         <div class="m-icon"><i class="fas fa-industry"></i></div>
-                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Assistance technique aux entreprises</h4>
+                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Assistance technique aux entreprises industrielles</h4>
 
                         <div class="collapse" id="studyCollapse6" data-bs-parent="#supportAccordion">
                             <p class="text-muted">Le Programme National de Restructuration et de Mise à Niveau (PNRMN) des
