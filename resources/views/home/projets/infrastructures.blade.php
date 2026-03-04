@@ -19,23 +19,43 @@
         <div class="container">
 
             <!-- Tabs Navigation -->
-            <ul class="nav nav-tabs nav-tabs-bordered mb-4" id="infraTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="presentation-tab" data-bs-toggle="tab"
-                        data-bs-target="#presentation" type="button" role="tab" aria-controls="presentation"
-                        aria-selected="true" style="color: #009B3A; font-weight: 700;">Présentation</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="realisation-tab" data-bs-toggle="tab" data-bs-target="#realisation"
-                        type="button" role="tab" aria-controls="realisation" aria-selected="false"
-                        style="color: #1a1a1a; font-weight: 600;">Réalisations</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="media-tab" data-bs-toggle="tab" data-bs-target="#media" type="button"
-                        role="tab" aria-controls="media" aria-selected="false"
-                        style="color: #1a1a1a; font-weight: 600;">{{ __('media') }}</button>
-                </li>
-            </ul>
+            <div class="d-flex justify-content-center mb-5">
+                <ul class="nav nav-pills custom-nav-pills shadow-sm rounded-pill p-1 bg-white" id="infraTab" role="tablist" aria-orientation="horizontal">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-pill px-4 active" id="presentation-tab" data-bs-toggle="tab"
+                            data-bs-target="#presentation" type="button" role="tab" aria-controls="presentation"
+                            aria-selected="true">Présentation</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-pill px-4" id="realisation-tab" data-bs-toggle="tab" data-bs-target="#realisation"
+                            type="button" role="tab" aria-controls="realisation" aria-selected="false">Réalisations</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-pill px-4" id="media-tab" data-bs-toggle="tab" data-bs-target="#media" type="button"
+                            role="tab" aria-controls="media" aria-selected="false">{{ __('media') }}</button>
+                    </li>
+                </ul>
+            </div>
+
+            <style>
+                .custom-nav-pills .nav-link {
+                    transition: all 0.3s ease;
+                    font-weight: 600;
+                    color: #333;
+                }
+
+                .custom-nav-pills .nav-link:hover {
+                    background-color: rgba(0, 155, 58, 0.1);
+                    color: #009B3A !important;
+                }
+
+                .custom-nav-pills .nav-link.active,
+                .custom-nav-pills .nav-link.active:focus,
+                .custom-nav-pills .nav-link.active:hover {
+                    background-color: #009B3A !important;
+                    color: white !important;
+                }
+            </style>
 
             <!-- Tabs Content -->
             <div class="tab-content pt-2" id="infraTabContent">
@@ -51,8 +71,7 @@
                                         style="width: 60px; height: 3px; background: #FF8200; margin-bottom: 20px;"></div>
                                 </div>
                                 <p class="text-dark mb-4" style="text-align: justify; line-height: 1.8;">
-                                    Dans le cadre du développement des infrastructures industrielles, des ressources d’un
-                                    montant global de <strong>9 000 000 000 F CFA</strong> ont été affectées par le
+                                    Dans le cadre du développement des infrastructures industrielles, des ressources ont été affectées par le
                                     Ministère du Budget et des Finances pour la prise en charge des engagements de l’Etat au
                                     titre de la Convention de concession signée le 14 juin 2022 entre l’Etat de Côte
                                     d’Ivoire et la société Arise Ivoire portant sur la réalisation des amenées primaires du
@@ -65,8 +84,6 @@
                                         <div class="info-card p-4 rounded-4 shadow-sm h-100"
                                             style="background: rgba(0, 155, 58, 0.05); border-left: 5px solid #009B3A;">
                                             <h5 class="fw-bold" style="color: #009B3A;">ZI Akoupé-Zeudji PK24</h5>
-                                            <p class="display-6 fw-bold mb-0">7 000 000 000 <small class="fs-6">F
-                                                    CFA</small></p>
                                             <p class="text-muted mt-2 mb-0">Pour les travaux d’amenées primaires</p>
                                         </div>
                                     </div>
@@ -74,8 +91,6 @@
                                         <div class="info-card p-4 rounded-4 shadow-sm h-100"
                                             style="background: rgba(255, 130, 0, 0.05); border-left: 5px solid #FF8200;">
                                             <h5 class="fw-bold" style="color: #FF8200;">Koumassi et Vridi</h5>
-                                            <p class="display-6 fw-bold mb-0">2 000 000 000 <small class="fs-6">F
-                                                    CFA</small></p>
                                             <p class="text-muted mt-2 mb-0">Pour la réhabilitation des zones industrielles
                                             </p>
                                         </div>

@@ -101,13 +101,13 @@
     <section id="agro-success" class="agro-success section">
         <div class="inst-container-compact" data-aos="fade-up">
             <div class="inst-header-compact mb-4 text-center">
-                <h2 class="inst-title-compact">RÉALISATIONS PRINCIPALES</h2>
+                <h2 class="inst-title-compact">NOS REALISATIONS</h2>
                 <div class="tricolor-accent-compact mx-auto">
                     <span class="bar orange"></span>
                     <span class="bar white"></span>
                     <span class="bar green"></span>
                 </div>
-                <p class="mt-3">Les principales réalisations du FREMIN au profit des acteurs du secteur industriel
+                <p class="mt-3">Les réalisations du FREMIN au profit des acteurs du secteur industriel
                 </p>
             </div>
         </div>

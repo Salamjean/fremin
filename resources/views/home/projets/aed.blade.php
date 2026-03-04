@@ -18,23 +18,43 @@
         <div class="container">
 
             <!-- Tabs Navigation -->
-            <ul class="nav nav-tabs nav-tabs-bordered mb-4" id="aedTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="presentation-tab" data-bs-toggle="tab"
-                        data-bs-target="#presentation" type="button" role="tab" aria-controls="presentation"
-                        aria-selected="true" style="color: #009B3A; font-weight: 700;">Présentation</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="realisation-tab" data-bs-toggle="tab" data-bs-target="#realisation"
-                        type="button" role="tab" aria-controls="realisation" aria-selected="false"
-                        style="color: #1a1a1a; font-weight: 600;">Réalisations</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="media-tab" data-bs-toggle="tab" data-bs-target="#media" type="button"
-                        role="tab" aria-controls="media" aria-selected="false"
-                        style="color: #1a1a1a; font-weight: 600;">{{ __('media') }}</button>
-                </li>
-            </ul>
+            <div class="d-flex justify-content-center mb-5">
+                <ul class="nav nav-pills custom-nav-pills shadow-sm rounded-pill p-1 bg-white" id="aedTab" role="tablist" aria-orientation="horizontal">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-pill px-4 active" id="presentation-tab" data-bs-toggle="tab"
+                            data-bs-target="#presentation" type="button" role="tab" aria-controls="presentation"
+                            aria-selected="true">Présentation</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-pill px-4" id="realisation-tab" data-bs-toggle="tab" data-bs-target="#realisation"
+                            type="button" role="tab" aria-controls="realisation" aria-selected="false">Réalisations</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-pill px-4" id="media-tab" data-bs-toggle="tab" data-bs-target="#media" type="button"
+                            role="tab" aria-controls="media" aria-selected="false">{{ __('media') }}</button>
+                    </li>
+                </ul>
+            </div>
+
+            <style>
+                .custom-nav-pills .nav-link {
+                    transition: all 0.3s ease;
+                    font-weight: 600;
+                    color: #333;
+                }
+
+                .custom-nav-pills .nav-link:hover {
+                    background-color: rgba(0, 155, 58, 0.1);
+                    color: #009B3A !important;
+                }
+
+                .custom-nav-pills .nav-link.active,
+                .custom-nav-pills .nav-link.active:focus,
+                .custom-nav-pills .nav-link.active:hover {
+                    background-color: #009B3A !important;
+                    color: white !important;
+                }
+            </style>
 
             <!-- Tabs Content -->
             <div class="tab-content pt-2" id="aedTabContent">
@@ -180,19 +200,12 @@
                                 <div class="col-lg-8 col-md-12">
                                     <div class="media-card video-card rounded-4 overflow-hidden position-relative shadow-sm"
                                         style="height: 420px;">
-                                        <img src="https://placehold.co/1200x800/212529/white?text=Video+Story:+Relance+Industrielle"
-                                            alt="Vidéo AED" class="w-100 h-100 object-fit-cover transition-transform">
+                                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/UI7eoNswhrU?si=A97Xv7m5brdBkomp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                         <div
-                                            class="media-overlay d-flex flex-column justify-content-center align-items-center text-center p-4">
-                                            <div class="play-button-wrapper mb-3">
-                                                <i class="fas fa-play-circle fa-4x text-white"></i>
-                                            </div>
-                                            <h4 class="text-white fw-bold mb-2">Témoignage de Relance</h4>
-                                            <p class="text-white-50 small mb-0">Découvrez l'impact direct du programme sur
-                                                les entreprises</p>
+                                            class="media-overlay d-flex flex-column justify-content-center align-items-center text-center p-4" style="pointer-events: none;">
                                         </div>
                                         <div
-                                            class="badge-type position-absolute top-0 end-0 m-3 px-3 py-1 bg-warning text-dark rounded-pill fw-bold">
+                                            class="badge-type position-absolute top-0 end-0 m-3 px-3 py-1 bg-warning text-dark rounded-pill fw-bold" style="pointer-events: none;">
                                             Vidéo</div>
                                     </div>
                                 </div>

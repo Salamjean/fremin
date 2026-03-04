@@ -48,11 +48,20 @@
 
                         <!-- C2.1 -->
                         <div class="col-12" data-aos="fade-up">
-                            <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
+                            <div class="card-premium h-60 overflow-hidden shadow-sm p-4">
                                 <h3 class="mb-3" style="color: black; font-weight: 700;">Cérémonie d’inauguration et la
                                     pose de la première pierre de la construction de la seconde phase du Centre des
                                     Expositions des
                                     Produits de la Petite Transformation et de l’Artisanat (CEPPTA)</h3>
+
+                                <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden shadow-sm">
+                                    <iframe src="https://www.youtube.com/embed/UI7eoNswhrU?si=A97Xv7m5brdBkomp"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                        class="w-100 h-60 border-0"></iframe>
+                                </div>
+
                                 <div class="row g-2 mb-3">
                                     <!-- Placeholders for other images -->
                                     <div class="col-md-4">
@@ -278,7 +287,9 @@
                                     <div class="col-md-12">
                                         <div class="bg-secondary rounded"
                                             style="height: 500px; display: flex; align-items: center; justify-content: center; color: white;">
-                                           <img src="{{ asset('assets/img/promotion-industrielle-le-ministre-souleymane-diarrassouba-procede-a-louver_uu3nr3q4jqk.jpg') }}" style="width: 100%; height: 100%; object-fit: cover;" alt=""></div>
+                                            <img src="{{ asset('assets/img/promotion-industrielle-le-ministre-souleymane-diarrassouba-procede-a-louver_uu3nr3q4jqk.jpg') }}"
+                                                style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                                        </div>
                                     </div>
                                 </div>
                                 <p class="text-muted">Dans le cadre du développement des cinq (05) clusters, le Ministère en

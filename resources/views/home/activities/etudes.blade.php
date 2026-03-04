@@ -15,10 +15,10 @@
 
     <section class="studies-list py-5">
         <div class="container">
-            <div class="row g-4" id="studiesAccordion">
+            <div class="row g-4 align-items-start" id="studiesAccordion">
                 <!-- Study 1: Stratégies de développement de Clustders (C1.1) -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="mission-item-card h-100 position-relative pb-5">
+                    <div class="mission-item-card position-relative pb-5">
                         <div class="m-icon"><i class="fas fa-project-diagram"></i></div>
                         <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Elaboration de cinq (05) stratégies de
                             développement de cinq (05) cluster</h4>
@@ -46,12 +46,12 @@
                 </div>
                 <!-- Study 1: Stratégies de développement de Clustders (C1.1) -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="mission-item-card h-100 position-relative pb-5">
+                    <div class="mission-item-card position-relative pb-5">
                         <div class="m-icon"><i class="fas fa-project-diagram"></i></div>
                         <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Actualisation du Programme National de
                             Restructuration et de Mise à Niveau des entreprises industrielles « PNRMN Durable »</h4>
 
-                        <div class="collapse" id="studyCollapse1" data-bs-parent="#studiesAccordion">
+                        <div class="collapse" id="studyCollapse2" data-bs-parent="#studiesAccordion">
                             <p class="text-muted">Dans le cadre du renforcement de la compétitivité des
                                 entreprises ivoiriennes, le Gouvernement a mis en œuvre, depuis 2014, le Programme National
                                 de Restructuration et de Mise à Niveau (PNRMN). Il a pour objectif d’accompagner les
@@ -65,7 +65,7 @@
                         </div>
                         <div class="position-absolute bottom-0 start-0 w-100 p-4">
                             <a href="javascript:void(0)" class="btn btn-outline-success btn-sm w-100 toggle-btn"
-                                data-bs-toggle="collapse" data-bs-target="#studyCollapse1">
+                                data-bs-toggle="collapse" data-bs-target="#studyCollapse2">
                                 Voir plus <i class="fas fa-chevron-down ms-1"></i>
                             </a>
                         </div>
@@ -74,7 +74,7 @@
 
                 <!-- Study 3: Fiches filières (C1.3) -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="mission-item-card h-100 position-relative pb-5" style="border-bottom: 5px solid #009B3A;">
+                    <div class="mission-item-card position-relative pb-5">
                         <div class="m-icon"><i class="fas fa-file-alt"></i></div>
                         <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Elaboration des fiches filières
                             industrielles prioritaires</h4>
@@ -96,15 +96,16 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Study 3: Fiches filières (C1.3) -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="mission-item-card h-100 position-relative pb-5" style="border-bottom: 5px solid #009B3A;">
+
+                <!-- Study 4: Fiches filières (C1.3) -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mission-item-card position-relative pb-5">
                         <div class="m-icon"><i class="fas fa-file-alt"></i></div>
-                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Stratégie pour le développement de la petite
+                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Stratégie pour le développement de la
+                            petite
                             transformation</h4>
 
-                        <div class="collapse" id="studyCollapse3" data-bs-parent="#studiesAccordion">
+                        <div class="collapse" id="studyCollapse4" data-bs-parent="#studiesAccordion">
                             <p class="text-muted">La création d’emplois décents constitue un enjeu majeur
                                 pour le Gouvernement ivoirien. Afin d’y répondre, les autorités ont placé
                                 l’industrialisation au cœur de la transformation structurelle de l’économie, conformément
@@ -118,18 +119,18 @@
                         </div>
                         <div class="position-absolute bottom-0 start-0 w-100 p-4">
                             <a href="javascript:void(0)" class="btn btn-outline-success btn-sm w-100 toggle-btn"
-                                data-bs-toggle="collapse" data-bs-target="#studyCollapse3">
+                                data-bs-toggle="collapse" data-bs-target="#studyCollapse4">
                                 Voir plus <i class="fas fa-chevron-down ms-1"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                
+
 
                 <!-- Study 5: Textile et Agro (C1.5) -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="mission-item-card h-100 position-relative pb-5">
+                    <div class="mission-item-card position-relative pb-5">
                         <div class="m-icon"><i class="fas fa-industry"></i></div>
                         <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Etude pour l’identification des acteurs
                             des secteurs textile-habillement et de l’agro-transformation ainsi leurs besoins en équipements
@@ -155,40 +156,22 @@
                     </div>
                 </div>
 
-                <!-- Study 5: Textile et Agro (C1.5) -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="mission-item-card h-100 position-relative pb-5">
-                        <div class="m-icon"><i class="fas fa-industry"></i></div>
-                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Appui direct aux entreprises</h4>
-
-                        <div class="collapse" id="studyCollapse5" data-bs-parent="#studiesAccordion">
-                            <p class="text-muted">Le Programme National de Restructuration et de Mise à Niveau (PNRMN) des
-                                entreprises industrielles vise à préparer les entreprises manufacturières ivoiriennes à
-                                faire face à une concurrence accrue, dans le contexte de la libéralisation des échanges
-                                induite par les accords multilatéraux de libre-échange.
-                                Le PNRMN s’articule autour de trois (03) composantes principales : (i) l’appui direct aux
-                                entreprises ;
-                                (ii) le renforcement de l’environnement de la qualité et des infrastructures existantes ;
-                                (iii) la création de trois (03) Centres d’Appui à la Compétitivité et au Développement
-                                Industriel (CACDI).
-                                Le Programme est exécuté sous la tutelle technique du Ministère en charge de l’Industrie. En
-                                ce qui concerne la composante relative à l’appui direct aux entreprises, l’Agence pour le
-                                Développement et la Compétitivité des Industries de Côte d’Ivoire (ADCI) mandatée par le
-                                FREMIN se charge de la sélection et de l’accompagnement des entreprises devant bénéficier
-                                d’un appui.
-                            </p>
-                        </div>
-                        <div class="position-absolute bottom-0 start-0 w-100 p-4">
-                            <a href="javascript:void(0)" class="btn btn-outline-success btn-sm w-100 toggle-btn"
-                                data-bs-toggle="collapse" data-bs-target="#studyCollapse5">
-                                Voir plus <i class="fas fa-chevron-down ms-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
+
+    <style>
+        .mission-item-card {
+            border-bottom: 5px solid #009B3A !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mission-item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 
 @endsection
 
