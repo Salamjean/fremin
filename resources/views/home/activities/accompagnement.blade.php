@@ -59,7 +59,7 @@
                         <div class="m-icon" style="background: rgba(255,255,255,0.2); color: #fff;"><i
                                 class="fas fa-industry"></i></div>
                         <h4 class="mb-3" style="font-weight: 700; color: #fff;">Appui aux acteurs exerçant dans le secteur
-                            textile-habillement et de l’agro-transformation
+                            textile-habillement
 
                         </h4>
 
