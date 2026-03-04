@@ -55,7 +55,8 @@
                                     Produits de la Petite Transformation et de l’Artisanat (CEPPTA)</h3>
 
                                 <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden shadow-sm">
-                                    <iframe src="https://www.youtube.com/embed/UI7eoNswhrU?si=A97Xv7m5brdBkomp"
+                                    <iframe
+                                        src="https://www.youtube.com/embed/UI7eoNswhrU?rel=0&loop=1&playlist=UI7eoNswhrU"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
@@ -109,6 +110,24 @@
                             <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
                                 <h3 class="mb-3" style="color: black; font-weight: 700;">La cérémonie de distribution
                                     d’équipements de production au profit des acteurs de la petite agro-transformation</h3>
+
+                                <div class="row g-2 mb-3">
+                                    <div class="col-md-6">
+                                        <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+                                            <iframe
+                                                src="https://drive.google.com/file/d/1FCDVCYuf8q4qttVrC455YorSo9eHqo1Y/preview"
+                                                class="w-100 h-100 border-0" allow="autoplay" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+                                            <iframe
+                                                src="https://drive.google.com/file/d/1zbVKJeZo0Ur5AecdOd2GcU322ajO2x0N/preview"
+                                                class="w-100 h-100 border-0" allow="autoplay" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="row g-2 mb-3">
                                     <!-- Placeholders for images -->
                                     <div class="col-md-6">
@@ -258,8 +277,9 @@
                                 <h3 class="mb-3" style="color: black; font-weight: 700;">Ateliers de lancement des études
                                     stratégique pour le développement de cinq (05) clusters</h3>
                                 <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden">
-                                    <iframe src="https://www.youtube.com/embed/GbSaUTFXIfQ" title="YouTube video"
-                                        allowfullscreen class="w-100 h-100 border-0">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/GbSaUTFXIfQ?rel=0&loop=1&playlist=GbSaUTFXIfQ"
+                                        title="YouTube video" allowfullscreen class="w-100 h-100 border-0">
                                     </iframe>
                                 </div>
 
