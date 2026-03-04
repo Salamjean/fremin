@@ -95,7 +95,7 @@
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
                     <div class="mission-item-card position-relative pb-5">
                         <div class="m-icon"><i class="fas fa-industry"></i></div>
-                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Appui direct aux entreprises</h4>
+                        <h4 class="mb-3" style="font-weight: 700; color: #1a1a1a;">Assistance technique aux entreprises</h4>
 
                         <div class="collapse" id="studyCollapse6" data-bs-parent="#supportAccordion">
                             <p class="text-muted">Le Programme National de Restructuration et de Mise à Niveau (PNRMN) des
@@ -112,6 +112,7 @@
                                 Développement et la Compétitivité des Industries de Côte d’Ivoire (ADCI) mandatée par le
                                 FREMIN se charge de la sélection et de l’accompagnement des entreprises devant bénéficier
                                 d’un appui.
+                                Le FREMIN a accompagné jusqu’à ce jour 15 entreprises dans le cadre du PNRMN.
                             </p>
                         </div>
                         <div class="position-absolute bottom-0 start-0 w-100 p-4">
