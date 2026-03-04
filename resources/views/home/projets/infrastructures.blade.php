@@ -125,7 +125,6 @@
                     <div class="content-box-premium p-4 p-md-5" data-aos="fade-up">
                         <div class="section-header text-center mb-5">
                             <h3 style="color: #1a1a1a; font-weight: 700;">Détails des Travaux Prévus</h3>
-                            <p class="text-muted">Répartition des ressources et matrice des interventions</p>
                         </div>
 
                         <div class="table-responsive shadow-sm rounded-4 overflow-hidden">
