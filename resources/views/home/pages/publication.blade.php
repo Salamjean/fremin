@@ -15,19 +15,19 @@
     <section class="py-5 bg-white">
         <div class="container py-5">
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="#rapports" class="pub-cat-card-v2 shadow-sm">
                         <div class="pub-cat-icon-v2"><i class="fas fa-file-invoice"></i></div>
                         <h5 class="fw-bold mb-2">Rapports</h5>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <a href="#etudes" class="pub-cat-card-v2 shadow-sm">
                         <div class="pub-cat-icon-v2"><i class="fas fa-microscope"></i></div>
                         <h5 class="fw-bold mb-2">Études</h5>
                     </a>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                </div> -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <a href="#autres" class="pub-cat-card-v2 shadow-sm">
                         <div class="pub-cat-icon-v2"><i class="fas fa-folder-plus"></i></div>
                         <h5 class="fw-bold mb-2">Autres Ressources</h5>
