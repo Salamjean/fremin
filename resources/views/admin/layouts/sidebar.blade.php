@@ -153,8 +153,7 @@
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link"
-                                    href="{{ route('admin.presentation-governances.index') }}">
+                                <a class="mdc-drawer-link" href="{{ route('admin.presentation-governances.index') }}">
                                     Organes de Gestion
                                 </a>
                             </div>
@@ -250,6 +249,34 @@
                     </div>
                 </div>
 
+                <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                        data-target="ui-sub-projets-detail">
+                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                            aria-hidden="true">assignment_turned_in</i>
+                        Projets
+                        <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+                    </a>
+                    <div class="mdc-expansion-panel" id="ui-sub-projets-detail">
+                        <nav class="mdc-list mdc-drawer-subhero">
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 1) }}">
+                                    Appuis directs
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 2) }}">
+                                    AED
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 3) }}">
+                                    Infrastructures
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
             </nav>
         </div>
 </aside>

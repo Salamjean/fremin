@@ -29,6 +29,7 @@ use App\Models\InstitutionalFramework;
 use App\Models\StrategicAxis;
 use App\Models\HistorySection;
 use App\Models\PresentationGovernance;
+use App\Models\ProjectPage;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -280,32 +281,35 @@ class HomeController extends Controller
     public function modernisationPresentation()
     {
         $hero = HeroSection::getActive();
-        return view('home.projets.modernisation-presentation', compact('hero'));
+        $page = ProjectPage::find(1);
+        return view('home.projets.modernisation-presentation', compact('hero', 'page'));
     }
 
     public function modernisationRealisation()
     {
         $hero = HeroSection::getActive();
-        // Fetch financed companies for realization display
-        $financedCompanies = FinancedCompany::active()->ordered()->get();
-        return view('home.projets.modernisation-realisation', compact('hero', 'financedCompanies'));
+        $page = ProjectPage::findOrFail(1);
+        return view('home.projets.modernisation-realisation', compact('hero', 'page'));
     }
 
     public function modernisationMedia()
     {
         $hero = HeroSection::getActive();
-        return view('home.projets.modernisation-media', compact('hero'));
+        $page = ProjectPage::find(1);
+        return view('home.projets.modernisation-media', compact('hero', 'page'));
     }
 
     public function aedProjet()
     {
         $hero = HeroSection::getActive();
-        return view('home.projets.aed', compact('hero'));
+        $page = ProjectPage::find(2);
+        return view('home.projets.aed', compact('hero', 'page'));
     }
 
     public function infrastructures()
     {
         $hero = HeroSection::getActive();
-        return view('home.projets.infrastructures', compact('hero'));
+        $page = ProjectPage::find(3);
+        return view('home.projets.infrastructures', compact('hero', 'page'));
     }
 }

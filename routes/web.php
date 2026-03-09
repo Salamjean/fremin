@@ -340,6 +340,12 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::post('/{opportunity}/toggle-status', [OpportunityController::class, 'toggleStatus'])->name('toggle-status');
     });
 
+    Route::prefix('project-pages')->name('admin.project-pages.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Project\ProjectPageController::class, 'index'])->name('index');
+        Route::get('/{projectPage}/edit', [\App\Http\Controllers\Admin\Project\ProjectPageController::class, 'edit'])->name('edit');
+        Route::put('/{projectPage}', [\App\Http\Controllers\Admin\Project\ProjectPageController::class, 'update'])->name('update');
+    });
+
     Route::prefix('projects')->name('admin.projects.')->group(function () {
         Route::get('/', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'index'])->name('index');
         Route::get('/create', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'create'])->name('create');
