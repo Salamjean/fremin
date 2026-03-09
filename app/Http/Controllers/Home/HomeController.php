@@ -23,6 +23,8 @@ use App\Models\FinancedCompany;
 use App\Models\PresentationStat;
 use App\Models\PresentationMission;
 use App\Models\PresentationValue;
+use App\Models\Project;
+use App\Models\Realisation;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -47,6 +49,9 @@ class HomeController extends Controller
 
         $ministerInfo = \App\Models\MinisterInfo::first();
 
+        $projects = Project::where('is_active', true)->take(3)->get();
+        $realisations = Realisation::active()->ordered()->get();
+
         return view('home.accueil', compact(
             'carousels',
             'teamMembers',
@@ -59,7 +64,9 @@ class HomeController extends Controller
             'programs',
             'financedCompanies',
             'faqs',
-            'ministerInfo'
+            'ministerInfo',
+            'projects',
+            'realisations'
         ));
     }
     public function about()

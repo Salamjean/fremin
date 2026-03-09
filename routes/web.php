@@ -305,6 +305,16 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::delete('/{project}', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'destroy'])->name('destroy');
         Route::post('/{project}/toggle-status', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'toggleStatus'])->name('toggle-status');
     });
+
+    Route::prefix('realisations')->name('admin.realisations.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\RealisationController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\RealisationController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\RealisationController::class, 'store'])->name('store');
+        Route::get('/{realisation}/edit', [\App\Http\Controllers\Admin\RealisationController::class, 'edit'])->name('edit');
+        Route::put('/{realisation}', [\App\Http\Controllers\Admin\RealisationController::class, 'update'])->name('update');
+        Route::delete('/{realisation}', [\App\Http\Controllers\Admin\RealisationController::class, 'destroy'])->name('destroy');
+        Route::post('/{realisation}/toggle-status', [\App\Http\Controllers\Admin\RealisationController::class, 'toggleStatus'])->name('toggle-status');
+    });
 });
 
 Route::get('/publications', [PublicationController::class, 'frontIndex'])->name('publications.index');

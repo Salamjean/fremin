@@ -32,18 +32,51 @@
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.team.index') }}">
-                                    Équipe
+                                <a class="mdc-drawer-link" href="{{ route('admin.governance-cards.index') }}">
+                                    ORGANES
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.projects.index') }}">
+                                    Nos Projets
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.realisations.index') }}">
+                                    NOS REALISATIONS
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{ route('admin.presentation-stats.index') }}">
-                                    Statistiques
+                                    Statistique
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.minister-infos.index') }}">
+                                    Mot du ministre
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{ route('admin.partners.index') }}">
-                                    Partenaires
+                                    Nos Partenaires
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                
+                <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-autres">
+                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                            aria-hidden="true">more_horiz</i>
+                        Autres Sections
+                        <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+                    </a>
+                    <div class="mdc-expansion-panel" id="ui-sub-autres">
+                        <nav class="mdc-list mdc-drawer-submenu">
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.team.index') }}">
+                                    Équipe
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
@@ -57,23 +90,8 @@
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.governance-cards.index') }}">
-                                    Gouvernance
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{ route('admin.financed-companies.index') }}">
                                     Entreprises
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.programs.index') }}">
-                                    Accompagnements
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.minister-infos.index') }}">
-                                    Mot du Ministre
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
@@ -205,13 +223,6 @@
                     </div>
                 </div>
 
-                <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="{{ route('admin.projects.index') }}">
-                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
-                            aria-hidden="true">work</i>
-                        Projets
-                    </a>
-                </div>
             </nav>
         </div>
 </aside>
