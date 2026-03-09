@@ -9,9 +9,7 @@
                 {{ $hero->main_title ?? 'PRÉSENTATION DU FREMIN' }}
             </h1>
             <div class="mx-auto bg-white mb-4" style="height: 4px; width: 80px;"></div>
-            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">
-                {{ $hero->subtitle ?? 'Le moteur de la restructuration et de la modernisation industrielle en Côte d\'Ivoire.' }}
-            </p>
+
         </div>
     </div>
 

@@ -8,9 +8,7 @@
                 style="font-weight: 900; font-size: 45px; letter-spacing: -1px;">{{ $hero->main_title ?? 'NOS PROGRAMMES' }}
             </h1>
             <div class="mx-auto bg-white mb-4" style="height: 4px; width: 80px;"></div>
-            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">
-                {{ $hero->subtitle ?? 'Des solutions stratégiques pour la compétitivité et la croissance de l\'industrie Ivoirienne.' }}
-            </p>
+          
         </div>
     </div>
 

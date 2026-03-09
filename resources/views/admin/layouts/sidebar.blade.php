@@ -65,7 +65,7 @@
                     </div>
                 </div>
 
-                <div class="mdc-list-item mdc-drawer-item">
+                <!-- <div class="mdc-list-item mdc-drawer-item">
                     <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
                         data-target="ui-sub-autres">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
@@ -117,7 +117,7 @@
                             </div>
                         </nav>
                     </div>
-                </div>
+                </div> -->
                 <div class="mdc-list-item mdc-drawer-item">
                     <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-hero">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
@@ -160,6 +160,63 @@
                             <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{ route('admin.team.index') }}">
                                     Membres du Comité
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                        data-target="ui-sub-projets-detail">
+                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                            aria-hidden="true">assignment_turned_in</i>
+                        Projets
+                        <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+                    </a>
+                    <div class="mdc-expansion-panel" id="ui-sub-projets-detail">
+                        <nav class="mdc-list mdc-drawer-subhero">
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 1) }}">
+                                    Appuis directs
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 2) }}">
+                                    AED
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 3) }}">
+                                    Infrastructures
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                        data-target="ui-sub-activites">
+                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                            aria-hidden="true">event_note</i>
+                        Activités
+                        <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+                    </a>
+                    <div class="mdc-expansion-panel" id="ui-sub-activites">
+                        <nav class="mdc-list mdc-drawer-subhero">
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.activity-pages.edit', 1) }}">
+                                    Etudes réalisées
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.activity-pages.edit', 2) }}">
+                                    Appui aux acteurs
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.activity-pages.edit', 3) }}">
+                                    Cérémonies
                                 </a>
                             </div>
                         </nav>
@@ -225,7 +282,7 @@
                     </div>
                 </div>
 
-                <div class="mdc-list-item mdc-drawer-item">
+                <!-- <div class="mdc-list-item mdc-drawer-item">
                     <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-prog">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">assignment</i>
@@ -247,64 +304,7 @@
                             </div>
                         </nav>
                     </div>
-                </div>
-
-                <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
-                        data-target="ui-sub-projets-detail">
-                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
-                            aria-hidden="true">assignment_turned_in</i>
-                        Projets
-                        <i class="mdc-drawer-arrow material-icons">chevron_right</i>
-                    </a>
-                    <div class="mdc-expansion-panel" id="ui-sub-projets-detail">
-                        <nav class="mdc-list mdc-drawer-subhero">
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 1) }}">
-                                    Appuis directs
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 2) }}">
-                                    AED
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 3) }}">
-                                    Infrastructures
-                                </a>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
-                        data-target="ui-sub-activites">
-                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
-                            aria-hidden="true">event_note</i>
-                        Activités
-                        <i class="mdc-drawer-arrow material-icons">chevron_right</i>
-                    </a>
-                    <div class="mdc-expansion-panel" id="ui-sub-activites">
-                        <nav class="mdc-list mdc-drawer-subhero">
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.activity-pages.edit', 1) }}">
-                                    Etudes réalisées
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.activity-pages.edit', 2) }}">
-                                    Appui aux acteurs
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.activity-pages.edit', 3) }}">
-                                    Cérémonies
-                                </a>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
+                </div> -->
             </nav>
         </div>
 </aside>

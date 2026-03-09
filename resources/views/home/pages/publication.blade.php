@@ -7,7 +7,7 @@
             <h1 class="text-white display-2 mb-3 fw-black animate__animated animate__zoomIn"
                 style="font-weight: 900; font-size: 45px; letter-spacing: -1px;">{{ $hero->main_title ?? 'PUBLICATIONS & RESSOURCES' }}</h1>
             <div class="mx-auto bg-white mb-4" style="height: 4px; width: 80px;"></div>
-            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">{{ $hero->subtitle ?? 'Documentation officielle, études sectorielles et ressources stratégiques pour l\'industrie.' }}</p>
+          
         </div>
     </div>
 

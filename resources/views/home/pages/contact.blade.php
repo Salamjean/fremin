@@ -7,8 +7,7 @@
             <h1 class="text-white display-2 mb-3 fw-black animate__animated animate__zoomIn"
                 style="font-weight: 900;font-size: 40px; letter-spacing: -2px;">NOUS CONTACTER</h1>
             <div class="mx-auto bg-white mb-4" style="height: 4px; width: 80px;"></div>
-            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">Des experts à votre écoute pour la
-                transformation de votre entreprise.</p>
+
         </div>
     </div>
 

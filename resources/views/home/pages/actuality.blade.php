@@ -8,8 +8,6 @@
                 style="font-weight: 900; font-size: 45px; letter-spacing: -1px;">
                 {{ $hero->main_title ?? 'ACTUALITÉS & ÉVÉNEMENTS' }}</h1>
             <div class="mx-auto bg-white mb-4" style="height: 4px; width: 80px;"></div>
-            <p class="text-white lead animate__animated animate__fadeInUp fw-medium">
-                {{ $hero->subtitle ?? 'Suivez les moments forts de l\'industrie Ivoirienne et les actions du FREMIN.' }}</p>
         </div>
     </div>
 
