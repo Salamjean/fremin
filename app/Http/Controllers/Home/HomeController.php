@@ -214,7 +214,13 @@ class HomeController extends Controller
     public function comiteGestion()
     {
         $teamMembers = TeamMember::active()->ordered()->get();
-        return view('home.institutional.comite-gestion', compact('teamMembers'));
+        $governances = PresentationGovernance::active()->ordered()->get();
+
+        $comite = $governances->where('section_key', 'comite_gestion')->first();
+        $cellule = $governances->where('section_key', 'cellule_technique')->first();
+        $tutelles = $governances->where('section_key', 'tutelles')->first();
+
+        return view('home.institutional.comite-gestion', compact('teamMembers', 'comite', 'cellule', 'tutelles'));
     }
 
     public function celluleTechnique()

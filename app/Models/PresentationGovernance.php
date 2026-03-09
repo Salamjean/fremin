@@ -12,6 +12,8 @@ class PresentationGovernance extends Model
         'title_en',
         'description',
         'description_en',
+        'content',
+        'content_en',
         'items',
         'sort_order',
         'is_active'
@@ -21,4 +23,14 @@ class PresentationGovernance extends Model
         'is_active' => 'boolean',
         'sort_order' => 'integer'
     ];
+
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
+
+    public function scopeOrdered($query)
+    {
+        return $query->orderBy('sort_order', 'asc');
+    }
 }

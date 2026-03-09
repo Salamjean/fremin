@@ -153,8 +153,14 @@
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.presentation-governances.index') }}">
-                                    Gouvernance
+                                <a class="mdc-drawer-link"
+                                    href="{{ route('admin.presentation-governances.index') }}">
+                                    Organes de Gestion
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.team.index') }}">
+                                    Membres du Comité
                                 </a>
                             </div>
                         </nav>

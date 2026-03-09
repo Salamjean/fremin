@@ -3,6 +3,7 @@
 @section('content')
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
 
     <style>
         .governance-form {
@@ -134,6 +135,15 @@
                                     @enderror
                                 </div>
 
+                                <div class="col-12">
+                                    <label class="form-label">Contenu / Rôle (Optionnel)</label>
+                                    <textarea name="content" id="editor"
+                                        class="form-control @error('content') is-invalid @enderror">{{ old('content', $governance->content ?? '') }}</textarea>
+                                    @error('content')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
                                 <div class="col-12 mt-4">
                                     <label class="form-label d-flex justify-content-between">
                                         Liste des membres / éléments de la liste
@@ -187,16 +197,24 @@
     </div>
 
     <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'],
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
         function addListItem() {
             const container = document.getElementById('list-items-container');
             const div = document.createElement('div');
             div.className = 'list-item-box d-flex g-2';
             div.innerHTML = `
-                    <input type="text" name="list_items[]" class="form-control me-2" placeholder="Texte de l'élément">
-                    <button type="button" class="btn btn-sm btn-danger rounded-circle" onclick="this.parentElement.remove()">
-                        <i class="fas fa-times"></i>
-                    </button>
-                `;
+                        <input type="text" name="list_items[]" class="form-control me-2" placeholder="Texte de l'élément">
+                        <button type="button" class="btn btn-sm btn-danger rounded-circle" onclick="this.parentElement.remove()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    `;
             container.appendChild(div);
         }
     </script>

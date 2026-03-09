@@ -125,9 +125,10 @@ class PresentationContentSeeder extends Seeder
                     "un représentant du Ministre chargé de l'Industrie (Présidence)",
                     "un représentant du Ministre chargé de l'Economie et des Finances",
                     "un représentant du Ministre chargé du Budget",
-                    "un représentant du Ministre chargé du Petites et Moyennes Entreprises",
+                    "un représentant du Ministre chargé des Petites et Moyennes Entreprises",
                     "le Directeur Général de la BNI"
                 ],
+                'content' => "Le Comité de Gestion suit l'exécution des opérations du FREMIN et établit des rapports trimestriels et un rapport annuel de fin d'exercice, au plus tard le 31 mars de l'année suivante.",
                 'sort_order' => 1
             ],
             [
@@ -140,6 +141,7 @@ class PresentationContentSeeder extends Seeder
                     "un représentant du Ministre chargé du Budget",
                     "un représentant de la BNI"
                 ],
+                'content' => "La Cellule Technique est chargée d'instruire et d'analyser les dossiers de demande d'appuis transmis au Comité de Gestion. Elle assure le suivi de la mise en œuvre des décisions prises par le Comité de Gestion.",
                 'sort_order' => 2
             ],
             [
@@ -147,6 +149,7 @@ class PresentationContentSeeder extends Seeder
                 'title' => 'Tutelles',
                 'desc' => "Le FREMIN est placé sous la tutelle technique du Ministre chargé de l'Industrie et sous la tutelle financière du Ministre chargé de l'Economie et des Finances, en liaison avec le Ministre chargé du Budget.",
                 'items' => [],
+                'content' => null,
                 'sort_order' => 3
             ]
         ];
@@ -158,6 +161,7 @@ class PresentationContentSeeder extends Seeder
                     'title' => $sec['title'],
                     'description' => $sec['desc'],
                     'items' => $sec['items'],
+                    'content' => $sec['content'],
                     'sort_order' => $sec['sort_order'],
                     'is_active' => true
                 ]

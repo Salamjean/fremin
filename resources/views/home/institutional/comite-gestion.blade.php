@@ -135,7 +135,6 @@
             <h1
                 style="font-size: 42px; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 10px;">
                 GOUVERNANCE</h1>
-            <p style="opacity: 0.8; font-size: 18px;">Organes de gestion et de contrôle du FREMIN</p>
         </div>
     </section>
 
@@ -151,23 +150,25 @@
             <div id="comite" class="gov-tab-content active">
                 <div class="row">
                     <div class="col-lg-12" data-aos="fade-right">
-                        <div class="inst-detail-card">
-                            <h2>Composition</h2>
-                            <p>Le FREMIN est administré par un Comité de Gestion composé comme suit :</p>
-                            <ul class="inst-detail-list">
-                                <li>un représentant du Ministre chargé de l'Industrie (Présidence)</li>
-                                <li>un représentant du Ministre chargé de l'Economie et des Finances</li>
-                                <li>un représentant du Ministre chargé du Budget</li>
-                                <li>un représentant du Ministre chargé des Petites et Moyennes Entreprises</li>
-                                <li>le Directeur Général de la BNI</li>
-                            </ul>
-                        </div>
-                        <div class="inst-detail-card">
-                            <h2>Rôle</h2>
-                            <p>Le Comité de Gestion suit l'exécution des opérations du FREMIN et établit des rapports
-                                trimestriels et un rapport annuel de fin d'exercice, au plus tard le 31 mars de l'année
-                                suivante.</p>
-                        </div>
+                        @if($comite)
+                            <div class="inst-detail-card">
+                                <h2>{{ $comite->title }}</h2>
+                                <p>{{ $comite->description }}</p>
+                                @if($comite->items)
+                                    <ul class="inst-detail-list">
+                                        @foreach($comite->items as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </div>
+                            @if($comite->content)
+                                <div class="inst-detail-card">
+                                    <h2>Rôle</h2>
+                                    {!! $comite->content !!}
+                                </div>
+                            @endif
+                        @endif
                     </div>
                 </div>
 
@@ -308,22 +309,25 @@
             <div id="cellule" class="gov-tab-content">
                 <div class="row">
                     <div class="col-lg-12" data-aos="fade-right">
+                        @if($cellule)
                         <div class="inst-detail-card">
-                            <h2>Composition</h2>
-                            <p>Le Comité de Gestion est assisté par une Cellule Technique composée comme suit :</p>
+                            <h2>{{ $cellule->title }}</h2>
+                            <p>{{ $cellule->description }}</p>
+                            @if($cellule->items)
                             <ul class="inst-detail-list">
-                                <li>un représentant du Ministre chargé de l'Industrie (Présidence)</li>
-                                <li>un représentant du Ministre chargé de l'Economie et des Finances</li>
-                                <li>un représentant du Ministre chargé du Budget</li>
-                                <li>un représentant de la BNI</li>
+                                @foreach($cellule->items as $item)
+                                <li>{{ $item }}</li>
+                                @endforeach
                             </ul>
+                            @endif
                         </div>
+                        @if($cellule->content)
                         <div class="inst-detail-card">
                             <h2>Rôle</h2>
-                            <p>La Cellule Technique est chargée d'instruire et d'analyser les dossiers de demande d'appuis
-                                transmis au Comité de Gestion. Elle assure le suivi de la mise en œuvre des décisions prises
-                                par le Comité de Gestion.</p>
+                            {!! $cellule->content !!}
                         </div>
+                        @endif
+                        @endif
                     </div>
                 </div>
             </div>
@@ -332,12 +336,12 @@
             <div id="tutelles" class="gov-tab-content">
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
+                        @if($tutelles)
                         <div class="inst-detail-card">
-                            <h2>Tutelles</h2>
-                            <p>Le FREMIN est placé sous la tutelle technique du Ministre chargé de l'Industrie et sous la
-                                tutelle financière du Ministre chargé de l'Economie et des Finances, en liaison avec le
-                                Ministre chargé du Budget.</p>
+                            <h2>{{ $tutelles->title }}</h2>
+                            <p>{{ $tutelles->description }}</p>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -363,21 +367,21 @@
             Swal.fire({
                 title: '<span style="color: #FF8200;">LE MOT DU PRÉSIDENT</span>',
                 html: `
-                                                    <div class="text-start" style="font-family: 'Inter', sans-serif;">
-                                                        <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
-                                                            <img src="${image}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
-                                                            <div>
-                                                                <h5 class="mb-0 fw-bold">${name}</h5>
-                                                                <p class="text-muted small mb-0">${role}</p>
+                                                        <div class="text-start" style="font-family: 'Inter', sans-serif;">
+                                                            <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+                                                                <img src="${image}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #009B3A; margin-right: 15px;">
+                                                                <div>
+                                                                    <h5 class="mb-0 fw-bold">${name}</h5>
+                                                                    <p class="text-muted small mb-0">${role}</p>
+                                                                </div>
+                                                            </div>
+                                                            <p style="font-style: italic; color: #555; line-height: 1.6;">"${bio}"</p>
+                                                            <div class="text-end mt-4">
+                                                                <p class="mb-0" style="font-weight: 600; color: #009B3A;">${name}</p>
+                                                                <p class="small text-muted">Président du Comité de Gestion</p>
                                                             </div>
                                                         </div>
-                                                        <p style="font-style: italic; color: #555; line-height: 1.6;">"${bio}"</p>
-                                                        <div class="text-end mt-4">
-                                                            <p class="mb-0" style="font-weight: 600; color: #009B3A;">${name}</p>
-                                                            <p class="small text-muted">Président du Comité de Gestion</p>
-                                                        </div>
-                                                    </div>
-                                                `,
+                                                    `,
                 showCloseButton: true,
                 showConfirmButton: true,
                 confirmButtonText: 'Fermer',

@@ -26,6 +26,8 @@ class PresentationGovernanceController extends Controller
             'section_key' => 'required|string|max:255|unique:presentation_governances',
             'title' => 'required|string|max:255',
             'description' => 'required|string',
+            'content' => 'nullable|string',
+            'content_en' => 'nullable|string',
             'sort_order' => 'required|integer',
         ]);
 
@@ -57,6 +59,7 @@ class PresentationGovernanceController extends Controller
             'section_key' => 'required|string|max:255|unique:presentation_governances,section_key,' . $presentationGovernance->id,
             'title' => 'required|string|max:255',
             'description' => 'required|string',
+            'content' => 'nullable|string',
             'sort_order' => 'required|integer',
         ]);
 
