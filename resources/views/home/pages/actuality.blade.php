@@ -19,20 +19,23 @@
             <div class="container py-5">
                 <div class="row g-0 shadow-lg overflow-hidden border" data-aos="fade-up">
                     <div class="col-lg-7">
-                        <img src="{{ asset('assets/img/eeeeeeee.png') }}"
+                        <img src="{{ (str_contains($featuredArticle->image, 'assets/')) ? asset($featuredArticle->image) : asset('storage/' . $featuredArticle->image) }}"
                             alt="{{ $featuredArticle->image_alt ?? $featuredArticle->title }}"
                             class="img-fluid h-100 object-fit-cover">
                     </div>
                     <div class="col-lg-5 bg-light p-5 d-flex flex-column justify-content-center">
-                        <div class="contact-badge mb-3">À LA UNE</div>
-                        <h2 class="fw-bold mb-4">La première phase du CEPPTA inauguré le jeudi 18 décembre 2025 à 11h00 au sein de la zone industrielle de Yamoussoukro</h2>
-                        <p class="text-muted mb-4">Le 18 décembre 2025, le CEPPTA a inauguré sa première phase au sein de la zone industrielle de Yamoussoukro. Cette inauguration marque un tournant important pour l'industrie Ivoirienne et pour le FREMIN.</p>
+                        <div class="contact-badge mb-3">{{ $featuredArticle->badge_text ?? 'À LA UNE' }}</div>
+                        <h2 class="fw-bold mb-4">{{ $featuredArticle->title }}</h2>
+                        <p class="text-muted mb-4">{{ $featuredArticle->excerpt }}</p>
                         <div class="mb-4 d-flex align-items-center gap-3">
                             <span class="text-success fw-bold"><i class="far fa-calendar-alt me-2"></i>
-                                18 décembre 2025</span>
+                                {{ $featuredArticle->publication_date ? $featuredArticle->publication_date->translatedFormat('d F Y') : '' }}</span>
                             <span class="text-secondary">|</span>
-                            <span class="text-secondary"><i class="far fa-user me-2"></i> Par Monsieur le Ministre</span>
+                            <span class="text-secondary"><i class="far fa-user me-2"></i> {{ $featuredArticle->category ?? 'Actualité' }}</span>
                         </div>
+                        @if($featuredArticle->read_more_link)
+                            <a href="{{ $featuredArticle->read_more_link }}" class="btn btn-outline-success rounded-pill px-4 align-self-start">{{ $featuredArticle->read_more_text ?? 'Lire la suite' }}</a>
+                        @endif
                     </div>
                 </div>
             </div>

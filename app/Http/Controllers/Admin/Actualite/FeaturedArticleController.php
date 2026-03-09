@@ -51,6 +51,9 @@ class FeaturedArticleController extends Controller
 
         $data['is_active'] = $request->has('is_active');
         $data['views'] = $request->get('views', 0);
+        $data['badge_text'] = $request->badge_text ?? 'À la Une';
+        $data['badge_icon'] = $request->badge_icon ?? 'fas fa-star';
+        $data['read_more_text'] = $request->read_more_text ?? 'Lire l’article complet';
 
         FeaturedArticle::create($data);
 
@@ -98,6 +101,9 @@ class FeaturedArticleController extends Controller
 
         $data['is_active'] = $request->has('is_active');
         $data['views'] = $request->get('views', $featuredArticle->views);
+        $data['badge_text'] = $request->badge_text ?? 'À la Une';
+        $data['badge_icon'] = $request->badge_icon ?? 'fas fa-star';
+        $data['read_more_text'] = $request->read_more_text ?? 'Lire l’article complet';
 
         $featuredArticle->update($data);
 
