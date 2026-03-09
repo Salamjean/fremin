@@ -346,6 +346,12 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::put('/{projectPage}', [\App\Http\Controllers\Admin\Project\ProjectPageController::class, 'update'])->name('update');
     });
 
+    Route::prefix('activity-pages')->name('admin.activity-pages.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Activity\ActivityPageController::class, 'index'])->name('index');
+        Route::get('/{activityPage}/edit', [\App\Http\Controllers\Admin\Activity\ActivityPageController::class, 'edit'])->name('edit');
+        Route::put('/{activityPage}', [\App\Http\Controllers\Admin\Activity\ActivityPageController::class, 'update'])->name('update');
+    });
+
     Route::prefix('projects')->name('admin.projects.')->group(function () {
         Route::get('/', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'index'])->name('index');
         Route::get('/create', [\App\Http\Controllers\Admin\Project\ProjectController::class, 'create'])->name('create');

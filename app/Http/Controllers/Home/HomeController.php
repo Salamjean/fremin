@@ -30,6 +30,7 @@ use App\Models\StrategicAxis;
 use App\Models\HistorySection;
 use App\Models\PresentationGovernance;
 use App\Models\ProjectPage;
+use App\Models\ActivityPage;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -255,27 +256,31 @@ class HomeController extends Controller
     public function etudes()
     {
         $hero = HeroSection::getActive();
-        return view('home.activities.etudes', compact('hero'));
+        $page = ActivityPage::where('slug', 'etudes')->first();
+        return view('home.activities.etudes', compact('hero', 'page'));
     }
 
     public function ceremonies()
     {
         $hero = HeroSection::getActive();
+        $page = ActivityPage::where('slug', 'ceremonies')->first();
         $activeTab = 'ceremonies';
-        return view('home.activities.ceremonies', compact('hero', 'activeTab'));
+        return view('home.activities.ceremonies', compact('hero', 'page', 'activeTab'));
     }
 
     public function ateliers()
     {
         $hero = HeroSection::getActive();
+        $page = ActivityPage::where('slug', 'ceremonies')->first();
         $activeTab = 'ateliers';
-        return view('home.activities.ceremonies', compact('hero', 'activeTab'));
+        return view('home.activities.ceremonies', compact('hero', 'page', 'activeTab'));
     }
 
     public function accompagnement()
     {
         $hero = HeroSection::getActive();
-        return view('home.activities.accompagnement', compact('hero'));
+        $page = ActivityPage::where('slug', 'accompagnement')->first();
+        return view('home.activities.accompagnement', compact('hero', 'page'));
     }
 
     public function modernisationPresentation()
