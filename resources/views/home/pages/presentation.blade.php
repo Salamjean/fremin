@@ -62,7 +62,7 @@
                 <div class="col-lg-12" data-aos="fade-up" data-aos-delay="1000">
                     <div class="mission-item-card last">
                         @foreach($missions as $mission)
-                            <p><span class="text-success">✓</span> {{ $mission->title }}</p>
+                            <p><span class="text-success">✓</span> {{ $mission->description }}</p>
                         @endforeach
                     </div>
                 </div>
