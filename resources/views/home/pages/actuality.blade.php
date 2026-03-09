@@ -58,7 +58,6 @@
                             <img src="{{ (str_contains($article->image, 'assets/')) ? asset($article->image) : asset('storage/' . $article->image) }}" alt="{{ $article->title }}">
                         </div>
                         <div class="news-body-premium">
-                            <span class="news-category-v2" style="background-color: {{ $article->category_color ?? '#009B3A' }}">{{ $article->category }}</span>
                             <h4 class="news-title-v2">{{ $article->title }}</h4>
                             <p class="news-text-v2">{{ $article->excerpt }}</p>
                            

@@ -110,7 +110,6 @@
                             <div class="card-premium h-100 overflow-hidden shadow-sm p-4">
                                 <h3 class="mb-3" style="color: black; font-weight: 700;">La cérémonie de distribution
                                     d’équipements de production au profit des acteurs de la petite agro-transformation</h3>
-
                                 <div class="row g-2 mb-3">
                                     <div class="col-md-6">
                                         <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
@@ -354,6 +353,20 @@
 
         .nav-pills .nav-link:hover:not(.active) {
             background-color: #e9ecef;
+        }
+
+        /* Augmentation de la taille de la police pour les textes */
+        p.text-muted {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            text-align: justify;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+        }
+
+        p.lead-text {
+            font-size: 1.25rem;
         }
     </style>
 

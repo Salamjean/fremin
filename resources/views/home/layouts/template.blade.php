@@ -60,6 +60,23 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    /* Augmentation de la taille de la police pour les textes dans toute l'application (côté public) */
+    p {
+      font-size: 1.15rem !important;
+      line-height: 1.6 !important;
+      text-align: justify;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+    }
+
+    p.lead-text {
+      font-size: 1.25rem !important;
+    }
+  </style>
+
 </head>
 
 <body class="index-page">
@@ -121,7 +138,8 @@
                 <li><a href="{{route('home.actuality')}}">Actualités</a></li>
                 <li><a href="{{route('home.program')}}">Programmes</a></li>
                 <li><a href="{{route('home.contact')}}">Contact</a></li>
-                <li><a href="https://www.commerce.gouv.ci/accueil" target="_blank">Ministère en charge de l'Industrie</a></li>
+                <li><a href="https://www.commerce.gouv.ci/accueil" target="_blank">Ministère en charge de
+                    l'Industrie</a></li>
               </ul>
             </div>
 

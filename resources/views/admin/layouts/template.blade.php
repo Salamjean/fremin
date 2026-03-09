@@ -20,6 +20,28 @@
   <!-- End layout styles -->
   <link rel="shortcut icon" href="{{asset('assets/img/logo_fremin.jpg')}}" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    /* Augmentation de la taille de la police pour les textes dans toute l'application (côté admin) */
+    p,
+    .text-muted,
+    .text-sm,
+    .text-md {
+      font-size: 1.10rem !important;
+      line-height: 1.6 !important;
+    }
+
+    .card-title,
+    .mdc-typography--headline6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      /* Ne pas affecter les titres */
+    }
+  </style>
 </head>
 
 <body>
