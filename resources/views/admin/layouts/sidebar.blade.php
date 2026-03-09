@@ -64,9 +64,10 @@
                         </nav>
                     </div>
                 </div>
-                
+
                 <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-autres">
+                    <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                        data-target="ui-sub-autres">
                         <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                             aria-hidden="true">more_horiz</i>
                         Autres Sections
@@ -74,6 +75,21 @@
                     </a>
                     <div class="mdc-expansion-panel" id="ui-sub-autres">
                         <nav class="mdc-list mdc-drawer-submenu">
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.hero.index') }}">
+                                    En-tête
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.about.index') }}">
+                                    Présentation Globale
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.gallery.index') }}">
+                                    Galerie
+                                </a>
+                            </div>
                             <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{ route('admin.team.index') }}">
                                     Équipe
@@ -112,18 +128,8 @@
                     <div class="mdc-expansion-panel" id="ui-sub-hero">
                         <nav class="mdc-list mdc-drawer-subhero">
                             <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.hero.index') }}">
-                                    En-tête
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.about.index') }}">
-                                    Présentation
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.gallery.index') }}">
-                                    Galerie
+                                <a class="mdc-drawer-link" href="{{ route('admin.institutional-frameworks.index') }}">
+                                    Cadre institutionnel
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
@@ -132,8 +138,23 @@
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.strategic-axes.index') }}">
+                                    Axes stratégiques
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.history-sections.index') }}">
+                                    Historique
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{ route('admin.presentation-values.index') }}">
-                                    Valeurs
+                                    Nos Valeurs
+                                </a>
+                            </div>
+                            <div class="mdc-list-item mdc-drawer-item">
+                                <a class="mdc-drawer-link" href="{{ route('admin.presentation-governances.index') }}">
+                                    Gouvernance
                                 </a>
                             </div>
                         </nav>

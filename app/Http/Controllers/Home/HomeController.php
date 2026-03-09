@@ -25,6 +25,10 @@ use App\Models\PresentationMission;
 use App\Models\PresentationValue;
 use App\Models\Project;
 use App\Models\Realisation;
+use App\Models\InstitutionalFramework;
+use App\Models\StrategicAxis;
+use App\Models\HistorySection;
+use App\Models\PresentationGovernance;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -77,7 +81,22 @@ class HomeController extends Controller
         $missions = PresentationMission::active()->ordered()->get();
         $values = PresentationValue::active()->ordered()->get();
 
-        return view('home.pages.presentation', compact('hero', 'about', 'stats', 'missions', 'values'));
+        $institutionalFramework = InstitutionalFramework::first();
+        $strategicAxes = StrategicAxis::where('is_active', true)->orderBy('axis_number')->get();
+        $historySection = HistorySection::where('is_active', true)->first();
+        $governanceSections = PresentationGovernance::where('is_active', true)->orderBy('sort_order')->get();
+
+        return view('home.pages.presentation', compact(
+            'hero',
+            'about',
+            'stats',
+            'missions',
+            'values',
+            'institutionalFramework',
+            'strategicAxes',
+            'historySection',
+            'governanceSections'
+        ));
     }
 
     public function actuality()

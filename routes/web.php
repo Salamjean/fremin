@@ -11,6 +11,10 @@ use App\Http\Controllers\Admin\Presentation\HeroSectionController;
 use App\Http\Controllers\Admin\Presentation\PresentationStatController;
 use App\Http\Controllers\Admin\Presentation\PresentationMissionController;
 use App\Http\Controllers\Admin\Presentation\PresentationValueController;
+use App\Http\Controllers\Admin\Presentation\InstitutionalFrameworkController;
+use App\Http\Controllers\Admin\Presentation\StrategicAxisController;
+use App\Http\Controllers\Admin\Presentation\HistorySectionController;
+use App\Http\Controllers\Admin\Presentation\PresentationGovernanceController;
 use App\Http\Controllers\Admin\Actualite\FeaturedArticleController;
 use App\Http\Controllers\Admin\Actualite\NewsArticleController;
 use App\Http\Controllers\Admin\Program\ProgramController;
@@ -222,6 +226,46 @@ Route::middleware('admin')->prefix('admin')->group(function () {
         Route::put('/{presentationValue}', [PresentationValueController::class, 'update'])->name('update');
         Route::delete('/{presentationValue}', [PresentationValueController::class, 'destroy'])->name('destroy');
         Route::post('/{presentationValue}/toggle-status', [PresentationValueController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('institutional-frameworks')->name('admin.institutional-frameworks.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Presentation\InstitutionalFrameworkController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Presentation\InstitutionalFrameworkController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Presentation\InstitutionalFrameworkController::class, 'store'])->name('store');
+        Route::get('/{institutionalFramework}/edit', [\App\Http\Controllers\Admin\Presentation\InstitutionalFrameworkController::class, 'edit'])->name('edit');
+        Route::put('/{institutionalFramework}', [\App\Http\Controllers\Admin\Presentation\InstitutionalFrameworkController::class, 'update'])->name('update');
+        Route::delete('/{institutionalFramework}', [\App\Http\Controllers\Admin\Presentation\InstitutionalFrameworkController::class, 'destroy'])->name('destroy');
+        Route::post('/{institutionalFramework}/toggle-status', [\App\Http\Controllers\Admin\Presentation\InstitutionalFrameworkController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('strategic-axes')->name('admin.strategic-axes.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Presentation\StrategicAxisController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Presentation\StrategicAxisController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Presentation\StrategicAxisController::class, 'store'])->name('store');
+        Route::get('/{strategicAxis}/edit', [\App\Http\Controllers\Admin\Presentation\StrategicAxisController::class, 'edit'])->name('edit');
+        Route::put('/{strategicAxis}', [\App\Http\Controllers\Admin\Presentation\StrategicAxisController::class, 'update'])->name('update');
+        Route::delete('/{strategicAxis}', [\App\Http\Controllers\Admin\Presentation\StrategicAxisController::class, 'destroy'])->name('destroy');
+        Route::post('/{strategicAxis}/toggle-status', [\App\Http\Controllers\Admin\Presentation\StrategicAxisController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('history-sections')->name('admin.history-sections.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Presentation\HistorySectionController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Presentation\HistorySectionController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Presentation\HistorySectionController::class, 'store'])->name('store');
+        Route::get('/{historySection}/edit', [\App\Http\Controllers\Admin\Presentation\HistorySectionController::class, 'edit'])->name('edit');
+        Route::put('/{historySection}', [\App\Http\Controllers\Admin\Presentation\HistorySectionController::class, 'update'])->name('update');
+        Route::delete('/{historySection}', [\App\Http\Controllers\Admin\Presentation\HistorySectionController::class, 'destroy'])->name('destroy');
+        Route::post('/{historySection}/toggle-status', [\App\Http\Controllers\Admin\Presentation\HistorySectionController::class, 'toggleStatus'])->name('toggle-status');
+    });
+
+    Route::prefix('presentation-governances')->name('admin.presentation-governances.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\Presentation\PresentationGovernanceController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\Presentation\PresentationGovernanceController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\Presentation\PresentationGovernanceController::class, 'store'])->name('store');
+        Route::get('/{presentationGovernance}/edit', [\App\Http\Controllers\Admin\Presentation\PresentationGovernanceController::class, 'edit'])->name('edit');
+        Route::put('/{presentationGovernance}', [\App\Http\Controllers\Admin\Presentation\PresentationGovernanceController::class, 'update'])->name('update');
+        Route::delete('/{presentationGovernance}', [\App\Http\Controllers\Admin\Presentation\PresentationGovernanceController::class, 'destroy'])->name('destroy');
+        Route::post('/{presentationGovernance}/toggle-status', [\App\Http\Controllers\Admin\Presentation\PresentationGovernanceController::class, 'toggleStatus'])->name('toggle-status');
     });
 
     //Les routes de la page actualité et evenements
