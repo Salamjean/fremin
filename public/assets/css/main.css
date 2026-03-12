@@ -933,9 +933,9 @@ section,
 }
 
 .refined-container {
-    width: 90%;
-    max-width: 1600px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
     background: #fff;
     position: relative;
     overflow: hidden;
@@ -1543,7 +1543,7 @@ section,
 }
 
 @media (max-width: 576px) {
-    .refined-container { width: 90%; margin: 0 auto; overflow: hidden; border-radius: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .refined-container { width: 100%; margin: 0; overflow: hidden; border-radius: 0; box-shadow: none; }
     .refined-row { min-height: auto; }
     .refined-col.text-col { padding: 40px 20px; align-items: center; text-align: center; }
     .refined-tag { margin-bottom: 20px; justify-content: center; }
