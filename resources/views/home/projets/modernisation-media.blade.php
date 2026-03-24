@@ -7,7 +7,7 @@
         <div class="container text-center" data-aos="fade-up">
             <h1 class="refined-title" style="color: #1a1a1a; font-weight: 800;">{{ __('media') }}</h1>
             <p class="lead-text" style="max-width: 800px; margin: 20px auto;">Retrouvez en images et vidéos l'impact de nos
-                programmes sur le tissu industriel.</p>
+                projets sur le tissu industriel.</p>
             <div class="tricolor-line shadow-sm mx-auto"
                 style="width: 100px; height: 4px; background: linear-gradient(to right, #FF8200 33.33%, #fff 33.33%, #fff 66.66%, #009B3A 66.66%);">
             </div>
