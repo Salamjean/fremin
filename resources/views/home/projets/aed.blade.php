@@ -77,7 +77,7 @@
                     <div class="tab-pane fade" id="realisation" role="tabpanel" aria-labelledby="realisation-tab">
                         <div class="content-box-premium" data-aos="fade-up">
                             <h3 class="section-title mb-4" style="color: #009B3A; font-weight: 800;">Liste des entreprises
-                                ayant bénéficié d’équipement</h3>
+                                ayant bénéficié d’équipements</h3>
                             <div class="table-responsive">
                                 <table class="table table-striped table-hover align-middle">
                                     <thead class="table-dark" style="background-color: #009B3A;">
