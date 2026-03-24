@@ -6,8 +6,8 @@
     <section id="hero" class="hero section institutional-base" style="background: #f8f9fa; padding: 100px 0 60px;">
         <div class="container text-center" data-aos="fade-up">
             <h1 class="refined-title" style="color: #1a1a1a; font-weight: 800;">{{ __('aed_program') }}</h1>
-            <p class="lead-text" style="max-width: 800px; margin: 20px auto;">Accompagnement et appuis directs aux
-                entreprises industrielles en difficulté.</p>
+            <p class="lead-text" style="max-width: 800px; margin: 20px auto;">Accompagnement aux
+                entreprises industrielles en difficultés.</p>
             <div class="tricolor-line shadow-sm mx-auto"
                 style="width: 100px; height: 4px; background: linear-gradient(to right, #FF8200 33.33%, #fff 33.33%, #fff 66.66%, #009B3A 66.66%);">
             </div>
