@@ -20,7 +20,7 @@
         <div class="container">
             <div data-aos="fade-up">
                 <div class="content-box-premium">
-                    <h2 class="section-title mb-4" style="color: #009B3A; font-weight: 800;">Réalisations : Liste des
+                    <h2 class="section-title mb-4" style="color: #009B3A; font-weight: 800;">Liste des
                         entreprises mises à niveau</h2>
                     <div class="table-responsive">
                         <table class="table table-striped table-hover mt-3 align-middle">
