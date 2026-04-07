@@ -171,7 +171,17 @@
                     $cellule = $governanceSections->where('section_key', 'cellule_technique')->first();
                     $tutelles = $governanceSections->where('section_key', 'tutelles')->first();
                 @endphp
-
+            @if($tutelles)
+                <div class="row mt-5" data-aos="fade-up">
+                    <div class="col-12">
+                        <div
+                            class="tutelles-box text-center card-premium p-5 bg-white shadow-sm border-top border-4 border-success">
+                            <h2 class="mb-3">{{ $tutelles->title }}</h2>
+                            <p class="mb-2" style="font-size:17px; font-weight:200px;">{{ $tutelles->description }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endif
                 @if($comite)
                     <div class="col-lg-6" data-aos="fade-right">
                         <div class="governance-box">
@@ -223,17 +233,7 @@
                 @endif
             </div>
 
-            @if($tutelles)
-                <div class="row mt-5" data-aos="fade-up">
-                    <div class="col-12">
-                        <div
-                            class="tutelles-box text-center card-premium p-5 bg-white shadow-sm border-top border-4 border-success">
-                            <h2 class="mb-3">{{ $tutelles->title }}</h2>
-                            <p class="mb-2" style="font-size:17px; font-weight:200px;">{{ $tutelles->description }}</p>
-                        </div>
-                    </div>
-                </div>
-            @endif
+            
         </div>
     </section>
 
