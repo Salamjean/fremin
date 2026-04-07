@@ -362,9 +362,6 @@
                                 <img src="{{ asset('storage/' . $partner->logo) }}" alt="{{ $partner->name }}">
                             @endif
                         </div>
-                        <p class="partner-name" style="margin-top: 8px; font-size: 14px; font-weight: 600; color: #333;">
-                            {{ $partner->name }}
-                        </p>
                     </div>
                 @endforeach
 
