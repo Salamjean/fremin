@@ -188,7 +188,7 @@
                                     <img src="{{ asset('storage/' . $ministerInfo->image) }}" alt="{{ $ministerInfo->name }}">
                                 </div>
                                 <h4 class="fw-bold mb-2">{{ $ministerInfo->name }}</h4>
-                                <p class="text-success fw-bold mb-4">{{Str::upper($ministerInfo->function)}}</p>
+                                <p class="text-success fw-bold mb-4 text-center" style="text-align: justify;">{{Str::upper($ministerInfo->function)}}</p>
                                 <button onclick="showMinisterMessage()" class="btn-action-outline px-4 py-2">
                                     <i class="fas fa-quote-left me-2"></i> MOT DU MINISTRE
                                 </button>
@@ -197,7 +197,7 @@
                                     <img src="{{ asset('assets/img/ministre.jpg') }}" alt="Ministre">
                                 </div>
                                 <h4 class="fw-bold mb-2">M. Souleymane Diarrassouba</h4>
-                                <p class="text-success fw-bold mb-4">MINISTRE DU COMMERCE ET DE L'INDUSTRIE</p>
+                                <p class="text-success fw-bold mb-4 text-center" style="text-align: justify;">MINISTRE DU COMMERCE ET DE L'INDUSTRIE</p>
                                 <button onclick="showMinisterMessage()" class="btn-action-outline px-4 py-2">
                                     <i class="fas fa-quote-left me-2"></i> MOT DU MINISTRE
                                 </button>
