@@ -29,7 +29,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="bg-secondary rounded d-flex align-items-center justify-content-center text-white shadow-sm overflow-hidden"
                                     style="height: 350px;">
-                                    <img src="{{ asset('assets/img/' . $img) }}" class="img-fluid w-100 h-100"
+                                    <img src="{{ str_starts_with($img, 'pages/') ? asset('storage/' . $img) : asset('assets/img/' . $img) }}" class="img-fluid w-100 h-100"
                                         style="object-fit: cover; transition: transform 0.3s ease;" alt="Modernisation Image"
                                         onmouseover="this.style.transform='scale(1.05)'"
                                         onmouseout="this.style.transform='scale(1)'">
@@ -44,7 +44,7 @@
                             <div class="col-lg-3 col-md-4 col-sm-6">
                                 <div class="bg-secondary rounded d-flex align-items-center justify-content-center text-white shadow-sm overflow-hidden"
                                     style="height: 200px;">
-                                    <img src="{{ asset('assets/img/' . $img) }}" class="img-fluid w-100 h-100"
+                                    <img src="{{ str_starts_with($img, 'pages/') ? asset('storage/' . $img) : asset('assets/img/' . $img) }}" class="img-fluid w-100 h-100"
                                         style="object-fit: cover; transition: transform 0.3s ease;" alt="Modernisation Image"
                                         onmouseover="this.style.transform='scale(1.05)'"
                                         onmouseout="this.style.transform='scale(1)'">

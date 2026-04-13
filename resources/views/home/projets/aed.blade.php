@@ -130,7 +130,7 @@
                                                 class="{{ $loop->first && !isset($page->media['video']) ? 'col-lg-8' : ($loop->index < 4 ? 'col-lg-4' : 'col-lg-3') }} col-md-6">
                                                 <div class="media-card rounded-4 overflow-hidden position-relative shadow-sm"
                                                     style="height: {{ $loop->index < 4 ? '420px' : '250px' }};">
-                                                    <img src="{{ asset('assets/img/' . $img) }}" alt="Project Image"
+                                                    <img src="{{ str_starts_with($img, 'pages/') ? asset('storage/' . $img) : asset('assets/img/' . $img) }}" alt="Project Image"
                                                         class="w-100 h-100 object-fit-cover transition-transform">
                                                 </div>
                                             </div>

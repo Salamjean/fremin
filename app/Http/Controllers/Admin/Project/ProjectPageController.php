@@ -30,7 +30,27 @@ class ProjectPageController extends Controller
             'is_active' => 'boolean',
         ]);
 
-        $projectPage->update($request->all());
+        $data = $request->all();
+        $media = $request->input('media', []);
+        
+        // Gérer les images existantes pour ne pas les perdre
+        $gallery = isset($media['gallery']) ? (array)$media['gallery'] : [];
+        
+        // Gérer les nouveaux uploads
+        if ($request->hasFile('gallery_uploads')) {
+            foreach ($request->file('gallery_uploads') as $file) {
+                if ($file->isValid()) {
+                    $path = $file->store('pages/projects', 'public');
+                    $gallery[] = $path;
+                }
+            }
+        }
+        
+        $data['media'] = $media; // On s'assure que media est bien dans data
+        $data['media']['gallery'] = array_values(array_filter($gallery));
+        $data['is_active'] = $request->has('is_active');
+
+        $projectPage->update($data);
 
         return redirect()->route('admin.project-pages.index')
             ->with('success', 'Page mise à jour avec succès.');

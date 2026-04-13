@@ -118,7 +118,7 @@
                                 @foreach($page->media['gallery'] as $img)
                                     <div class="col-lg-4 col-md-6">
                                         <div class="gallery-item rounded-4 overflow-hidden shadow-sm position-relative">
-                                            <img src="{{ asset('assets/img/' . $img) }}" alt="Infrastructure Image"
+                                            <img src="{{ str_starts_with($img, 'pages/') ? asset('storage/' . $img) : asset('assets/img/' . $img) }}" alt="Infrastructure Image"
                                                 class="img-fluid w-100"
                                                 style="height: 250px; object-fit: cover; transition: transform 0.5s ease;">
                                             <div class="gallery-overlay d-flex align-items-end p-3 position-absolute bottom-0 start-0 w-100 h-100"

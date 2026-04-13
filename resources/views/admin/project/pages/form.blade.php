@@ -77,7 +77,7 @@
                         </a>
                     </div>
                     <div class="card-body p-4">
-                        <form action="{{ route('admin.project-pages.update', $projectPage->id) }}" method="POST">
+                        <form action="{{ route('admin.project-pages.update', $projectPage->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 
@@ -184,26 +184,37 @@
 
                                         <div class="col-12">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <label class="form-label mb-0">Galerie d'images (Fichiers existants dans
-                                                    assets/img)</label>
+                                                <label class="form-label mb-0">Galerie d'images (Fichiers existants et nouveaux)</label>
                                                 <button type="button" class="btn btn-sm btn-outline-success"
                                                     onclick="addImage()">
-                                                    <i class="fas fa-plus me-1"></i> Ajouter une image
+                                                    <i class="fas fa-plus me-1"></i> Ajouter une image (Nom ou Upload)
                                                 </button>
                                             </div>
-                                            <div id="gallery-container" class="row g-2">
+                                            <div class="mb-3">
+                                                <label class="form-label small">Uploader de nouvelles images :</label>
+                                                <input type="file" name="gallery_uploads[]" class="form-control" multiple accept="image/*">
+                                            </div>
+                                            <div id="gallery-container" class="row g-3">
                                                 @php
                                                     $gallery = old('media.gallery', $projectPage->media['gallery'] ?? []);
                                                 @endphp
                                                 @foreach($gallery as $img)
                                                     <div class="col-md-3 gallery-item">
-                                                        <div class="input-group">
-                                                            <input type="text" name="media[gallery][]" class="form-control"
-                                                                value="{{ $img }}" placeholder="image.jpg">
-                                                            <button class="btn btn-outline-danger" type="button"
-                                                                onclick="removeRow(this)">
-                                                                <i class="fas fa-times"></i>
-                                                            </button>
+                                                        <div class="card h-100 border shadow-sm">
+                                                            @if($img)
+                                                                <img src="{{ str_starts_with($img, 'pages/') ? asset('storage/' . $img) : asset('assets/img/' . $img) }}" 
+                                                                     class="card-img-top" style="height: 120px; object-fit: cover;" alt="Image">
+                                                            @endif
+                                                            <div class="card-body p-2">
+                                                                <div class="input-group input-group-sm">
+                                                                    <input type="text" name="media[gallery][]" class="form-control"
+                                                                        value="{{ $img }}" placeholder="image.jpg">
+                                                                    <button class="btn btn-outline-danger" type="button"
+                                                                        onclick="removeRow(this)">
+                                                                        <i class="fas fa-times"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 @endforeach

@@ -35,7 +35,7 @@
                                             <div class="col-md-{{ 12 / count($item['images']) }}">
                                                 <div class="bg-secondary rounded"
                                                     style="height: 300px; display: flex; align-items: center; justify-content: center; color: white;">
-                                                    <img src="{{ asset('assets/img/' . $image) }}"
+                                                    <img src="{{ str_starts_with($image, 'pages/') ? asset('storage/' . $image) : asset('assets/img/' . $image) }}"
                                                         style="width: 100%; height: 100%; object-fit: cover;" alt="Image d'illustration">
                                                 </div>
                                             </div>

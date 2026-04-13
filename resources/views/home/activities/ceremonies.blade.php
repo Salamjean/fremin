@@ -76,7 +76,7 @@
                                                         class="col-md-{{ count($item['images']) > 1 ? (count($item['images']) == 2 ? 6 : 4) : 12 }}">
                                                         <div class="bg-secondary rounded mb-2"
                                                             style="height: 300px; display: flex; align-items: center; justify-content: center; color: white;">
-                                                            <img src="{{ asset('assets/img/' . $image) }}"
+                                                            <img src="{{ str_starts_with($image, 'pages/') ? asset('storage/' . $image) : asset('assets/img/' . $image) }}"
                                                                 style="width: 100%; height: 100%; object-fit: cover;" alt="">
                                                         </div>
                                                     </div>
@@ -127,7 +127,7 @@
                                                         class="col-md-{{ count($item['images']) > 1 ? (count($item['images']) == 2 ? 6 : 12) : 12 }} {{ count($item['images']) == 1 ? 'col-12' : '' }}">
                                                         <div class="bg-secondary rounded"
                                                             style="height: {{ count($item['images']) == 1 ? '500px' : '300px' }}; display: flex; align-items: center; justify-content: center; color: white;">
-                                                            <img src="{{ asset('assets/img/' . $image) }}"
+                                                            <img src="{{ str_starts_with($image, 'pages/') ? asset('storage/' . $image) : asset('assets/img/' . $image) }}"
                                                                 style="width: 100%; height: 100%; object-fit: cover;" alt="">
                                                         </div>
                                                     </div>
