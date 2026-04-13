@@ -30,13 +30,16 @@
                                 </div>
 
                                 @if(isset($item['images']) && count($item['images']) > 0)
-                                    <div class="row g-2 mb-3">
-                                        @foreach($item['images'] as $image)
-                                            <div class="col-md-{{ 12 / count($item['images']) }}">
-                                                <div class="bg-secondary rounded"
-                                                    style="height: 300px; display: flex; align-items: center; justify-content: center; color: white;">
+                                    <div class="row g-3 mb-4 gallery-wrapper">
+                                        @php $imgCount = count($item['images']); @endphp
+                                        @foreach($item['images'] as $imgIndex => $image)
+                                            <div class="{{ $imgCount == 1 ? 'col-12' : ($imgCount == 2 ? 'col-md-6' : 'col-md-4') }}">
+                                                <div class="activity-gallery-item {{ $imgCount == 1 ? 'large' : '' }}">
                                                     <img src="{{ str_starts_with($image, 'pages/') ? asset('storage/' . $image) : asset('assets/img/' . $image) }}"
-                                                        style="width: 100%; height: 100%; object-fit: cover;" alt="Image d'illustration">
+                                                        alt="Image {{ $imgIndex + 1 }}">
+                                                    <div class="gallery-overlay">
+                                                        <i class="fas fa-search-plus"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         @endforeach
@@ -63,6 +66,73 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
             border-bottom: 5px solid #009B3A !important;
+        }
+
+        /* Styles pour la galerie premium */
+        .activity-gallery-item {
+            position: relative;
+            height: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .activity-gallery-item.large {
+            height: 450px;
+        }
+
+        .activity-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .activity-gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .activity-gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 155, 58, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .activity-gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: white;
+            font-size: 2rem;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .activity-gallery-item:hover .gallery-overlay i {
+            transform: scale(1);
+        }
+
+        @media (max-width: 768px) {
+            .activity-gallery-item, .activity-gallery-item.large {
+                height: 250px;
+            }
         }
     </style>
 
