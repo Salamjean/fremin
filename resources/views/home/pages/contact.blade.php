@@ -24,7 +24,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h4 class="fw-bold mb-3">Siège Social</h4>
-                        <p class="text-muted">Abidjan, Côte d'Ivoire<br>Deux plateaux, Vallon, non loin du siège de Burida</p>
+                        <p class="text-muted text-center">Abidjan, Côte d'Ivoire<br>Deux plateaux, Vallon, non loin du siège de Burida</p>
                     </div>
                 </div>
                 <!-- Phone Card -->
@@ -34,7 +34,7 @@
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <h4 class="fw-bold mb-3">Téléphone</h4>
-                        <p class="text-muted">Support: +225 27 22 41 72 92</p>
+                        <p class="text-muted text-center">Support: +225 27 22 41 72 92</p>
                     </div>
                 </div>
                 <!-- Email Card -->
@@ -44,7 +44,7 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h4 class="fw-bold mb-3">E-mail</h4>
-                        <p class="text-muted">contact@fremin.ci</p>
+                        <p class="text-muted text-center">contact@freminci.com</p>
                     </div>
                 </div>
             </div>

@@ -62,7 +62,7 @@
                         <div class="card-body-compact">
                             <h4>{{ $project->title }}</h4>
                             <p>{!! nl2br(e($project->description)) !!}</p>
-                            <a href="{{ route('home.project', $project->slug) }}" class="card-link-compact">En savoir
+                            <a href="{{ route('home.projets.modernisation.presentation', $project->slug) }}" class="card-link-compact">En savoir
                                 plus <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>

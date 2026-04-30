@@ -141,9 +141,9 @@
     <section class="gov-tabs-section">
         <div class="container">
             <div class="gov-tabs-nav" data-aos="fade-up">
+                <button class="gov-tab-btn" onclick="openTab(event, 'tutelles')">Tutelles</button>
                 <button class="gov-tab-btn active" onclick="openTab(event, 'comite')">Comité de Gestion</button>
                 <button class="gov-tab-btn" onclick="openTab(event, 'cellule')">Cellule Technique</button>
-                <button class="gov-tab-btn" onclick="openTab(event, 'tutelles')">Tutelles</button>
             </div>
 
             <!-- Tab 1: Comité de Gestion -->

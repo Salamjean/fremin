@@ -12,12 +12,12 @@
     </div>
 
     <!-- Featured News -->
-    @if($featuredArticle)
+    @if ($featuredArticle)
         <section class="py-5 bg-white">
             <div class="container py-5">
                 <div class="row g-0 shadow-lg overflow-hidden border" data-aos="fade-up">
                     <div class="col-lg-7">
-                        <img src="{{ (str_contains($featuredArticle->image, 'assets/')) ? asset($featuredArticle->image) : asset('storage/' . $featuredArticle->image) }}"
+                        <img src="{{ str_contains($featuredArticle->image, 'assets/') ? asset($featuredArticle->image) : asset('storage/' . $featuredArticle->image) }}"
                             alt="{{ $featuredArticle->image_alt ?? $featuredArticle->title }}"
                             class="img-fluid h-100 object-fit-cover">
                     </div>
@@ -29,10 +29,12 @@
                             <span class="text-success fw-bold"><i class="far fa-calendar-alt me-2"></i>
                                 {{ $featuredArticle->publication_date ? $featuredArticle->publication_date->translatedFormat('d F Y') : '' }}</span>
                             <span class="text-secondary">|</span>
-                            <span class="text-secondary"><i class="far fa-user me-2"></i> {{ $featuredArticle->category ?? 'Actualité' }}</span>
+                            <span class="text-secondary"><i class="far fa-user me-2"></i>
+                                {{ $featuredArticle->category ?? 'Actualité' }}</span>
                         </div>
-                        @if($featuredArticle->read_more_link)
-                            <a href="{{ $featuredArticle->read_more_link }}" class="btn btn-outline-success rounded-pill px-4 align-self-start">{{ $featuredArticle->read_more_text ?? 'Lire la suite' }}</a>
+                        @if ($featuredArticle->read_more_link)
+                            <a href="{{ $featuredArticle->read_more_link }}"
+                                class="btn btn-outline-success rounded-pill px-4 align-self-start">{{ $featuredArticle->read_more_text ?? 'Lire la suite' }}</a>
                         @endif
                     </div>
                 </div>
@@ -50,63 +52,70 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="row g-4 {{ $newsArticles->count() < 3 ? 'justify-content-center' : 'justify-content-start' }}">
                 @forelse($newsArticles as $article)
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
-                    <div class="news-card-premium">
-                        <div class="news-img-box">
-                            <span class="news-date-tag">{{ $article->formatted_date }}</span>
-                            <img src="{{ (str_contains($article->image, 'assets/')) ? asset($article->image) : asset('storage/' . $article->image) }}" alt="{{ $article->title }}">
-                        </div>
-                        <div class="news-body-premium">
-                            <h4 class="news-title-v2">{{ $article->title }}</h4>
-                            <p class="news-text-v2">{{ $article->excerpt }}</p>
-                           
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
+                        <div class="news-card-premium">
+                            <div class="news-img-box">
+                                <span class="news-date-tag">{{ $article->formatted_date }}</span>
+                                <img src="{{ str_contains($article->image, 'assets/') ? asset($article->image) : asset('storage/' . $article->image) }}"
+                                    alt="{{ $article->title }}">
+                            </div>
+                            <div class="news-body-premium">
+                                <h4 class="news-title-v2">{{ $article->title }}</h4>
+                                <p class="news-text-v2">{{ $article->excerpt }}</p>
+
+                            </div>
                         </div>
                     </div>
-                </div>
                 @empty
-                <div class="col-12 text-center py-5">
-                    <p class="text-muted">Aucun article récent disponible pour le moment.</p>
-                </div>
+                    <div class="col-12 text-center py-5">
+                        <p class="text-muted">Aucun evenement récent disponible pour le moment.</p>
+                    </div>
                 @endforelse
             </div>
         </div>
     </section>
 
     <!-- Upcoming Events Section -->
-    @if($upcomingEvents->count() > 0)
-    <section class="py-5 bg-white">
-        <div class="container py-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold" style="color: #009B3A;">Événements à Venir</h2>
-                <div class="mx-auto" style="height: 3px; width: 60px; background: #FF8200; margin-top: 10px;"></div>
-            </div>
-            <div class="row g-4">
-                @foreach($upcomingEvents as $event)
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
-                    <div class="d-flex bg-light rounded shadow-sm overflow-hidden p-0 h-100">
-                        <div class="col-4 p-0">
-                            <img src="{{ (str_contains($event->image, 'assets/')) ? asset($event->image) : asset('storage/' . $event->image) }}" class="img-fluid h-100 object-fit-cover" alt="{{ $event->title }}">
-                        </div>
-                        <div class="col-8 p-4 d-flex flex-column justify-content-center">
-                            <div class="d-flex align-items-center mb-2">
-                                <span class="badge bg-success me-2">{{ $event->day }} {{ $event->month_short }} {{ $event->year }}</span>
-                                <small class="text-muted"><i class="far fa-clock me-1"></i> {{ $event->formatted_time }}</small>
-                            </div>
-                            <h5 class="fw-bold mb-2">{{ $event->title }}</h5>
-                            <p class="small text-muted mb-3">{{ Str::limit($event->description, 100) }}</p>
-                            <div class="mt-auto">
-                                <small class="text-secondary d-block mb-3"><i class="{{ $event->location_icon }} me-1"></i> {{ $event->location }}</small>
-                                <a href="{{ $event->button_link ?? '#' }}" class="btn btn-sm {{ $event->button_css }}">{{ $event->button_text }}</a>
-                            </div>
-                        </div>
-                    </div>
+    @if ($upcomingEvents->count() > 0)
+        <section class="py-5 bg-white">
+            <div class="container py-5">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="fw-bold" style="color: #009B3A;">Événements à Venir</h2>
+                    <div class="mx-auto" style="height: 3px; width: 60px; background: #FF8200; margin-top: 10px;"></div>
                 </div>
-                @endforeach
+                <div class="row g-4">
+                    @foreach ($upcomingEvents as $event)
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
+                            <div class="d-flex bg-light rounded shadow-sm overflow-hidden p-0 h-100">
+                                <div class="col-4 p-0">
+                                    <img src="{{ str_contains($event->image, 'assets/') ? asset($event->image) : asset('storage/' . $event->image) }}"
+                                        class="img-fluid h-100 object-fit-cover" alt="{{ $event->title }}">
+                                </div>
+                                <div class="col-8 p-4 d-flex flex-column justify-content-center">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge bg-success me-2">{{ $event->day }} {{ $event->month_short }}
+                                            {{ $event->year }}</span>
+                                        <small class="text-muted"><i class="far fa-clock me-1"></i>
+                                            {{ $event->formatted_time }}</small>
+                                    </div>
+                                    <h5 class="fw-bold mb-2">{{ $event->title }}</h5>
+                                    <p class="small text-muted mb-3">{{ Str::limit($event->description, 100) }}</p>
+                                    <div class="mt-auto">
+                                        <small class="text-secondary d-block mb-3"><i
+                                                class="{{ $event->location_icon }} me-1"></i>
+                                            {{ $event->location }}</small>
+                                        <a href="{{ $event->button_link ?? '#' }}"
+                                            class="btn btn-sm {{ $event->button_css }}">{{ $event->button_text }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
     @endif
 
     <!-- Newsletter V2 -->
