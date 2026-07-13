@@ -15,8 +15,8 @@ class AdminSeeder extends Seeder
     {
        Admin::create([
             'name' => 'ADMIN - FREMIN',
-            'email' => 'admin@gmail.com',
-            'password' => Hash::make('KKStechnologies2022@'),
+            'email' => 'contact@freminci.com',
+            'password' => Hash::make('azertyui'),
         ]);
        
     }
