@@ -257,7 +257,8 @@ class HomeController extends Controller
     {
         $hero = HeroSection::getActive();
         $page = ActivityPage::where('slug', 'etudes')->first();
-        return view('home.activities.etudes', compact('hero', 'page'));
+        $activeTab = 'realisees';
+        return view('home.activities.etudes', compact('hero', 'page', 'activeTab'));
     }
 
     public function ceremonies()

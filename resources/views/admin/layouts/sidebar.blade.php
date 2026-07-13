@@ -206,7 +206,7 @@
                         <nav class="mdc-list mdc-drawer-subhero">
                             <div class="mdc-list-item mdc-drawer-item">
                                 <a class="mdc-drawer-link" href="{{ route('admin.activity-pages.edit', 1) }}">
-                                    Etudes réalisées
+                                    Etudes
                                 </a>
                             </div>
                             <div class="mdc-list-item mdc-drawer-item">

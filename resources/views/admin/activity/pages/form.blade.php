@@ -143,6 +143,14 @@
                                                         <option value="atelier" {{ ($item['type'] ?? '') == 'atelier' ? 'selected' : '' }}>Atelier</option>
                                                     </select>
                                                 </div>
+                                                @elseif($activityPage->slug == 'etudes')
+                                                <div class="col-md-4">
+                                                    <label class="form-label small fw-bold">Type d'étude</label>
+                                                    <select name="items[{{ $index }}][type]" class="form-select form-select-sm">
+                                                        <option value="realisee" {{ (!isset($item['type']) || $item['type'] == 'realisee') ? 'selected' : '' }}>Réalisée</option>
+                                                        <option value="en_cours" {{ ($item['type'] ?? '') == 'en_cours' ? 'selected' : '' }}>En cours</option>
+                                                    </select>
+                                                </div>
                                                 @endif
                                             </div>
                                         </div>
@@ -170,6 +178,7 @@
         function addItem() {
             const container = document.getElementById('items-container');
             const isCeremoniePage = '{{ $activityPage->slug }}' === 'ceremonies';
+            const isEtudesPage = '{{ $activityPage->slug }}' === 'etudes';
             
             const html = `
                 <div class="item-row" id="item-${itemIndex}">
@@ -208,6 +217,14 @@
                             <select name="items[${itemIndex}][type]" class="form-select form-select-sm">
                                 <option value="ceremonie">Cérémonie</option>
                                 <option value="atelier">Atelier</option>
+                            </select>
+                        </div>` : ''}
+                        ${isEtudesPage ? `
+                        <div class="col-md-4">
+                            <label class="form-label small fw-bold">Type d'étude</label>
+                            <select name="items[${itemIndex}][type]" class="form-select form-select-sm">
+                                <option value="realisee">Réalisée</option>
+                                <option value="en_cours">En cours</option>
                             </select>
                         </div>` : ''}
                     </div>
