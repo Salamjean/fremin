@@ -3,165 +3,6 @@
 
     @include('home.layouts.carousel')
 
-    <!-- Institutional Overview Section - Compact Refinement -->
-    <section id="institutional-overview" class="institutional-overview-compact">
-        <div class="inst-container-compact" data-aos="fade-up">
-            <div class="inst-header-compact">
-                <h2 class="inst-title-compact">PRINCIPAUX ORGANES DE GESTION</h2>
-                <div class="tricolor-accent-compact">
-                    <span class="bar green"></span>
-                    <span class="bar white"></span>
-                    <span class="bar orange"></span>
-                </div>
-            </div>
-
-            <div class="inst-grid-compact">
-                @foreach ($governanceCards as $card)
-                    <div class="card-compact" data-aos="fade-up" data-aos-delay="{{ 100 * $loop->index }}">
-                        <div class="icon-wrap"><i class="{{ $card->icon }}"></i></div>
-                        <div class="card-body-compact">
-                            <h4>{{ $card->title }}</h4>
-                            <p>{!! $card->description !!}</p>
-                            @if ($card->list_items)
-                                <ul class="list-compact">
-                                    @foreach ($card->list_items as $item)
-                                        <li>{{ $item }}</li>
-                                    @endforeach
-                                </ul>
-                            @endif
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-
-            <div class="inst-footer-action">
-                <a href="{{ route('home.about') }}" class="btn-discover-all">
-                    <span>Voir plus</span>
-                    <i class="fas fa-plus"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specific Projects Section - Compact Design -->
-    <section id="specific-projects" class="specific-projects-compact">
-        <div class="inst-container-compact" data-aos="fade-up">
-            <div class="inst-header-compact">
-                <h2 class="inst-title-compact">Nos Projets</h2>
-                <div class="tricolor-accent-compact">
-                    <span class="bar orange"></span>
-                    <span class="bar white"></span>
-                    <span class="bar green"></span>
-                </div>
-            </div>
-
-            <div class="inst-grid-compact">
-                @foreach ($projects as $project)
-                    <div class="card-compact" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
-                        <div class="icon-wrap orange"><i class="fas fa-industry"></i></div>
-                        <div class="card-body-compact">
-                            <h4>{{ $project->title }}</h4>
-                            <p>{!! nl2br(e($project->description)) !!}</p>
-                            <a href="{{ route('home.projets.modernisation.presentation', $project->slug) }}" class="card-link-compact">En savoir
-                                plus <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section id="agro-success" class="agro-success section">
-        <div class="inst-container-compact" data-aos="fade-up">
-            <div class="inst-header-compact mb-4 text-center">
-                <h2 class="inst-title-compact">NOS REALISATIONS</h2>
-                <div class="tricolor-accent-compact mx-auto">
-                    <span class="bar orange"></span>
-                    <span class="bar white"></span>
-                    <span class="bar green"></span>
-                </div>
-                <p class="mt-3">Les réalisations du FREMIN au profit des acteurs du secteur industriel
-                </p>
-            </div>
-        </div>
-
-        <div class="container" data-aos="fade-up">
-            <div class="swiper init-swiper agro-carousel">
-                <script type="application/json" class="swiper-config">
-                                                                                                            {
-                                                                                                                "loop": true,
-                                                                                                                "speed": 600,
-                                                                                                                "autoplay": { "delay": 6000 },
-                                                                                                                "slidesPerView": 1,
-                                                                                                                "pagination": { "el": ".agro-pagination", "clickable": true },
-                                                                                                                "navigation": { "nextEl": ".agro-next", "prevEl": ".agro-prev" }
-                                                                                                            }
-                                                                                                            </script>
-
-                <div class="swiper-wrapper">
-                    @foreach($realisations as $realisation)
-                        <div class="swiper-slide">
-                            <div class="agro-slide-card">
-                                <div class="row align-items-center g-0">
-                                    <div class="col-lg-5">
-                                        <div class="agro-content-box">
-                                            <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
-                                            <h3>{{ $realisation->title }}</h3>
-                                            <p>{!! nl2br(e($realisation->description)) !!}</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7">
-                                        <div class="agro-gallery">
-                                            @if($realisation->image_main)
-                                                <div class="agro-img-main">
-                                                    <img src="{{ Str::startsWith($realisation->image_main, 'assets') ? asset($realisation->image_main) : asset('storage/' . $realisation->image_main) }}"
-                                                        alt="{{ $realisation->title }}">
-                                                </div>
-                                            @endif
-                                            @if($realisation->image_sub)
-                                                <div class="agro-img-sub">
-                                                    <img src="{{ Str::startsWith($realisation->image_sub, 'assets') ? asset($realisation->image_sub) : asset('storage/' . $realisation->image_sub) }}"
-                                                        alt="{{ $realisation->title }}">
-                                                </div>
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-
-                <!-- Navigation Controls -->
-                <div class="agro-controls">
-                    <div class="agro-prev"><i class="fas fa-chevron-left"></i></div>
-                    <div class="agro-pagination"></div>
-                    <div class="agro-next"><i class="fas fa-chevron-right"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Bar -->
-    <section class="pres-stats-bar" style="height: auto;">
-        <div class="container">
-            <div class="row g-4 justify-content-center">
-                @foreach($statistics as $stat)
-                    <div class="col-md-3">
-                        <div class="stat-v2">
-                            <span class="number">
-                                <span class="purecounter" data-purecounter-start="0"
-                                    data-purecounter-end="{{ preg_replace('/[^0-9]/', '', $stat->value) }}"
-                                    data-purecounter-duration="1">0</span>{{ preg_replace('/[0-9]/', '', $stat->value) }}
-                            </span>
-                            <span class="label">{{ $stat->label }}</span>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
     <!-- Compact News Section -->
     <section id="compact-news" class="compact-news section">
         <div class="inst-container-compact" data-aos="fade-up">
@@ -334,6 +175,166 @@
         </script>
     </section>
     <!-- /Compact News Section -->
+
+    <!-- Institutional Overview Section - Compact Refinement -->
+    <section id="institutional-overview" class="institutional-overview-compact">
+        <div class="inst-container-compact" data-aos="fade-up">
+            <div class="inst-header-compact">
+                <h2 class="inst-title-compact">PRINCIPAUX ORGANES DE GESTION</h2>
+                <div class="tricolor-accent-compact">
+                    <span class="bar green"></span>
+                    <span class="bar white"></span>
+                    <span class="bar orange"></span>
+                </div>
+            </div>
+
+            <div class="inst-grid-compact">
+                @foreach ($governanceCards as $card)
+                    <div class="card-compact" data-aos="fade-up" data-aos-delay="{{ 100 * $loop->index }}">
+                        <div class="icon-wrap"><i class="{{ $card->icon }}"></i></div>
+                        <div class="card-body-compact">
+                            <h4>{{ $card->title }}</h4>
+                            <p>{!! $card->description !!}</p>
+                            @if ($card->list_items)
+                                <ul class="list-compact">
+                                    @foreach ($card->list_items as $item)
+                                        <li>{{ $item }}</li>
+                                    @endforeach
+                                </ul>
+                            @endif
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="inst-footer-action">
+                <a href="{{ route('home.about') }}" class="btn-discover-all">
+                    <span>Voir plus</span>
+                    <i class="fas fa-plus"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specific Projects Section - Compact Design -->
+    <section id="specific-projects" class="specific-projects-compact">
+        <div class="inst-container-compact" data-aos="fade-up">
+            <div class="inst-header-compact">
+                <h2 class="inst-title-compact">Nos Projets</h2>
+                <div class="tricolor-accent-compact">
+                    <span class="bar orange"></span>
+                    <span class="bar white"></span>
+                    <span class="bar green"></span>
+                </div>
+            </div>
+
+            <div class="inst-grid-compact">
+                @foreach ($projects as $project)
+                    <div class="card-compact" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
+                        <div class="icon-wrap orange"><i class="fas fa-industry"></i></div>
+                        <div class="card-body-compact">
+                            <h4>{{ $project->title }}</h4>
+                            <p>{!! nl2br(e($project->description)) !!}</p>
+                            <a href="{{ route('home.projets.modernisation.presentation', $project->slug) }}" class="card-link-compact">En savoir
+                                plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section id="agro-success" class="agro-success section">
+        <div class="inst-container-compact" data-aos="fade-up">
+            <div class="inst-header-compact mb-4 text-center">
+                <h2 class="inst-title-compact">NOS REALISATIONS</h2>
+                <div class="tricolor-accent-compact mx-auto">
+                    <span class="bar orange"></span>
+                    <span class="bar white"></span>
+                    <span class="bar green"></span>
+                </div>
+                <p class="mt-3">Les réalisations du FREMIN au profit des acteurs du secteur industriel
+                </p>
+            </div>
+        </div>
+
+        <div class="container" data-aos="fade-up">
+            <div class="swiper init-swiper agro-carousel">
+                <script type="application/json" class="swiper-config">
+                                                                                                            {
+                                                                                                                "loop": true,
+                                                                                                                "speed": 600,
+                                                                                                                "autoplay": { "delay": 6000 },
+                                                                                                                "slidesPerView": 1,
+                                                                                                                "pagination": { "el": ".agro-pagination", "clickable": true },
+                                                                                                                "navigation": { "nextEl": ".agro-next", "prevEl": ".agro-prev" }
+                                                                                                            }
+                                                                                                            </script>
+
+                <div class="swiper-wrapper">
+                    @foreach($realisations as $realisation)
+                        <div class="swiper-slide">
+                            <div class="agro-slide-card">
+                                <div class="row align-items-center g-0">
+                                    <div class="col-lg-5">
+                                        <div class="agro-content-box">
+                                            <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                                            <h3>{{ $realisation->title }}</h3>
+                                            <p>{!! nl2br(e($realisation->description)) !!}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="agro-gallery">
+                                            @if($realisation->image_main)
+                                                <div class="agro-img-main">
+                                                    <img src="{{ Str::startsWith($realisation->image_main, 'assets') ? asset($realisation->image_main) : asset('storage/' . $realisation->image_main) }}"
+                                                        alt="{{ $realisation->title }}">
+                                                </div>
+                                            @endif
+                                            @if($realisation->image_sub)
+                                                <div class="agro-img-sub">
+                                                    <img src="{{ Str::startsWith($realisation->image_sub, 'assets') ? asset($realisation->image_sub) : asset('storage/' . $realisation->image_sub) }}"
+                                                        alt="{{ $realisation->title }}">
+                                                </div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="agro-controls">
+                    <div class="agro-prev"><i class="fas fa-chevron-left"></i></div>
+                    <div class="agro-pagination"></div>
+                    <div class="agro-next"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="pres-stats-bar" style="height: auto;">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                @foreach($statistics as $stat)
+                    <div class="col-md-3">
+                        <div class="stat-v2">
+                            <span class="number">
+                                <span class="purecounter" data-purecounter-start="0"
+                                    data-purecounter-end="{{ preg_replace('/[^0-9]/', '', $stat->value) }}"
+                                    data-purecounter-duration="1">0</span>{{ preg_replace('/[0-9]/', '', $stat->value) }}
+                            </span>
+                            <span class="label">{{ $stat->label }}</span>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
 
 
 
