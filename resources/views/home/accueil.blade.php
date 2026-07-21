@@ -233,7 +233,7 @@
                     <div class="card-compact" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
                         <div class="icon-wrap orange"><i class="fas fa-industry"></i></div>
                         <div class="card-body-compact">
-                            <h4>{{ $project->title }}</h4>
+                            <h4>{{ $project->subtitle }}</h4>
                             <p>{!! nl2br(e($project->description)) !!}</p>
                             <a href="{{ route('home.projets.modernisation.presentation', $project->slug) }}" class="card-link-compact">En savoir
                                 plus <i class="fas fa-arrow-right"></i></a>

@@ -1,0 +1,1 @@
+<?php require __DIR__."/vendor/autoload.php"; $app = require_once __DIR__."/bootstrap/app.php"; $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class); $kernel->bootstrap(); $projects = App\Models\Project::all(); foreach($projects as $p) { App\Models\ProjectPage::firstOrCreate(["slug" => $p->slug], ["title" => $p->title, "is_active" => true]); } echo "done";

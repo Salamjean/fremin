@@ -55,7 +55,7 @@ class HomeController extends Controller
 
         $ministerInfo = \App\Models\MinisterInfo::first();
 
-        $projects = Project::where('is_active', true)->take(3)->get();
+        $projects = Project::where('is_active', true)->orderBy('created_at', 'desc')->get();
         $realisations = Realisation::active()->ordered()->get();
 
         return view('home.accueil', compact(
@@ -284,24 +284,36 @@ class HomeController extends Controller
         return view('home.activities.accompagnement', compact('hero', 'page'));
     }
 
-    public function modernisationPresentation()
+    public function modernisationPresentation($slug = null)
     {
         $hero = HeroSection::getActive();
-        $page = ProjectPage::find(1);
+        if ($slug) {
+            $page = ProjectPage::where('slug', $slug)->firstOrFail();
+        } else {
+            $page = ProjectPage::find(1);
+        }
         return view('home.projets.modernisation-presentation', compact('hero', 'page'));
     }
 
-    public function modernisationRealisation()
+    public function modernisationRealisation($slug = null)
     {
         $hero = HeroSection::getActive();
-        $page = ProjectPage::findOrFail(1);
+        if ($slug) {
+            $page = ProjectPage::where('slug', $slug)->firstOrFail();
+        } else {
+            $page = ProjectPage::find(1);
+        }
         return view('home.projets.modernisation-realisation', compact('hero', 'page'));
     }
 
-    public function modernisationMedia()
+    public function modernisationMedia($slug = null)
     {
         $hero = HeroSection::getActive();
-        $page = ProjectPage::find(1);
+        if ($slug) {
+            $page = ProjectPage::where('slug', $slug)->firstOrFail();
+        } else {
+            $page = ProjectPage::find(1);
+        }
         return view('home.projets.modernisation-media', compact('hero', 'page'));
     }
 

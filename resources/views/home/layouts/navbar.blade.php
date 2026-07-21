@@ -48,14 +48,28 @@
             <span>{{ __('projects') }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
           </a>
           <ul>
-            <li>
-              <a href="{{route('home.projets.modernisation.presentation')}}"
-                class="{{ Request::is('home/projects/modernisation*') ? 'active' : '' }}">
-                {{ __('modernization_industrial') }}
-              </a>
-            </li>
-            <li><a href="{{route('home.projets.aed')}}">{{ __('aed_program') }}</a></li>
-            <li><a href="{{route('home.projets.infrastructures')}}">{{ __('industrial_infrastructure') }}</a></li>
+            @php
+                $navProjects = \App\Models\Project::where('is_active', true)->orderBy('created_at', 'asc')->get();
+            @endphp
+            @foreach($navProjects as $navProject)
+                @php
+                    if ($navProject->slug === 'aed') {
+                        $routeUrl = route('home.projets.aed');
+                        $isActive = Request::is('home/projects/aed');
+                    } elseif ($navProject->slug === 'infrastructures') {
+                        $routeUrl = route('home.projets.infrastructures');
+                        $isActive = Request::is('home/projects/infrastructures');
+                    } else {
+                        $routeUrl = route('home.projets.modernisation.presentation', ['slug' => $navProject->slug]);
+                        $isActive = Request::is('home/projects/modernisation*') && (request()->route('slug') === $navProject->slug || (request()->route('slug') === null && $loop->first));
+                    }
+                @endphp
+                <li>
+                  <a href="{{ $routeUrl }}" class="{{ $isActive ? 'active' : '' }}">
+                    {{ $navProject->subtitle ?: $navProject->title }}
+                  </a>
+                </li>
+            @endforeach
           </ul>
         </li>
         

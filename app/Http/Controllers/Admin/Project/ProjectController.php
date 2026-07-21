@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Project;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\ProjectPage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -54,7 +55,7 @@ class ProjectController extends Controller
         if ($request->type === 'aed') {
             $data['slug'] = 'aed';
         } elseif ($request->type === 'zone') {
-            $data['slug'] = 'zone-industrielle';
+            $data['slug'] = 'infrastructures';
         } else {
             $data['slug'] = Str::slug($request->title);
         }
@@ -65,7 +66,16 @@ class ProjectController extends Controller
             $data['image'] = $request->file('image')->store('projects', 'public');
         }
 
-        Project::create($data);
+        $project = Project::create($data);
+
+        // Also create a corresponding ProjectPage if it doesn't exist
+        \App\Models\ProjectPage::firstOrCreate(
+            ['slug' => $project->slug],
+            [
+                'title' => $project->title,
+                'is_active' => true,
+            ]
+        );
 
         return redirect()->route('admin.projects.index')->with('success', 'Projet créé avec succès.');
     }
@@ -108,7 +118,7 @@ class ProjectController extends Controller
         if ($request->type === 'aed') {
             $data['slug'] = 'aed';
         } elseif ($request->type === 'zone') {
-            $data['slug'] = 'zone-industrielle';
+            $data['slug'] = 'infrastructures';
         } else {
             $data['slug'] = Str::slug($request->title);
         }
@@ -122,7 +132,17 @@ class ProjectController extends Controller
             $data['image'] = $request->file('image')->store('projects', 'public');
         }
 
+        $oldSlug = $project->slug;
         $project->update($data);
+
+        // Update ProjectPage slug and title
+        $page = \App\Models\ProjectPage::where('slug', $oldSlug)->first();
+        if ($page) {
+            $page->update([
+                'slug' => $project->slug,
+                'title' => $project->title,
+            ]);
+        }
 
         return redirect()->route('admin.projects.index')->with('success', 'Projet mis à jour avec succès.');
     }
@@ -132,7 +152,11 @@ class ProjectController extends Controller
         if ($project->image && Storage::disk('public')->exists($project->image)) {
             Storage::disk('public')->delete($project->image);
         }
+        $slug = $project->slug;
         $project->delete();
+
+        // Delete the corresponding ProjectPage
+        \App\Models\ProjectPage::where('slug', $slug)->delete();
 
         return redirect()->route('admin.projects.index')->with('success', 'Projet supprimé avec succès.');
     }

@@ -172,7 +172,12 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Sous-titre / Accroche</label>
+                    <label class="form-label">
+                        Sous-titre / Accroche 
+                        <span style="color: #e67e22; font-size: 0.85rem; font-weight: normal; margin-left: 8px;">
+                            <i class="fas fa-info-circle"></i> Sera affiché comme titre sur la page d'accueil
+                        </span>
+                    </label>
                     <input type="text" name="subtitle" class="form-control"
                         value="{{ old('subtitle', $project->subtitle ?? '') }}"
                         placeholder="Ex: Projet Appui aux Entreprises...">

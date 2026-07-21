@@ -50,9 +50,9 @@ Route::prefix('home')->group(function () {
     Route::get('/gouvernance/tutelles', [HomeController::class, 'tutelles'])->name('home.tutelles');
 
     // Projets
-    Route::get('/projects/modernisation/presentation', [HomeController::class, 'modernisationPresentation'])->name('home.projets.modernisation.presentation');
-    Route::get('/projects/modernisation/realisation', [HomeController::class, 'modernisationRealisation'])->name('home.projets.modernisation.realisation');
-    Route::get('/projects/modernisation/media', [HomeController::class, 'modernisationMedia'])->name('home.projets.modernisation.media');
+    Route::get('/projects/modernisation/presentation/{slug?}', [HomeController::class, 'modernisationPresentation'])->name('home.projets.modernisation.presentation');
+    Route::get('/projects/modernisation/realisation/{slug?}', [HomeController::class, 'modernisationRealisation'])->name('home.projets.modernisation.realisation');
+    Route::get('/projects/modernisation/media/{slug?}', [HomeController::class, 'modernisationMedia'])->name('home.projets.modernisation.media');
     Route::get('/projects/aed', [HomeController::class, 'aedProjet'])->name('home.projets.aed');
     Route::get('/projects/infrastructures', [HomeController::class, 'infrastructures'])->name('home.projets.infrastructures');
 

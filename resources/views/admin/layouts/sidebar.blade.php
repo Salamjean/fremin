@@ -176,21 +176,21 @@
                     </a>
                     <div class="mdc-expansion-panel" id="ui-sub-projets-detail">
                         <nav class="mdc-list mdc-drawer-subhero">
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 1) }}">
-                                    Appuis directs
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 2) }}">
-                                    AED
-                                </a>
-                            </div>
-                            <div class="mdc-list-item mdc-drawer-item">
-                                <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', 3) }}">
-                                    Infrastructures
-                                </a>
-                            </div>
+                            @php
+                                $sidebarProjects = \App\Models\Project::all();
+                            @endphp
+                            @foreach($sidebarProjects as $project)
+                                @php
+                                    $page = \App\Models\ProjectPage::where('slug', $project->slug)->first();
+                                @endphp
+                                @if($page)
+                                <div class="mdc-list-item mdc-drawer-item">
+                                    <a class="mdc-drawer-link" href="{{ route('admin.project-pages.edit', $page->id) }}" title="{{ $project->title }}">
+                                        {{ \Illuminate\Support\Str::limit($project->title, 15) }}
+                                    </a>
+                                </div>
+                                @endif
+                            @endforeach
                         </nav>
                     </div>
                 </div>

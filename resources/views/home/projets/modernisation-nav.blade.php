@@ -3,17 +3,17 @@
         <div class="nav nav-pills custom-nav-pills shadow-sm rounded-pill p-1 bg-white" id="v-pills-tab" role="tablist"
             aria-orientation="horizontal">
             <a class="nav-link rounded-pill px-4 {{ Route::is('home.projets.modernisation.presentation') ? 'active' : '' }}"
-                href="{{ route('home.projets.modernisation.presentation') }}"
+                href="{{ route('home.projets.modernisation.presentation', ['slug' => $page->slug ?? null]) }}"
                 style="{{ Route::is('home.projets.modernisation.presentation') ? 'background-color: #009B3A; color: white;' : 'color: #333;' }}">
                 {{ __('project_presentation') }}
             </a>
             <a class="nav-link rounded-pill px-4 {{ Route::is('home.projets.modernisation.realisation') ? 'active' : '' }}"
-                href="{{ route('home.projets.modernisation.realisation') }}"
+                href="{{ route('home.projets.modernisation.realisation', ['slug' => $page->slug ?? null]) }}"
                 style="{{ Route::is('home.projets.modernisation.realisation') ? 'background-color: #009B3A; color: white;' : 'color: #333;' }}">
                 {{ __('realizations') }}
             </a>
             <a class="nav-link rounded-pill px-4 {{ Route::is('home.projets.modernisation.media') ? 'active' : '' }}"
-                href="{{ route('home.projets.modernisation.media') }}"
+                href="{{ route('home.projets.modernisation.media', ['slug' => $page->slug ?? null]) }}"
                 style="{{ Route::is('home.projets.modernisation.media') ? 'background-color: #009B3A; color: white;' : 'color: #333;' }}">
                 {{ __('media') }}
             </a>

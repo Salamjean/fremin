@@ -1,0 +1,1 @@
+<?php require __DIR__."/vendor/autoload.php"; $app = require_once __DIR__."/bootstrap/app.php"; $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class); $kernel->bootstrap(); $page4 = App\Models\ProjectPage::find(4); if($page4 && $page4->slug === "mise-a-niveau-des-entreprises-industrielles") { $page4->delete(); } echo "Cleaned";
