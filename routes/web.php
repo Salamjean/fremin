@@ -38,6 +38,7 @@ Route::prefix('home')->group(function () {
     Route::get('/publication', [HomeController::class, 'publication'])->name('home.publication');
     Route::get('/program', [HomeController::class, 'program'])->name('home.program');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
+    Route::post('/contact', [HomeController::class, 'sendContact'])->name('home.contact.send');
     Route::get('/project/{slug}', [HomeController::class, 'project'])->name('home.project');
     Route::get('/search', [HomeController::class, 'search'])->name('home.search');
 

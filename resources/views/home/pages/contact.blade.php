@@ -57,20 +57,35 @@
                         <p class="text-muted mb-4">Une question ? Un projet de restructuration ? Notre équipe vous répondra
                             dans les plus brefs délais.</p>
 
-                        <form action="#" method="POST">
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        <form action="{{ route('home.contact.send') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Nom Complet" required>
+                                    <input type="text" name="name" class="form-control" placeholder="Nom Complet" value="{{ old('name') }}" required>
+                                    @error('name')<span class="text-danger small">{{ $message }}</span>@enderror
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Votre Email" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Votre Email" value="{{ old('email') }}" required>
+                                    @error('email')<span class="text-danger small">{{ $message }}</span>@enderror
                                 </div>
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control" placeholder="Sujet du message" required>
+                                    <input type="text" name="subject" class="form-control" placeholder="Sujet du message" value="{{ old('subject') }}" required>
+                                    @error('subject')<span class="text-danger small">{{ $message }}</span>@enderror
                                 </div>
                                 <div class="col-md-12">
-                                    <textarea class="form-control" rows="6" placeholder="Votre message..."
-                                        required></textarea>
+                                    <textarea name="message" class="form-control" rows="6" placeholder="Votre message..." required>{{ old('message') }}</textarea>
+                                    @error('message')<span class="text-danger small">{{ $message }}</span>@enderror
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <label class="form-label text-muted small">Joindre un document (PDF, JPG, PNG - Max 5MB)</label>
+                                    <input type="file" name="attachment" class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+                                    @error('attachment')<span class="text-danger small">{{ $message }}</span>@enderror
                                 </div>
                                 <div class="col-12 mt-4">
                                     <button type="submit" class="btn btn-contact-submit">

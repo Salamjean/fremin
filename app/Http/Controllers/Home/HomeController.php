@@ -32,6 +32,8 @@ use App\Models\PresentationGovernance;
 use App\Models\ProjectPage;
 use App\Models\ActivityPage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
 class HomeController extends Controller
 {
@@ -134,6 +136,28 @@ class HomeController extends Controller
     public function contact()
     {
         return view('home.pages.contact');
+    }
+
+    public function sendContact(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string',
+            'attachment' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+        ]);
+
+        $filePath = null;
+        $fileName = null;
+        if ($request->hasFile('attachment')) {
+            $filePath = $request->file('attachment')->getRealPath();
+            $fileName = $request->file('attachment')->getClientOriginalName();
+        }
+
+        Mail::to('salamjeanlouis3@gmail.com')->send(new ContactMail($validated, $filePath, $fileName));
+
+        return redirect()->back()->with('success', 'Votre message a été envoyé avec succès.');
     }
 
     public function project($slug)
