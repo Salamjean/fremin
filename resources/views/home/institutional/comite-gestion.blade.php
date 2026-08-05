@@ -236,7 +236,7 @@
                                     </div>
                                     <div class="member-info">
                                         <h3>{{ $member->name }}</h3>
-                                        <p class="role">{{ $member->position }}</p>
+                                        <p class="role" style="text-align: center">{{ $member->position }}</p>
                                     </div>
                                 </div>
                             @endforeach
@@ -253,7 +253,7 @@
                                     </div>
                                     <div class="member-info">
                                         <h3>{{ $president->name }}</h3>
-                                        <p class="role">{{ $president->position }}</p>
+                                        <p class="role" style="text-align: center">{{ $president->position }}</p>
                                         @if ($president->bio)
                                             <button
                                                 onclick="showPresidentMessage('{{ addslashes($president->name) }}', '{{ addslashes($president->position) }}', '{{ asset('storage/' . $president->image) }}', '{{ addslashes($president->bio) }}')"
@@ -277,7 +277,7 @@
                                     </div>
                                     <div class="member-info">
                                         <h3>{{ $member->name }}</h3>
-                                        <p class="role">{{ $member->position }}</p>
+                                        <p class="role" style="text-align: center">{{ $member->position }}</p>
                                     </div>
                                 </div>
                             @endforeach
@@ -295,7 +295,7 @@
                                         </div>
                                         <div class="member-info">
                                             <h3>{{ $member->name }}</h3>
-                                            <p class="role">{{ $member->position }}</p>
+                                            <p class="role" style="text-align: center">{{ $member->position }}</p>
                                         </div>
                                     </div>
                                 @endforeach
